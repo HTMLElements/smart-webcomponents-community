@@ -1,7 +1,7 @@
 {
-  "name": "@jqwidgets/jqx-element",
+  "name": "Smart HTML Custom Elements",
   "version": "1.0.0",
-  "description": "Smart HTML Custom Elements Core",
+  "description": "Smart HTML Elements Core",
   "scripts": {
   
   },
