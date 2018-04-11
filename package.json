@@ -1,0 +1,62 @@
+{
+  "name": "@jqwidgets/jqx-element",
+  "version": "1.0.0",
+  "description": "Smart HTML Custom Elements Core",
+  "scripts": {
+  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HTMLElements/Smart-HTML-Elements-Core.git"
+  },
+  "author": "Smart HTML Elements",
+  "license": "SEE LICENSE IN http://www.htmlelements.com/pricing/",
+  "bugs": {
+    "url": "https://github.com/HTMLElements/Smart-HTML-Elements-Core"
+  },
+  "homepage": "https://github.com/HTMLElements/Smart-HTML-Elements-Core#readme",
+  "devDependencies": {
+   
+  },
+  "dependencies": {},
+  "main": "",
+  "directories": {
+    
+  },
+  "keywords": [
+    "custom",
+    "element",
+    "base",
+	"button",
+	"progressbar",
+	"listbox",
+	"dropdownlist",
+	"custom elements",
+	"web components",
+	"ui components",
+	"ui elements",
+	"html",
+	"html5",
+	"css3",
+	"html elements",
+	"html components",
+	"html elements",
+	"combobox",
+	"switchbutton",
+	"checkbox",
+	"radiobutton",
+	"tank",
+	"gauge",
+	"slider",
+	"graphs",
+	"grid",
+	"dataGrid",
+	"data grid",
+	"charting",
+	"buttons",
+	"user interface",
+	"user experience",
+	"web ui components",
+	"web framework"
+  ]
+}
