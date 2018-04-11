@@ -1,5 +1,5 @@
 {
-  "name": "smart-html-elements-core",
+  "name": "smarthtmlelements-core",
   "version": "1.0.0",
   "description": "Smart HTML Elements Core",
   "scripts": {
@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HTMLElements/Smart-HTML-Elements-Core.git"
+    "url": "git+https://github.com/HTMLElements/smarthtmlelements-core.git"
   },
   "author": "Smart HTML Elements",
   "license": "SEE LICENSE IN http://www.htmlelements.com/pricing/",
   "bugs": {
-    "url": "https://github.com/HTMLElements/Smart-HTML-Elements-Core"
+    "url": "https://github.com/HTMLElements/smarthtmlelements-core"
   },
-  "homepage": "https://github.com/HTMLElements/Smart-HTML-Elements-Core#readme",
+  "homepage": "https://github.com/HTMLElements/smarthtmlelements-core#readme",
   "devDependencies": {
    
   },
