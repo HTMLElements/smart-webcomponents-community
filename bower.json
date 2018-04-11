@@ -1,0 +1,28 @@
+{
+  "name": "smart-html-elements-core",
+  "authors": [
+    "jQWidgets Ltd"
+  ],
+  "description": "Smart HTML Elements is an evolving set of free, open sourced custom HTML elements, built using native Javascript and CSS.",
+  "license": "Apache-2.0",
+  "keywords": [
+    "smart html elements",
+    "core",
+    "elements",
+    "web",
+    "components",
+    "webcomponents",
+    "web-components",
+    "element-collection"
+  ],
+  "main": "",
+  "ignore": [
+    "**/.*",
+    "**/node_modules",
+    "**/bower_components",
+    "**/tests"
+  ],
+  "dependencies": {
+    "smart-button": "HTMLElements/smart-button"
+  }
+}
