@@ -1,0 +1,3566 @@
+:root {
+    --smart-material-color: #555; /* Default font color for an element */
+    --smart-material-font-family: Arial, Helvetica, sans-serif; /* Default material font family */
+    --smart-material-background-color: #E0E0E0; /* Default background color for an element */
+    --smart-material-focused-background-color: #D5D5D5; /* Used for the background color when a button is focused */
+    --smart-material-hovered-background-color: #DBDBDB; /* Used for the background color when an element is hovered */
+    --smart-material-pressed-background-color: #CCCCCC; /* Used for the background color when an element is pressed */
+    --smart-material-fill-color: var(--smart-material-pressed-background-color); /* Used for the background color when an element is pressed */
+    --smart-material-indeterminate-background-color: #fff; /* Used for the backgroudn color of elements that are in Indeterminate state */
+    --smart-material-pressed-color: #000; /* Used for the color of the fonts when an element is in pressed state*/
+    --smart-material-items-border-color: #E9E9E9; /* Used in smartListBox for the border color of the list items */
+    --smart-material-items-group-border-color: #009788; /* Used in smartListBox for the border color of the list group items */
+    --smart-ripple-color: var(--smart-material-background-color); /* Default color for the ripple effect of the elements. Ripple appears on click */
+    --smart-material-today-background-color: rgba(0, 151,136, 0.5); /* Default background color for the Today date in smartCalendar */
+    --smart-material-secondary-color: #FFFF8D; /* Secondary background color to apply to miscellaneous elements */
+}
+
+/* ------------ Google fonts ------------ */
+
+/* fallback */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v31/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ------------ */
+
+smart-button .ripple,
+smart-calendar .ripple,
+smart-toggle-button .ripple,
+smart-repeat-button .ripple,
+smart-power-button .ripple,
+smart-led .ripple,
+smart-radio-button .ripple,
+smart-check-box .ripple,
+smart-list-box .ripple,
+smart-menu-item .ripple,
+smart-menu-items-group .ripple,
+smart-drop-down-list .ripple,
+smart-combo-box .ripple,
+smart-multi-split-button .ripple,
+smart-pager .ripple,
+smart-tabs .ripple,
+smart-accordion .ripple {
+    display: block;
+    position: absolute;
+    background: var(--smart-ripple-color);
+    border-radius: 100%;
+    transform: scale(0);
+    pointer-events: none;
+}
+
+    smart-led .ripple.animate,
+    smart-button .ripple.animate,
+    smart-calendar .ripple.animate,
+    smart-toggle-button .ripple.animate,
+    smart-repeat-button .ripple.animate,
+    smart-power-button .ripple.animate,
+    smart-radio-button .ripple.animate,
+    smart-check-box .ripple.animate,
+    smart-list-box .ripple.animate,
+    smart-menu-item .ripple.animate,
+    smart-menu-items-group .ripple.animate,
+    smart-drop-down-list .ripple.animate,
+    smart-combo-box .ripple.animate,
+    smart-multi-split-button .ripple.animate,
+    smart-pager .ripple.animate,
+    smart-tabs .ripple.animate,
+    smart-accordion .ripple.animate {
+        animation: ripple 0.65s linear;
+    }
+
+/* Has to be quicker because the popup will be visible in 0.2s and if the ripple is longer the text will be blurry */
+    smart-check-box .ripple.animate,
+    smart-combo-box[drop-down-position="overlay-center"] .ripple.animate,
+    smart-combo-box[drop-down-position="overlay-bottom"] .ripple.animate,
+    smart-combo-box[drop-down-position="overlay-top"] .ripple.animate,
+    smart-drop-down-list[drop-down-position="overlay-center"] .ripple.animate,
+    smart-drop-down-list[drop-down-position="overlay-bottom"] .ripple.animate,
+    smart-drop-down-list[drop-down-position="overlay-top"] .ripple.animate {
+        animation: ripple 0.35s linear;
+    }
+
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2.5); /*scale the element to 250% to safely cover the entire link and fade it out*/
+    }
+}
+
+.material .smart-arrow-up:after,
+.material .smart-arrow-down:after,
+.material .smart-arrow-left:after,
+.material .smart-arrow-right:after {
+    color: #009688;
+}
+
+
+/* smart-time-picker */
+
+smart-time-picker.material,
+smart-time-picker.material[view="portrait"] {
+    width: 300px;
+    height: 450px;
+    --smart-material-background-color: #fff;
+    --smart-material-header-background-color: #009688;
+    --smart-material-pressed-color: #009688;
+    box-shadow: 3px 5px 20px 1px #A9A9A9;
+    font-family: var(--smart-material-font-family);
+    border: initial;
+    border-radius: 2px;
+}
+
+    smart-time-picker.material[view="landscape"] {
+        width: 400px;
+        height: 350px;
+    }
+
+    smart-time-picker.material .smart-main-container {
+        background-color: var(--smart-material-background-color);
+    }
+
+
+
+smart-time-picker.material {
+    font-family: var(--smart-material-font-family);
+}
+
+    smart-time-picker.material .smart-header {
+        background-color: var(--smart-material-header-background-color);
+        color: white;
+    }
+
+    smart-time-picker.material .smart-needle,
+    smart-time-picker.material .smart-needle-central-circle {
+        fill: var(--smart-material-header-background-color);
+    }
+
+    smart-time-picker.material .smart-hour-container,
+    smart-time-picker.material .smart-minute-container,
+    smart-time-picker.material .smart-am-container,
+    smart-time-picker.material .smart-pm-container {
+        opacity: 0.7;
+    }
+
+    smart-time-picker.material .smart-selected {
+        opacity: 1;
+    }
+
+    smart-time-picker.material .smart-label.smart-selected {
+        fill: white;
+        stroke: none;
+    }
+
+
+
+/* smart-slider */
+
+smart-slider.material {
+    --smart-tank-default-height: 30px;
+    --smart-slider-track-size: 3px;
+    --smart-slider-thumb-width: 15px;
+    --smart-slider-thumb-height: 15px;
+    --smart-material-background-color: #B9B9B9;
+    --smart-material-focused-background-color: #A6A6A6;
+    --smart-material-fill-color: #009688;
+    --smart-border-width: 0px;
+}
+
+smart-slider[orientation="vertical"].material {
+    --smart-tank-default-width: 30px;
+    --smart-tank-default-height: 200px;
+}
+
+smart-slider.material .smart-thumb {
+    margin-top: calc(var(--smart-slider-track-size) / 2 - var(--smart-slider-thumb-height) / 2);
+    border-width: 1px;
+    border-style: solid;
+    width: var(--smart-slider-thumb-width);
+    min-width: var(--smart-slider-track-size);
+    height: var(--smart-slider-thumb-height);
+    min-height: var(--smart-slider-track-size);
+    background-color: var(--smart-material-fill-color);
+    border-color: var(--smart-material-fill-color);
+}
+
+smart-slider.material .smart-track {
+    border: none;
+    background-color: var(--smart-material-background-color);
+}
+
+smart-slider.material:focus .smart-track {
+    background-color: var(--smart-material-focused-background-color);
+}
+
+smart-slider[orientation="vertical"].material .smart-thumb {
+    margin-left: calc(var(--smart-slider-track-size) / 2 - var(--smart-slider-thumb-width) / 2);
+}
+
+smart-slider.material .smart-button {
+    border: none;
+}
+
+smart-slider.material .smart-spin-button {
+    margin-top: calc(var(--smart-slider-track-size) / 2 - var(--smart-slider-spin-button-height) / 2);
+    width: var(--smart-slider-spin-button-width);
+    height: var(--smart-slider-spin-button-height);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+smart-slider[orientation="vertical"].material .smart-spin-button {
+    margin-top: initial;
+}
+
+smart-slider.material .smart-value {
+    background-color: var(--smart-material-fill-color);
+}
+
+smart-slider.material .smart-thumb.hovered {
+    transform: scale(1.1);
+}
+
+smart-slider.material[dragged] .smart-thumb,
+smart-slider.material[range-slider][dragged] .smart-thumb.smart-moved-thumb {
+    transform: scale(1.5);
+}
+
+smart-slider.material[range-slider][dragged] .smart-thumb {
+    transform: none;
+}
+
+smart-slider.material:focus .smart-thumb::before {
+    transform: scale(3);
+    animation: slider-thumb-effect 1s infinite;
+    animation-delay: 0.1s;
+    background-color: var(--smart-material-fill-color);
+}
+
+smart-slider.material[show-thumb-label]:focus .smart-thumb::before {
+    transform: initial;
+    animation: initial;
+    background-color: var(--smart-material-fill-color);
+}
+
+smart-slider.material .smart-thumb.hovered::before,
+smart-slider.material[dragged] .smart-thumb::before,
+smart-slider.material[range-slider][dragged] .smart-thumb.smart-moved-thumb::before {
+    transform: none;
+    animation: none;
+}
+
+/* Atttention: If slider's "min" property is not 0 this has to be changed to the appropriate value */
+smart-slider.material[value="0"] .smart-thumb {
+    --smart-material-fill-color: #EEEEEE;
+    --smart-border-width: 2px;
+    border-width: var(--smart-border-width);
+    border-style: solid;
+    border-color: var(--smart-material-background-color);
+    background-color: var(--smart-material-fill-color);
+}
+
+smart-slider.material[value="0"]:focus .smart-thumb:before {
+    background-color: black;
+    opacity: 0.1;
+    transform: scale(3);
+}
+
+smart-slider.material[value="0"] .smart-thumb.hovered:before {
+    transform: scale(1);
+}
+
+smart-slider.material .smart-tooltip,
+smart-slider[tooltip-position="near"].material .smart-tooltip {
+    transform: scale(0.66667);
+    opacity: 0.9;
+    background-color: rgb(97,97,97);
+    color: rgba(255,255,255,0.87);
+    border-radius: 4px;
+    border: none;
+}
+
+smart-slider[tooltip-position="far"].material .smart-tooltip {
+    left: calc(var(--smart-slider-tooltip-width) / 2 - 2 * var(--smart-slider-thumb-width) - 5px);
+}
+
+smart-slider.material[value="0"][show-thumb-label] .smart-thumb:before {
+    content: initial;
+}
+
+smart-slider.material[value="0"][show-thumb-label] .smart-thumb {
+    --smart-material-fill-color: #000;
+    background-color: var(--smart-material-fill-color);
+    --smart-border-width: 0;
+}
+
+smart-slider.material[show-thumb-label][disabled][value="0"] .smart-thumb {
+    --smart-material-fill-color: var(--smart-material-background-color);
+}
+
+smart-slider[show-thumb-label][value="0"].material:focus .smart-thumb {
+    --smart-material-fill-color: #ACACAC;
+}
+
+smart-slider[show-thumb-label].material .smart-thumb,
+smart-slider[show-thumb-label][orientation="horizontal"].material .smart-thumb,
+smart-slider[show-thumb-label][thumb-label-position="near"].material .smart-thumb,
+smart-slider[show-thumb-label][orientation="horizontal"][thumb-label-position="near"].material .smart-thumb {
+    transform: rotate(45deg);
+    transition: transform 0.2s ease-out, top 0.2s ease-out;
+    top: 0;
+}
+
+smart-slider[show-thumb-label][thumb-label-position="far"].material .smart-thumb,
+smart-slider[show-thumb-label][thumb-label-position="far"][orientation="horizontal"].material .smart-thumb {
+    transform: rotate(225deg);
+    transition: transform 0.2s ease-out, top 0.2s ease-out;
+    top: 0;
+}
+
+smart-slider[show-thumb-label][orientation="vertical"].material .smart-thumb,
+smart-slider[show-thumb-label][orientation="vertical"][thumb-label-position="near"].material .smart-thumb {
+    transform: scale(1) rotate(-45deg);
+    transition: transform 0.2s ease-out, left 0.2s ease-out;
+    left: 0;
+    top: 0;
+}
+
+smart-slider[show-thumb-label][orientation="vertical"][thumb-label-position="far"].material .smart-thumb {
+    transform: rotate(135deg);
+    transition: transform 0.2s ease-out, left 0.2s ease-out;
+    left: 0;
+    top: 0;
+}
+
+smart-slider[show-thumb-label][orientation="vertical"].material:focus .smart-thumb,
+smart-slider[show-thumb-label][orientation="vertical"][thumb-label-position="near"].material:focus .smart-thumb {
+    transform: scale(1.75) rotate(-45deg);
+    top: 0;
+    left: calc(-1 * var(--smart-slider-track-size) - var(--smart-slider-thumb-width) - 7px);
+}
+
+smart-slider[show-thumb-label][orientation="vertical"][thumb-label-position="far"].material:focus .smart-thumb {
+    top: 0;
+    left: calc(var(--smart-slider-track-size) + var(--smart-slider-thumb-width) + 7px);
+    transform: scale(1.75) rotate(135deg);
+    transition: transform 0.2s ease-out, left 0.2s ease-out;
+}
+
+smart-slider[show-thumb-label].material:focus .smart-thumb,
+smart-slider[show-thumb-label][thumb-label-position="near"].material:focus .smart-thumb,
+smart-slider[show-thumb-label][orientation="horizontal"].material:focus .smart-thumb,
+smart-slider[show-thumb-label][orientation="horizontal"][thumb-label-position="near"].material:focus .smart-thumb {
+    transform: scale(1.75) rotate(45deg);
+    transition: transform 0.2s ease-out, top 0.2s ease-out;
+    border-radius: 50% 50% 0;
+    top: calc(-1 * var(--smart-slider-track-size) - var(--smart-slider-thumb-height) - 7px);
+}
+
+    smart-slider[show-thumb-label].material:focus .smart-thumb.enable-animation,
+    smart-slider[show-thumb-label][orientation="horizontal"].material:focus .smart-thumb.enable-animation,
+    smart-slider[show-thumb-label][orientation="horizontal"][thumb-label-position="near"].material:focus .smart-thumb.enable-animation {
+        transition: transform 0.2s ease-out, margin-left .4s cubic-bezier(.25,.8,.25,1), top 0.2s ease-out;
+    }
+
+smart-slider[show-thumb-label][orientation="vertical"].material:focus .smart-thumb.enable-animation {
+    transition: transform 0.2s ease-out, margin-top .4s cubic-bezier(.25,.8,.25,1), left 0.2s ease-out;
+}
+
+smart-slider[show-thumb-label].material .smart-thumb-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    font-size: 7px;
+    font-family: var(--smart-material-font-family);
+    color: white;
+}
+
+smart-slider[show-thumb-label][orientation="vertical"].material .smart-thumb-label {
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+
+smart-slider[show-thumb-label][orientation="vertical"][thumb-label-position="far"].material .smart-thumb-label {
+    transform: translate(-50%,-50%) rotate(225deg);
+}
+
+smart-slider[show-thumb-label].material .smart-tooltip {
+    transform: scale(0.5) rotate(-45deg) translate(-25px, -105px);
+    top: 50%;
+    left: 0;
+    text-align: center;
+}
+
+smart-slider[show-thumb-label][tooltip-position="far"].material .smart-tooltip {
+    transform: scale(0.5) rotate(-45deg) translate(-25px, -15px);
+}
+
+smart-slider[show-thumb-label][orientation="vertical"].material .smart-tooltip,
+smart-slider[show-thumb-label][orientation="vertical"][tooltip-position="near"].material .smart-tooltip {
+    transform: scale(0.5) rotate(45deg) translate(-130px, 25px);
+}
+
+smart-slider.material[show-thumb-label][thumb-label-position="far"]:focus .smart-thumb {
+    transform: scale(1.75) rotate(225deg);
+    transition: transform 0.2s ease-out, top 0.2s ease-out;
+    top: calc(var(--smart-slider-track-size) + var(--smart-slider-thumb-height) + 7px);
+}
+
+smart-slider.material[show-thumb-label][thumb-label-position="far"] .smart-thumb-label,
+smart-slider.material[show-thumb-label][thumb-label-position="far"][orientation="horizontal"] .smart-thumb-label {
+    transform: translate(-50%,-50%) rotate(135deg);
+}
+
+/* smart-tank */
+
+smart-tank.material {
+    --smart-tank-default-width: 150px; /* smartTank default width */
+    --smart-tank-default-height: 175px; /* smartTank default height*/
+    --smart-tank-scale-size: 105px; /* smartTank scale size*/
+    --smart-tank-tooltip-width: 80px; /* smartTank tooltip width*/
+    --smart-tank-tooltip-height: 30px; /* smartTank thumb height*/
+    --smart-tank-tick-size: 10px; /* smartTank tick size. Horizontal Tank tick height = Vertical Tank tick width. */
+    --smart-tank-minor-tick-size: 5px; /* smartTank minor tick size. */
+    --smart-material-background-color: #B9B9B9;
+    --smart-material-focused-background-color: #A6A6A6;
+    --smart-material-fill-color: #009688;
+    --smart-border-width: 0px;
+}
+
+    smart-tank.material .smart-track {
+        border-radius: 2px;
+        box-shadow: 0 0px 5px 2px rgba(0,0,0, 0.3) inset;
+    }
+
+    smart-tank.material:focus .smart-track {
+        box-shadow: 0.75px 0.2px 1.5px 0.2px rgba(0,0,0, 0.3), 0 0px 5px 2px rgba(0,0,0, 0.3) inset;
+    }
+
+    smart-tank.material .smart-value,
+    smart-tank[orientation="horizontal"].material .smart-value {
+        background-color: var(--smart-material-fill-color);
+        border-radius: 0 0 2px 2px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0.5px inset;
+    }
+
+    /* Atttention: If slider's "max" property is not 100 this has to be changed to the appropriate value */
+    smart-tank.material[value="100"] .smart-value,
+    smart-tank[orientation="vertical"][value="100"].material .smart-value,
+    smart-tank[orientation="horizontal"][value="100"].material .smart-value {
+        border-radius: 2px;
+    }
+
+smart-tank[orientation="horizontal"][inverted].material .smart-value {
+    border-radius: 0 2px 2px 0;
+}
+
+smart-tank[orientation="horizontal"].material .smart-value {
+    border-radius: 2px 0 0 2px;
+}
+
+smart-tank[show-thumb-label][value="0"].material:focus .smart-thumb {
+    --smart-material-fill-color: #ACACAC;
+}
+
+smart-tank.material[show-thumb-label] .smart-thumb:before {
+    content: initial;
+}
+
+smart-tank[show-thumb-label].material .smart-thumb {
+    left: calc(-1 * var(--smart-tank-thumb-width) / 2);
+    transform: scale(0) rotate(-45deg);
+    transition: transform 0.2s ease-out, left 0.2s ease-out;
+    background-color: var(--smart-material-fill-color);
+}
+
+smart-tank[show-thumb-label][orientation="horizontal"].material .smart-thumb {
+    left: 100%;
+    top: calc(-1 * var(--smart-tank-thumb-height) / 2);
+    transform: scale(0) rotate(45deg);
+    transition: transform 0.2s ease-out, top 0.2s ease-out;
+}
+
+smart-tank[show-thumb-label][orientation="horizontal"].material:focus .smart-thumb,
+smart-tank[show-thumb-label][thumb-label-position="near"][orientation="horizontal"].material:focus .smart-thumb {
+    left: 100%;
+    top: calc(-1 * var(--smart-tank-thumb-height) * 2);
+    transform: scale(1.75) rotate(45deg);
+    transition: transform 0.2s ease-out, top 0.2s ease-out;
+    border-radius: 50% 50% 0;
+}
+
+smart-tank[show-thumb-label].material:focus .smart-thumb,
+smart-tank[show-thumb-label][thumb-label-position="near"].material:focus .smart-thumb {
+    left: calc(-1 * var(--smart-tank-thumb-width) * 2);
+    transform: scale(1.75) rotate(-45deg);
+    transition: transform 0.2s ease-out, left 0.2s ease-out;
+    border-radius: 50% 50% 0;
+}
+
+smart-tank[show-thumb-label][thumb-label-position="far"].material .smart-thumb {
+    left: calc(var(--smart-tank-default-width) - var(--smart-tank-thumb-width));
+    transform: scale(0) rotate(135deg);
+}
+
+smart-tank[show-thumb-label][orientation="horizontal"][inverted].material .smart-thumb,
+smart-tank[show-thumb-label][orientation="horizontal"][inverted].material:focus .smart-thumb,
+smart-tank[show-thumb-label][thumb-label-position="near"][orientation="horizontal"][inverted].material .smart-thumb,
+smart-tank[show-thumb-label][thumb-label-position="far"][orientation="horizontal"][inverted].material .smart-thumb,
+smart-tank[show-thumb-label][thumb-label-position="near"][orientation="horizontal"][inverted].material:focus .smart-thumb,
+smart-tank[show-thumb-label][thumb-label-position="far"][orientation="horizontal"][inverted].material:focus .smart-thumb {
+    left: calc(-1 * var(--smart-tank-thumb-width) / 2);
+}
+
+smart-tank[show-thumb-label][orientation="horizontal"][thumb-label-position="far"].material .smart-thumb {
+    left: 100%;
+    top: calc(100% - var(--smart-tank-thumb-height) / 2);
+    transform: scale(0) rotate(235deg);
+}
+
+smart-tank[show-thumb-label][orientation="horizontal"][thumb-label-position="far"].material:focus .smart-thumb {
+    left: 100%;
+    top: calc(100% + var(--smart-tank-thumb-height));
+    transform: scale(1.75) rotate(225deg);
+    transition: transform 0.2s ease-out, top 0.2s ease-out;
+}
+
+smart-tank[show-thumb-label][thumb-label-position="far"].material:focus .smart-thumb {
+    left: calc(var(--smart-tank-default-width) + var(--smart-tank-thumb-width) / 2);
+    transform: scale(1.75) rotate(135deg);
+    transition: transform 0.2s ease-out, left 0.2s ease-out;
+}
+
+smart-tank[show-thumb-label].material .smart-thumb-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    font-size: 7px;
+    font-family: var(--smart-material-font-family);
+    color: white;
+}
+
+smart-tank[show-thumb-label].material .smart-thumb-label {
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+
+smart-tank[show-thumb-label][thumb-label-position="far"].material .smart-thumb-label {
+    transform: translate(-50%,-50%) rotate(225deg);
+}
+
+smart-tank[show-thumb-label][orientation="horizontal"].material .smart-thumb-label {
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+smart-tank[show-thumb-label][orientation="horizontal"][thumb-label-position="far"].material .smart-thumb-label {
+    transform: translate(-50%,-50%) rotate(135deg);
+}
+
+/* smart-tabs */
+smart-tabs.material {
+    --smart-material-background-color: #00BCD4;
+    border: none;
+    padding: 0;
+    outline: none;
+    font-family: var(--smart-material-font-family);
+}
+
+    smart-tabs.material .smart-tabs-header-section {
+        background-color: var(--smart-material-background-color);
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    smart-tabs.material .smart-tab-label-container.smart-tab-selected,
+    smart-tabs.material .smart-tab-group-selected,
+    smart-tabs.material .smart-tab-group-selected .smart-tab-group-arrow {
+        background-color: initial;
+        color: white;
+    }
+
+        smart-tabs.material .smart-tab-label-container.smart-tab-selected:before,
+        smart-tabs.material .smart-tab-group-container.smart-tab-group-selected:before {
+            content: '';
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: calc(100% - 2px);
+            background-color: var(--smart-material-secondary-color);
+        }
+
+    smart-tabs.material[tab-text-orientation="vertical"] .smart-tab-label-container.smart-tab-selected:before,
+    smart-tabs.material[tab-text-orientation="vertical"] .smart-tab-group-container.smart-tab-group-selected:before {
+        top: calc(100% - 2px);
+    }
+
+    smart-tabs.material[tab-position="bottom"] .smart-tab-label-container.smart-tab-selected:before,
+    smart-tabs.material[tab-position="bottom"] .smart-tab-group-container.smart-tab-group-selected:before {
+        top: 0;
+    }
+
+    smart-tabs.material[vertical] .smart-tab-label-container.smart-tab-selected:before,
+    smart-tabs.material[vertical] .smart-tab-group-container.smart-tab-group-selected:before {
+        width: 2px;
+        height: 100%;
+        top: 0;
+        left: calc(100% - 2px);
+    }
+
+    smart-tabs.material[tab-position="right"] .smart-tab-label-container.smart-tab-selected:before,
+    smart-tabs.material[tab-position="right"] .smart-tab-group-container.smart-tab-group-selected:before {
+        left: 0;
+    }
+
+    smart-tabs.material .smart-tab-label-container.smart-tab-hovered,
+    smart-tabs.material .smart-tab-group-container.smart-tab-hovered,
+    smart-tabs.material .smart-tab-hovered .smart-tab-group-arrow {
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    smart-tabs.material .smart-tab-label-text-container {
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    smart-tabs.material .smart-tab-label-text-wrapper {
+        padding: 10px;
+    }
+
+    smart-tabs.material .ripple-agent {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
+    smart-tabs.material .smart-tabs-content-section {
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    smart-tabs.material .smart-tabs-scroll-button {
+        background-color: transparent;
+    }
+
+    smart-tabs.material smart-repeat-button button:active,
+    smart-tabs.material smart-repeat-button button.active {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    smart-tabs.material .smart-arrow-left:after,
+    smart-tabs.material .smart-arrow-right:after,
+    smart-tabs.material .smart-arrow-up:after,
+    smart-tabs.material .smart-arrow-down:after {
+        color: white;
+        font-size: 10px;
+    }
+
+    smart-tabs.material .smart-tabs-drop-down-button {
+        background-color: transparent;
+    }
+
+    smart-tabs.material .smart-tabs-drop-down-button-arrow {
+        color: inherit;
+    }
+
+    smart-tabs.material .smart-tabs-drop-down-button-drop-down {
+        top: 0;
+        background-color: #FAFAFA;
+    }
+
+        smart-tabs.material .smart-tabs-drop-down-button-drop-down .smart-tab-label-container {
+            padding: 20px;
+            color: black;
+            font-size: 14px;
+        }
+
+    smart-tabs.material .smart-tab-group-arrow {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    smart-tabs.material .smart-tab-group-drop-down {
+        background-color: #FAFAFA;
+    }
+
+        smart-tabs.material .smart-tab-group-drop-down .smart-tab-label-text-wrapper {
+            padding: 20px;
+        }
+
+    smart-tabs.material .smart-tab-group-drop-down {
+        top: 0;
+        color: rgba(0, 0, 0, 0.7);
+    }
+
+        smart-tabs.material .smart-tab-group-drop-down .smart-tab-hovered {
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        smart-tabs.material .smart-tab-group-drop-down .smart-tab-selected {
+            color: black;
+        }
+
+        smart-tabs.material .smart-tab-group-drop-down .smart-tab-label-container.smart-tab-selected:before {
+            display: none;
+        }
+
+/* smart-button */
+
+smart-button.material,
+smart-button.material.flat,
+smart-button.material.raised,
+smart-button.material.floating {
+    width: 88px;
+    height: 36px;
+    border-radius: 2px;
+    font-size: 14px;
+    box-shadow: 0.2px 1px 1px 1px rgba(0,0,0, 0.3);
+}
+
+    smart-button.material.floating {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+        smart-button.material.floating button,
+        smart-button.material-dark.floating button {
+            border-radius: 50%;
+        }
+
+        smart-button.material button,
+        smart-button.material.raised button,
+        smart-button.material.floating button {
+            background-color: var(--smart-material-background-color);
+        }
+
+        smart-repeat-button.material button,
+        smart-button.material.flat button,
+        smart-button.material.floating button {
+            color: var(--smart-material-color);
+        }
+
+    smart-button.material.flat,
+    smart-button.material.flat:active {
+        box-shadow: initial;
+    }
+
+        smart-button.material button,
+        smart-button.material.flat button,
+        smart-button.material.raised button,
+        smart-button.material-dark button,
+        smart-button.material.flat-dark button,
+        smart-button.material.raised-dark button,
+        smart-button.material.floating button,
+        smart-button.material.floating-dark button,
+        smart-repeat-button.material button,
+        smart-repeat-button.material-dark button {
+            text-transform: uppercase;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            user-select: none;
+            font-weight: 600;
+            border: initial;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    smart-button.material button,
+    smart-button.material.raised button,
+    smart-button.material.floating button {
+        color: #555;
+    }
+
+    smart-button.material.flat button {
+        background-color: transparent;
+    }
+
+        smart-button.material.flat button:focus,
+        smart-repeat-button.material button:focus {
+            background-color: var(--smart-material-focused-background-color); /*rgba(224, 224, 224, .75); */
+        }
+
+        smart-button[disabled].material button,
+        smart-button[disabled].material.raised button,
+        smart-button.material button.hover,
+        smart-button.material button:hover,
+        smart-button.material.raised button.hover,
+        smart-button.material.raised button:hover,
+        smart-button.material.flat button.hover,
+        smart-button.material.flat button:hover,
+        smart-button.material.floating button.hover,
+        smart-button.material.floating button:hover,
+        smart-repeat-button.material button:hover,
+        smart-repeat-button.material button.hover {
+            background-color: var(--smart-material-hovered-background-color);
+        }
+
+        smart-repeat-button.material button:active,
+        smart-button.material.flat button:active {
+            background-color: var(--smart-material-pressed-background-color);
+        }
+
+smart-button[disabled].material.flat button,
+smart-button[disabled].material.flat button,
+smart-repeat-button[disabled].material button {
+    background-color: #EEEEEE;
+}
+
+smart-button[disabled].material,
+smart-button[disabled].material.raised,
+smart-button[disabled].material.floating,
+smart-button[disabled].material.floating:active {
+    box-shadow: initial;
+    background-color: #EEEEEE;
+}
+
+smart-button.material button:focus,
+smart-button.material.raised button:focus,
+smart-button.material.floating button:focus {
+    background-color: var(--smart-material-pressed-background-color); /* Inverted for raised buttons */
+}
+
+smart-button.material button:active,
+smart-button.material.raised button:active,
+smart-button.material.floating button:active {
+    background-color: var(--smart-material-focused-background-color); /* Inverted for raised buttons */
+}
+
+smart-button.material:active,
+smart-button.material.raised:active,
+smart-button.material.floating:active,
+smart-button.material-dark.floating:active {
+    box-shadow: 0.2px 5px 10px 3px rgba(0,0,0, 0.3);
+}
+
+/* smart-toggle-button */
+
+smart-toggle-button.material {
+    width: 50px;
+    height: 50px;
+    --smart-ripple-color: rgba(0,0,0,0.1);
+    --smart-material-color: #C8C8C8;
+    --smart-material-pressed-color: #000;
+    --smart-material-pressed-background-color: rgba(0,0,0,0.2);
+    border-radius: 50%;
+}
+
+    smart-toggle-button.material[checked] button {
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-toggle-button.material button {
+        border: initial;
+        color: var(--smart-material-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+    }
+
+        smart-toggle-button.material button:active {
+            background-color: initial;
+        }
+
+        smart-toggle-button.material button:focus,
+        smart-toggle-button.material[checked] button:focus {
+            background-color: var(--smart-material-focused-background-color);
+        }
+
+    smart-toggle-button.material[checked] button:hover,
+    smart-toggle-button.material[checked] button.hover {
+        background-color: var(--smart-material-hovered-background-color);
+    }
+
+    smart-toggle-button.material button:hover,
+    smart-toggle-button.material button.hover {
+        background-color: var(--smart-material-focused-background-color);
+    }
+
+        smart-toggle-button.material button.hover:focus,
+        smart-toggle-button.material button:hover:focus {
+            background-color: var(--smart-material-hovered-background-color);
+        }
+
+    smart-toggle-button.material[disabled] button:hover,
+    smart-toggle-button.material[disabled] button.hover {
+        background-color: initial;
+    }
+
+    smart-toggle-button.material[checked] button {
+        background-color: var(--smart-material-pressed-background-color);
+    }
+
+
+
+/* smart-power-button */
+
+smart-power-button.material,
+smart-power-button.material.flat,
+smart-power-button.material.raised {
+    --smart-ripple-color: rgba(0,0,0,0.1);
+    --smart-material-pressed-background-color: rgba(0,0,0,0.7);
+    width: 40px;
+    height: 40px;
+}
+
+    smart-power-button.material,
+    smart-power-button.material.raised {
+        box-shadow: 0.2px 1px 1px 1px rgba(0,0,0, 0.3);
+        border-radius: 50%;
+    }
+
+        smart-power-button.material.flat {
+            box-shadow: initial;
+        }
+
+        smart-power-button.material .smart-input {
+            border: initial;
+            background-color: transparent;
+        }
+
+        smart-power-button.material[disabled] .smart-input:hover,
+        smart-power-button.material.flat[disabled] .smart-input:hover,
+        smart-power-button.material.raised[disabled] .smart-input:hover {
+            background-color: transparent;
+            color: initial;
+        }
+
+smart-power-button[checked].material .smart-input,
+smart-power-button[checked].material.flat .smart-input,
+smart-power-button[checked].material.raised .smart-input {
+    background-color: var(--smart-material-pressed-background-color);
+}
+
+smart-power-button[checked].material,
+smart-power-button[checked].material.raised {
+    box-shadow: 0.2px 5px 10px 3px rgba(0,0,0, 0.3);
+}
+
+    smart-power-button[checked].material.flat {
+        box-shadow: initial;
+    }
+
+smart-power-button.material .smart-input:hover,
+smart-power-button.material.flat .smart-input:hover,
+smart-power-button.material.raised .smart-input:hover {
+    background-color: var(--smart-material-hovered-background-color);
+    color: var(--smart-material-color);
+}
+
+smart-power-button[checked].material.flat .smart-input:hover,
+smart-power-button[checked].material.flat .smart-input:hover:focus,
+smart-power-button[checked].material .smart-input:hover,
+smart-power-button[checked].material .smart-input:hover:focus {
+    background-color: rgba(0,0,0,0.6);
+}
+
+smart-power-button.material .smart-input:focus,
+smart-power-button.material.flat .smart-input:focus,
+smart-power-button.material.raised .smart-input:focus {
+    background-color: var(--smart-material-focused-background-color);
+}
+
+smart-power-button[checked].material .smart-input:focus,
+smart-power-button[checked].material.flat .smart-input:focus,
+smart-power-button[checked].material.raised .smart-input:focus {
+    background-color: var(--smart-material-pressed-background-color);
+}
+
+smart-power-button.material .smart-input:focus:hover,
+smart-power-button.material.flat .smart-input:focus:hover,
+smart-power-button.material.raised .smart-input:focus:hover {
+    background-color: var(--smart-material-hovered-background-color);
+}
+
+
+/* smart-led */
+
+smart-led.material {
+    --smart-ripple-color: rgba(0,0,0,0.1);
+    --smart-material-pressed-background-color: #595959;
+    --smart-material-indeterminate-background-color: rgba(0,0,0, 0.3);
+    box-shadow: 0.2px 1px 1px 1px rgba(0,0,0, 0.3);
+    width: 40px;
+    height: 40px;
+}
+
+    smart-led.material .smart-input:focus {
+        outline: none;
+    }
+
+    smart-led.material .smart-input {
+        background-color: transparent;
+        border: initial;
+    }
+
+    smart-led.material .smart-true-content-container {
+        background-color: var(--smart-material-pressed-background-color);
+        box-shadow: 0.2px 5px 10px 3px rgba(0,0,0, 0.3);
+    }
+
+    smart-led.material .smart-false-content-container {
+        background-color: transparent;
+    }
+
+    smart-led.material .smart-indeterminate-content-container {
+        background-color: var(--smart-material-indeterminate-background-color);
+    }
+
+
+/* smart-repeat-button */
+
+smart-repeat-button.material {
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+    user-select: none;
+}
+
+    smart-repeat-button.material button {
+        border: initial;
+    }
+
+/* smart-radio-button */
+
+smart-radio-button.material {
+    --smart-material-color: #555;
+    --smart-material-background-color: #009788;
+    --smart-ripple-color: rgba(0, 151, 136, 0.5);
+    --smart-material-focused-checked-background-color: rgba(0, 151, 136, 0.15);
+    --smart-material-focused-background-color: rgba(0,0,0,0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+    smart-radio-button.material > .smart-container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    smart-radio-button.material .smart-label:empty {
+        margin: initial;
+    }
+
+    smart-radio-button.material .smart-input {
+        border-width: 2px;
+        padding: 3px;
+        border-color: var(--smart-material-color);
+    }
+
+    smart-radio-button.material:focus {
+        background-color: var(--smart-material-focused-background-color);
+    }
+
+smart-radio-button[checked].material:focus {
+    background-color: var(--smart-material-focused-checked-background-color);
+}
+
+smart-radio-button[checked].material .smart-input {
+    background-color: var(--smart-material-background-color);
+    border-color: var(--smart-material-background-color);
+}
+
+/* smart-check-box */
+
+smart-check-box.material {
+    --smart-material-color: #555;
+    --smart-material-background-color: #009788;
+    --smart-ripple-color: rgba(0, 151, 136, 0.5);
+    --smart-material-focused-checked-background-color: rgba(0, 151, 136, 0.15);
+    --smart-material-focused-background-color: rgba(0,0,0,0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+    smart-check-box.material > .smart-container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    smart-check-box.material .smart-label:empty {
+        margin: initial;
+    }
+
+    smart-check-box.material .smart-input {
+        border-width: 2px;
+        border-radius: 2px;
+        border-color: var(--smart-material-color);
+        background-color: transparent;
+        position: relative;
+    }
+
+    smart-check-box.material:focus {
+        background-color: var(--smart-material-focused-background-color);
+    }
+
+        smart-check-box.material:focus .smart-input {
+            background-color: transparent;
+        }
+
+    smart-check-box.material[checked].material:focus {
+        background-color: var(--smart-material-focused-checked-background-color);
+    }
+
+    smart-check-box.material[checked].material .smart-input {
+        background-color: var(--smart-material-background-color);
+        border-color: var(--smart-material-background-color);
+    }
+
+        smart-check-box.material[checked].material .smart-input:after {
+            content: '\e876';
+            font-family: 'Material icons';
+            font-size: 15px;
+            font-weight: 100;
+            color: #fff;
+            line-height: 100%;
+        }
+
+
+/* smart-switch-button */
+
+smart-switch-button.material {
+    --smart-material-color: #fff;
+    --smart-switch-button-default-width: 40px;
+    --smart-switch-button-default-height: 30px;
+    --smart-material-background-color: #808080;
+    --smart-material-pressed-background-color: #009788;
+    --smart-switch-button-thumb-size: calc(var(--smart-switch-button-default-height) - 8px);
+    border: initial;
+    overflow: visible;
+}
+
+    smart-switch-button.material .smart-false-content-container,
+    smart-switch-button.material .smart-true-content-container {
+        background-color: initial;
+    }
+
+    smart-switch-button.material > .smart-container {
+        overflow: visible;
+    }
+
+    smart-switch-button.material .smart-thumb {
+        border-radius: 50%;
+        height: var(--smart-switch-button-thumb-size);
+        background-color: var(--smart-material-color);
+        box-shadow: 0.2px 1px 1px 1px rgba(0,0,0, 0.3);
+        margin-top: 4px;
+        position: relative;
+    }
+
+    smart-switch-button.material[checked] .smart-thumb {
+        background-color: var(--smart-material-pressed-background-color);
+    }
+
+    smart-switch-button.material .smart-container::before {
+        content: "";
+        position: absolute;
+        width: 90%;
+        height: 50%;
+        left: 5%;
+        top: 25%;
+        border-radius: 10px;
+        background-color: var(--smart-material-background-color);
+    }
+
+    smart-switch-button.material[checked] .smart-container::before {
+        background-color: var(--smart-material-pressed-background-color);
+        opacity: 0.6;
+    }
+
+    /* Material Button Circle Effect */
+
+    smart-switch-button.material .smart-thumb::before {
+        background-color: white;
+        position: absolute;
+        width: 250%;
+        height: 250%;
+        left: -75%;
+        top: -75%;
+        transition: 0.2s;
+        display: block;
+        border-radius: 50%;
+        content: "";
+        transform: scale(0);
+        opacity: 0.2;
+        animation: 0;
+    }
+
+    smart-switch-button.material[disabled] .smart-thumb::before {
+        content: none;
+    }
+
+    smart-switch-button.material[checked] .smart-thumb:active::before,
+    smart-switch-button.material[checked]:focus .smart-thumb::before {
+        transform: scale(1);
+        animation: button-wave-effect 0.1s ease-in;
+        background-color: var(--smart-material-pressed-background-color);
+    }
+
+    smart-switch-button.material .smart-thumb:active::before,
+    smart-switch-button.material:focus .smart-thumb::before {
+        transform: scale(1);
+        animation: button-wave-effect 0.1s ease-in;
+        background-color: rgba(0,0,0, 0.5);
+    }
+
+@keyframes button-wave-effect {
+    0% {
+        transform: scale(0.2);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* smart-date-time-picker */
+
+smart-date-time-picker.material {
+    --smart-date-time-picker-drop-down-height: 350px;
+    --smart-material-pressed-background-color: #009788;
+    --smart-material-pressed-color: #fff;
+    --smart-material-color: #000;
+}
+
+    smart-date-time-picker.material smart-calendar.material,
+    smart-date-time-picker.material smart-time-picker.material {
+        font-size: 12px;
+        width: 100%;
+        height: 100%;
+        border-radius: initial;
+        box-shadow: initial;
+    }
+
+    smart-date-time-picker.material .smart-date-time-popup {
+        border-radius: 2px;
+        box-shadow: 3px 5px 20px 1px #A9A9A9;
+        /*overflow: hidden;*/ /* Issue in Chrome */
+        border: initial;
+    }
+
+    smart-date-time-picker.material .smart-calendar-button-pressed {
+        background-color: var(--smart-material-pressed-background-color);
+    }
+
+    smart-date-time-picker.material .smart-drop-down-header > .smart-selected {
+        color: var(--smart-material-pressed-color);
+        background-color: var(--smart-material-pressed-background-color);
+    }
+
+    smart-date-time-picker.material .smart-calendar-button {
+        border-radius: 2px;
+    }
+
+        smart-date-time-picker.material .smart-calendar-button.hover::after {
+            color: var(--smart-material-pressed-background-color);
+        }
+
+    smart-date-time-picker.material .smart-calendar-button-pressed::after,
+    smart-date-time-picker.material .smart-calendar-button-pressed.hover::after {
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-date-time-picker.material .smart-date-time-input.hover {
+        border-color: var(--smart-material-pressed-background-color);
+    }
+
+    smart-date-time-picker.material .smart-spin-button .smart-arrow:after,
+    smart-date-time-picker[readonly].material .smart-spin-button button .smart-arrow:after {
+        color: var(--smart-material-color);
+    }
+
+    smart-date-time-picker.material .smart-spin-button:hover .smart-arrow:after,
+    smart-date-time-picker.material .smart-spin-button.hover .smart-arrow:after,
+    smart-date-time-picker[readonly].material .smart-spin-button button:active .smart-arrow:after,
+    smart-date-time-picker[readonly].material .smart-spin-button button.active .smart-arrow:after {
+        color: var(--smart-material-pressed-background-color);
+    }
+
+    smart-date-time-picker.material .smart-spin-button button:active .smart-arrow:after,
+    smart-date-time-picker.material .smart-spin-button button.active .smart-arrow:after {
+        color: var(--smart-material-color);
+    }
+
+    smart-date-time-picker.material button:active {
+        background-color: var(--smart-material-pressed-background-color);
+    }
+
+    smart-date-time-picker.material lendar .smart-calendar-title div:first-of-type {
+        font-size: 125%;
+    }
+
+    smart-date-time-picker.material .smart-calendar-title div:first-of-type {
+        font-size: inherit;
+    }
+
+    smart-date-time-picker.material .smart-calendar-title div:last-of-type {
+        font-size: 175%;
+    }
+
+    smart-date-time-picker.material smart-calendar .smart-calendar-title,
+    smart-date-time-picker.material smart-calendar[view="portrait"] .smart-calendar-title {
+        border-radius: initial;
+    }
+
+    smart-date-time-picker.material[focused] .smart-label,
+    smart-date-time-picker.material[focused] .smart-hint {
+        color: var(--smart-material-pressed-background-color);
+    }
+
+    smart-date-time-picker.material .smart-date-time-input {
+        border-left: initial;
+        border-top: initial;
+        border-right: initial;
+        background-color: transparent;
+        border-bottom-color: #D1D1D1;
+    }
+
+    smart-date-time-picker.material[popup-mode="dateAndTime"] .smart-drop-down-header > div {
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-date-time-picker.material[popup-mode="dateAndTime"] .smart-drop-down-header > .smart-selected {
+        color: white;
+        background-color: var(--smart-material-header-background-color);
+    }
+
+    smart-date-time-picker.material[focused] > .smart-container > .smart-content:after {
+        position: absolute;
+        content: ' ';
+        width: calc(100% - var(--smart-date-time-picker-spin-buttons-width) - var(--smart-date-time-picker-calendar-button-width));
+        left: var(--smart-date-time-picker-spin-buttons-width);
+        height: 2px;
+        top: calc(100% - 2px);
+        background-color: var(--smart-material-pressed-background-color);
+        animation: splash 0.15s ease-out;
+    }
+
+@keyframes splash {
+    0% {
+        width:0%;
+        left:50%;
+    }
+
+    100% {
+        width:100%;
+        left:0%;
+    }
+}
+
+
+/* smart-calendar */
+
+smart-calendar.material {
+    --smart-material-background-color: #fff;
+    --smart-material-hovered-background-color: rgba(169,169,169,0.5);
+    --smart-material-pressed-background-color: #009788;
+    --smart-material-pressed-color: #fff;
+    --smart-material-color: #000;
+    --smart-material-today-background-color: rgba(0, 151,136, 0.5);
+    --smart-font-size: 14px;
+    box-shadow: 3px 5px 20px 1px #A9A9A9;
+    font-family: var(--smart-material-font-family);
+    border: initial;
+    border-radius: 2px;
+    background-color: var(--smart-material-background-color);
+    color: var(--smart-material-color);
+}
+
+    smart-calendar.material .smart-calendar-title,
+    smart-calendar.material[view="portrait"] .smart-calendar-title {
+        border-radius: 2px 2px 0 0;
+    }
+
+    smart-calendar.material[view="landscape"] .smart-calendar-title {
+        border-radius: 2px 0 0 2px;
+    }
+
+    smart-calendar.material .smart-months-container,
+    smart-calendar.material .smart-next-months-container {
+        padding: 5%;
+    }
+
+    smart-calendar.material .smart-calendar-week div {
+        padding-top: 3.5%;
+        padding-bottom: 3.5%;
+    }
+
+smart-calendar[view="landscape"].material {
+    width: 400px;
+    height: 325px;
+}
+
+smart-calendar.material,
+smart-calendar[view="portrait"].material {
+    width: 300px;
+    height: 400px;
+}
+
+    smart-calendar.material .smart-calendar-week div,
+    smart-calendar.material .smart-content:focus .smart-calendar-week div[focused] {
+        border-radius: 50%;
+    }
+
+        smart-calendar.material .smart-calendar-week div.hovered {
+            background-color: var(--smart-material-hovered-background-color);
+        }
+
+        smart-calendar.material .smart-calendar-week div[selected],
+        smart-calendar.material .smart-calendar-week div[selected].hovered {
+            background-color: var(--smart-material-pressed-background-color);
+            color: var(--smart-material-pressed-color);
+        }
+
+        smart-calendar.material .smart-calendar-week div[today] {
+            color: var(--smart-material-color);
+            background-color: var(--smart-material-today-background-color);
+        }
+
+            smart-calendar.material .smart-calendar-week div[today][selected] {
+                background-color: var(--smart-material-pressed-background-color);
+                color: var(--smart-material-pressed-color);
+            }
+
+    smart-calendar.material .smart-calendar-container > .smart-content {
+        margin: 0;
+        width: 100%;
+        line-height: 1.25;
+    }
+
+/* Firefox Specific CSS */
+@-moz-document url-prefix() {
+    /*smart-calendar.material .smart-months-container {
+        line-height: 1.15;
+    }*/
+}
+
+smart-calendar.material .smart-calendar-title {
+    background-color: var(--smart-material-pressed-background-color);
+    color: var(--smart-material-pressed-color);
+    font-family: var(--smart-material-font-family);
+}
+
+smart-calendar.material .smart-content smart-list-box smart-list-item[selected][focused],
+smart-calendar.material .smart-content smart-list-box smart-list-item[selected] {
+    color: var(--smart-material-pressed-background-color);
+}
+
+smart-calendar.material .smart-content smart-list-box:focus:not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected][focused] {
+    color: var(--smart-material-pressed-background-color);
+}
+
+smart-calendar.material .smart-calendar-title div:first-of-type {
+    font-size: 100%;
+}
+
+smart-calendar.material .smart-calendar-title div {
+    font-size: 175%;
+}
+
+/* smart-progress-bar */
+
+smart-progress-bar.material > .smart-container,
+smart-circular-progress-bar.material > .smart-container {
+    border: initial;
+    border-radius: 2px;
+}
+
+smart-circular-progress-bar.material > .smart-container {
+    border-radius: 50%;
+}
+
+smart-progress-bar.material {
+    background-color: var(--smart-material-background-color);
+    /*box-shadow: inset 0 0 0 0.5px rgba(0,0,0,0.05);*/
+    box-shadow: initial;
+    font-family: var(--smart-material-font-family);
+}
+
+smart-circular-progress-bar.material .smart-value-path {
+    stroke: var(--smart-material-background-color);
+}
+
+smart-progress-bar.material .smart-value {
+    background-color: var(--smart-material-fill-color);
+}
+
+smart-circular-progress-bar.material .smart-value {
+    stroke: var(--smart-material-fill-color);
+}
+
+smart-circular-progress-bar.material .smart-label-container {
+    border: initial;
+}
+
+/* smart-list-box */
+
+smart-list-box.material {
+    --smart-material-background-color: #F7F7F7;
+    --smart-material-pressed-background-color: #E0E0E0;
+    --smart-ripple-color: #D5D5D5;
+    background-color: var(--smart-material-background-color);
+    font-family: var(--smart-material-font-family);
+    box-shadow: 3px 4px 10px 0px #A9A9A9;
+    border: initial;
+    padding: 5px;
+}
+
+    smart-list-box.material[selection-mode="checkBox"] .smart-input {
+        border-radius: 2px;
+    }
+
+    smart-list-box.material[selection-mode="checkBox"] .smart-list-item-container,
+    smart-list-box.material[selection-mode="radioButton"] .smart-list-item-container {
+        margin-left: 5%;
+    }
+
+    smart-list-box.material smart-list-item {
+        overflow: hidden;
+    }
+
+        smart-list-box.material smart-list-item > .smart-container {
+            position: relative;
+        }
+
+    smart-list-box.material smart-button {
+        --smart-material-pressed-background-color: #CCCCCC;
+    }
+
+    smart-list-box.material .smart-list-items-container {
+        padding: 5px;
+    }
+
+    smart-list-box.material .smart-list-items-group-label {
+        border-bottom: 2px solid var(--smart-material-items-group-border-color);
+        color: var(--smart-material-items-group-border-color);
+    }
+
+    smart-list-box.material smart-list-item {
+        border-bottom: 0.2px solid var(--smart-material-items-border-color);
+    }
+
+    smart-list-box.material smart-list-items-group smart-list-item:last-of-type {
+        border-bottom: initial;
+    }
+
+    smart-list-box.material .smart-list-items-group-label {
+        font-weight: 400;
+    }
+
+    smart-list-box.material input {
+        border: initial;
+        box-shadow: 0px 1px 2px 0 #CCCCCC;
+        padding: 5px;
+    }
+
+    smart-list-box.material:focus:not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected][focused] {
+        background-color: var(--smart-material-pressed-background-color);
+        color: black;
+    }
+
+    smart-list-box.material:not(:focus):not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected][focused] {
+        background-color: var(--smart-material-pressed-background-color);
+    }
+
+    smart-list-box.material:not(:focus):not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected]:not([focused]) {
+        background-color: var(--smart-material-background-color);
+    }
+
+    smart-list-box.material:focus smart-list-item[focused],
+    smart-list-box.material smart-list-item.hovered,
+    smart-list-box.material smart-list-item[selected].hovered {
+        color: var(--smart-material-color);
+    }
+
+    smart-drop-down-list.material[selection-mode="radioButton"] smart-list-item .smart-input:after,
+    smart-drop-down-list.material[selection-mode="radioButton"] smart-list-items-group .smart-input:after,
+    smart-combo-box.material[selection-mode="radioButton"] smart-list-item .smart-input:after,
+    smart-combo-box.material[selection-mode="radioButton"] smart-list-items-group .smart-input:after,
+    smart-list-box.material[selection-mode="radioButton"] smart-list-item .smart-input:after,
+    smart-list-box.material[selection-mode="radioButton"] smart-list-items-group .smart-input:after {
+        line-height: 14px;
+    }
+
+.smart-list-item-feedback {
+    border: 0px solid #FFBB00;
+    box-shadow: 3px 3px 1px rgba(0,0,0, 0.3);
+    cursor: move;
+}
+
+    .smart-list-item-feedback .smart-list-item-container {
+        color: black;
+    }
+
+    .smart-list-item-feedback smart-list-item {
+        background-color: var(--smart-material-background-color);
+        font-family: var(--smart-material-font-family);
+        font-weight: 300;
+        font-size: 14px;
+        height: 100%;
+        outline: 0 none;
+        display: table;
+        user-select: none;
+        padding: 5px;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        touch-action: none;
+        border: 1px solid transparent;
+    }
+
+smart-list-box.material .smart-list-item-line-feedback,
+smart-list-box.material .smart-list-item-bottom-line-feedback {
+    border-top-color: #009688;
+    border-top-width: 1px;
+    border-top-style: dashed;
+}
+
+/* smart-drop-down-list */
+
+smart-drop-down-list.material,
+smart-combo-box.material {
+    --smart-border-color: #D1D1D1DB;
+    --smart-material-background-color: #FAFAFA;
+    --smart-material-hovered-background-color: rgba(255,255,255,0.25);
+    --smart-material-pressed-background-color: #E0E0E0;
+    --smart-material-pressed-color: #0078D7;
+    --smart-ripple-color: #D1D1D1;
+    --smart-drop-down-list-default-width: 150px;
+    --smart-drop-down-list-default-height: 30px;
+    --smart-label-height: 10px;
+    background-color: transparent;
+    border-radius: 2px;
+    margin: 10px;
+}
+
+    smart-drop-down-list.material > .smart-container,
+    smart-combo-box.material > .smart-container {
+        position: relative;
+    }
+
+    smart-drop-down-list.material:active,
+    smart-combo-box.material:active > .smart-container {
+        background-color: transparent;
+        color: black;
+    }
+
+smart-drop-down-list[disabled].material:active > .smart-container,
+smart-combo-box[disabled].material:active > .smart-container {
+    background-color: initial;
+    color: initial;
+}
+
+smart-combo-box[label][focused].material .smart-label,
+smart-combo-box[label].material > .smart-container[has-value] .smart-label,
+smart-combo-box[label][hint].material > .smart-container[has-value] .smart-label {
+    top: calc(-1 * calc(var(--smart-label-height) + 8px));
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+smart-combo-box[label].material .smart-label {
+    position: absolute;
+    opacity: 1;
+    padding: 2px;
+    /*top: calc(var(--smart-label-height) + 8px);*/
+    top: 0;
+    font-size: var(--smart-font-size);
+    color: gray;
+    transition: top 0.25s ease-out, font-size 0.25s ease-out, opacity 0.25s ease-out;
+    user-select: none;
+    pointer-events: none;
+}
+
+smart-combo-box[label][focused].material .smart-label {
+    color: var(--smart-material-pressed-color);
+}
+
+smart-combo-box.material .smart-selection-field input,
+smart-combo-box.material .smart-selection-field div {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+smart-combo-box[focused].material .smart-selection-field,
+smart-combo-box[focused].material .smart-drop-down-button,
+smart-combo-box[focused][drop-down-button-position="left"].material .smart-drop-down-button,
+smart-combo-box[focused][drop-down-open-mode="default"].material .smart-selection-field,
+smart-combo-box.material:focus .smart-drop-down-button {
+    outline: initial;
+    border-color: #555555;
+}
+
+smart-combo-box[focused].material .smart-selection-field {
+    border-width: 0;
+    border-bottom-style: solid;
+    border-bottom-width: var(--smart-border-width);
+}
+
+smart-combo-box.material .smart-selection-field {
+    border-style: solid;
+    border-color: var(--smart-border-color);
+    border-width: 0;
+    border-bottom-width: var(--smart-border-width);
+    align-items: center;
+}
+
+    /*smart-combo-box.auto-height.material .smart-selection-field input {
+    min-height: 50px;
+}*/
+
+    smart-combo-box.material .smart-selection-field > span {
+        background-color: transparent;
+        /*padding: 5px;*/
+    }
+
+smart-combo-box[drop-down-open-mode="dropDownButton"].material .smart-drop-down-button {
+    box-shadow: calc(-1 * var(--smart-border-width)) 0 0 0 var(--smart-border-color);
+}
+
+smart-combo-box[drop-down-open-mode="dropDownButton"]:not([disabled]).material .smart-drop-down-button:active {
+    box-shadow: calc(-1 * var(--smart-border-width)) 0 0 0 var(--smart-border-color);
+}
+
+smart-combo-box.material.hovered .smart-selection-field,
+smart-combo-box.material.hovered .smart-drop-down-button,
+smart-combo-box.material.hovered[focused][drop-down-open-mode="dropDownButton"] .smart-selection-field,
+smart-combo-box.material.hovered[focused][drop-down-open-mode="dropDownButton"] .smart-drop-down-button,
+smart-combo-box.material.hovered[drop-down-open-mode="dropDownButton"] .smart-drop-down-button:focus {
+    border-color: var(--smart-material-pressed-color);
+}
+
+smart-combo-box.material.hovered[disabled] .smart-selection-field,
+smart-combo-box.material.hovered[disabled] .smart-drop-down-button {
+    border-color: var(--smart-border-color);
+}
+
+smart-combo-box.material[focused] > .smart-container > .smart-content:after {
+    position: absolute;
+    content: ' ';
+    width: 100%;
+    left: 0;
+    height: 2px;
+    top: calc(100% - 2px);
+    background-color: var(--smart-material-pressed-color);
+    animation: splash 0.15s ease-out;
+}
+
+smart-combo-box.material[focused][disabled] > .smart-container > .smart-content:after {
+    content: initial;
+}
+
+smart-combo-box[label].material .smart-selection-field input::placeholder,
+smart-combo-box.material .smart-selection-field input::placeholder {
+    color: black;
+    opacity: 0.8;
+    transition: color 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+/* MS EDGE */
+smart-combo-box[label].material .smart-selection-field input::-ms-input-placeholder,
+smart-combo-box.material .smart-selection-field input::-ms-input-placeholder {
+    color: black;
+    opacity: 0.8;
+    transition: color 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+/* MOZ FireFox */
+smart-combo-box[label].material .smart-selection-field input::-moz-placeholder,
+smart-combo-box.material .smart-selection-field input::-moz-placeholder {
+    color: black;
+    opacity: 0.8;
+    transition: color 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+/* Safari */
+smart-combo-box[label].material .smart-selection-field input::-webkit-input-placeholder,
+smart-combo-box.material .smart-selection-field input::-webkit-input-placeholder {
+    color: black;
+    opacity: 0.8;
+    transition: color 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+smart-combo-box[label][focused].material .smart-selection-field input::placeholder,
+smart-combo-box[focused].material .smart-selection-field input::placeholder {
+    color: transparent;
+    opacity: 0;
+    font-weight: 500;
+    transition: color 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+/* MOZ FireFox */
+smart-combo-box[label][focused].material .smart-selection-field input::-moz-placeholder {
+    color: transparent;
+    opacity: 0;
+    font-weight: 500;
+    transition: color 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+/* Safari */
+smart-combo-box[label][focused].material .smart-selection-field input::-webkit-input-placeholder {
+    color: transparent;
+    opacity: 0;
+    font-weight: 500;
+    transition: color 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+/* MS EDGE */
+smart-combo-box[label][focused].material .smart-selection-field input::-ms-input-placeholder {
+    color: transparent;
+    opacity: 0;
+    font-weight: 500;
+    transition: color 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+smart-combo-box.material .smart-drop-down-button,
+smart-combo-box[drop-down-open-mode="dropDownButton"].material .smart-drop-down-button:focus {
+    border-top: initial;
+    border-left: initial;
+    border-right: initial;
+    /*padding: 14px; /* fallback*/
+    position: relative;
+    overflow: hidden;
+    border-color: var(--smart-border-color);
+}
+
+smart-drop-down-list[drop-down-open-mode="dropDownButton"].material:active > .smart-container,
+smart-combo-box[drop-down-open-mode="dropDownButton"].material:active > .smart-container {
+    background-color: transparent;
+    color: initial;
+}
+
+smart-drop-down-list[drop-down-open-mode="dropDownButton"]:not([disabled]).material .smart-action-button:active,
+smart-drop-down-list[drop-down-open-mode="dropDownButton"]:not([disabled]).material .smart-drop-down-button:active,
+smart-combo-box[drop-down-open-mode="dropDownButton"]:not([disabled]).material .smart-action-button:active,
+smart-combo-box[drop-down-open-mode="dropDownButton"]:not([disabled]).material .smart-drop-down-button:active {
+    background-color: var(--smart-material-background-color);
+    color: black;
+}
+
+smart-drop-down-list.material.hovered,
+smart-combo-box.material.hovered {
+    background-color: var(--smart-material-hovered-background-color);
+}
+
+smart-drop-down-list[drop-down-open-mode="dropDownButton"].material.hovered,
+smart-combo-box[drop-down-open-mode="dropDownButton"].material.hovered {
+    background-color: initial;
+}
+
+    smart-drop-down-list[drop-down-open-mode="dropDownButton"].material.hovered .smart-action-button.hovered,
+    smart-drop-down-list[drop-down-open-mode="dropDownButton"][opened].material.hovered .smart-action-button,
+    smart-drop-down-list[drop-down-open-mode="dropDownButton"].material.hovered .smart-drop-down-button.hovered,
+    smart-combo-box[drop-down-open-mode="dropDownButton"].material.hovered .smart-action-button.hovered,
+    smart-combo-box[drop-down-open-mode="dropDownButton"][opened].material.hovered .smart-action-button,
+    smart-combo-box[drop-down-open-mode="dropDownButton"].material.hovered .smart-drop-down-button.hovered {
+        background-color: var(--smart-material-background-color);
+    }
+
+smart-drop-down-list[disabled].material.hovered,
+smart-combo-box[disabled].material.hovered {
+    background-color: initial;
+}
+
+smart-drop-down-list.material:focus,
+smart-drop-down-list.material .smart-action-button:focus,
+smart-drop-down-list.material .smart-drop-down-button:focus,
+smart-drop-down-list.hovered[drop-down-open-mode="dropDownButton"].material .smart-drop-down-button:focus,
+smart-combo-box.material:focus,
+smart-combo-box.material .smart-action-button:focus,
+smart-combo-box.material .smart-drop-down-button:focus,
+smart-combo-box.hovered[drop-down-open-mode="dropDownButton"].material .smart-drop-down-button:focus {
+    box-shadow: 0.15px 0.5px 0.5px 0.5px rgba(0,0,0, 0.3);
+}
+
+    smart-drop-down-list.material:focus .smart-action-button,
+    smart-drop-down-list.material:focus .smart-drop-down-button,
+    smart-combo-box.material:focus .smart-action-button,
+    smart-combo-box.material:focus .smart-drop-down-button {
+        border: initial;
+    }
+
+smart-drop-down-list.material .smart-action-button,
+smart-drop-down-list[drop-down-open-mode="dropDownButton"].material .smart-action-button:focus {
+    border-top: initial;
+    border-left: initial;
+    padding: 14px;
+    /*padding: 0.8rem;*/
+    position: relative;
+    overflow: hidden;
+    border-color: var(--smart-border-color);
+}
+
+smart-drop-down-list.material[selection-mode="oneOrManyExtended"] .smart-action-button,
+smart-drop-down-list.material[selection-mode="oneOrManyExtended"] .smart-drop-down-button,
+smart-drop-down-list.material[selection-mode="zeroOrMany"] .smart-action-button,
+smart-drop-down-list.material[selection-mode="zeroOrMany"] .smart-drop-down-button,
+smart-drop-down-list.material[selection-mode="oneOrMany"] .smart-action-button,
+smart-drop-down-list.material[selection-mode="oneOrMany"] .smart-drop-down-button,
+smart-drop-down-list[drop-down-open-mode="dropDownButton"].material[selection-mode="oneOrManyExtended"] .smart-action-button:focus,
+smart-drop-down-list[drop-down-open-mode="dropDownButton"].material[selection-mode="oneOrManyExtended"] .smart-drop-down-button:focus,
+smart-drop-down-list[drop-down-open-mode="dropDownButton"].material[selection-mode="zeroOrMany"] .smart-action-button:focus,
+smart-drop-down-list[drop-down-open-mode="dropDownButton"].material[selection-mode="zeroOrMany"] .smart-drop-down-button:focus,
+smart-drop-down-list[drop-down-open-mode="dropDownButton"].material[selection-mode="oneOrMany"] .smart-action-button:focus,
+smart-drop-down-list[drop-down-open-mode="dropDownButton"].material[selection-mode="oneOrMany"] .smart-drop-down-button:focus,
+smart-combo-box.material[selection-mode="oneOrManyExtended"] .smart-action-button,
+smart-combo-box.material[selection-mode="oneOrManyExtended"] .smart-drop-down-button,
+smart-combo-box.material[selection-mode="zeroOrMany"] .smart-action-button,
+smart-combo-box.material[selection-mode="zeroOrMany"] .smart-drop-down-button,
+smart-combo-box.material[selection-mode="oneOrMany"] .smart-action-button,
+smart-combo-box.material[selection-mode="oneOrMany"] .smart-drop-down-button,
+smart-combo-box[drop-down-open-mode="dropDownButton"].material[selection-mode="oneOrManyExtended"] .smart-action-button:focus,
+smart-combo-box[drop-down-open-mode="dropDownButton"].material[selection-mode="oneOrManyExtended"] .smart-drop-down-button:focus,
+smart-combo-box[drop-down-open-mode="zeroOrMany"].material[selection-mode="oneOrManyExtended"] .smart-action-button:focus,
+smart-combo-box[drop-down-open-mode="zeroOrMany"].material[selection-mode="oneOrManyExtended"] .smart-drop-down-button:focus,
+smart-combo-box[drop-down-open-mode="oneOrMany"].material[selection-mode="oneOrManyExtended"] .smart-action-button:focus,
+smart-combo-box[drop-down-open-mode="oneOrMany"].material[selection-mode="oneOrManyExtended"] .smart-drop-down-button:focus {
+    padding-left: 10px;
+}
+
+smart-drop-down-list.material.hovered .smart-action-button,
+smart-drop-down-list.material.hovered .smart-drop-down-button {
+    border-color: var(--smart-border-color);
+}
+
+smart-drop-down-list.material .smart-drop-down-button,
+smart-drop-down-list[drop-down-open-mode="dropDownButton"].material .smart-drop-down-button:focus {
+    border-top: initial;
+    border-left: initial;
+    border-right: initial;
+    /*padding: 14px; /* fallback */
+    /*padding: 1rem;*/
+    position: relative;
+    overflow: hidden;
+    border-color: var(--smart-border-color);
+}
+
+    smart-drop-down-list.material .smart-drop-down-button[selected],
+    smart-combo-box.material .smart-drop-down-button[selected] {
+        background-color: var(--smart-material-background-color);
+        box-shadow: initial;
+    }
+
+smart-drop-down-list[opened].material,
+smart-drop-down-list.material .smart-drop-down,
+.smart-drop-down-repositioned.material {
+    background-color: var(--smart-material-background-color);
+    box-shadow: 0.15px 0.5px 0.5px 0.5px rgba(0,0,0, 0.3);
+    border-radius: 2px;
+    border: initial;
+}
+
+smart-drop-down-list[opened][drop-down-open-mode="dropDownButton"].material {
+    box-shadow: initial;
+}
+
+    smart-drop-down-list[opened][drop-down-open-mode="dropDownButton"].material .smart-drop-down-button {
+        box-shadow: 0.15px 0.5px 0.5px 0.5px rgba(0,0,0, 0.3);
+    }
+
+smart-drop-down-list.material smart-list-item[selected][focused],
+.smart-drop-down-repositioned.material smart-list-item[selected][focused],
+.smart-drop-down-repositioned.material smart-list-box:focus:not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected][focused],
+.smart-drop-down-repositioned.material smart-list-box:not(:focus):not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected][focused],
+.smart-drop-down-repositioned.material smart-list-box:not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected]:not([focused]),
+smart-drop-down-list.material smart-list-box:focus:not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected][focused],
+smart-drop-down-list.material smart-list-box:not(:focus):not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected][focused],
+smart-drop-down-list.material smart-list-box:not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected]:not([focused]),
+smart-combo-box.material smart-list-item[selected][focused],
+smart-combo-box.material smart-list-box:focus:not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected][focused],
+smart-combo-box.material smart-list-box:not(:focus):not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected][focused],
+smart-combo-box.material smart-list-box:not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected]:not([focused]) {
+    background-color: var(--smart-material-pressed-background-color);
+    /*color: var(--smart-material-pressed-color);*/
+}
+
+smart-drop-down-list.material .smart-drop-down,
+smart-combo-box.material .smart-drop-down,
+.smart-drop-down-repositioned.material {
+    padding: initial;
+}
+
+    smart-drop-down-list.material smart-list-item,
+    smart-combo-box.material smart-list-item,
+    .smart-drop-down-repositioned.material smart-list-item {
+        background-color: var(--smart-material-background-color);
+        overflow: hidden;
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+        smart-drop-down-list.material smart-list-item.hovered,
+        smart-drop-down-list.material smart-list-item[selected].hovered,
+        smart-combo-box.material smart-list-item.hovered,
+        smart-combo-box.material smart-list-item[selected].hovered,
+        .smart-drop-down-repositioned.material smart-list-item.hovered,
+        .smart-drop-down-repositioned.material smart-list-item[selected].hovered {
+            background-color: var(--smart-material-hovered-background-color);
+            color: initial;
+        }
+
+    smart-drop-down-list.material smart-list-box[selection-mode="checkBox"] .smart-input,
+    smart-combo-box.material smart-list-box[selection-mode="checkBox"] .smart-input,
+    .smart-drop-down-repositioned.material smart-list-box[selection-mode="checkBox"] .smart-input {
+        border-radius: 2px;
+        margin-right: 5px;
+    }
+
+smart-drop-down-list.material smart-list-box:focus smart-list-item[focused],
+smart-combo-box.material smart-list-box:focus smart-list-item[focused] {
+    background-color: var(--smart-material-focused-background-color);
+}
+
+smart-combo-box.material smart-list-item[focused],
+smart-drop-down-list.material smart-list-item[focused],
+smart-text-box.material smart-list-item[focused],
+.smart-drop-down-repositioned.material smart-list-item[focused] {
+    color: var(--smart-material-pressed-color);
+}
+
+
+/*  smart-text-box */
+smart-text-box.material {
+    --smart-material-pressed-color: #2979ff;
+    --smart-border-color: #D1D1D1;
+}
+
+    smart-text-box.material input {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 0px;
+        background: transparent;
+        border: 0px;
+        color: black;
+    }
+
+    smart-text-box.material[label] .smart-label {
+        top: -15px;
+        width: auto;
+    }
+
+    smart-text-box.material[label][focused] .smart-label {
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-text-box.material[label][disabled] .smart-label {
+        color: gray;
+    }
+
+
+    smart-text-box.material .smart-content {
+        border-bottom: var(--smart-border-color) solid 1px;
+    }
+
+    smart-text-box.material[disabled] .smart-content,
+    smart-text-box.material[disabled]:hover .smart-content {
+        border-bottom: var(--smart-border-color) dashed 1px;
+    }
+
+    smart-text-box.material[focused] .smart-content:after {
+        position: absolute;
+        content: ' ';
+        width: 100%;
+        left: 0;
+        height: 2px;
+        top: calc(100% - 2px);
+        background-color: var(--smart-material-pressed-color);
+        animation: splash 0.15s ease-out;
+    }
+
+    smart-text-box.material[disabled] .smart-content:after {
+        background-color: transparent;
+    }
+
+    smart-text-box.material input {
+        caret-color: var(--smart-material-pressed-color);
+        color: #424242;
+        pointer-events: auto;
+    }
+
+    smart-text-box.material.invalid input {
+        caret-color: red;
+    }
+
+    smart-text-box.material[label] input::placeholder {
+        color: transparent;
+        opacity: 0;
+        transition: color 0.25s ease-out, opacity 0.25s ease-out;
+    }
+
+    smart-text-box.material input::placeholder,
+    smart-text-box.material[focused] input::placeholder {
+        color: gray;
+        opacity: 1;
+        font-weight: 500;
+        transition: color 0.25s ease-out, opacity 0.25s ease-out;
+    }
+
+    smart-text-box.material[label] .smart-label {
+        display: block;
+        color: gray;
+        font-size: inherit;
+        position: absolute;
+        left: 0px;
+        top: 4px;
+        pointer-events: none;
+        transition: top 0.25s ease-out, font-size 0.25s ease-out;
+    }
+
+    smart-text-box.material[label].has-value .smart-label,
+    smart-text-box.material[label][disabled] .smart-label,
+    smart-text-box.material[label][focused] .smart-label {
+        color: var(--smart-material-pressed-color);
+        font-size: 12px;
+        height: 12px;
+        top: -15px;
+        pointer-events: none;
+        transition: top 0.25s ease-out, font-size 0.25s ease-out;
+    }
+
+        smart-text-box.material[label]:not([focused]).has-value .smart-label,
+        smart-text-box.material[label].has-value .smart-label smart-text-box.material.has-value .smart-label {
+            color: gray;
+        }
+
+    smart-text-box.material.has-value[focused] .smart-label {
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-text-box.material.has-value[disabled] .smart-label {
+        color: gray;
+    }
+
+    smart-text-box.material.invalid .smart-label,
+    smart-text-box.material[label].has-value.invalid .smart-label,
+    smart-text-box.material[focused].invalid .smart-label {
+        color: red;
+    }
+
+smart-text-box[required].material .smart-label::after {
+    content: "*";
+    display: block;
+    color: inherit;
+    position: absolute;
+    right: -10px;
+    top: 0px;
+}
+
+smart-text-box.material.invalid .smart-content::after,
+smart-text-box.material[label].has-value.invalid .smart-content::after,
+smart-text-box.material[focused].invalid .smart-content::after {
+    background-color: red;
+}
+
+smart-text-box.material.invalid[focused] .smart-label {
+    animation: invalidShake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    left:0px;
+}
+
+@keyframes invalidShake {
+    10%, 90% {
+        left:3px;
+    }
+
+    20%, 80% {
+        left:6px;
+    }
+
+    30%, 50%, 70% {
+        left:0px;
+    }
+
+    40%, 60% {
+        left:8px;
+    }
+}
+
+smart-text-box.material.invalid .smart-content {
+    border-bottom-color: red;
+}
+
+smart-text-box.material .smart-hint {
+    color: gray;
+    display: block;
+    width: 100%;
+}
+
+smart-text-box.material.invalid .smart-label,
+smart-text-box.material.invalid .smart-hint {
+    color: red;
+}
+
+smart-text-box.material.invalid .smart-hint {
+    border-color: red;
+}
+
+smart-text-box.material,
+smart-text-box.material .smart-container {
+    pointer-events: none;
+}
+
+    smart-text-box.material[disabled] .smart-label,
+    smart-text-box.material[disabled] .smart-hint {
+        color: gray;
+        pointer-events: none;
+    }
+
+
+/*smart-multiline-text-box*/
+smart-multiline-text-box.material {
+    --smart-material-pressed-color: #2979ff;
+    --smart-border-width: 0px;
+    --smart-color: #000;
+    margin: 0px 0px 60px 0px;
+    border-width: 0px;
+    width: 230px;
+    height: 110px;
+    font-size: 15px;
+    padding: 0px;
+    user-select: none;
+    pointer-events: none;
+    border-radius: 3px;
+    overflow: visible;
+    display: block;
+}
+
+    smart-multiline-text-box.material .smart-container {
+        overflow: visible;
+    }
+
+    smart-multiline-text-box.material textarea {
+        user-select: initial;
+        background-color: transparent;
+        padding: 30px 10px 0px 10px;
+        caret-color: var(--smart-material-pressed-color);
+        color: #606060;
+        pointer-events: auto;
+    }
+
+    smart-multiline-text-box.material .smart-inner-container {
+        border: gray solid 1px;
+        border-radius: 5px;
+    }
+
+    smart-multiline-text-box.material.hovered textarea {
+        padding: 29px 10px 0px 9px;
+    }
+
+    smart-multiline-text-box.material.hovered .smart-inner-container {
+        border: gray solid 2px;
+    }
+
+    smart-multiline-text-box.material[focused] .smart-inner-container {
+        border-color: var(--smart-material-pressed-color);
+    }
+
+    smart-multiline-text-box.material textarea::placeholder {
+        color: transparent;
+        opacity: 0;
+        transition: color 0.25s ease-out, opacity 0.25s ease-out;
+    }
+
+    smart-multiline-text-box.material[focused] textarea::placeholder {
+        color: gray;
+        opacity: 1;
+        transition: color 0.25s ease-out, opacity 0.25s ease-out;
+    }
+
+    smart-multiline-text-box.material[disabled] textarea {
+        color: gray;
+        opacity: 1;
+        pointer-events: none;
+    }
+
+    smart-multiline-text-box.material[focused] .smart-label {
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-multiline-text-box.material .smart-label {
+        color: gray;
+        display: block;
+        position: absolute;
+        left: 14px;
+        top: 15px;
+        font-size: 16px;
+        pointer-events: none;
+        transition: top 0.25s ease-out, font-size 0.25s ease-out;
+        z-index: 1;
+    }
+
+    smart-multiline-text-box.material.has-value .smart-label,
+    smart-multiline-text-box.material[focused] .smart-label {
+        left: 14px;
+        top: 3px;
+        color: var(--smart-material-pressed-color);
+        font-size: 12px;
+        transition: top 0.25s ease-out, font-size 0.25s ease-out;
+    }
+
+    smart-multiline-text-box.material.has-value .smart-label,
+    smart-multiline-text-box.material[disabled] .smart-label,
+    smart-multiline-text-box.material[focused] .smart-label {
+        color: var(--smart-material-pressed-color);
+        font-size: 12px;
+        height: 12px;
+        top: 3px;
+        pointer-events: none;
+        transition: top 0.25s ease-out, font-size 0.25s ease-out;
+    }
+
+    smart-multiline-text-box.material .smart-inner-container::before {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        content: '';
+        width: 100%;
+        height: 32px;
+        background-color: #EEE;
+    }
+
+    smart-multiline-text-box.material .smart-hint {
+        font-size: 12px;
+    }
+
+    smart-multiline-text-box.material.has-value .smart-label {
+        color: gray;
+    }
+
+    smart-multiline-text-box.material.has-value[focused] .smart-label {
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-multiline-text-box.material.invalid .smart-label,
+    smart-multiline-text-box.material[focused].invalid .smart-label {
+        color: red;
+    }
+
+    smart-multiline-text-box.material.invalid input {
+        border-bottom-color: red;
+    }
+
+    smart-multiline-text-box.material .smart-hint {
+        display: block;
+    }
+
+    smart-multiline-text-box.material.invalid .smart-hint {
+        color: red;
+    }
+
+    smart-multiline-text-box.material,
+    smart-multiline-text-box.material .smart-container {
+        pointer-events: none;
+    }
+
+        smart-multiline-text-box.material[disabled] .smart-label,
+        smart-multiline-text-box.material[disabled] .smart-hint {
+            color: gray;
+        }
+
+
+        smart-multiline-text-box.material.invalid[focused][auto-expand] .smart-label,
+        smart-multiline-text-box.material.invalid[focused] .smart-label {
+            color: red;
+            animation-delay: 1s;
+            animation: invalidShake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+            transform: translate3d(0, 0, 0);
+        }
+
+        smart-multiline-text-box.material.invalid[auto-expand] input,
+        smart-multiline-text-box.material.invalid input {
+            border-bottom-color: red;
+        }
+
+        smart-multiline-text-box.material[auto-expand] .smart-hint,
+        smart-multiline-text-box.material .smart-hint {
+            display: block;
+            width: 100%;
+        }
+
+        smart-multiline-text-box.material.invalid[auto-expand][focused] .smart-label,
+        smart-multiline-text-box.material.invalid[focused] .smart-hint,
+        smart-multiline-text-box.material.invalid[auto-expand] .smart-label,
+        smart-multiline-text-box.material.invalid .smart-hint {
+            color: red;
+        }
+
+        smart-multiline-text-box.material.invalid[auto-expand][focused] .smart-label,
+        smart-multiline-text-box.material.invalid[focused] .smart-label,
+        smart-multiline-text-box.material.invalid[auto-expand] .smart-label,
+        smart-multiline-text-box.material.invalid .smart-label {
+            color: red;
+        }
+
+        smart-multiline-text-box.material.invalid[auto-expand] .smart-hint,
+        smart-multiline-text-box.material.invalid .smart-hint {
+            border-color: red;
+        }
+
+
+/*smart-multiline-text-box auto-expand*/
+smart-multiline-text-box[auto-expand].material {
+    height: auto;
+}
+
+smart-multiline-text-box.material[auto-expand] .smart-inner-container::before {
+    background-color: transparent;
+}
+
+smart-multiline-text-box[auto-expand].material textarea {
+    background-color: transparent;
+    font-size: 16px;
+    color: #6e6e6e;
+    padding-top: 40px;
+    padding: 40px 0px 10px 0px;
+}
+
+smart-multiline-text-box[auto-expand].material {
+    width: 340px;
+    height: auto;
+    background-color: transparent;
+    border: 0px;
+}
+
+    smart-multiline-text-box[auto-expand].material .smart-container {
+        height: auto;
+    }
+
+    smart-multiline-text-box[auto-expand].material .smart-inner-container {
+        border-width: 0px;
+        border-radius: 3px;
+    }
+
+    smart-multiline-text-box[auto-expand].material textarea {
+        border-bottom: gray solid 1px;
+        position: relative;
+        height: auto;
+        min-height: 48px;
+        padding-left: 16px;
+        padding-right: 16px;
+        background-color: #00000010;
+        transition: height 0.15s;
+    }
+
+    smart-multiline-text-box[auto-expand].material.hovered textarea {
+        border-bottom: #111 solid 2px;
+    }
+
+    smart-multiline-text-box[auto-expand].material[focused] textarea,
+    smart-multiline-text-box[auto-expand].material.hovered[focused] textarea {
+        border-bottom: var(--smart-material-pressed-color) solid 2px;
+    }
+
+    smart-multiline-text-box[auto-expand].material textarea::selection {
+        background: var(--smart-material-pressed-color);
+        color: #fff;
+        opacity: 0.5;
+    }
+
+    smart-multiline-text-box[auto-expand].material .smart-label {
+        color: gray;
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 10px;
+        font-size: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    smart-multiline-text-box[auto-expand].material[focused] .smart-label {
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-multiline-text-box[auto-expand].material .smart-hint {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 50px;
+        padding: 6px 16px 0px 16px;
+        position: absolute;
+        top: calc(100% - 54px);
+        left: 0px;
+    }
+
+        smart-multiline-text-box[auto-expand].material .smart-hint:after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            position: absolute;
+            left: 50%;
+            top: -2px;
+            opacity: 0.5;
+            background-color: white;
+        }
+
+    smart-multiline-text-box[auto-expand].material[focused] .smart-hint:after {
+        width: 100%;
+        left: 0%;
+        transition: left 0.2s ease-in, width 0.2s ease-in;
+    }
+
+smart-multiline-text-box.material[auto-expand][focused] .smart-hint,
+smart-multiline-text-box.material[auto-expand][focused].hovered .smart-hint,
+smart-multiline-text-box.material[auto-expand].hovered .smart-hint {
+    top: calc(100% - 55px);
+}
+
+
+/*  smart-password-text-box */
+smart-password-text-box.material {
+    --smart-border-width: 0px;
+    --smart-color: #000;
+    --smart-material-pressed-color: #2979ff;
+    --smart-border-color: #D1D1D1;
+    font-size: 15px;
+    padding: 0px;
+    user-select: none;
+    display: inline-block;
+    margin: 10px;
+    height: 30px;
+}
+
+    smart-password-text-box.material input {
+        background-color: transparent;
+        padding: 8px 0px 8px 0px;
+        margin-top: 0px;
+        caret-color: #2979FF;
+        color: #424242;
+        pointer-events: auto;
+        border-bottom: var(--smart-border-color) solid 1px;
+    }
+
+    smart-password-text-box.material.invalid input {
+        caret-color: red;
+        border-bottom-color: red;
+    }
+
+    smart-password-text-box.material input::placeholder {
+        color: transparent;
+        opacity: 0;
+        transition: color 0.25s ease-out, opacity 0.25s ease-out;
+    }
+
+    smart-password-text-box.material[focused] input::placeholder {
+        color: gray;
+        opacity: 1;
+        font-weight: 500;
+        transition: color 0.25s ease-out, opacity 0.25s ease-out;
+    }
+
+    smart-password-text-box.material[disabled] input {
+        color: gray;
+        opacity: 1;
+        pointer-events: none;
+    }
+
+    smart-password-text-box.material .smart-label {
+        display: block;
+        color: gray;
+        font-size: 16px;
+        position: absolute;
+        left: 0px;
+        top: -15px;
+        pointer-events: none;
+        transition: top 0.25s ease-out, font-size 0.25s ease-out;
+    }
+
+    smart-password-text-box.material[label] .smart-label {
+        top: 4px;
+        width: auto;
+    }
+
+    smart-password-text-box.material[label][focused] .smart-label {
+        top: -15px;
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-password-text-box.material[label][disabled] .smart-label {
+        color: gray;
+    }
+
+    smart-password-text-box.material.has-value .smart-label,
+    smart-password-text-box.material[disabled] .smart-label,
+    smart-password-text-box.material[focused] .smart-label {
+        color: var(--smart-material-pressed-color);
+        font-size: 12px;
+        height: 12px;
+        top: -15px;
+        pointer-events: none;
+        transition: top 0.25s ease-out, font-size 0.25s ease-out;
+    }
+
+    smart-password-text-box.material .smart-hint {
+        font-size: 12px;
+        position: absolute;
+        top: 100%;
+        left: 0px;
+    }
+
+    smart-password-text-box.material.has-value .smart-label {
+        color: gray;
+    }
+
+    smart-password-text-box.material.has-value[focused] .smart-label {
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-password-text-box.material.invalid .smart-label,
+    smart-password-text-box.material[focused].invalid .smart-label {
+        color: red;
+    }
+
+smart-text-box[required].material .smart-label::after {
+    content: "*";
+    display: block;
+    color: inherit;
+    position: absolute;
+    right: -10px;
+    top: 0px;
+}
+
+smart-password-text-box.material.invalid[focused] .smart-label {
+    animation: invalidShakePassword 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    left:0px;
+}
+
+@keyframes invalidShakePassword {
+    10%, 90% {
+        left:3px;
+    }
+
+    20%, 80% {
+        left:6px;
+    }
+
+    30%, 50%, 70% {
+        left:0px;
+    }
+
+    40%, 60% {
+        left:8px;
+    }
+}
+
+smart-password-text-box.material.has-value[focused] .smart-hint {
+    width: 100%;
+}
+
+smart-password-text-box.material[disabled] .smart-hint,
+smart-password-text-box.material[disabled]:hover .smart-hint {
+    border-top: gray dashed 1px;
+}
+
+smart-password-text-box.material .smart-hint::after {
+    content: '';
+    height: 2px;
+    width: 0%;
+    background-color: var(--smart-material-pressed-color);
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+}
+
+smart-password-text-box.material[focused] .smart-hint:after {
+    width: 100%;
+    left: 0%;
+    transition: left 0.2s ease-in, width 0.2s ease-in;
+}
+
+
+smart-password-text-box.material .smart-hint {
+    display: block;
+    width: 100%;
+}
+
+smart-password-text-box.material.invalid .smart-hint {
+    border-color: red;
+    color: red;
+}
+
+smart-password-text-box.material[disabled] .smart-hint:after {
+    background-color: transparent;
+}
+
+smart-password-text-box.material.invalid .smart-hint::after,
+smart-password-text-box.material[label].has-value.invalid .smart-hint::after,
+smart-password-text-box.material[focused].invalid .smart-hint::after {
+    background-color: red;
+}
+
+smart-password-text-box.material,
+smart-password-text-box.material .smart-container {
+    pointer-events: none;
+}
+
+    smart-password-text-box.material[disabled] .smart-label,
+    smart-password-text-box.material[disabled] .smart-hint {
+        color: gray;
+    }
+
+
+/* smart-masked-text-box */
+smart-masked-text-box.material {
+    --smart-material-pressed-color: #2979ff;
+    --smart-border-color: #D1D1D1;
+}
+
+    smart-masked-text-box.material input,
+    smart-masked-text-box.material[disabled]:hover input {
+        margin-top: 0px;
+        background: transparent;
+        border: 0px;
+        color: black;
+        padding-left: 0px;
+        padding-right: 0px;
+        border-bottom: var(--smart-border-color) solid 1px;
+    }
+
+    smart-masked-text-box.material[label] .smart-label {
+        display: block;
+        font-size: 16px;
+        position: absolute;
+        left: 0px;
+        top: 4px;
+        pointer-events: none;
+        transition: top 0.25s ease-out, font-size 0.25s ease-out;
+    }
+
+    smart-masked-text-box.material[label].has-value .smart-label,
+    smart-masked-text-box.material[label][placeholder] .smart-label,
+    smart-masked-text-box.material[label][disabled] .smart-label,
+    smart-masked-text-box.material[label][focused] .smart-label {
+        font-size: 12px;
+        height: 12px;
+        top: -15px;
+        pointer-events: none;
+        transition: top 0.25s ease-out, font-size 0.25s ease-out;
+    }
+
+    smart-masked-text-box.material[label][focused] .smart-label {
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-masked-text-box.material[disabled] .smart-hint,
+    smart-masked-text-box.material[disabled]:hover .smart-hint {
+        border-top: black dashed 1px;
+    }
+
+    smart-masked-text-box.material .smart-hint::after {
+        content: '';
+        height: 2px;
+        width: 0%;
+        background-color: var(--smart-material-pressed-color);
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: -2px;
+    }
+
+    smart-masked-text-box.material[focused] .smart-hint:after {
+        width: 100%;
+        left: 0%;
+        transition: left 0.2s ease-in, width 0.2s ease-in;
+    }
+
+    smart-masked-text-box.material[disabled] .smart-hint:after {
+        background-color: transparent;
+    }
+
+/* smart-numeric-text-box */
+smart-numeric-text-box.material {
+    --smart-material-pressed-color: #2979ff;
+}
+
+    smart-numeric-text-box.material input,
+    smart-numeric-text-box.material[disabled]:hover input {
+        margin-top: 0px;
+        background: transparent;
+        border: 0px;
+        color: black;
+    }
+
+    smart-numeric-text-box.material[label] .smart-label,
+    smart-numeric-text-box.material[label][focused][value="null"] .smart-label {
+        top: -15px;
+        font-size: 12px;
+        transition: top 0.25s ease-out, left 0.25s ease-out, font-size 0.25s ease-out;
+    }
+
+    smart-numeric-text-box.material[label][value="null"] .smart-label {
+        top: 4px;
+        font-size: 16px;
+    }
+
+    smart-numeric-text-box.material[label][focused] .smart-label {
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-numeric-text-box.material[label][value="null"][radix-display]:not([focused]):not([radix-display-position="right"]) .smart-label {
+        left: var(--smart-numeric-text-box-default-radix-display-width);
+    }
+
+    smart-numeric-text-box.material[label][value="null"][spin-buttons][spin-buttons-position="left"]:not([focused]) .smart-label {
+        left: var(--smart-numeric-text-box-spin-buttons-default-width);
+    }
+
+    smart-numeric-text-box.material[label][value="null"][radix-display][spin-buttons][spin-buttons-position="left"]:not([focused]):not([radix-display-position="right"]) .smart-label {
+        left: calc(var(--smart-numeric-text-box-default-radix-display-width) + var(--smart-numeric-text-box-spin-buttons-default-width));
+    }
+
+    smart-numeric-text-box.material[label][value="null"] input::placeholder {
+        opacity: 1;
+        transition: opacity 0.25s ease-out;
+    }
+
+    smart-numeric-text-box.material[label][value="null"]:not([focused]) input::placeholder {
+        opacity: 0;
+    }
+
+    smart-numeric-text-box.material .smart-hint {
+        border-top: var(--smart-border-color) solid 1px;
+    }
+
+    smart-numeric-text-box.material[disabled] .smart-hint,
+    smart-numeric-text-box.material[disabled]:hover .smart-hint {
+        border-top: black dashed 1px;
+    }
+
+    smart-numeric-text-box.material .smart-hint::after {
+        content: '';
+        height: 2px;
+        width: 0%;
+        background-color: var(--smart-material-pressed-color);
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: -1px;
+    }
+
+    smart-numeric-text-box.material[focused] .smart-hint:after {
+        width: 100%;
+        left: 0%;
+        transition: left 0.2s ease-in, width 0.2s ease-in;
+    }
+
+    smart-numeric-text-box.material[disabled] .smart-hint:after {
+        background-color: transparent;
+    }
+
+    smart-numeric-text-box.material .smart-spin-buttons-container {
+        border-width: 0px;
+    }
+
+    smart-numeric-text-box.material .smart-spin-button,
+    smart-numeric-text-box.material .smart-button {
+        background-color: transparent;
+    }
+
+    smart-numeric-text-box.material .smart-arrow:after {
+        color: gray;
+    }
+
+    smart-numeric-text-box.material .smart-numeric-text-box-radix-display,
+    smart-numeric-text-box.material .smart-numeric-text-box-radix-display.hovered,
+    smart-numeric-text-box.material .smart-numeric-text-box-unit-display {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    smart-numeric-text-box.material .smart-numeric-text-box-radix-display {
+        color: black;
+    }
+
+    smart-numeric-text-box.material[focused] .smart-numeric-text-box-unit-display {
+        color: var(--smart-material-pressed-color);
+    }
+
+    smart-numeric-text-box.material .smart-drop-down {
+        opacity: 0.9;
+    }
+
+/* smart-window */
+
+smart-window.material,
+smart-alert-window.material,
+smart-dialog-window.material,
+smart-wait-window.material,
+smart-progress-window.material,
+smart-prompt-window.material,
+smart-tabs-window.material {
+    /*--smart-material-background-color: rgb(16,108,200); Material Blue color*/
+    --smart-material-background-color: #E0E0E0;
+    --smart-material-fill-color: rgb(16,108,200); /* #009688; Material Green color */
+    --smart-material-color: #555;
+    --smart-window-header-height: 50px;
+    --smart-window-footer-height: 50px;
+    font-family: var(--smart-material-font-family);
+}
+
+smart-alert-window.material,
+smart-dialog-window.material,
+smart-wait-window.material,
+smart-progress-window.material,
+smart-prompt-window.material {
+    --smart-window-footer-height: 40px;
+}
+
+
+smart-tabs-window.material {
+    --smart-window-header-height: 0px;
+    --smart-window-footer-height: 0px;
+    --smart-window-default-width: 600px;
+    --smart-window-default-height: 400px;
+    --smart-material-color: black;
+    --smart-material-background-color: #00BCD4;
+    --smart-tabs-header-controls-width: 70px;
+}
+
+smart-tabs-window[pinned].material .smart-pin-button:after {
+    color: white;
+}
+
+smart-tabs-window.material smart-tabs.material {
+    --smart-material-background-color: #00BCD4;
+}
+
+smart-tabs-window.material .smart-tabs-header-controls {
+    color: var(--smart-material-color);
+    padding: 0;
+}
+
+smart-tabs-window.material .smart-tabs-header-section {
+    padding: 10px 20px 0px 20px;
+}
+
+smart-tabs-window.material .smart-tabs-content-section {
+    background-color: white;
+}
+
+smart-tabs-window.material smart-tab-item {
+    padding: 20px;
+}
+
+smart-tabs-window.material .smart-tabs-header-controls button.hover {
+    background-color: transparent;
+}
+
+smart-wait-window.material,
+smart-progress-window.material {
+    --smart-window-footer-height: 35px;
+    --smart-window-header-height: 35px;
+}
+
+smart-wait-window.material {
+    --smart-window-header-height: 35px;
+    --smart-window-footer-height: 0px;
+}
+
+    smart-window.material > .smart-container > .smart-footer,
+    smart-alert-window.material > .smart-container > .smart-footer,
+    smart-dialog-window.material > .smart-container > .smart-footer,
+    smart-wait-window.material > .smart-container > .smart-footer,
+    smart-progress-window.material > .smart-container > .smart-footer,
+    smart-prompt-window.material > .smart-container > .smart-footer {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    smart-window.material > .smart-container > .smart-header-section,
+    smart-alert-window.material > .smart-container > .smart-header-section,
+    smart-dialog-window.material > .smart-container > .smart-header-section,
+    smart-wait-window.material > .smart-container > .smart-header-section,
+    smart-progress-window.material > .smart-container > .smart-header-section,
+    smart-prompt-window.material > .smart-container > .smart-header-section {
+        font-size: 20px;
+        padding: 18px;
+    }
+
+    smart-wait-window.material > .smart-container > .smart-header-section,
+    smart-progress-window.material > .smart-container > .smart-header-section {
+        padding: 10px;
+    }
+
+    smart-wait-window.material > .smart-container > .smart-header-section,
+    smart-progress-window.material > .smart-container > .smart-header-section {
+        font-size: 18px;
+    }
+
+    smart-window.material .smart-header-section > .smart-header,
+    smart-alert-window.material .smart-header-section > .smart-header,
+    smart-dialog-window.material .smart-header-section > .smart-header,
+    smart-wait-window.material .smart-header-section > .smart-header,
+    smart-progress-window.material .smart-header-section > .smart-header,
+    smart-prompt-window.material .smart-header-section > .smart-header {
+        display: flex;
+        align-items: center;
+    }
+
+    smart-window.material > .smart-container > .smart-content,
+    smart-alert-window.material > .smart-container > .smart-content,
+    smart-dialog-window.material > .smart-container > .smart-content,
+    smart-wait-window.material > .smart-container > .smart-content,
+    smart-progress-window.material > .smart-container > .smart-content,
+    smart-prompt-window.material > .smart-container > .smart-content {
+        padding: 18px;
+        font-size: 15px;
+    }
+
+    smart-wait-window.material > .smart-container > .smart-content {
+        padding: 10px;
+    }
+
+    smart-window.material > .smart-container > .smart-footer:empty,
+    smart-alert-window.material > .smart-container > .smart-footer:empty,
+    smart-dialog-window.material > .smart-container > .smart-footer:empty,
+    smart-wait-window.material > .smart-container > .smart-footer:empty,
+    smart-progress-window.material > .smart-container > .smart-footer:empty,
+    smart-prompt-window.material > .smart-container > .smart-footer:empty {
+        display: none;
+    }
+
+    smart-window.material > .smart-container > .smart-footer smart-button,
+    smart-alert-window.material > .smart-container > .smart-footer smart-button,
+    smart-dialog-window.material > .smart-container > .smart-footer smart-button,
+    smart-wait-window.material > .smart-container > .smart-footer smart-button,
+    smart-prompt-window.material > .smart-container > .smart-footer smart-button {
+        height: 100%;
+    }
+
+    smart-window.material .smart-buttons-container smart-button,
+    smart-alert-window.material .smart-buttons-container smart-button,
+    smart-dialog-window.material .smart-buttons-container smart-button,
+    smart-wait-window.material .smart-buttons-container smart-button,
+    smart-progress-window.material .smart-buttons-container smart-button,
+    smart-prompt-window.material .smart-buttons-container smart-button {
+        box-shadow: initial;
+    }
+
+smart-progress-window.material .smart-complete-button button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+smart-progress-window.material > .smart-container > .smart-footer smart-progress-bar {
+    background-color: var(--smart-material-background-color);
+}
+
+smart-progress-window.material > .smart-container > .smart-footer smart-button {
+    background-color: var(--smart-material-background-color);
+}
+
+smart-tabs-window.material smart-tabs .smart-tabs-header-controls {
+    background-color: var(--smart-material-background-color);
+    color: white;
+}
+
+smart-window.material > .smart-container > .smart-footer button,
+smart-alert-window.material > .smart-container > .smart-footer button,
+smart-dialog-window.material > .smart-container > .smart-footer button,
+smart-wait-window.material > .smart-container > .smart-footer button,
+smart-progress-window.material > .smart-container > .smart-footer button,
+smart-prompt-window.material > .smart-container > .smart-footer button {
+    color: var(--smart-material-fill-color);
+}
+
+smart-window.material .smart-buttons-container button:focus,
+smart-alert-window.material .smart-buttons-container button:focus,
+smart-dialog-window.material .smart-buttons-container button:focus,
+smart-wait-window.material .smart-buttons-container button:focus,
+smart-progress-window.material .smart-buttons-container button:focus,
+smart-prompt-window.material .smart-buttons-container button:focus {
+    background-color: initial;
+}
+
+smart-window.material .smart-buttons-container button,
+smart-alert-window.material .smart-buttons-container button,
+smart-dialog-window.material .smart-buttons-container button,
+smart-wait-window.material .smart-buttons-container button,
+smart-progress-window.material .smart-buttons-container button,
+smart-prompt-window.material .smart-buttons-container button {
+    background-color: transparent;
+}
+
+    smart-window.material .smart-buttons-container button.hover,
+    smart-alert-window.material .smart-buttons-container button.hover,
+    smart-dialog-window.material .smart-buttons-container button.hover,
+    smart-wait-window.material .smart-buttons-container button.hover,
+    smart-progress-window.material .smart-buttons-container button.hover,
+    smart-prompt-window.material .smart-buttons-container button.hover {
+        /*background-color: rgba(0,0,0, 0.1);*/
+        background-color: transparent;
+    }
+
+smart-window.material > .smart-container > .smart-header-section,
+smart-window.material > .smart-container > .smart-footer,
+smart-alert-window.material > .smart-container > .smart-header-section,
+smart-alert-window.material > .smart-container > .smart-footer,
+smart-dialog-window.material > .smart-container > .smart-header-section,
+smart-dialog-window.material > .smart-container > .smart-footer,
+smart-wait-window.material > .smart-container > .smart-header-section,
+smart-wait-window.material > .smart-container > .smart-footer,
+smart-progress-window.material > .smart-container > .smart-header-section,
+smart-progress-window.material > .smart-container > .smart-footer,
+smart-prompt-window.material > .smart-container > .smart-header-section,
+smart-prompt-window.material > .smart-container > .smart-footer {
+    background-color: var(--smart-material-background-color);
+    color: var(--smart-material-color);
+    font-family: var(--smart-material-font-family);
+}
+
+smart-window[pinned].material .smart-pin-button:after,
+smart-alert-window[pinned].material .smart-pin-button:after,
+smart-dialog-window[pinned].material .smart-pin-button:after,
+smart-wait-window[pinned].material .smart-pin-button:after,
+smart-progress-window[pinned].material .smart-pin-button:after,
+smart-prompt-window[pinned].material .smart-pin-button:after {
+    color: var(--smart-material-color);
+}
+
+/* smart-gauge */
+smart-gauge.material {
+    --smart-tick-label-color: var(--smart-material-color);
+}
+
+    smart-gauge.material .smart-track {
+        width: 50px;
+        fill: var(--smart-material-background-color);
+        stroke: var(--smart-material-background-color);
+        font-family: var(--smart-material-font-family);
+    }
+
+    smart-gauge.material .smart-value {
+        fill: var(--smart-material-fill-color);
+        stroke: var(--smart-material-fill-color);
+    }
+
+    smart-gauge.material .smart-digital-display {
+        width: 200px;
+        color: var(--smart-material-color);
+        font-family: var(--smart-material-font-family);
+    }
+
+        smart-gauge.material .smart-digital-display input {
+            border: none;
+            background-color: transparent;
+            font-size: 40px;
+        }
+
+/* smart-menu and smart-list-menu */
+smart-menu.material,
+smart-list-menu.material {
+    border: none;
+    --smart-material-color: #747474;
+}
+
+    smart-menu.material .smart-menu-item-label-container,
+    .smart-menu-drop-down.material[external] .smart-menu-item-label-container,
+    smart-list-menu.material .smart-menu-item-label-container,
+    .smart-list-menu-view.material[external] .smart-menu-item-label-container,
+    smart-menu.material .smart-arrow:after,
+    smart-list-menu.material .smart-arrow:after,
+    .material[external] .smart-arrow:after,
+    smart-list-menu.material .smart-title,
+    .material[external] .smart-title {
+        color: var(--smart-material-color);
+    }
+
+    smart-menu.material .smart-menu-item-label-container,
+    .smart-menu-drop-down.material[external] .smart-menu-item-label-container,
+    smart-list-menu.material .smart-menu-item-label-container,
+    .smart-list-menu-view.material[external] .smart-menu-item-label-container {
+        padding: 18px;
+    }
+
+    smart-menu.material .smart-menu-minimized-items-container .smart-menu-items-group-opened > .smart-menu-drop-down,
+    .smart-menu-minimized-items-container.material[external] .smart-menu-items-group-opened > .smart-menu-drop-down {
+        margin-top: 18px;
+    }
+
+.smart-menu-minimized-items-container.material[external] .smart-menu-items-group-opened > .smart-menu-item-label-container {
+    padding-bottom: 0;
+}
+
+/* smart-accordion */
+smart-accordion {
+    font-size: 15px;
+    /*--smart-accordion-animation-duration: 150ms;*/
+}
+
+    smart-accordion.material > .smart-container {
+        padding: 1px;
+    }
+
+    smart-accordion.material smart-accordion-item {
+        box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+
+        smart-accordion.material smart-accordion-item[expanded] {
+            margin-bottom: 20px;
+        }
+
+        smart-accordion.material smart-accordion-item .smart-accordion-item-header {
+            padding-left: 24px;
+            padding-right: 24px;
+            position: relative;
+            display: block;
+        }
+
+        smart-accordion.material smart-accordion-item .smart-accordion-item-header > .smart-label {
+            margin-left: initial;
+        }
+
+        smart-accordion.material smart-accordion-item.hovered .smart-accordion-item-header {
+            color: #1a1a1a;
+            background-color: rgba(0,0,0,.04);
+        }
+
+        smart-accordion.material smart-accordion-item[expanded].hovered .smart-accordion-item-header {
+            background-color: none;
+            background-color: rgba(0,0,0,0);
+        }
+
+    smart-accordion.material .smart-arrow {
+        float: right;
+    }
+
+    smart-accordion.material smart-accordion-item[focused] .smart-accordion-item-header > .smart-arrow {
+        opacity: 1;
+    }
+
+    smart-accordion.material smart-accordion-item .smart-accordion-item-header > .smart-arrow:after {
+        transform: rotate(90deg);
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    smart-accordion.material smart-accordion-item[expanded] .smart-accordion-item-header > .smart-arrow:after {
+        transform: rotate(270deg);
+    }
+
+    smart-accordion.material smart-accordion-item > .smart-container {
+        border-bottom-width: 0px;
+    }
+
+    smart-accordion.material .smart-accordion-item-content {
+        /*animation-timing-function: ease-in;*/
+    }
+
+    smart-accordion.material smart-accordion-item .smart-content-container {
+        padding: 24px;
+    }
+
+/* smart-multi-split-button */
+smart-multi-split-button.material {
+    --smart-border-color: #D1D1D1DB;
+    --smart-material-background-color: #FAFAFA;
+    --smart-material-hovered-background-color: rgba(255,255,255,0.25);
+    --smart-material-pressed-background-color: #E0E0E0;
+    --smart-material-pressed-color: #0078D7;
+    --smart-ripple-color: #D1D1D1;
+    width: 180px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 2px;
+}
+
+smart-multi-split-button[opened].material, smart-drop-down-list.material .smart-drop-down {
+    background-color: var(--smart-material-background-color);
+    box-shadow: 0.15px 0.5px 0.5px 0.5px rgba(0,0,0, 0.3);
+    border-radius: 2px;
+    border: initial;
+}
+
+smart-multi-split-button.material .smart-action-button, smart-multi-split-button.material .smart-drop-down-button {
+    border-color: rgba(209, 209, 209, 0.86);
+    border-width: 0px;
+    border-bottom-width: 1px;
+}
+
+smart-multi-split-button.material .smart-button {
+    border-color: rgba(209, 209, 209, 0.86);
+    padding: 14px 16px 16px 16px;
+}
+
+    smart-multi-split-button.material .smart-button.hover {
+        color: var(--smart-color);
+    }
+
+smart-multi-split-button[disabled] {
+    pointer-events: none;
+}
+
+smart-multi-split-button.material > .smart-container {
+    position: relative;
+}
+
+smart-multi-split-button.material:active > .smart-container {
+    background-color: transparent;
+    color: black;
+}
+
+smart-multi-split-button[disabled].material:active > .smart-container {
+    background-color: initial;
+    color: initial;
+}
+
+smart-multi-split-button.material.hovered {
+    background-color: var(--smart-material-hovered-background-color);
+}
+
+smart-multi-split-button[disabled].material.hovered {
+    background-color: initial;
+}
+
+smart-multi-split-button.material:focus, smart-multi-split-button.material .smart-action-button:focus, smart-multi-split-button.material .smart-drop-down-button:focus {
+    box-shadow: 0.15px 0.5px 0.5px 0.5px rgba(0,0,0, 0.3);
+}
+
+    smart-multi-split-button.material:focus .smart-action-button, smart-multi-split-button.material:focus .smart-drop-down-button {
+        border: initial;
+    }
+
+smart-multi-split-button.material.hovered .smart-action-button, smart-multi-split-button.material.hovered .smart-drop-down-button {
+    border-color: var(--smart-border-color);
+}
+
+smart-multi-split-button.material .smart-drop-down-button {
+    border-top: initial;
+    border-left: initial;
+    border-right: initial;
+    padding: 16px;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+    border-color: var(--smart-border-color);
+}
+
+    smart-multi-split-button.material .smart-drop-down-button[selected] {
+        background-color: var(--smart-material-background-color);
+        box-shadow: initial;
+    }
+
+smart-multi-split-button[opened].material, smart-multi-split-button.material .smart-drop-down {
+    background-color: var(--smart-material-background-color);
+    box-shadow: 0.15px 0.5px 0.5px 0.5px rgba(0,0,0, 0.3);
+    border-radius: 2px;
+    border: initial;
+}
+
+smart-multi-split-button.material smart-list-item[selected][focused], smart-multi-split-button.material smart-list-box:focus:not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected][focused], smart-multi-split-button.material smart-list-box:not(:focus):not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected][focused], smart-multi-split-button.material smart-list-box:not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected]:not([focused]) {
+    background-color: var(--smart-material-pressed-background-color);
+    color: var(--smart-material-pressed-color);
+}
+
+smart-multi-split-button.material .smart-drop-down {
+    padding: initial;
+}
+
+smart-multi-split-button.material smart-list-item {
+    background-color: var(--smart-material-background-color);
+    overflow: hidden;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+    smart-multi-split-button.material smart-list-item.hovered, smart-multi-split-button.material smart-list-item[selected].hovered {
+        background-color: var(--smart-material-hovered-background-color);
+        color: initial;
+    }
+
+smart-multi-split-button.material smart-list-box:focus smart-list-item[focused] {
+    background-color: var(--smart-material-focused-background-color);
+}
+
+
+/*smart-tooltip*/
+smart-tooltip.material .smart-tooltip-content {
+    font-size: 9px;
+    color: white;
+    padding-top: 0px;
+    height: 22px;
+    background-color: gray;
+    border-width: 0px;
+    border-radius: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+smart-tooltip.animation.material {
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+    animation-name: tooltipHide;
+}
+
+    smart-tooltip.animation.material[visible] {
+        animation-name: tooltipShow;
+    }
+
+@keyframes tooltipShow {
+    from {
+        transform: scale(0, 0);
+    }
+
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes tooltipHide {
+    from {
+        transform: scale(1, 1);
+    }
+
+    to {
+        transform: scale(0, 0);
+    }
+}
+
+smart-tooltip.material.mobile .smart-tooltip-content {
+    /*margin-top:15px;*/
+    font-size: 14px;
+    color: white;
+    height: auto;
+    padding: 5px 15px 5px 17px;
+}
+
+
+/*smart-pager*/
+smart-pager.material {
+    border-width: 0px;
+    width: 600px;
+    background-color: #ffffff90;
+}
+
+    smart-pager.material .smart-container {
+        justify-content: flex-end;
+    }
+
+    smart-pager.material smart-button,
+    smart-pager.material smart-repeat-button {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border-width: 0px;
+        font-size: 30px;
+    }
+
+    smart-pager.material .smart-items-per-page-block,
+    smart-pager.material .smart-range {
+        border-width: 0px;
+    }
+
+    smart-pager.material .smart-next-page-button {
+        order: 11;
+    }
+
+    smart-pager.material .smart-previous-page-button {
+        order: 10;
+    }
+
+    smart-pager.material .smart-items-per-page-block {
+        position: relative;
+    }
+
+        /*smart-pager.material .smart-items-per-page-block::before {
+            content: 'Items per page:';
+            position: absolute;
+            left: -100px;
+            top: 7px;
+            width: 100px;
+        }*/
+
+    smart-pager.material smart-drop-down-list.material{
+            margin:0px;
+    }
+
+    smart-pager.material .smart-pager-item {
+        border-radius: 50%;
+        border-width: 0px;
+        height: 35px;
+    }
+
+    smart-pager.material smart-drop-down-list {
+        border-bottom: 1px solid gray;
+    }
+
+    smart-pager.material .smart-previous-ellipsis-button,
+    smart-pager.material .smart-next-ellipsis-button {
+        font-size: 20px;
+    }
+
+    
+/*smart-toast*/
+.smart-toast-item.material {
+    width:100%;
+    background-color:#323232;
+    border-radius:0px;
+    position: relative;
+    opacity:0.95;
+    text-align:left;
+}
+
+.smart-toast-item.material[opened] {
+    height:50px;
+}
+
+.smart-toast-item.material .message{
+    position:absolute;
+    left:25px;
+    top:12px;
+    width:250px;
+    display:block;
+}
+
+.smart-toast-item.material .smart-toast-item-content {
+    text-align: left;
+    color:white;
+    text-shadow:none;
+}
+
+.smart-toast-item.material smart-button{
+    height: 100%;
+    border-width: 0px;
+    position: absolute;
+    right: 0px;
+    top:0px;
+    color: green;
+    background-color: transparent;
+}
+
+.smart-toast-item.material smart-button button{
+    border-width: 0px;
+    color: green;
+    background-color: transparent;
+}

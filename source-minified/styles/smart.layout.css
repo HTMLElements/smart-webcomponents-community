@@ -1,0 +1,160 @@
+smart-layout {
+    display: block;
+    width: 1000px;
+    height: 800px;
+    /*border: 1px solid #a9a9a9;*/
+    box-shadow: 0 0 0 1px #A9A9A9;
+    --smart-window-default-height: 250px;
+}
+
+    smart-layout > .smart-container {
+        /*overflow: hidden;*/
+    }
+
+    smart-layout .smart-layout-items-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        /*overflow: hidden;*/
+        display: flex;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    smart-layout[dragged] {
+        cursor: pointer;
+    }
+
+    smart-layout smart-tabs-window {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        top: initial;
+        left: initial;
+        z-index: initial;
+        transition: transform 0.2s ease-out;
+        transform: initial;
+    }
+
+        smart-layout smart-tabs-window:focus,
+        smart-layout smart-tabs-window[focused] {
+            box-shadow: 1.25px 2.5px 7.5px 0.5px #A9A9A9;
+        }
+
+        smart-layout smart-tabs-window[tabs-window-dragged]:not(.smart-tabs-window-dummy) {
+            transform: scale(0.75);
+        }
+
+smart-tabs-window[tabs-window-dragged]:not(.smart-tabs-window-dummy) {
+    transform: scale(0.75) translate(30px, 30px);
+}
+
+smart-tabs-window[tabs-window-dragged] {
+    position: absolute;
+    transform: scale(0.75);
+    transform-origin: top left;
+    z-index: 9999;
+    transition: transform 0.2s ease-in;
+    pointer-events: none;
+    width: 200px;
+    height: 100px;
+    min-width: 100px;
+    opacity: 0.5;
+}
+
+smart-layout smart-tabs-window[ontop]:not([tabs-window-dragged]) {
+    z-index: initial;
+}
+
+smart-layout .smart-tabs-window-dummy {
+    position: absolute;
+    /*z-index: -1;*/
+    /*z-index: 9999;*/
+    opacity: 0;
+    /*transform: scale(1);*/
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+    smart-layout .smart-tabs-window-dummy[tabs-window-dragged] {
+        z-index: 9999;
+        opacity: 0.5;
+        transform: scale(0.75);
+    }
+
+smart-layout .smart-window-snap-right-dummy,
+smart-layout .smart-window-snap-left-dummy,
+smart-layout .smart-window-snap-top-dummy,
+smart-layout .smart-window-snap-bottom-dummy {
+    margin-top: 1.5px;
+    bottom: initial;
+}
+
+smart-layout .smart-window-snap-right-dummy {
+    width: 50%;
+    left: calc(50% - 5px);
+}
+
+smart-layout .smart-window-snap-header-dummy,
+smart-layout .smart-window-snap-layout-left-dummy,
+smart-layout .smart-window-snap-layout-right-dummy,
+smart-layout .smart-window-snap-layout-top-dummy,
+smart-layout .smart-window-snap-layout-bottom-dummy {
+    position: absolute;
+    /*background-color: #fff;*/
+    opacity: 0.65;
+    box-shadow: 0 0 1px 1px #8a8a8a;
+    border-radius: 2px;
+    transition: all 0.2s cubic-bezier(0.4, 0.0, 0.6, 1);
+    animation: scaleIn 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    transform: scale(1);
+    pointer-events: none;
+    cursor: pointer;
+}
+
+smart-layout .smart-window-snap-header-dummy,
+smart-layout .smart-window-snap-layout-left-dummy,
+smart-layout .smart-window-snap-layout-right-dummy,
+smart-layout .smart-window-snap-layout-top-dummy,
+smart-layout .smart-window-snap-layout-bottom-dummy {
+    transition: width 0.2s cubic-bezier(0.4, 0.0, 0.2, 1), height 0.25s cubic-bezier(0.4, 0.0, 0.2, 1), top 0.2s cubic-bezier(0.4, 0.0, 0.6, 1), animation 0.2s cubic-bezier(0.4, 0.0, 0.6, 1), left 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+    animation: scaleIn 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+    smart-layout .smart-window-snap-header-dummy.smart-visibility-hidden,
+    smart-layout .smart-window-snap-layout-left-dummy.smart-visibility-hidden,
+    smart-layout .smart-window-snap-layout-right-dummy.smart-visibility-hidden,
+    smart-layout .smart-window-snap-layout-top-dummy.smart-visibility-hidden,
+    smart-layout .smart-window-snap-layout-bottom-dummy.smart-visibility-hidden {
+        transition: animation 0.2s cubic-bezier(0.4, 0.0, 0.6, 1), visibility 0.2s cubic-bezier(0.4, 0.0, 0.6, 1), top 0.2s cubic-bezier(0.4, 0.0, 0.2, 1), left 0.1s cubic-bezier(0.4, 0.0, 0.2, 1);
+        animation: scaleOut 0.2s cubic-bezier(0.4, 0.0, 0.6, 1);
+        transform: scale(0);
+    }
+
+smart-layout .smart-window-snap-header-dummy {
+    width: 50px;
+    left: 5px;
+}
+
+smart-layout .smart-window-snap-layout-left-dummy {
+    width: 5%;
+    left: 5px;
+    transform-origin: left;
+}
+
+smart-layout .smart-window-snap-layout-right-dummy {
+    width: 5%;
+    left: calc(95% - 5px);
+    transform-origin: left;
+}
+
+smart-layout .smart-window-snap-layout-top-dummy,
+smart-layout .smart-window-snap-layout-bottom-dummy {
+    width: calc(100% - 10px);
+    transform-origin: left;
+    left: 5px;
+}
+
+smart-layout smart-tabs-window {
+    position: relative;
+}
