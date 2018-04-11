@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.material-novars.css" type="text/css" />');
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.material-dark-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <link rel="stylesheet" href="../../source-minified/styles/smart.material.css" type="text/css" />
+    <link rel="stylesheet" href="../../source-minified/styles/smart.material-dark.css" type="text/css" />
+    <!--! do not remove -->
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.scrollbar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.listbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.dropdownlist.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.calendar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.tooltip.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.timepicker.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.numeric.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.math.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.draw.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.date.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.datetimepicker.js"></script>
+    <style>
+        /* ------------ Google fonts ------------ */ /* APACHE LICENSE 2.0 ! */
+
+        /* fallback */
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/materialicons/v31/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+        }
+
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: inherit;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ------------ */
+
+        #materialPicker {
+            font-family: var(--smart-material-font-family);
+            line-height: 24px;
+            font-size: 13px;
+            background-color: #fafafa;
+            padding: 25px;
+            margin-left: 0;
+            padding: 200px;
+            padding-top: 50px;
+        }
+
+            #materialPicker #timePickers smart-time-picker {
+                line-height: initial;
+            }
+
+            #materialPicker #dateTimePickers smart-date-time-picker {
+                line-height: initial;
+            }
+
+            #materialPicker .dateTimeLight > div {
+                background-color: #EEEEEE;
+                padding: 20px;
+            }
+
+            #materialPicker .dateTimeDark > div {
+                background-color: #000;
+                padding: 20px;
+                color: white;
+            }
+
+            #materialPicker section h1 {
+                border-top: 1px solid rgba(0,0,0,.12);
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 40px;
+                margin-bottom: 30px;
+                color: #3949ab;
+                padding-top: 80px;
+                width: calc(100% - 280px);
+            }
+
+            #materialPicker #usage h1 {
+                border-top: initial;
+            }
+
+            #materialPicker section:first-of-type h1 {
+                font-size: 34px;
+                border-top: initial;
+            }
+
+            #materialPicker section:first-of-type div h1 {
+                font-size: 20px;
+            }
+
+            #materialPicker section {
+                margin-top: 80px;
+            }
+
+                #materialPicker section:first-of-type {
+                    margin-top: 0;
+                }
+
+                #materialPicker section div h1 {
+                    color: #212121;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 32px;
+                    margin-bottom: 30px;
+                    max-width: 940px;
+                }
+
+            #materialPicker nav {
+                display: block;
+                border-left: 5px #3949ab solid;
+                padding-left: 20px;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+                -webkit-font-smoothing: antialiased;
+                font: inherit;
+                margin-top: 60px;
+            }
+
+                #materialPicker nav ul {
+                    list-style: none;
+                    margin-top: 0;
+                    padding-left: 0;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font: inherit;
+                    vertical-align: baseline;
+                    display: block;
+                    list-style-type: disc;
+                }
+
+                #materialPicker nav li {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    font-size: 20px;
+                    line-height: 40px;
+                }
+
+                    #materialPicker nav li a {
+                        text-decoration: none;
+                    }
+
+                #materialPicker nav h1 {
+                    font-size: 15px;
+                    line-height: 16px;
+                    padding-bottom: 12px;
+                    font-weight: 400;
+                    color: #757575;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font: inherit;
+                    vertical-align: baseline;
+                    -webkit-margin-before: 1em;
+                    -webkit-margin-after: 1em;
+                    -webkit-margin-start: 0px;
+                    -webkit-margin-end: 0px;
+                }
+
+        .module {
+            width: calc(100% / 4);
+            display: inline-block;
+            font: inherit;
+            margin-right: 40px;
+            min-width: 365px;
+            vertical-align: top;
+        }
+
+            .module h3 {
+                font-size: 13px;
+            }
+
+            .module p {
+                margin-bottom: 20px;
+            }
+
+            .module img {
+                width: 100%;
+            }
+
+            .module h2 {
+                font-weight: 400;
+            }
+
+        /*width: calc(100% / 2 + 45px);
+        height: 500px;
+        background-color: #EEEEEE;
+        margin-top: 50px;
+        margin-bottom: 80px;*/
+
+        #materialPicker #datePickers .module:nth-of-type(4),
+        #materialPicker #datePickers .module:nth-of-type(5),
+        #materialPicker #datePickers .module:nth-of-type(6),
+        #materialPicker #datePickers .module:nth-of-type(7),
+        #materialPicker #datePickers .module:nth-of-type(8),
+        #materialPicker #datePickers .module:nth-of-type(9),
+        #materialPicker #timePickers .module:nth-of-type(4),
+        #materialPicker #timePickers .module:nth-of-type(5),
+        #materialPicker #timePickers .module:nth-of-type(6),
+        #materialPicker #timePickers .module:nth-of-type(7),
+        #materialPicker #timePickers .module:nth-of-type(8),
+        #materialPicker #timePickers .module:nth-of-type(9),
+        #materialPicker #dateTimePickers .module:nth-of-type(4),
+        #materialPicker #dateTimePickers .module:nth-of-type(5),
+        #materialPicker #dateTimePickers .module:nth-of-type(6) {
+            margin-top: 100px;
+        }
+
+        #materialPicker #datePickers smart-calendar[view="landscape"] {
+            height: 350px;
+        }
+
+        #materialPicker #datePickers smart-calendar,
+        #materialPicker #datePickers smart-calendar[view="portrait"] {
+            height: 450px
+        }
+
+        #materialPicker #timePickers .smart-footer {
+            padding-left: 7%;
+            padding-right: 7%;
+        }
+
+        #materialPicker #datePickers .smart-footer,
+        #materialPicker #timePickers .smart-footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+
+            #materialPicker #datePickers .smart-footer smart-button,
+            #materialPicker #timePickers .smart-footer smart-button {
+                height: 100%;
+                font-size: 12px;
+                margin-left: 10px;
+                --smart-material-color: #009788;
+            }
+
+            #materialPicker #timePickers .smart-footer smart-button {
+                height: 100%;
+            }
+
+                #materialPicker #datePickers .smart-footer smart-button:last-of-type,
+                #materialPicker #timePickers .smart-footer smart-button:last-of-type {
+                    width: 60px
+                }
+
+                #materialPicker #datePickers .smart-footer smart-button button,
+                #materialPicker #timePickers .smart-footer smart-button button {
+                    padding-left: 4px;
+                    padding-right: 4px;
+                    padding-top: 3.5px;
+                    padding-bottom: 3.5px;
+                }
+
+                    #materialPicker #datePickers .smart-footer smart-button button:active,
+                    #materialPicker #timePickers .smart-footer smart-button button:active {
+                        color: white;
+                    }
+    </style>
+</head>
+<body>
+    <template id="templateWithButtons">
+        <smart-button class="material flat">CANCEL</smart-button>
+        <smart-button class="material flat">OK</smart-button>
+    </template>
+    <template id="templateWithButtonsDark">
+        <smart-button class="material-dark flat">CANCEL</smart-button>
+        <smart-button class="material-dark flat">OK</smart-button>
+    </template>
+    <div id="materialPicker">
+        <section>
+            <h1>Pickers</h1>
+            <div>
+                <h1>Pickers provide a simple way to select a single value from a pre-determined set.</h1>
+                <div class="module">
+                    <p><strong>Date pickers</strong> use a dialog window to select a single date on mobile.</p>
+                    <p><strong>Time pickers</strong> use a dialog to select a single time (in the hours:minutes format) on mobile. They adjust to a user’s preferred time setting.</p>
+                </div>
+                <div class="module">
+                </div>
+                <div class="module">
+                    <figure>
+                        <img alt="" src="../images/components-pickers.png">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <nav>
+            <h1>Contents</h1>
+            <ul>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#datePickers">Date pickers</a></li>
+                <li><a href="#timePickers">Time pickers</a></li>
+                <li><a href="#dateTimePickers">DateTime pickers</a></li>
+            </ul>
+        </nav>
+
+        <section id="usage">
+            <h1>Usage</h1>
+            <div class="module">
+                <p>On mobile, pickers are best suited for display in a confirmation dialog.</p>
+                <p><strong>Tiles</strong> hold content, and can vary in height within a list.</p>
+            </div>
+            <div class="module">
+            </div>
+            <div class="module">
+            </div>
+        </section>
+
+        <section id="datePickers">
+            <h1>Date pickers</h1>
+            <div class="module">
+                <p>A dialog picker is used to select a single date on mobile.</p>
+                <p>The selected day is indicated by a filled circle. The current day is indicated by a different color and type weight.</p>
+                <p>Swipe left to right to navigate through the months. Touch the year in the title bar to transition to the year view.</p>
+            </div>
+            <div class="module">
+                <div>
+                    <smart-calendar class="material animation" selection-mode="one" view="portrait" hide-other-month-days view-sections='["title", "header", "footer"]' display-mode-view="list" footer-template="templateWithButtons"></smart-calendar>
+                </div>
+                <p>Date and year picker: Light theme, portrait, month display mode</p>
+            </div>
+            <div class="module">
+                <div>
+                    <smart-calendar class="material animation" selection-mode="one" view="portrait" hide-other-month-days view-sections='["title", "header", "footer"]' display-mode-view="list" display-mode="decade" footer-template="templateWithButtons"></smart-calendar>
+                </div>
+                <p>Date and year picker: Light theme, portrait, decade display mode.</p>
+            </div>
+            <div class="module">
+                <p>The picker has a landscape view as well to suite the different screen orientations.</p>
+            </div>
+            <div class="module">
+                <smart-calendar class="material animation" selection-mode="one" view="landscape" hide-other-month-days view-sections='["title", "header", "footer"]' display-mode-view="list" footer-template="templateWithButtons"></smart-calendar>
+                <p>Date picker: Light theme, landscape, month display mode</p>
+            </div>
+            <div class="module">
+                <smart-calendar class="material animation" selection-mode="one" view="landscape" hide-other-month-days view-sections='["title", "header", "footer"]' display-mode-view="list" display-mode="decade" footer-template="templateWithButtons"></smart-calendar>
+                <p>Date picker: Light theme, landscape, decade display mode.</p>
+            </div>
+            <div class="module">
+                <p>A dark theme picker can complement apps that have a dark theme.</p>
+            </div>
+            <div class="module">
+                <smart-calendar class="material-dark animation" selection-mode="one" view="portrait" hide-other-month-days view-sections='["title", "header", "footer"]' display-mode-view="list" footer-template="templateWithButtonsDark"></smart-calendar>
+                <p>Date picker: Dark theme, portrait</p>
+            </div>
+            <div class="module">
+                <smart-calendar class="material-dark animation" selection-mode="one" view="landscape" hide-other-month-days view-sections='["title", "header", "footer"]' display-mode-view="list" footer-template="templateWithButtonsDark"></smart-calendar>
+                <p>Date picker: Dark theme, landscape</p>
+            </div>
+        </section>
+
+        <section id="timePickers">
+            <h1>Time pickers</h1>
+            <div class="module">
+                <p>A time picker adjusts to a user’s preferred time setting, i.e. the 12-hour or 24-hour format.</p>
+                <p>A dialog picker is used to select a single time (hours:minutes) on mobile.</p>
+                <p>The selected time is indicated by the filled circle at the end of the clock hand.</p>
+                <p>
+                    Tap between the hour and minute label in the title bar to switch between the hour or minute view.
+                    Additionally, tap on the AM/PM label in the title bar to switch between AM or PM (in 12-hour clock mode).
+                </p>
+            </div>
+            <div class="module">
+                <div>
+                    <smart-time-picker class="material" footer footer-template="templateWithButtons"></smart-time-picker>
+                </div>
+                <p>Time picker: Light theme, portrait</p>
+            </div>
+            <div class="module">
+                <div>
+                    <smart-time-picker class="material" footer footer-template="templateWithButtons" selection="minute"></smart-time-picker>
+                </div>
+                <p>Time picker: Light theme, portrait</p>
+            </div>
+            <div class="module">
+                <p>The picker has a landscape view as well to suite the different screen orientations.</p>
+            </div>
+            <div class="module">
+                <smart-time-picker class="material" view="landscape" footer footer-template="templateWithButtons"></smart-time-picker>
+                <p>Time picker: Light theme, landscape, hours selection.</p>
+            </div>
+            <div class="module">
+                <smart-time-picker class="material" view="landscape" footer footer-template="templateWithButtons" selection="minute"></smart-time-picker>
+                <p>Time picker: Light theme, landscape, minute selection</p>
+            </div>
+            <div class="module">
+                <p>A dark theme picker can complement apps that have a dark theme.</p>
+            </div>
+            <div class="module">
+                <smart-time-picker class="material-dark" view="portrait" footer footer-template="templateWithButtonsDark" selection="minute"></smart-time-picker>
+                <p>Time picker: Dark theme, portrait</p>
+            </div>
+            <div class="module">
+                <smart-time-picker class="material-dark" view="landscape" footer footer-template="templateWithButtonsDark" selection="minute"></smart-time-picker>
+                <p>Time picker: Dark theme, landscape</p>
+            </div>
+        </section>
+
+        <section id="dateTimePickers">
+            <h1>DateTime pickers</h1>
+            <div class="module">
+                <p>DateTime picker contains both a Date picker and a Ticker and allows the selection of date and time.</p>
+            </div>
+            <div class="module">
+                <div>
+                    <smart-date-time-picker class="material" calendar-button enable-mouse-wheel-action drop-down-position="center-bottom" spin-buttons spin-buttons-position="left" label="Today" placeholder="" display-mode-view="list" hide-other-month-days></smart-date-time-picker>
+                </div>
+                <p>Date Time picker: Light theme</p>
+            </div>
+            <div class="module"></div>
+            <div class="module">
+                <p>DateTime picker also has a light and a dark theme</p>
+            </div>
+            <div class="module dateTimeLight">
+                <div>
+                    <smart-date-time-picker class="material" calendar-button enable-mouse-wheel-action drop-down-position="center-bottom" spin-buttons spin-buttons-position="left" label="Today" placeholder="" display-mode-view="list" hide-other-month-days></smart-date-time-picker>
+                    <p>Date Time picker: Light theme</p>
+                </div>
+            </div>
+            <div class="module dateTimeDark">
+                <div>
+                    <smart-date-time-picker class="material-dark" calendar-button enable-mouse-wheel-action drop-down-position="center-bottom" spin-buttons spin-buttons-position="left" label="Today" placeholder="" display-mode-view="list" hide-other-month-days></smart-date-time-picker>
+                    <p>DateTime picker: Dark theme</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

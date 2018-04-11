@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.scrollbar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.radiobutton.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.listbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.dropdownlist.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.combobox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.textbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.maskedtextbox.js"></script>
+</head>
+<body>
+    <h3>cutCopyMaskFormat : </h3>
+    <smart-masked-text-box mask="00/00/0000" cut-copy-mask-format="excludePromptAndLiterals"></smart-masked-text-box> : excludePromptAndLiterals <br />
+    <smart-masked-text-box mask="00/00/0000" cut-copy-mask-format="includePrompt"></smart-masked-text-box> : includePrompt <br />
+    <smart-masked-text-box mask="00/00/0000" cut-copy-mask-format="includeLiterals"></smart-masked-text-box> : includeLiterals <br />
+    <smart-masked-text-box mask="00/00/0000" cut-copy-mask-format="includePromptAndLiterals"></smart-masked-text-box> : includePromptAndLiterals <br /><br />
+
+    <h3>Paste copied text from a masked text box:</h3>
+    <smart-text-box placeholder="Paste Here ..."></smart-text-box>
+
+</body>
+</html>

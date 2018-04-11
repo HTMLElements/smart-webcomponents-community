@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.material-novars.css" type="text/css" />');
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.material-dark-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <link rel="stylesheet" href="../../source-minified/styles/smart.material.css" type="text/css" />
+    <link rel="stylesheet" href="../../source-minified/styles/smart.material-dark.css" type="text/css" />
+    <!--! do not remove -->
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-loader.js"></script>
+    <script type="text/javascript" src="../../source-minified/smartelement.js"></script>
+    <script type="text/javascript" src="../../source-minified/smartbutton.js"></script>
+    <script type="text/javascript" src="../../source-minified/smartradiobutton.js"></script>
+    <script type="text/javascript" src="../../source-minified/smartprogressbar.js"></script>
+    <style>
+        /* ------------ Google fonts ------------ */
+
+        /* fallback */
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/materialicons/v31/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+        }
+
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: inherit;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ------------ */
+
+        #container {
+            font-family: var(--smart-material-font-family);
+            line-height: 24px;
+            font-size: 13px;
+            background-color: #fafafa;
+            padding: 25px;
+            margin-left: 0;
+            padding: 200px;
+            padding-top: 50px;
+        }
+
+            #container section h1 {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 40px;
+                margin-bottom: 30px;
+                color: #3949ab;
+            }
+
+            #container section:first-of-type h1 {
+                font-size: 34px;
+                border-top: initial;
+            }
+
+            #container section:first-of-type div h1 {
+                font-size: 20px;
+            }
+
+            #container section {
+                margin-top: 80px;
+            }
+
+                #container section:first-of-type {
+                    margin-top: 0;
+                }
+
+                #container section div h1 {
+                    color: #212121;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 32px;
+                    margin-bottom: 20px;
+                    max-width: 940px;
+                }
+
+            #container nav {
+                display: block;
+                border-left: 5px #3949ab solid;
+                padding-left: 20px;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+                -webkit-font-smoothing: antialiased;
+                font: inherit;
+                margin-top: 60px;
+            }
+
+                #container nav ul {
+                    list-style: none;
+                    margin-top: 0;
+                    padding-left: 0;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font: inherit;
+                    vertical-align: baseline;
+                    display: block;
+                    list-style-type: disc;
+                }
+
+                #container nav li {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    font-size: 20px;
+                    line-height: 40px;
+                }
+
+                    #container nav li a {
+                        text-decoration: none;
+                    }
+
+                #container nav h1 {
+                    font-size: 15px;
+                    line-height: 16px;
+                    padding-bottom: 12px;
+                    font-weight: 400;
+                    color: #757575;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    font: inherit;
+                    vertical-align: baseline;
+                    -webkit-margin-before: 1em;
+                    -webkit-margin-after: 1em;
+                    -webkit-margin-start: 0px;
+                    -webkit-margin-end: 0px;
+                }
+
+        .module {
+            width: calc(100% / 4);
+            display: inline-block;
+            font: inherit;
+            margin-right: 40px;
+            min-width: 365px;
+            vertical-align: top;
+        }
+
+        #container .progress-bar-container,
+        #container .progress-bar-container-dark-theme {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #EEEEEE;
+            padding: 10px;
+        }
+
+        #container .progress-bar-container-dark-theme {
+            background-color: #000;
+        }
+
+        #container #progressBarCircularControl .smart-label-container,
+        #container #progressBarCircularControl2 .smart-label-container,
+        #container #progressBarAnimated .smart-label-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            #container #progressBarCircularControl .smart-label-container smart-repeat-button {
+                width: 100%;
+                height: 50%;
+            }
+
+            #container #progressBarAnimated .smart-label-container smart-power-button {
+                width: 100%;
+                height: 100%;
+            }
+
+                #container #progressBarAnimated .smart-label-container smart-power-button .smart-input::after {
+                    font-size: 30px;
+                }
+
+        #container #progressBarCircularControl2 .smart-label-container {
+            flex-direction: row;
+        }
+
+            #container #progressBarCircularControl2 .smart-label-container smart-repeat-button {
+                width: 50%;
+                height: 100%;
+            }
+
+        #container .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 250px;
+            background-color: #EEEEEE;
+        }
+
+        .module h3 {
+            margin-top: 30px;
+            font-size: 13px;
+        }
+
+        .module p {
+            margin-bottom: 20px;
+        }
+
+        .module img {
+            width: 100%;
+        }
+
+        .module h2 {
+            font-weight: 400;
+        }
+
+        #container #indicatorTypes .module.progress-bar-animations {
+            width: calc(100% / 2 + 45px);
+            margin-bottom: 80px;
+        }
+
+        #container #indicatorTypes .module:first-of-type {
+            width: 100%;
+        }
+
+        #container #indicatorTypes .progress-bar-animations,
+        #container #indicatorTypes .progress-bar-animations-dark {
+            width: calc(100% / 2 + 45px);
+            height: 400px;
+            background-color: #EEEEEE;
+            margin-top: 50px;
+        }
+
+        #container #circularProgressBar .progress-bar-animations,
+        #container #circularProgressBar .progress-bar-animations-dark {
+            height: 500px;
+            background-color: #EEEEEE;
+        }
+
+        #container #indicatorTypes .progress-bar-animations-dark,
+        #container #circularProgressBar .progress-bar-animations-dark {
+            background-color: #000;
+        }
+
+        #container #indicatorTypes .progress-bar-animations-dark > div,
+        #container #circularProgressBar .progress-bar-animations-dark > div {
+            color: white;
+        }
+
+        #container #circularProgressBar {
+            margin-top: 120px;
+        }
+
+            #container #circularProgressBar h2 {
+                -webkit-margin-before: initial;
+                font-weight: 400;
+            }
+
+        #container #indicatorTypes .progress-bar-animations h3,
+        #container #indicatorTypes .progress-bar-animations-dark h3 {
+            width: 100%;
+            padding-left: 20%;
+            margin-bottom: initial;
+        }
+
+        #container #indicatorTypes .progress-bar-animations-dark p {
+            color: #000;
+        }
+
+        #container .progress-bar-animations h3,
+        #container .progress-bar-animations-dark h3 {
+            margin-top: 0;
+        }
+
+        #container #indicatorTypes .progress-bar-linear {
+            margin-top: 50px;
+        }
+
+            #container #indicatorTypes .progress-bar-linear h2 {
+                -webkit-margin-before: initial;
+            }
+
+        #container #indicatorTypes .progress-bar-animations div:first-of-type,
+        #container #indicatorTypes .progress-bar-animations-dark div:first-of-type,
+        #container #circularProgressBar .progress-bar-animations div:first-of-type,
+        #container #circularProgressBar .progress-bar-animations-dark div:first-of-type {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            position: relative; /* FireFox needs it */
+        }
+
+        #container #circularProgressBar .circular-loading-progress > div {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #EEEEEE;
+        }
+
+        #container #circularProgressBar .circular-loading-progress {
+            height: 350px;
+        }
+
+        #container #indicatorTypes .progress-bar-animations smart-progress-bar,
+        #container #indicatorTypes .progress-bar-animations-dark smart-progress-bar {
+            width: 80%;
+            height: 10px;
+        }
+
+        #container #indicatorTypes .page-loading-progress,
+        #container #indicatorTypes .files-loading-progress,
+        #container #circularProgressBar .page-refresh-progress {
+            position: relative;
+            height: 700px;
+            background-color: #EEEEEE;
+            text-align: center;
+            background-image: url(../images/progress-bar-indeterminate.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #container #circularProgressBar .page-refresh-progress {
+            text-align: initial;
+        }
+
+            #container #circularProgressBar .page-refresh-progress > div {
+                display: flex;
+                justify-content: center;
+                height: 100%;
+            }
+
+            #container #circularProgressBar .page-refresh-progress smart-circular-progress-bar {
+                animation: re-appear 0.5s ease-in-out;
+                margin-top: 30%;
+            }
+
+                #container #circularProgressBar .page-refresh-progress smart-circular-progress-bar.smart-visibility-hidden {
+                    opacity: 0;
+                    animation: hide 0.5s ease-in-out;
+                    transition: animation, visibility 0.5s ease-in;
+                }
+
+        #container #indicatorTypes .files-loading-progress {
+            background-image: url(../images/progres-bar-loading-files.jpeg);
+        }
+
+        #container #indicatorTypes .progress-bar-behavior,
+        #container #indicatorTypes .progress-bar-determinate,
+        #container #indicatorTypes .page-loading-progress,
+        #container #indicatorTypes .files-loading-progress,
+        #container #circularProgressBar .progress-bar-behavior,
+        #container #circularProgressBar .circular-loading-progress,
+        #container #circularProgressBar .page-loading-progress,
+        #container #circularProgressBar .page-refresh-progress {
+            margin-top: 130px;
+        }
+
+        #container .circular-loading-progress smart-circular-progress-bar smart-toggle-button,
+        #container .circular-loading-progress smart-circular-progress-bar smart-toggle-button[checked] {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            font-size: 50px;
+        }
+
+            #container .circular-loading-progress smart-circular-progress-bar smart-toggle-button button {
+                border-radius: 50%;
+                border: initial;
+                color: white;
+                display: flex;
+                justify-content: center;
+            }
+
+            #container .circular-loading-progress smart-circular-progress-bar smart-toggle-button button,
+            #container .circular-loading-progress smart-circular-progress-bar smart-toggle-button[checked] button {
+                background-color: #5869B1;
+            }
+
+        #container #indicatorTypes .page-loading-progress smart-progress-bar,
+        #container #indicatorTypes .files-loading-progress smart-progress-bar {
+            width: 100%;
+            height: 5px;
+            margin-top: 88px;
+        }
+
+        #container #indicatorTypes .files-loading-progress smart-progress-bar {
+            width: 30%;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate( -50%, -50%);
+        }
+
+        #container #indicatorTypes .files-loading-progress > div,
+        #container #indicatorTypes .page-loading-progress > div {
+            height: 100%;
+            display: flex;
+        }
+
+        #container #indicatorTypes .files-loading-progress > div p {
+            width: 100%;
+            position: absolute;
+            top: 51%;
+            left: 50%;
+            transform: translate( -50%, -50%);
+            font-size: 15px;
+            text-align: center;
+        }
+
+        #container #indicatorTypes .page-loading-progress p,
+        #container #indicatorTypes .files-loading-progress p {
+            text-align: left;
+        }
+
+        #container smart-circular-progress-bar.finish .smart-value,
+        #container smart-circular-progress-bar.finish .smart-value-path {
+            animation: finish-uploading 0.25s ease-in;
+            stroke-width: 0%;
+            opacity: 0;
+        }
+
+        #container smart-circular-progress-bar.animation .smart-value {
+            transition-duration: 0.8s;
+        }
+
+        #container smart-circular-progress-bar.uploading {
+            --smart-circular-progress-bar-fill-size: 10%;
+        }
+
+            #container smart-circular-progress-bar.uploading .smart-value,
+            #container smart-circular-progress-bar.uploading .smart-value-path {
+                stroke-width: 0%;
+                opacity: 0;
+            }
+
+            #container smart-circular-progress-bar.uploading .smart-value {
+                stroke: #F47B12;
+            }
+
+            #container smart-circular-progress-bar.uploading .smart-value-path {
+                stroke: #FDB65E;
+            }
+
+        #container smart-circular-progress-bar.start .smart-value,
+        #container smart-circular-progress-bar.start .smart-value-path {
+            animation: start-uploading 0.5s ease-in;
+            stroke-width: 10%;
+            opacity: 1;
+        }
+
+        #container smart-circular-progress-bar.start svg:first-of-type {
+            animation: rotateValue 3s ease-in-out;
+        }
+
+        #container smart-progress-bar.finished,
+        #container smart-circular-progress-bar.finished {
+            animation: finish-animation 0.5s ease-in;
+            transform: scaleY(0);
+        }
+
+        #container smart-circular-progress-bar.finished {
+            animation: finish-animation-circular 0.5s ease-in;
+            transform: scale(0);
+        }
+
+        #container #circularProgressBar .page-refresh-progress {
+            background-image: url(../images/progress-bar-refresh.jpeg);
+        }
+
+            #container #circularProgressBar .page-refresh-progress smart-circular-progress-bar {
+                width: 40px;
+                height: 40px;
+            }
+
+        @keyframes re-appear {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes hide {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes rotateValue {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes finish-animation {
+            0% {
+                transform: scaleY(1);
+            }
+
+            100% {
+                transform: scaleY(0);
+            }
+        }
+
+        @keyframes finish-animation-circular {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(0);
+            }
+        }
+
+        @keyframes start-uploading {
+            0% {
+                stroke-width: 0%;
+                opacity: 0;
+            }
+
+            100% {
+                stroke-width: 10%;
+                opacity: 1;
+            }
+        }
+
+        @keyframes finish-uploading {
+            0% {
+                stroke-width: 10%;
+                opacity: 1;
+            }
+
+            100% {
+                stroke-width: 0%;
+                opacity: 0;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var hoverArea = document.getElementById('hover-area'),
+                linearProgressBar1 = document.getElementsByClassName('determinate')[0],
+                linearProgressBar2 = document.getElementsByClassName('determinate')[1],
+                linearProgressBar3 = document.getElementsByClassName('determinate')[2],
+                circularProgressBar1 = document.getElementsByClassName('determinate')[3],
+                circularProgressBar2 = document.getElementsByClassName('determinate')[4],
+                mouseHoverArea = document.getElementsByClassName('page-refresh-progress')[0],
+                uploadButton = document.getElementById('toggleUploadButton'),
+                value, isPaused;
+
+            mouseHoverArea.addEventListener('mouseenter', function () {
+                document.getElementById('refreshing').$.removeClass('smart-visibility-hidden');
+            });
+
+            mouseHoverArea.addEventListener('mouseleave', function () {
+                document.getElementById('refreshing').$.addClass('smart-visibility-hidden');
+            });
+
+            uploadButton.addEventListener('change', function (event) {
+                var circularProgressBar1 = document.getElementsByClassName('uploading')[0];
+
+                if (uploadButton.disabled || (circularProgressBar1.value > 0 && circularProgressBar1.value < circularProgressBar1.max)) {
+                    return;
+                }
+
+                if (event.detail.value) {
+                    circularProgressBar1.readonly = true;
+                    circularProgressBar1.$.addClass('start');
+                    circularProgressBar1.$.addClass('animation');
+                    var uploading = setInterval(function () {
+                        circularProgressBar1.value += 25;
+
+                        if (circularProgressBar1.value > circularProgressBar1.max) {
+                            clearInterval(uploading);
+                            circularProgressBar1.$.addClass('finish');
+                            circularProgressBar1.$.removeClass('animation');
+                            circularProgressBar1.$.removeClass('start');
+
+                            setTimeout(function () {
+                                uploadButton.$.button.style.backgroundColor = '#F47B12';
+                                uploadButton.$.button.innerHTML = '<i class="material-icons">done</i>';
+                                circularProgressBar1.readonly = false;
+                                circularProgressBar1.$.removeClass('finish');
+                            }, 250);
+                        }
+                    }, 750);
+                }
+                else {
+                    circularProgressBar1.value = circularProgressBar1.min;
+                    uploadButton.$.button.style.backgroundColor = '';
+                    uploadButton.$.button.innerHTML = '<i class="material-icons">cloud_upload</i>';
+                }
+            });
+
+            setInterval(function () {
+                if (isPaused) {
+                    return;
+                }
+
+                value = Math.random() * 15;
+                linearProgressBar1.value += value;
+                linearProgressBar2.value += value;
+                circularProgressBar1.value += value;
+                circularProgressBar2.value += value;
+
+                if (linearProgressBar1.value >= linearProgressBar1.max) {
+                    isPaused = true;
+                    linearProgressBar1.$.addClass('finished');
+                    linearProgressBar1.$.removeClass('animation');
+                    linearProgressBar2.$.addClass('finished');
+                    linearProgressBar2.$.removeClass('animation');
+                    circularProgressBar1.$.addClass('finished');
+                    circularProgressBar1.$.removeClass('animation');
+                    circularProgressBar2.$.addClass('finished');
+                    circularProgressBar2.$.removeClass('animation');
+
+                    setTimeout(function () {
+                        linearProgressBar1.value = linearProgressBar1.min;
+                        linearProgressBar2.value = linearProgressBar2.min;
+                        circularProgressBar1.value = circularProgressBar1.min;
+                        circularProgressBar2.value = circularProgressBar2.min;
+                        linearProgressBar1.$.removeClass('finished');
+                        linearProgressBar1.$.addClass('animation');
+                        linearProgressBar2.$.removeClass('finished');
+                        linearProgressBar2.$.addClass('animation');
+                        circularProgressBar1.$.removeClass('finished');
+                        circularProgressBar1.$.addClass('animation');
+                        circularProgressBar2.$.removeClass('finished');
+                        circularProgressBar2.$.addClass('animation');
+                        isPaused = false;
+                    }, 1500);
+                }
+            }, 500);
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <section>
+            <div>
+                <h1>Progress and activity indicators are visual indications of an app loading content.</h1>
+                <div class="module">
+                    <p>
+                        A single visual indicator should be used to represent each type of operation. For example,
+                        a refresh operation should display either a refresh bar or an activity circle, but not both.
+                    </p>
+                    <p>Additional button types include:</p>
+                    <p><strong>Determinate indicators</strong> display how long an operation will take.</p>
+                    <p><strong>Indeterminate indicators</strong> visualize an unspecified wait time.</p>
+                </div>
+                <div class="module">
+                    <h3>Types</h3>
+                    <p>Linear<br>Circular</p>
+                    <h3>Behavior</h3>
+                    <p>Loading content in phases<br>Loading additional content</p>
+                </div>
+                <div class="module">
+                    <figure>
+                        <img alt="" src="../images/components-progress-and-activity.png">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <nav>
+            <h1>Contents</h1>
+            <ul>
+                <li><a href="#indicatorTypes">Linear</a></li>
+                <li><a href="#circularProgressBar">Circular</a></li>
+            </ul>
+        </nav>
+
+        <section id="indicatorTypes">
+            <h1>Types of indicators</h1>
+            <div class="module">
+                <p>When indicators are <strong>determinate</strong> they indicate how long an operation will take when the percentage complete is detectable.</p>
+                <p>When indicators are <strong>indeterminate</strong> they request that the user wait while something finishes when it’s not necessary to indicate how long it will take.</p>
+                <p>Both linear and circular progress indicators may be either determinate or indeterminate.</p>
+            </div>
+            <div class="module progress-bar-linear">
+                <h2>Linear</h2>
+                <p>
+                    A linear progress indicator should always fill from 0% to 100% and never decrease in value.
+                    It should be represented by bars on the edge of a header or sheet that appear and disappear.
+                </p>
+                <p>For <strong>multiple operations</strong> happening in sequence, use the indicator to represent the progress as a whole, and not each individual operation. </p>
+            </div>
+            <div class="module progress-bar-animations">
+                <div>
+                    <h3>Determinate</h3>
+                    <smart-progress-bar class="material animation determinate"></smart-progress-bar>
+                    <h3>Indeterminate</h3>
+                    <smart-progress-bar indeterminate class="material"></smart-progress-bar>
+                    <!--<smart-circular-progress-bar class="material determinate"></smart-circular-progress-bar>
+                    <smart-circular-progress-bar indeterminate class="material"></smart-circular-progress-bar>-->
+                </div>
+                <p>Linear progress indicators Light Theme</p>
+            </div>
+            <div class="module">
+
+            </div>
+            <div class="module progress-bar-animations-dark">
+                <div>
+                    <h3>Determinate</h3>
+                    <smart-progress-bar class="material-dark animation determinate"></smart-progress-bar>
+                    <h3>Indeterminate</h3>
+                    <smart-progress-bar indeterminate class="material-dark"></smart-progress-bar>
+                </div>
+                <p>Linear progress indicators Dark Theme</p>
+            </div>
+            <div class="module progress-bar-behavior">
+                <h2>Demo usage</h2>
+            </div>
+            <div class="module files-loading-progress">
+                <div>
+                    <p>Getting your files</p>
+                    <smart-progress-bar class="material determinate" indeterminate inverted></smart-progress-bar>
+                </div>
+                <p>Loading content for the first time</p>
+            </div>
+            <div class="module page-loading-progress">
+                <div>
+                    <smart-progress-bar class="material-dark" indeterminate></smart-progress-bar>
+                </div>
+                <p>Query indicator on a webpage</p>
+            </div>
+        </section>
+
+        <section id="circularProgressBar">
+            <div class="module">
+                <h2>Circular</h2>
+            </div>
+            <div class="module progress-bar-animations">
+                <div>
+                    <h3>Determinate</h3>
+                    <smart-circular-progress-bar class="material animation determinate"></smart-circular-progress-bar>
+                    <h3>Indeterminate</h3>
+                    <smart-circular-progress-bar indeterminate class="material"></smart-circular-progress-bar>
+                </div>
+                <p>Circular progress indicators Light Theme</p>
+            </div>
+            <div class="module progress-bar-animations-dark">
+                <div>
+                    <h3>Determinate</h3>
+                    <smart-circular-progress-bar class="material-dark animation determinate"></smart-circular-progress-bar>
+                    <h3>Indeterminate</h3>
+                    <smart-circular-progress-bar indeterminate class="material-dark"></smart-circular-progress-bar>
+                </div>
+                <p>Circular progress indicators Dark Theme</p>
+            </div>
+            <div class="module progress-bar-behavior">
+                <h2>Demo usage</h2>
+            </div>
+            <div class="module circular-loading-progress">
+                <div>
+                    <smart-circular-progress-bar class="material uploading">
+                        <smart-toggle-button class="material" id="toggleUploadButton"><i class="material-icons">cloud_upload</i></smart-toggle-button>
+                    </smart-circular-progress-bar>
+                </div>
+                <p>A circular loader may be integrated with a button.</p>
+            </div>
+            <div class="module page-refresh-progress">
+                <div>
+                    <smart-circular-progress-bar id="refreshing" class="material-dark smart-visibility-hidden" indeterminate></smart-circular-progress-bar>
+                </div>
+                <p>A circular loader may be used to load something on hover.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

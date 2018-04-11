@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style type="text/css">
+        #map-canvas-0,
+        #map-canvas-1,
+        #map-canvas-2,
+        #map-canvas-3 {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.tabs.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.radiobutton.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var tabs = document.getElementById('tabs'),
+                initialized = [false, false, false, true],
+                mapCoordinates = [{ lat: 40.7590403, long: -74.0392705 }, { lat: 22.257983, long: 114.1696828 }, { lat: 42.8863169, long: 24.7089964 }];
+
+            tabs.addEventListener('change', function (event) {
+                var index = event.detail.index;
+
+                if (!initialized[index]) {
+                    new google.maps.Map(document.getElementById('map-canvas-' + index), {
+                        center: new google.maps.LatLng(mapCoordinates[index].lat, mapCoordinates[index].long),
+                        zoom: 10,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    });
+                    initialized[index] = true;
+                }
+            });
+
+            [].slice.call(document.querySelectorAll('smart-radio-button')).map(function (button) {
+                button.addEventListener('change', function (event) {
+                    tabs[this.groupName] = this.id;
+                });
+            });
+        }
+    </script>
+</head>
+<body id="bodyLightTheme">
+    <smart-tabs id="tabs" class="demoTabs" selected-index="3" tab-position="left" selectionMode="click" tab-text-orientation="vertical" overflow="scroll">
+        <smart-tab-item label="New York"><div id="map-canvas-0"></div></smart-tab-item>
+        <smart-tab-item label="Hong Kong"><div id="map-canvas-1"></div></smart-tab-item>
+        <smart-tab-item label="Troyan"><div id="map-canvas-2"></div></smart-tab-item>
+        <smart-tab-item label="Bali"><div id="map-canvas-3"></div></smart-tab-item>
+    </smart-tabs>
+    <div>
+        <p>Tab position</p>
+        <smart-radio-button id="top" group-name="tabPosition" enable-container-click>top</smart-radio-button>
+        <smart-radio-button id="bottom" group-name="tabPosition" enable-container-click>bottom</smart-radio-button>
+        <smart-radio-button id="left" group-name="tabPosition" enable-container-click checked>left</smart-radio-button>
+        <smart-radio-button id="right" group-name="tabPosition" enable-container-click>right</smart-radio-button>
+    </div>
+    <div>
+        <p>Selection mode</p>
+        <smart-radio-button id="click" group-name="selectionMode" enable-container-click checked>click</smart-radio-button>
+        <smart-radio-button id="dblclick" group-name="selectionMode" enable-container-click>dblclick</smart-radio-button>
+        <smart-radio-button id="mouseenter" group-name="selectionMode" enable-container-click>mouseenter</smart-radio-button>
+        <smart-radio-button id="none" group-name="selectionMode" enable-container-click>none</smart-radio-button>
+    </div>
+    <div>
+        <p>Tab text orientation</p>
+        <smart-radio-button id="horizontal" group-name="tabTextOrientation" enable-container-click>horizontal</smart-radio-button>
+        <smart-radio-button id="vertical" group-name="tabTextOrientation" enable-container-click checked>vertical</smart-radio-button>
+    </div>
+    <script type="text/javascript">
+        function initializeMaps() {
+            new google.maps.Map(document.getElementById('map-canvas-3'), {
+                center: new google.maps.LatLng(-10.516768, 119.680272),
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+        }
+    </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLNo8WFhrz_4zuLdl423WX9h5Kh0SedHQ&callback=initializeMaps"></script>
+</body>
+</html>

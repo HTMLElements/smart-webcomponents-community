@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.scrollbar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.radiobutton.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.listbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.dropdownlist.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.combobox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.textbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.maskedtextbox.js"></script>
+    <script>
+        window.onload = function () {
+            var maskedTextBox = document.getElementById('maskedTextBox'),
+                validationStatus = document.getElementById('validationStatus');
+
+            maskedTextBox.validation = function (value) {
+                if(value.length === 5){
+                    return true;
+                }
+
+                return false;
+            };
+
+            maskedTextBox.addEventListener('validation', function (event) {
+                var details = event.detail;
+
+                console.log('Validation success : ' + details.success);
+
+                if (details.success) {
+                    validationStatus.innerHTML = 'Validation successful!';
+                } else {
+                    validationStatus.innerHTML = 'Please, fill the mask...';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <smart-masked-text-box id="maskedTextBox"></smart-masked-text-box>
+    <div id="validationStatus"></div>
+</body>
+</html>

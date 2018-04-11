@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.radiobutton.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.checkbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.scrollbar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.listbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.dropdownlist.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.toast.js"></script>
+    <script>
+        window.onload = function () {
+            var toast = document.querySelectorAll('smart-toast')[0],
+                openButton = document.getElementById('openButton'),
+                closeLastButton = document.getElementById('closeLastButton'),
+                toastTopLeft = document.getElementById('toastTopLeft'),
+                toastTopRight = document.getElementById('toastTopRight'),
+                toastBottomLeft = document.getElementById('toastBottomLeft'),
+                toastBottomRight = document.getElementById('toastBottomRight'),
+                type = document.getElementById('type'),
+                closeAllButton = document.getElementById('closeAllButton'),
+                modal = document.getElementById('modal'),
+                autoClose = document.getElementById('autoClose'),
+                animation = document.getElementById('animation'),
+                blink = document.getElementById('blink');
+
+
+
+            openButton.addEventListener('click', function () {
+                toast.open();
+                toast.value = type.selectedValues[0];
+            });
+            closeLastButton.addEventListener('click', function () {
+                toast.closeLast();
+            });
+            closeAllButton.addEventListener('click', function () {
+                toast.closeAll();
+            });
+
+
+            toastTopLeft.addEventListener('change', function () {
+                toast.position = 'top-left';
+            });
+            toastTopRight.addEventListener('change', function () {
+                toast.position = 'top-right';
+            });
+            toastBottomLeft.addEventListener('change', function () {
+                toast.position = 'bottom-left';
+            });
+            toastBottomRight.addEventListener('change', function () {
+                toast.position = 'bottom-right';
+            });
+
+
+            type.addEventListener('change', function () {
+                toast.type = type.selectedValues[0] === 'null' ? null : type.selectedValues[0];
+            });
+
+            modal.addEventListener('change', function () {
+                toast.modal = modal.checked;
+            });
+            autoClose.addEventListener('change', function () {
+                toast.autoClose = autoClose.checked;
+            });
+            animation.addEventListener('change', function () {
+                animation.checked ? toast.classList.add('animation') : toast.classList.remove('animation');
+            });
+            blink.addEventListener('change', function () {
+                blink.checked ? toast.classList.add('blink') : toast.classList.remove('blink');
+            });
+        }
+    </script>
+    <style>
+        #settingsContainer{
+            width:380px;
+            position:absolute;
+            left:calc(50% - 210px);
+            top:50px;
+            padding:20px;
+            border:1px gray dashed;
+        }
+    </style>
+</head>
+<body>
+    <div id="settingsContainer">
+        <h2>Methods</h2>
+        <smart-button id="openButton">Open</smart-button>
+        <smart-button id="closeLastButton">CloseLast</smart-button>
+        <smart-button id="closeAllButton">CloseAll</smart-button>
+
+        <h2>Settings</h2>
+        Position: <br />
+        <smart-radio-button id="toastTopLeft" enable-container-click group-name="toastPosition">Top-left</smart-radio-button>
+        <smart-radio-button id="toastTopRight" enable-container-click group-name="toastPosition" checked>Top-right</smart-radio-button>
+        <smart-radio-button id="toastBottomLeft" enable-container-click group-name="toastPosition">Bottom-left</smart-radio-button>
+        <smart-radio-button id="toastBottomRight" enable-container-click group-name="toastPosition">Bottom-right</smart-radio-button>
+
+        <hr />
+        Type: <br />
+        <smart-drop-down-list id="type" data-source='["info", "warning", "success", "error", "mail", "time", "null"]'></smart-drop-down-list>
+
+        <hr />
+        <smart-check-box id="modal" enable-container-click>Modal</smart-check-box>
+        <smart-check-box id="autoClose" enable-container-click>Auto close</smart-check-box>
+        <smart-check-box id="animation" enable-container-click>Animation</smart-check-box>
+        <smart-check-box id="blink" enable-container-click>Blink</smart-check-box>
+    </div>
+
+    <smart-toast position="top-right" auto-open show-close-button>Toast !</smart-toast>
+</body>
+</html>

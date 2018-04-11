@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.scrollbar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.listbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.dropdownlist.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.pager.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.checkbox.js"></script>
+
+    <style>
+        smart-pager {
+            --smart-color: #007bff;
+            --smart-focus-color: #007bff;
+            color: #007bff;
+        }
+
+            smart-pager button {
+                --smart-border-width : 0px;
+            }
+
+            smart-pager .smart-previous-button:hover,
+            smart-pager .smart-next-button:hover {
+                background-color: #e8e9ea;
+            }
+
+            smart-pager .smart-selected,
+            smart-pager .smart-pager-item.smart-selected {
+                color: white;
+                background-color: #007bff;
+            }
+    </style>
+
+</head>
+<body>
+    <smart-pager prev-next-buttons items="30"></smart-pager><br /><br />
+</body>
+</html>

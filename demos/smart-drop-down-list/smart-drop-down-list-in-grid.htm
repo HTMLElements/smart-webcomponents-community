@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://jqwidgets.com/public/jqwidgets/styles/jqx.base.css" type="text/css" />
+    <style type="text/css">
+        smart-drop-down-list {
+            width: 100%;
+        }
+
+        #outsideDropDownList {
+            width: 250px
+        }
+
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://jqwidgets.com/public/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="https://jqwidgets.com/public/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="https://jqwidgets.com/public/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="https://jqwidgets.com/public/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="https://jqwidgets.com/public/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="https://jqwidgets.com/public/jqwidgets/jqxdropdownlist.js"></script>
+    <script type="text/javascript" src="https://jqwidgets.com/public/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="https://jqwidgets.com/public/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="https://jqwidgets.com/public/jqwidgets/jqxgrid.pager.js"></script>
+    <script type="text/javascript" src="https://jqwidgets.com/public/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="https://jqwidgets.com/public/jqwidgets/jqxgrid.edit.js"></script>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.scrollbar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.listbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.dropdownlist.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var source =
+                {
+                    localdata: [],
+                    datatype: "array"
+                };
+            var dataAdapter = new $.smart.dataAdapter(source);
+
+            $("#smartgrid").smartGrid(
+                {
+                    width: 600,
+                    autoheight: true,
+                    source: dataAdapter,
+                    selectionmode: 'singlecell',
+                    rowsheight: 30,
+                    columns: [
+                        {
+                            text: 'Numerics', datafield: 'numericTextBoxes', width: 100,
+                            createwidget: function (row, column, value, htmlElement) {
+                                var dropDownList = document.createElement('smart-drop-down-list');
+
+                                dropDownList.selectionMode = 'zeroOrMany';
+                                dropDownList.dataSource = ['A', 'B', 'C'];
+                                dropDownList.dropDownAppendTo = 'body';
+                                dropDownList.dropDownHeight = 'auto';
+                                $(htmlElement).append(dropDownList);
+                                dropDownList.placeholder = '<i style="align: middle" class="fa fa-cog">';
+                            },
+                            initwidget: function () {
+                            }
+                        },
+                        { text: 'Title', datafield: 'title', width: 200 },
+                        { text: 'Country', datafield: 'country' }
+                    ]
+                });
+
+            document.getElementById('appendButton').addEventListener('click', function () {
+                $('#smartgrid').smartGrid('addrow', null, { title: 'Sales Representative', country: 'USA' });
+            });
+
+            document.getElementById('removeButton').addEventListener('click', function () {
+                var datarows = $('#smartgrid').smartGrid('getrows');
+                var lastRowId = $('#smartgrid').smartGrid('getrowid', datarows[datarows.length - 1].uid);
+
+                $('#smartgrid').smartGrid('deleterow', lastRowId);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="smartgrid">
+    </div>
+    <br />
+    <smart-drop-down-list id="outsideDropDownList" data-source='["A", "B", "C"]' drop-down-height="auto"></smart-drop-down-list>
+    <br />
+    <smart-button id="appendButton">Add Row</smart-button>
+    <br />
+    <smart-button id="removeButton">Remove Row</smart-button>
+</body>
+</html>

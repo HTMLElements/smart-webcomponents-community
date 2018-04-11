@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.radiobutton.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.scrollbar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.listbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.dropdownlist.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.combobox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.calendar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.tooltip.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.textbox.js"></script>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+            -webkit-margin-before: 0.25em;
+            -webkit-margin-after: 0.25em;
+        }
+
+        i {
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var calendar = document.getElementById('datePicker'),
+                roomPicker = document.getElementById('roomPicker'),
+                adultPicker = document.getElementById('adultPicker'),
+                childrenPicker = document.getElementById('childrenPicker');
+
+            roomPicker.dataSource = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
+            adultPicker.dataSource = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30];
+            childrenPicker.dataSource = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            calendar.addEventListener('change', function () {
+                var summary = document.getElementById('summary');
+
+                summary.innerHTML = calendar.selectedDates.length + ' days';
+                summary.classList.remove('smart-visibility-hidden');
+            });
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h4>Welcome, user10</h4><smart-button id="logoutButton">Logout</smart-button>
+    </div>
+    <div id="mainContainer">
+        <h2>Search</h2>
+        <div>
+            <h4>Name of the destination:</h4>
+            <smart-text-box id="nameInput" placeholder="London"></smart-text-box>
+        </div>
+        <div id="travelChooser">
+            <h4>Work travel ?</h4>
+            <smart-radio-button>Yes</smart-radio-button>
+            <smart-radio-button>No</smart-radio-button>
+        </div>
+        <div>
+            <h4>Reservation dates:</h4>
+            <smart-calendar id="datePicker" min="new Date()" months="2" selection-mode="many" view-sections='["header", "footer"]'></smart-calendar>
+        </div>
+        <div id="summary" class="smart-visibility-hidden"></div>
+        <div id="personPicker">
+            <div>
+                <h4>Rooms:</h4>
+                <smart-combo-box id="roomPicker" class="hotelRoomPicker" selection-mode="one"></smart-combo-box>
+            </div>
+            <div>
+                <h4>Adults:</h4>
+                <smart-combo-box id="adultPicker" class="hotelRoomPicker" selection-mode="one"></smart-combo-box>
+            </div>
+            <div>
+                <h4>Children:</h4>
+                <smart-combo-box id="childrenPicker" class="hotelRoomPicker" selection-mode="one"></smart-combo-box>
+            </div>
+        </div>
+        <smart-button id="submitButton">Search</smart-button>
+    </div>
+</body>
+</html>

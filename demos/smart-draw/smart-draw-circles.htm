@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <style type="text/css">
+        #container {
+            width: 850px;
+            height: 500px;
+        }
+    </style>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.draw.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var draw = new Smart.Utilities.Draw(document.getElementById('container'));
+
+            var firstCircleParameters = { stroke: 'red', fill: 'white' };
+            firstCircleParameters['stroke-width'] = '20px';
+            draw.circle(150, 150, 100, firstCircleParameters);
+
+            var secondCircleParameters = { stroke: 'blue', fill: 'white' };
+            secondCircleParameters['stroke-width'] = '20px';
+            draw.circle(150, 150, 50, secondCircleParameters);
+
+            var thirdCircleParameters = { fill: 'red' };
+            draw.circle(150, 150, 20, thirdCircleParameters);
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+    </div>
+</body>
+</html>

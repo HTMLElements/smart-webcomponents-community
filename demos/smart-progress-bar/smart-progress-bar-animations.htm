@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <style type="text/css">
+        .smart-progress-bar-horizontal {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+        }
+
+        h2, h3, h4 {
+            text-align: center;
+        }
+
+        h1 {
+            margin-left: 250px;
+            margin-top: 40px;
+        }
+
+        div {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        smart-circular-progress-bar {
+            margin-top: 20px;
+        }
+
+        smart-button {
+            margin-top: 10px;
+            display: inline-block;
+            height: 35px;
+        }
+
+        b {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+    <script type="text/javascript" src="../../source-minified/smart.progressbar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script>
+        window.onload = function () {
+            document.querySelector('smart-button').addEventListener('click', function () {
+                var progressBars = document.getElementsByClassName('animated');
+                for (var i = 0; i < progressBars.length; i++) {
+                    progressBars[i].indeterminate = !progressBars[i].indeterminate;
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Animations</h1>
+    <div>
+        <h2>Default - Animation Off</h2>
+        <div>
+            <h3>Horizontal</h3>
+            <h4>Normal</h4>
+            <smart-progress-bar class="smart-progress-bar-horizontal animated" orientation="horizontal" value="50"></smart-progress-bar>
+            <h4>Inverted</h4>
+            <smart-progress-bar class="smart-progress-bar-horizontal animated" orientation="horizontal" value="50" inverted></smart-progress-bar>
+        </div>
+        <div>
+            <h3>Vertical</h3>
+            <div>
+                <h4>Normal</h4>
+                <smart-progress-bar orientation="vertical" class="smart-progress-bar-vertical animated" value="50"></smart-progress-bar>
+            </div>
+            <div>
+                <h4>Inverted</h4>
+                <smart-progress-bar orientation="vertical" class="smart-progress-bar-vertical animated" value="50" inverted></smart-progress-bar>
+            </div>
+        </div>
+        <div>
+            <h3>Circular</h3>
+            <div>
+                <h4>Normal</h4>
+                <smart-circular-progress-bar class="smart-progress-bar-circular animated" value="50"></smart-circular-progress-bar>
+            </div>
+            <div>
+                <h4>Inverted</h4>
+                <smart-circular-progress-bar class="smart-progress-bar-circular animated" value="50" inverted></smart-circular-progress-bar>
+            </div>
+        </div>
+        <br />
+        <b>Set Indeterminate property:</b>
+        <smart-button>Animate</smart-button>
+        <h2>Indeterminate Effect</h2>
+        <div>
+            <h3>Horizontal</h3>
+            <h4>Normal</h4>
+            <smart-progress-bar class="smart-progress-bar-horizontal" value="null"></smart-progress-bar>
+            <h4>Inverted</h4>
+            <smart-progress-bar class="smart-progress-bar-horizontal" inverted value="null"></smart-progress-bar>
+        </div>
+        <div>
+            <h3>Vertical</h3>
+            <div>
+                <h4>Normal</h4>
+                <smart-progress-bar orientation="vertical" class="smart-progress-bar-vertical" value="null"></smart-progress-bar>
+            </div>
+            <div>
+                <h4>Inverted</h4>
+                <smart-progress-bar orientation="vertical" class="smart-progress-bar-vertical" inverted value="null"></smart-progress-bar>
+            </div>
+        </div>
+        <div>
+            <h3>Circular</h3>
+            <div>
+                <h4>Normal</h4>
+                <smart-circular-progress-bar class="smart-progress-bar-circular" value="null"></smart-circular-progress-bar>
+            </div>
+            <div>
+                <h4>Inverted</h4>
+                <smart-circular-progress-bar class="smart-progress-bar-circular" inverted value="null"></smart-circular-progress-bar>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

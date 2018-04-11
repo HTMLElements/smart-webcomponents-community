@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.scrollbar.js"></script>
+    <script type="text/javascript" src="./../../source-minified/smart.listbox.js"></script>
+    <script type="text/javascript" src="./../../source-minified/smart.dropdownlist.js"></script>
+    <script type="text/javascript" src="./../../source-minified/smart.checkbox.js"></script>
+    <script type="text/javascript" src="./../../source-minified/smart.radiobutton.js"></script>
+    <script>
+        window.onload = function () {
+            document.getElementById('dropDownListMethodsDemo').dataSource = [
+                {
+                    label: "Andrew",
+                    value: 1,
+                    group: "A"
+                },
+                {
+                    label: "Natalia",
+                    value: 5,
+                    group: "B"
+                },
+                {
+                    label: "Michael",
+                    value: 4,
+                    group: "B"
+                },
+                {
+                    label: "Angel",
+                    value: 2,
+                    group: "A"
+                },
+                {
+                    label: "Hristo",
+                    value: 6,
+                    group: "C"
+                },
+               {
+                   label: "Peter",
+                   value: 3,
+                   group: "A"
+               },
+               {
+                   label: "Albert",
+                   value: 4,
+                   group: "A"
+               },
+               {
+                   label: "Boyko",
+                   value: 8,
+                   group: "A"
+               },
+               {
+                   label: "Dimitar",
+                   value: 9,
+                   group: "B"
+               },
+               {
+                   label: "George",
+                   value: 10,
+                   group: "C"
+               }
+            ];
+
+            document.getElementById("unsort").onclick = function () {
+                document.getElementById('dropDownListMethodsDemo').sorted = false;
+            }
+            document.getElementById("sort").onclick = function () {
+                document.getElementById('dropDownListMethodsDemo').sorted = true;
+            }
+            document.getElementById("ungroup").onclick = function () {
+                document.getElementById('dropDownListMethodsDemo').grouped = false;
+            }
+            document.getElementById("group").onclick = function () {
+                document.getElementById('dropDownListMethodsDemo').grouped = true;
+            }
+            document.getElementById("open").onclick = function () {
+                document.getElementById('dropDownListMethodsDemo').open();
+            }
+            document.getElementById("close").onclick = function () {
+                document.getElementById('dropDownListMethodsDemo').close();
+            }
+            document.getElementById("default").onclick = function () {
+                document.getElementById('dropDownListMethodsDemo').selectionMode = 'oneOrManyExtended';
+            }
+            document.getElementById("check").onclick = function () {
+                document.getElementById('dropDownListMethodsDemo').selectionMode = 'checkBox';
+            }
+            document.getElementById("radio").onclick = function () {
+                document.getElementById('dropDownListMethodsDemo').selectionMode = 'radioButton';
+            }
+            document.getElementById("insert").onclick = function () {
+                document.getElementById('dropDownListMethodsDemo').insert(0, "New Item");
+            }
+            document.getElementById("update").onclick = function () {
+                document.getElementById('dropDownListMethodsDemo').update(0, "Updated Item");
+            }
+            document.getElementById("remove").onclick = function () {
+                document.getElementById('dropDownListMethodsDemo').remove(0);
+            }
+            document.getElementById("disabled").onclick = function () {
+                var dropDownList = document.getElementById('dropDownListMethodsDemo');
+
+                dropDownList.disabled = !dropDownList.disabled;
+            }
+        }
+    </script>
+</head>
+<body>
+    <smart-drop-down-list id="dropDownListMethodsDemo"></smart-drop-down-list>
+    <div style="float: left; margin-left:100px;">
+        <smart-button id="unsort">Unsort</smart-button>
+        <smart-button id="sort">Sort</smart-button>
+        <br /><br />
+        <smart-button id="ungroup">Ungroup</smart-button>
+        <smart-button id="group">Group</smart-button>
+        <br /><br />
+        <smart-button id="open">Open</smart-button>
+        <smart-button id="close">Close</smart-button>
+        <br /><br />
+        <smart-button id="default">Default</smart-button>
+        <smart-button id="check">Check</smart-button>
+        <smart-button id="radio">Radio</smart-button>
+        <br /><br />
+        <smart-button id="insert">Insert</smart-button>
+        <smart-button id="update">Update</smart-button>
+        <smart-button id="remove">Remove</smart-button>
+        <br /><br />
+        <smart-button style="width:auto;" id="disabled">Enable/Disable</smart-button>
+    </div>
+</body>
+</html>

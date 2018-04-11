@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.material-novars.css" type="text/css" />');
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.material-dark-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <link rel="stylesheet" href="../../source-minified/styles/smart.material.css" type="text/css" />
+    <link rel="stylesheet" href="../../source-minified/styles/smart.material-dark.css" type="text/css" />
+    <!--! do not remove -->
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.window.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.tank.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.gauge.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.draw.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.numeric.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.math.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.tickintervalhandler.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.numerictextbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.complex.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.powerbutton.js"></script>
+    <script>
+        window.onload = function () {
+            var gauge = document.querySelector('smart-gauge');
+
+            document.getElementById('power').addEventListener('click', function () {
+                gauge.disabled = !this.checked; 
+            });
+
+            gauge.addEventListener('change', function (event) {
+                document.getElementById('value').textContent = event.detail.value;
+            });
+        }
+    </script>
+    <style>
+        smart-window section {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        smart-window > .smart-container > .smart-content {
+            overflow-y: auto;
+        }
+
+        smart-window smart-gauge {
+            height: 100%;
+            width: 100%;
+        }
+
+        smart-window .smart-header,
+        smart-window .smart-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        smart-window .smart-header label {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <template id="headerTemplate">
+        <smart-power-button id="power" checked></smart-power-button><label>Gauge</label>
+    </template>
+
+    <template id="footerTemplate">
+        <div>Value:<span id="value"></span></div>
+    </template>
+
+    <smart-window opened header-template="headerTemplate" footer-template="footerTemplate">
+        <section>
+            <smart-gauge analog-display-type="needle" start-angle="-30" end-angle="210" min="0" max="100" value="0" size-mode="auto"></smart-gauge>
+        </section>
+    </smart-window>
+</body>
+</html>

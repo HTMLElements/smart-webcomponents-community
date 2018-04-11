@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.material-novars.css" type="text/css" />');
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.material-dark-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <link rel="stylesheet" href="../../source-minified/styles/smart.material.css" type="text/css" />
+    <link rel="stylesheet" href="../../source-minified/styles/smart.material-dark.css" type="text/css" />
+    <!--! do not remove -->
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.radiobutton.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.progressbar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.tooltip.js"></script>
+    <style>
+        smart-progress-bar {
+            position: absolute;
+            top: 25%;
+            left: 15%;
+        }
+
+        smart-circular-progress-bar {
+            position: absolute;
+            top: 20%;
+            left: 35%;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            document.getElementsByTagName('smart-radio-button')[0].addEventListener('change', function () {
+                document.getElementById('tooltip').position = 'top';
+                document.getElementById('tooltip2').position = 'top';
+            });
+
+            document.getElementsByTagName('smart-radio-button')[1].addEventListener('change', function () {
+                document.getElementById('tooltip').position = 'bottom';
+                document.getElementById('tooltip2').position = 'bottom';
+            });
+
+            document.getElementsByTagName('smart-radio-button')[2].addEventListener('change', function () {
+                document.getElementById('tooltip').position = 'left';
+                document.getElementById('tooltip2').position = 'left';
+            });
+            document.getElementsByTagName('smart-radio-button')[3].addEventListener('change', function () {
+                document.getElementById('tooltip').position = 'right';
+                document.getElementById('tooltip2').position = 'right';
+            });
+
+            document.getElementById('tooltip').innerHTML = 'Progress:' + document.querySelector('smart-progress-bar').value + '%';
+            document.getElementById('tooltip2').innerHTML = 'Progress:' + document.querySelector('smart-circular-progress-bar').value + '%';
+        }
+    </script>
+</head>
+<body>
+    <smart-progress-bar id="linearProgressBar" value="50"></smart-progress-bar>
+    <smart-tooltip id="tooltip" selector="linearProgressBar" arrow></smart-tooltip>
+    <smart-circular-progress-bar id="circularProgressBar" value="75"></smart-circular-progress-bar>
+    <smart-tooltip id="tooltip2" selector="circularProgressBar" arrow position="left"></smart-tooltip>
+    <div id="controlPanel">
+        <h3>Tooltip Position:</h3>
+        <smart-radio-button enable-container-click checked>Top</smart-radio-button>
+        <smart-radio-button enable-container-click>Bottom</smart-radio-button>
+        <smart-radio-button enable-container-click>Left</smart-radio-button>
+        <smart-radio-button enable-container-click>Right</smart-radio-button>
+    </div>
+</body>
+</html>

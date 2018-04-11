@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style type="text/css">
+        html, body {
+            background-color: black;
+        }
+
+        #tabs {
+            border-color: #366D93;
+            width: 500px;
+            height: 200px;
+            color: #F2F2F2;
+        }
+
+            #tabs .smart-tab-strip {
+                background-color: #366D93;
+            }
+
+            #tabs .smart-tab-label-container {
+                border: 1px solid transparent;
+            }
+
+                #tabs .smart-tab-label-container.smart-tab-selected {
+                    border-color: #4384B7 #4384B7 black #4384B7;
+                    background-color: black;
+                }
+
+                #tabs .smart-tab-label-container.smart-tab-hovered {
+                    border-color: #4384B7;
+                    background-color: #2D5B7A;
+                    color: #F2F2F2;
+                }
+    </style>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.tabs.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+</head>
+<body>
+    <smart-tabs id="tabs">
+        <smart-tab-item label="template1">The Sun is the star at the center of the Solar System.</smart-tab-item>
+        <smart-tab-item label="template2" selected>Earth is the third planet from the Sun and the only object in the Universe known to harbor life.</smart-tab-item>
+        <smart-tab-item label="template3">The Moon is an astronomical body that orbits planet Earth, being Earth's only permanent natural satellite.</smart-tab-item>
+        <smart-tab-item label="template4">Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, after Mercury.</smart-tab-item>
+    </smart-tabs>
+
+    <template id="template1">
+        <img src="../images/sun.png" />Sun
+    </template>
+    <template id="template2">
+        <img src="../images/earth.png" />Earth
+    </template>
+    <template id="template3">
+        <img src="../images/moon.png" />Moon
+    </template>
+    <template id="template4">
+        <img src="../images/mars.png" />Mars
+    </template>
+</body>
+</html>

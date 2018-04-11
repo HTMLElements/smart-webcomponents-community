@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.radiobutton.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.scrollbar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.listbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.dropdownlist.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.multisplitbutton.js"></script>
+    <script>
+        window.onload = function () {
+            var multiSplitButton = document.getElementById('multiSplitButton');
+
+            document.getElementById("arrayWithStringItems").addEventListener('click', function () {
+                multiSplitButton.dataSource = ["Affogato", "Americano", "Bicerin", "Breve", "Café Bombón"];
+            });
+            document.getElementById("arrayWithObjects").addEventListener('click', function () {
+                multiSplitButton.dataSource = [{ "value": "1", "label": "Btn 1", "button": true }, { "value": "2", "label": "Btn 2", "button": true }, { "value": "3", "label": "Btn 3", "button": true }, { "value": "4", "label": "Btn 4", "button": true }, { "value": "5", "label": "Btn 5", "button": true }, { "value": "6", "label": "Btn 6", "button": true }, { "value": "7", "label": "Btn 7" }, { "value": "8", "label": "Btn 8" }];
+            });
+        }
+    </script>
+    <style>
+        smart-multi-split-button {
+            width: 300px;
+        }
+
+        smart-multi-split-button,
+        .container {
+            margin: 10px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .container smart-button {
+            width: 150px;
+         }
+    </style>
+</head>
+<body>
+    <smart-multi-split-button id="multiSplitButton">Multi Split Button</smart-multi-split-button>
+
+    <div class="container">
+        <h1>Update Data Source</h1>
+        <smart-button id="arrayWithStringItems">Array of string items</smart-button>
+        <smart-button id="arrayWithObjects">Array of objects</smart-button>
+    </div>
+</body>
+</html>

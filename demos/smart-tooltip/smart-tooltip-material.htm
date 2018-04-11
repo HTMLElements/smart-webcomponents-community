@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.material-novars.css" type="text/css" />');
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.material-dark-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <link rel="stylesheet" href="../../source-minified/styles/smart.material.css" type="text/css" />
+    <link rel="stylesheet" href="../../source-minified/styles/smart.material-dark.css" type="text/css" />
+    <!--! do not remove --> 
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>  
+    <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.led.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.tooltip.js"></script>
+
+    <script>
+        window.onload = function () {
+            const smallMenu = document.getElementById('smallMenu'),
+                smallMenuButtons = smallMenu.querySelectorAll('smart-toggle-button'),
+                smallMenuLabels = ['Bold', 'Italic', 'Underline', 'Color'],
+                commonSmallMenuTooltip = document.getElementById('commonSmallMenuTooltip'),
+                largeMenu = document.getElementById('largeMenu'),
+                largeMenuButtons = largeMenu.querySelectorAll('smart-toggle-button'),
+                largeMenuLabels = ['Font Family', 'Font Size', 'Bold', 'Italic', 'Underline',/* 'Color',*/ 'Align Left', 'Align Center', 'Align Right', 'Align Justify'],
+                commonLargeMenuTooltip = document.getElementById('commonLargeMenuTooltip');
+
+            attachTooltipToGroup(commonSmallMenuTooltip, smallMenuButtons, smallMenuLabels);
+            attachTooltipToGroup(commonLargeMenuTooltip, largeMenuButtons, largeMenuLabels);
+
+            function attachTooltipToGroup(tooltip, elements, labels) {
+                for (let i = 0; i < elements.length; i++) {
+                    const btn = elements[i],
+                        label = labels[i];
+
+                    btn.addEventListener('mouseenter', function () {
+                        tooltip.selector = btn;
+                        tooltip.value = label;
+                        tooltip.open();
+                    });
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* fallback */
+  @font-face {
+     font-family: 'Material Icons';
+     font-style: normal;
+     font-weight: 400;
+     src: url(https://fonts.gstatic.com/s/materialicons/v31/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+ .material-icons {
+     font-family: 'Material Icons';
+     font-weight: normal;
+     font-style: normal;
+     font-size: 24px;
+     line-height: 1;
+     letter-spacing: normal;
+     text-transform: none;
+     display: inline-block;
+     white-space: nowrap;
+     word-wrap: normal;
+     direction: ltr;
+     -webkit-font-feature-settings: 'liga';
+     -webkit-font-smoothing: antialiased;
+}
+/* ------------ */
+ #container {
+     font-family: var(--smart-material-font-family);
+     line-height: 24px;
+     font-size: 13px;
+     background-color: #fafafa;
+     padding: 25px;
+     margin-left: 0;
+     padding: 200px;
+     padding-top: 50px;
+}
+ #container section h1 {
+     font-weight: 400;
+     font-size: 24px;
+     line-height: 40px;
+     margin-bottom: 30px;
+     color: #3949ab;
+}
+ #container section:first-of-type h1 {
+     font-size: 34px;
+     border-top: initial;
+}
+ #container section:first-of-type div h1 {
+     font-size: 20px;
+}
+ #container section {
+     margin-top: 80px;
+}
+ #container section:first-of-type {
+     margin-top: 0;
+}
+ #container section div h1 {
+     color: #212121;
+     font-size: 20px;
+     font-weight: 400;
+     line-height: 32px;
+     margin-bottom: 20px;
+     max-width: 940px;
+}
+ #container nav {
+     display: block;
+     border-left: 5px #3949ab solid;
+     padding-left: 20px;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+     -webkit-font-smoothing: antialiased;
+     font: inherit;
+     margin-top: 60px;
+}
+ #container nav ul {
+     list-style: none;
+     margin-top: 0;
+     padding-left: 0;
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font: inherit;
+     vertical-align: baseline;
+     display: block;
+     list-style-type: disc;
+}
+ #container nav li {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+     font-size: 20px;
+     line-height: 40px;
+}
+ #container nav li a {
+     text-decoration: none;
+}
+ #container nav h1 {
+     font-size: 15px;
+     line-height: 16px;
+     padding-bottom: 12px;
+     font-weight: 400;
+     color: #757575;
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font: inherit;
+     vertical-align: baseline;
+     -webkit-margin-before: 1em;
+     -webkit-margin-after: 1em;
+     -webkit-margin-start: 0px;
+     -webkit-margin-end: 0px;
+}
+ .module {
+     width: calc(100% / 4);
+     display: inline-block;
+     font: inherit;
+     margin-right: 40px;
+     min-width: 365px;
+     vertical-align: top;
+     position:relative;
+}
+ .module h3 {
+     margin-top: 30px;
+}
+ .module p {
+     margin-bottom: 20px;
+}
+ .module img {
+     width: 100%;
+}
+ .module-large{
+     width: calc(100% / 2);
+}
+
+.module.light>div,
+.module.dark>div{
+     position:relative;
+}
+
+    /*******************/
+     .menu-container {
+         background-color: #EEEEEE;
+         display: flex;
+         justify-content: center;
+         height: 50px;
+         align-items: center;
+         position:absolute;
+         top:320px;
+         left:250px;
+         width:350px;
+         background-color:white;
+    }
+     .menu-container div {
+         display: flex;
+         height: 30px;
+         width: 50%;
+         border-radius: 2px;
+         background-color: transparent;
+         overflow: hidden;
+    }
+     .toggle-button-no-selection div {
+         box-shadow: initial;
+         border-radius: 2px;
+         background-color: initial;
+    }
+     .menu-container smart-toggle-button {
+         height: 100%;
+         flex-grow: 1;
+         border-radius: initial;
+         box-shadow: initial;
+         background-color: initial;
+    }
+     smart-toggle-button.material[checked] button{
+         background-color:transparent;
+    }
+
+
+     #tooltip-usage .module-large {
+         background-color:#EEEEEE;
+         padding:55px;
+    }
+     #tooltip-usage table {
+         width:100%;
+    }
+     #tooltip-usage table td {
+         padding-bottom:20px;
+         color:gray;
+         font-size:11px;
+         position:relative;
+    }
+     #tooltip-usage smart-led{
+         width:50px;
+         height:50px;
+    }
+     #tooltip-usage smart-led .smart-input{
+         padding:8px;
+    }
+     #tooltip-usage smart-led .smart-input:hover{
+         color:gray;
+    }
+     #tooltip-usage smart-led .smart-true-content-container{
+         background-color:lightgray;
+    }
+     #usageTooltipNormalBtn .smart-input, 
+     #usageTooltipHoverBtn .smart-input{
+         border-width:0px;
+    }
+     #tooltip-usage2 .module-large{
+         height:400px;
+         background-color:#EEEEEE;
+         padding:55px;
+         color:gray;
+         position:relative;
+    }
+     #quickAdd{
+         position: absolute;
+         left:380px;
+         top:130px;
+         cursor:pointer;
+    }
+     #smallMenu{
+         width:300px;
+    }
+
+
+     #tooltip-interaction .module-large{
+         padding:50px;
+         position:relative;
+    }
+     #tooltip-interaction smart-button{
+         margin:40px;
+    }
+
+
+     #tooltip-desktop .menu-container{
+         position: relative;
+         margin-left: 20px;
+         left:auto;
+         top:auto;
+         width:750px;
+    }
+     #largeMenu{
+         width:700px;
+    }
+     #btnFontSize, #btnBold, #btnAlignLeft {
+         border-left:lightgray solid 1px;
+    }
+
+
+     #tooltip-mobile .module > div{
+         text-align: center;
+         background-color: #efefef;
+         padding: 50px;
+    }
+     #tooltip-mobile .module.dark > div{
+         background-color: #333;
+    }
+     #mobileDemo1, #mobileDemo2{
+         height: 660px;
+         padding: 0px;
+         background-image: url(../images/components-tooltips-touch1.png);
+         background-repeat: no-repeat;
+         background-size: 100% auto;
+         position:relative;
+    }
+     #mobileDemo2{
+         background-image: url(../images/components-tooltips-touch2.png);
+    }
+     #mobileDemo1btn, #mobileDemo2btn{
+         position:absolute;
+         left:268px;
+         top:29px;
+         width:50px;
+         height:50px;
+    }
+     #mobileDemo1btn button.hover, 
+     #mobileDemo2btn button.hover{
+         box-shadow: 5px 10px 18px #888888;
+    }
+     #mobileDemo1btn button{
+         background-color:#7ed0f5;
+    }
+     #mobileDemo2btn{
+         left:316px;
+    }
+     #mobileDemo2btn button{
+         background-color:#009BCE;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <section>
+            <h1>smartTooltip</h1>
+            <div>
+                <h1>Tooltips are text labels that appear when the user hovers over, focuses on, or touches an element.</h1>
+                <div class="module">
+                    <p>Tooltips identify an element when they are activated. They may contain brief helper text about its function. For example, they may contain text information about actionable icons.</p>
+                    <p>Tooltip labels do not receive input focus.</p>
+                </div>
+                <div class="module">
+                    <h3>Summoned by:</h3>
+                    <p>
+                        Hovering over an element with a cursor<br>
+                        Focusing on an element with a keyboard (usually the tab key)<br>
+                        Upon touch
+                    </p>
+                </div>
+                <div class="module">
+                    <figure>
+                        <img alt="" src="../images/components-tooltips.png">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <nav>
+            <h1>Contents</h1>
+            <ul>
+                <li><a href="#tooltip-usage">Usage</a></li>
+                <li><a href="#tooltip-interaction">Interaction</a></li>
+                <li><a href="#tooltip-desktop">Tooltips - desktop style</a></li>
+                <li><a href="#tooltip-mobile">Tooltips - mobile style</a></li>
+            </ul>
+        </nav>
+        <section id="tooltip-usage">
+            <h2>Usage</h2>
+            <div class="module">
+                <p>Use tooltips for interactive imagery.</p>
+            </div>
+            <div class="module light module-large">
+                <table>
+                    <tr>
+                        <td>Normal</td>
+                        <td>
+                            <smart-led id="usageTooltipNormalBtn" true-content="<i class='material-icons'>&#xE8AD;</i>" false-content="<i class='material-icons'>&#xE8AD;</i>"></smart-led>
+                            <smart-tooltip id="usageTooltipNormal" selector="usageTooltipNormalBtn"position="bottom" class="animation material">Print</smart-tooltip>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hover</td>
+                        <td>
+                            <smart-led id="usageTooltipHoverBtn" true-content="<i class='material-icons'>&#xE8AD;</i>" false-content="<i class='material-icons'>&#xE8AD;</i>"></smart-led>
+                            <smart-tooltip id="usageTooltipHover" selector="usageTooltipHoverBtn" position="bottom" class="animation material" visible>Print</smart-tooltip>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Focus</td>
+                        <td>
+                            <smart-led id="usageTooltipFocusBtn" true-content="<i class='material-icons'>&#xE8AD;</i>" false-content="<i class='material-icons'>&#xE8AD;</i>" checked></smart-led>
+                            <smart-tooltip id="usageTooltipFocus" selector="usageTooltipFocusBtn" position="bottom" class="animation material" visible>Print</smart-tooltip>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="tooltip-usage2">
+            <div class="module">
+                <p>Tooltips don’t display rich information including images and formatted text.</p>
+                <p>Tooltips are different than ALT-attributes, which are intended primarily for static images.</p>
+                <p>Tooltips don’t have directional arrows; instead, they rely on motion emanating from the source to convey direction.</p>
+            </div>
+            <div class="module module-large">
+                Helper text regarding functions
+
+                <i id="quickAdd"class="material-icons">&#xE145;</i>
+                <smart-tooltip id="tooltipQuickAdd" selector="quickAdd" position="bottom" offset="[0,20]" class="animation material">Quick add</smart-tooltip>
+
+                <div class="menu-container toggle-button-exclusive-selection">
+                    <div id="smallMenu">
+                        <smart-toggle-button class="material exclusive-selection" group="small"><i class="material-icons">format_bold</i></smart-toggle-button>
+                        <smart-toggle-button class="material exclusive-selection" group="small"><i class="material-icons">format_italic</i></smart-toggle-button>
+                        <smart-toggle-button class="material exclusive-selection" group="small"><i class="material-icons">format_underlined</i></smart-toggle-button>
+                        <smart-toggle-button class="material exclusive-selection" group="small"><i class="material-icons">format_color_fill</i></smart-toggle-button>
+                    </div>
+                </div>
+
+                <smart-tooltip id="commonSmallMenuTooltip" position="bottom" offset="[0,10]" class="animation material"></smart-tooltip>
+            </div>
+        </section>
+
+        <section id="tooltip-interaction">
+            <h2>Interaction</h2>
+            <div class="module ">
+                <p>A tooltip is triggered by tapping and holding an item. Keep the tooltip displayed as long as the user continues to hold the element.</p>
+
+                <h1>Motion details</h1>
+                <p>The tooltip entrance occurs over 150ms, using the Deceleration Curve. It also exits over 150ms, using the Acceleration Curve.</p>
+              
+                <h1>Tooltip delay</h1>
+                 <p>
+                    User can control the delay of tooltip show by configuring the "delay" property. 
+               </p> 
+            </div>
+            <div class="module module-large" style="padding:10px;">
+                    <smart-button id="button300ms" class="material">300ms</smart-button>
+                    <smart-tooltip id="tooltip300ms" selector="button300ms" position="bottom" delay="300" offset="[0,10]" class="animation material">300ms delay</smart-tooltip>
+
+                    <smart-button id="button500ms" class="material">500ms</smart-button>
+                    <smart-tooltip id="tooltip500ms" selector="button500ms" position="bottom" delay="500" offset="[0,10]" class="animation material">500ms delay</smart-tooltip>
+
+                    <smart-button id="button1000ms" class="material">1000ms</smart-button>
+                    <smart-tooltip id="tooltip1000ms" selector="button1000ms" position="bottom" delay="1000" offset="[0,10]" class="animation material">1000ms delay</smart-tooltip>
+
+                    <smart-button id="button1500ms" class="material">1500ms</smart-button>
+                    <smart-tooltip id="toolti1500ms" selector="button1500ms" position="bottom" delay="1500" offset="[0,10]" class="animation material">1500ms delay</smart-tooltip>
+            </div>
+        </section>
+
+
+        <section id="tooltip-desktop">
+            <h2>Tooltips (desktop)</h2>
+            <div class="module">
+
+            </div>
+            <div class="module module-large" style="position:relative;">
+                <div class="menu-container toggle-button-exclusive-selection">
+                    <div id="largeMenu">
+                        <smart-toggle-button id="butFontFamily" class="material exclusive-selection" group="large">Roboto</smart-toggle-button>
+                        <smart-toggle-button id="btnFontSize" class="material exclusive-selection" group="large">11</smart-toggle-button>
+                        <smart-toggle-button id="btnBold" class="material exclusive-selection" group="large"><i class="material-icons">format_bold</i></smart-toggle-button>
+                        <smart-toggle-button id="btnItalic" class="material exclusive-selection" group="large"><i class="material-icons">format_italic</i></smart-toggle-button>
+                        <smart-toggle-button id="btnUnderline" class="material exclusive-selection" group="large"><i class="material-icons">format_underlined</i></smart-toggle-button>
+                        <smart-toggle-button id="btnAlignLeft" class="material exclusive-selection" group="large"><i class="material-icons">format_align_left</i></smart-toggle-button>
+                        <smart-toggle-button id="btnAlignCenter" class="material exclusive-selection" group="large"><i class="material-icons">format_align_center</i></smart-toggle-button>
+                        <smart-toggle-button id="btnAlignRight" class="material exclusive-selection" group="large"><i class="material-icons">format_align_right</i></smart-toggle-button>
+                        <smart-toggle-button id="btnAlignJustify" class="material exclusive-selection" group="large"><i class="material-icons">format_align_justify</i></smart-toggle-button>
+                    </div>
+                </div>
+
+                <smart-tooltip id="commonLargeMenuTooltip" selector="btnAlignJustify" position="bottom" offset="[0,10]" class="animation material">Align Justify</smart-tooltip>
+            </div>
+        </section>
+
+        <section id="tooltip-mobile">
+            <h2>Tooltips (mobile)</h2>
+            <div class="module">
+            </div>
+            <div class="module light" style="position:relative;">
+                <div>
+                    <smart-button id="button4a" class="material floating"><i class="material-icons">&#xE5D5;</i></smart-button>
+                    <smart-tooltip id="tooltip4a" selector="button4a" position="bottom" offset="[0,10]" class="animation material mobile">Refresh</smart-tooltip>
+                </div>
+                <p>Raised Light/Light theme</p>
+            </div>
+            <div class="module dark">
+                <div>
+                    <smart-button id="button4b" class="material-dark floating"><i class="material-icons">&#xE5D5;</i></smart-button>
+                    <smart-tooltip id="tooltip4b" selector="button4b" position="bottom" offset="[0,10]" class="animation material-dark mobile">Refresh</smart-tooltip>
+
+                </div>
+                <p>Raised Dark/Dark theme</p>
+            </div>
+        </section>
+
+        <section id="tooltip-mobile2">
+            <div>
+                <div class="module">
+                </div>
+                <div class="module">
+                    <div class="light-theme" id="mobileDemo1">
+                        <smart-button id="mobileDemo1btn" class="material-dark floating"><i class="material-icons">&#xE5D5;</i></smart-button>
+                        <smart-tooltip id="mobileDemo1tooltip" selector="mobileDemo1btn" position="bottom" offset="[0,10]" class="animation material mobile">Refresh</smart-tooltip>
+                    </div>
+                    <p>
+                        Example of Touch UI tooltips
+                    </p>
+                </div>
+                <div class="module">
+                    <div class="light-theme" id="mobileDemo2">
+                        <smart-button id="mobileDemo2btn" class="material-dark floating"><i class="material-icons">&#xE8B6;</i></smart-button>
+                        <smart-tooltip id="mobileDemo2tooltip" selector="mobileDemo2btn" position="bottom" offset="[-15,10]" class="animation material mobile">Search</smart-tooltip>
+                    </div>
+                    <p>
+                        Example of Touch UI tooltips
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

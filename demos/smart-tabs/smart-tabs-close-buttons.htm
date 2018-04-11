@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.tabs.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var tabs1 = document.getElementById('tabs1');
+
+            document.getElementById('toggleCloseButtons').addEventListener('change', function () {
+                tabs1.closeButtons = this.checked;
+            });
+
+            var showCloseButton = document.getElementById('showCloseButton'),
+                hideCloseButton = document.getElementById('hideCloseButton');
+
+            tabs1.addEventListener('close', function (event) {
+                showCloseButton.disabled = true;
+                hideCloseButton.disabled = true;
+            });
+
+            showCloseButton.addEventListener('click', function () {
+                tabs1.getElementsByTagName('smart-tab-item')[2].closeButtonHidden = false;
+                showCloseButton.disabled = true;
+                hideCloseButton.disabled = false;
+            });
+
+            document.getElementById('hideCloseButton').addEventListener('click', function () {
+                tabs1.getElementsByTagName('smart-tab-item')[2].closeButtonHidden = true;
+                hideCloseButton.disabled = true;
+                showCloseButton.disabled = false;
+            });
+
+            document.getElementById('tabs2').addEventListener('closing', function (event) {
+                var close = window.confirm('Do you wish to close tab with index ' + event.detail.index + '?');
+
+                if (!close) {
+                    event.preventDefault();
+                }
+            });
+        }
+    </script>
+</head>
+<body id="bodyLightTheme">
+    <p>closeButtonMode 'default'</p>
+    <smart-tabs id="tabs1" class="demoTabsShort" close-buttons>
+        <smart-tab-item label="TAB 1">Content 1</smart-tab-item>
+        <smart-tab-item label="TAB 2" selected>Content 2</smart-tab-item>
+        <smart-tab-item label="TAB 3" close-button-hidden>Content 3</smart-tab-item>
+    </smart-tabs>
+    <br />
+    <smart-toggle-button id="toggleCloseButtons" class="demoButton" checked>Toggle close buttons</smart-toggle-button>
+    <smart-button id="showCloseButton" class="demoButton">Show third close button</smart-button>
+    <smart-button id="hideCloseButton" class="demoButton" disabled>Hide third close button</smart-button>
+    <p>closeButtonMode 'selected'</p>
+    <smart-tabs id="tabs2" class="demoTabsShort" close-buttons close-button-mode="selected" add-new-tab>
+        <smart-tab-item label="TAB 1">Content 1</smart-tab-item>
+        <smart-tab-item label="TAB 2">Content 2</smart-tab-item>
+        <smart-tab-item label="TAB 3" selected>Content 3</smart-tab-item>
+    </smart-tabs>
+</body>
+</html>

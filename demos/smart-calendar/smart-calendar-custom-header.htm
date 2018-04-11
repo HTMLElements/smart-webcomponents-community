@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.scrollbar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.listbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.dropdownlist.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.calendar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.tooltip.js"></script>
+</head>
+<body>
+    <smart-calendar class="custom-header" header-template="headerTemplate" selection-mode="one" selected-dates='["2017-08-17"]'></smart-calendar>
+    <template id="headerTemplate">
+        <smart-repeat-button class="smart-previous-month-button">
+            <div class="smart-arrow">&#xe809</div>
+        </smart-repeat-button>
+        <smart-button>Note</smart-button>
+        <div class="smart-date-element">
+            <span>{{date}}</span>
+        </div>
+        <smart-button>Today</smart-button>
+        <smart-repeat-button class="smart-next-month-button">
+            <div class="smart-arrow">&#xe810</div>
+        </smart-repeat-button>
+    </template>
+</body>
+</html>

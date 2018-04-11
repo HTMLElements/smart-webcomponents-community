@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.material-novars.css" type="text/css" />');
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.material-dark-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <link rel="stylesheet" href="../../source-minified/styles/smart.material.css" type="text/css" />
+    <link rel="stylesheet" href="../../source-minified/styles/smart.material-dark.css" type="text/css" />
+    <!--! do not remove -->
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.window.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.radiobutton.js"></script>
+    <style>
+        smart-window #article {
+            overflow-y: auto;
+            width: 100%;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var smartWindow = document.querySelector('smart-window'),
+                radioButtons = document.getElementsByTagName('smart-radio-button');
+
+            document.getElementById('openButton').addEventListener('click', function () {
+                smartWindow.opened ? smartWindow.close() : smartWindow.open();
+            });
+
+            radioButtons[0].addEventListener('change', function () {
+                smartWindow.headerPosition = 'top';
+            });
+
+            radioButtons[1].addEventListener('change', function () {
+                smartWindow.headerPosition = 'bottom';
+            });
+
+            radioButtons[2].addEventListener('change', function () {
+                smartWindow.headerPosition = 'left';
+            });
+
+            radioButtons[3].addEventListener('change', function () {
+                smartWindow.headerPosition = 'right';
+            });
+        }
+    </script>
+</head>
+<body>
+    <smart-button id="openButton">Open/Close</smart-button>
+    <br />
+
+    <div id="controlPanel">
+        <h3>Header position:</h3>
+        <smart-radio-button checked>Top</smart-radio-button>
+        <smart-radio-button>Bottom</smart-radio-button>
+        <smart-radio-button>Left</smart-radio-button>
+        <smart-radio-button>Right</smart-radio-button>
+    </div>
+
+    <smart-window opened label="Window 1" resizable>
+        <div id="article">
+            <section>
+                <h3>What is Lorem Ipsum?</h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </section>
+            <section>
+                <h3>Where does it come from?</h3>
+                <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                </p>
+            </section>
+        </div>
+    </smart-window>
+</body>
+</html>

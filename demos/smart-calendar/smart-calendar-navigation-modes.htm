@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove --> 
+   <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.button.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.scrollbar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.listbox.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.dropdownlist.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.calendar.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.tooltip.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.radiobutton.js"></script>
+    <script>
+        window.onload = function () {
+            var calendar = document.querySelector('smart-calendar');
+
+            document.getElementsByTagName('smart-radio-button')[0].addEventListener('change', function (event) {
+                if (event.detail.value) {
+                    calendar.scrollButtonsPosition = 'near';
+                }
+            });
+
+            document.getElementsByTagName('smart-radio-button')[1].addEventListener('change', function (event) {
+                if (event.detail.value) {
+                    calendar.scrollButtonsPosition = 'far';
+                }
+            });
+
+            document.getElementsByTagName('smart-radio-button')[2].addEventListener('change', function (event) {
+                if (event.detail.value) {
+                    calendar.scrollButtonsPosition = 'both';
+                }
+            });
+
+            document.getElementsByTagName('smart-radio-button')[3].addEventListener('change', function (event) {
+                if (event.detail.value) {
+                    calendar.scrollButtonsNavigationMode = 'landscape';
+                }
+            });
+
+            document.getElementsByTagName('smart-radio-button')[4].addEventListener('change', function (event) {
+                if (event.detail.value) {
+                    calendar.scrollButtonsNavigationMode = 'portrait';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h3>Scroll Buttons Navigation Modes</h3>
+    <smart-calendar></smart-calendar>
+    <br />
+    <h4 id="buttonsPosition"></h4>
+    <h4 id="buttonsDirection">Scroll Buttons Position</h4>
+    <smart-radio-button enable-container-click group-name="a">Near</smart-radio-button>
+    <smart-radio-button enable-container-click group-name="a">Far</smart-radio-button>
+    <smart-radio-button enable-container-click checked group-name="a">Both</smart-radio-button>
+
+    <h4 id="buttonsDirection">Scroll Buttons Navigation Mode</h4>
+    <smart-radio-button enable-container-click checked group-name="b">Landscape</smart-radio-button>
+    <smart-radio-button enable-container-click group-name="b">Portrait</smart-radio-button>
+</body>
+</html>
