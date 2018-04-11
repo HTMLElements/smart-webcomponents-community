@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="styles/smart.apireference.css" type="text/css" />
+	<title>ComboBox API Reference</title>
+</head>
+<body>
+	<div id="properties">
+		<h2 class="documentation-top-header">Properties</h2>
+		<table class="documentation-table">
+			<tbody>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan0">autoComplete</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						none
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the autocomplete mode:<br /> - none: autocomplete is disabled. When the popup is triggered, the suggested values it contains are the same regardless of the characters typed in the textbox. For example, the popup suggests a set of recently entered values, and the suggestions do not change as the user types.<br /> - auto: When the popup is triggered, it presents suggested values that complete or logically correspond to the characters typed in the textbox, and the first suggestion is automatically highlighted as selected. The automatically selected suggestion becomes the value of the textbox when the combobox loses focus unless the user chooses a different suggestion or changes the character string in the textbox.<br /> - manual: When the popup is triggered, it presents suggested values that complete or logically correspond to the characters typed in the textbox. The character string the user has typed will become the value of the textbox unless the user selects a value in the popup.<br /> - inline: This is the same as list with automatic selection with one additional feature. The portion of the selected suggestion that has not been typed by the user, a completion string, appears inline after the input cursor in the textbox. The inline completion string is visually highlighted and has a selected state. Possible values:  'none', 'auto', 'manual', 'inline'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>autoComplete</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box auto-complete='auto'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>autoComplete</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.autoComplete = 'manual';</PRE><br/>
+ 
+
+							<P>Get the <strong>autoComplete</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let autoComplete = comboBox.autoComplete;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan1">dataSource</span>
+					</td>
+					<td>
+						<span>any</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the data source that will be loaded to the combo box.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dataSource</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box data-source='["item 1", "item 2"]'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>dataSource</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.dataSource = ["new item 1", "new item 2"];</PRE><br/>
+ 
+
+							<P>Get the <strong>dataSource</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let dataSource = comboBox.dataSource;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan2">disabled</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables or disables the combo box.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box disabled&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.disabled = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let disabled = comboBox.disabled;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan3">displayLoadingIndicator</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Displays or hides the loading indicator</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>displayLoadingIndicator</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box display-loading-indicator&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>displayLoadingIndicator</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.displayLoadingIndicator = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>displayLoadingIndicator</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let displayLoadingIndicator = comboBox.displayLoadingIndicator;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan4">displayMember</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						""
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the displayMember. The displayMember specifies the name of an object property to display. The name is contained in the collection specified by the 'dataSource' property.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>displayMember</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box display-member='label'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>displayMember</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.displayMember = 'name';</PRE><br/>
+ 
+
+							<P>Get the <strong>displayMember</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let displayMember = comboBox.displayMember;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">dropDownAppendTo</span>
+					</td>
+					<td>
+						<span>string?</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the parent container of the dropDown list(the popup) inside the ComboBox. Used when a CSS property of unknowned parent is interfering with the visibility of the dropDown list.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownAppendTo</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box drop-down-append-to='body'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>dropDownAppendTo</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.dropDownAppendTo = null;</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownAppendTo</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let dropDownAppendTo = comboBox.dropDownAppendTo;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan6">dropDownButtonPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						right
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines position of the drop down button. Possible values:  'left', 'right'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownButtonPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box drop-down-button-position='left'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>dropDownButtonPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.dropDownButtonPosition = 'right';</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownButtonPosition</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let dropDownButtonPosition = comboBox.dropDownButtonPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan7">dropDownHeight</span>
+					</td>
+					<td>
+						<span>string?</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the height of the drop down. Default value of null means that CSS variables are used. This property should be used when the browser doesn"t support CSS variables.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownHeight</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box drop-down-height='auto'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>dropDownHeight</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.dropDownHeight = 500;</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownHeight</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let dropDownHeight = comboBox.dropDownHeight;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan8">dropDownOpenMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						default
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines when to open the dropDown list. Possible values:  'none', 'default', 'dropDownButton', 'auto'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownOpenMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box drop-down-open-mode='dropDownButton'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>dropDownOpenMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.dropDownOpenMode = 'auto';</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownOpenMode</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let dropDownOpenMode = comboBox.dropDownOpenMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan9">dropDownPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						overlay
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the vertical position of the drop down list. 'Auto' means its automatically determined depending on the viewport size. Possible values:  'auto', 'top', 'bottom', 'overlay-bottom', 'overlay-center', 'overlay-top', 'center-bottom', 'center-top'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box drop-down-position='top'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>dropDownPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.dropDownPosition = 'bottom';</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownPosition</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let dropDownPosition = comboBox.dropDownPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan10">dropDownWidth</span>
+					</td>
+					<td>
+						<span>string?</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the width of the drop down. Default value of null means that CSS variables are used. This property should be used when the browser doesn"t support CSS variables.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownWidth</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box drop-down-width='auto'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>dropDownWidth</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.dropDownWidth = 500;</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownWidth</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let dropDownWidth = comboBox.dropDownWidth;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan11">filterable</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines whether the Filtering is enabled.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>filterable</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box filterable&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>filterable</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.filterable = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>filterable</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let filterable = comboBox.filterable;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan12">filterMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						startsWithIgnoreCase
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the filtering for the drop down list mode. Possible values:  'contains', 'containsIgnoreCase', 'doesNotContain', 'doesNotContainIgnoreCase', 'equals', 'equalsIgnoreCase', 'startsWith', 'startsWithIgnoreCase', 'endsWith', 'endsWithIgnoreCase', 'matchMetaData'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>filterMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box filter-mode='contains'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>filterMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.filterMode = 'equals';</PRE><br/>
+ 
+
+							<P>Get the <strong>filterMode</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let filterMode = comboBox.filterMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan13">filterInputPlaceholder</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the placeholder for the drop down list filter input field.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>filterInputPlaceholder</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box filter-input-placeholder='Enter a value:'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>filterInputPlaceholder</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.filterInputPlaceholder = 'Awaiting entry:';</PRE><br/>
+ 
+
+							<P>Get the <strong>filterInputPlaceholder</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let filterInputPlaceholder = comboBox.filterInputPlaceholder;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan14">grouped</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>If enabled, the items will be grouped by their first letter. Can't be applied if the dataSource already contains groups.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>grouped</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box grouped&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>grouped</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.grouped = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>grouped</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let grouped = comboBox.grouped;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan15">groupMember</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the groupMember. If it's not set, by default is used 'group' property of the source object.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>groupMember</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box group-member='group'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>groupMember</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.groupMember = 'section';</PRE><br/>
+ 
+
+							<P>Get the <strong>groupMember</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let groupMember = comboBox.groupMember;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan16">incrementalSearchDelay</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						700
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets ot gets the incrementalSearchDelay property. The incrementalSearchDelay specifies the time-interval in milliseconds after which the previous search string is deleted. The timer starts when you stop typing.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>incrementalSearchDelay</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box incremental-search-delay='100'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>incrementalSearchDelay</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.incrementalSearchDelay = 500;</PRE><br/>
+ 
+
+							<P>Get the <strong>incrementalSearchDelay</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let incrementalSearchDelay = comboBox.incrementalSearchDelay;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan17">incrementalSearchMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						startsWith
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets ot gets the mode of the incremental search mode. Possible values:  'contains', 'containsIgnoreCase', 'doesNotContain', 'doesNotContainIgnoreCase', 'equals', 'equalsIgnoreCase', 'startsWith', 'startsWithIgnoreCase', 'endsWith', 'endsWithIgnoreCase', 'matchMetaData'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>incrementalSearchMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box incremental-search-mode='contains'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>incrementalSearchMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.incrementalSearchMode = 'endsWith';</PRE><br/>
+ 
+
+							<P>Get the <strong>incrementalSearchMode</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let incrementalSearchMode = comboBox.incrementalSearchMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan18">itemHeight</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the height of the items.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>itemHeight</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box item-height='20'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>itemHeight</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.itemHeight = 'auto';</PRE><br/>
+ 
+
+							<P>Get the <strong>itemHeight</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let itemHeight = comboBox.itemHeight;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan19">itemTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>The itemTemplate property is a string that represents the id of an HTMLTemplateElement in the DOM. It's used to load list items from the HTMLTemplateElement.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>itemTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box item-template='templateA'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>itemTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.itemTemplate = 'templateB';</PRE><br/>
+ 
+
+							<P>Get the <strong>itemTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let itemTemplate = comboBox.itemTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan20">listBoxPlaceholder</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						No Items
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the placeholder for the list box, displayed when there are no items in it.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>listBoxPlaceholder</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box list-box-placeholder='No Items'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>listBoxPlaceholder</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.listBoxPlaceholder = 'Empty';</PRE><br/>
+ 
+
+							<P>Get the <strong>listBoxPlaceholder</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let listBoxPlaceholder = comboBox.listBoxPlaceholder;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan21">loadingIndicatorPlaceholder</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						Loading...
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the text that will be displayed next to the loading indicator when the loader is visible and it's position is top or bottom.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>loadingIndicatorPlaceholder</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box loading-indicator-placeholder='Incoming data'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>loadingIndicatorPlaceholder</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.loadingIndicatorPlaceholder = 'LOADING...';</PRE><br/>
+ 
+
+							<P>Get the <strong>loadingIndicatorPlaceholder</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let loadingIndicatorPlaceholder = comboBox.loadingIndicatorPlaceholder;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan22">loadingIndicatorPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						center
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>The position of the loading indicator. Possible values:  'bottom', 'center', 'top'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>loadingIndicatorPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box loading-indicator-position='bottom'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>loadingIndicatorPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.loadingIndicatorPosition = 'top';</PRE><br/>
+ 
+
+							<P>Get the <strong>loadingIndicatorPosition</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let loadingIndicatorPosition = comboBox.loadingIndicatorPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan23">messages</span>
+					</td>
+					<td>
+						<span>object</span>
+					</td>
+					<td>
+						{ "en": { "missingReference": "{{elementType}}: Missing reference to {{files}}.", "overridingProperties": "{{elementType}}: Overriding properties {{property1}} and {{property2}} applied. {{property1}} is applied.",  } }
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets an object specifying strings used in the widget that can be localized. Used in conjunction with the property <strong>language</strong>. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box messages='{ "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "overridingProperties": "{{elementType}}: Übergeordnete Eigenschaften {{property1}} und {{property2}} wurden angewendet. {{property1}} angewendet wird." } }'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>messages</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.messages = { "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "overridingProperties": "{{elementType}}: Übergeordnete Eigenschaften {{property1}} und {{property2}} wurden angewendet. {{property1}} angewendet wird." } };</PRE><br/>
+ 
+
+							<P>Get the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let messages = comboBox.messages;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan24">opened</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines whether the popup is opened or closed</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>opened</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box opened&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>opened</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.opened = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>opened</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let opened = comboBox.opened;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan25">placeholder</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						Please Select:
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the element's placeholder, displayed in the element's selection field.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>placeholder</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box placeholder='Choose:'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>placeholder</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.placeholder = 'Submit';</PRE><br/>
+ 
+
+							<P>Get the <strong>placeholder</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let placeholder = comboBox.placeholder;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan26">readonly</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Disables user interaction with the element.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>readonly</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box readonly&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>readonly</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.readonly = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>readonly</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let readonly = comboBox.readonly;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan27">resizeIndicator</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines whether the resize indicator in the bottom right corner is visible or not.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>resizeIndicator</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box resize-indicator&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>resizeIndicator</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.resizeIndicator = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>resizeIndicator</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let resizeIndicator = comboBox.resizeIndicator;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan28">resizeMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						none
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines of the dropDown popup can be resized or not. Four: different modes are available: <br /> - none - resizing is disabled. <br /> - vertical - vertical resizing is allowed. <br /> - horizontal - horizontal resizing is allowed. <br /> - both - horizontal and vertical resizing is allowed. <br /><br /> Possible values:  'none', 'horizontal', 'vertical', 'both'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>resizeMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box resize-mode='horizontal'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>resizeMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.resizeMode = 'vertical';</PRE><br/>
+ 
+
+							<P>Get the <strong>resizeMode</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let resizeMode = comboBox.resizeMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan29">selectionDisplayMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						plain
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines what will be displayed in the dropDown selection field. Possible values:  'plain', 'placeholder', 'tokens'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>selectionDisplayMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box selection-display-mode='placeholder'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>selectionDisplayMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.selectionDisplayMode = 'default';</PRE><br/>
+ 
+
+							<P>Get the <strong>selectionDisplayMode</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let selectionDisplayMode = comboBox.selectionDisplayMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan30">selectedIndexes</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets elected indexes.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>selectedIndexes</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box selected-indexes='["item 1"]'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>selectedIndexes</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.selectedIndexes = ["item 2"];</PRE><br/>
+ 
+
+							<P>Get the <strong>selectedIndexes</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let selectedIndexes = comboBox.selectedIndexes;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan31">selectedValues</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets elected indexes.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>selectedValues</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box selected-values='[1,2,3]'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>selectedValues</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.selectedValues = [4,5,6];</PRE><br/>
+ 
+
+							<P>Get the <strong>selectedValues</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let selectedValues = comboBox.selectedValues;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan32">selectionMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						zeroOrOne
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines how many items can be selected. Possible values:  'none', 'oneOrManyExtended', 'zeroOrMany', 'oneOrMany', 'zeroOrOne', 'one', 'checkBox', 'radioButton'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>selectionMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box selection-mode='zeroOrMany'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>selectionMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.selectionMode = 'oneOrMany';</PRE><br/>
+ 
+
+							<P>Get the <strong>selectionMode</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let selectionMode = comboBox.selectionMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan33">sorted</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines whether the items are sorted alphabetically or not</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>sorted</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box sorted&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>sorted</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.sorted = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>sorted</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let sorted = comboBox.sorted;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan34">valueMember</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						""
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the value member of an item. Stored as value in the item object.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>valueMember</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box value-member='value'&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>valueMember</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.valueMember = 'newValue';</PRE><br/>
+ 
+
+							<P>Get the <strong>valueMember</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let valueMember = comboBox.valueMember;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan35">virtualized</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines weather or not Virtualization is used for the dropDownList.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>virtualized</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-combo-box virtualized&gt;&lt;/smart-combo-box&gt;</PRE><br/>							<P>Set the <strong>virtualized</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+ 
+							<PRE class="prettyprint"> comboBox.virtualized = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>virtualized</strong> property. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box');</PRE>
+							<PRE class="prettyprint"> let virtualized = comboBox.virtualized;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Events
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan36">change</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when selection is changed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>change</strong> event by type: smartComboBox
+							</p>
+							<p>
+								<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+<PRE class="prettyprint"> comboBox.addEventListener('change', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan37">close</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the drop down list is closed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>close</strong> event by type: smartComboBox
+							</p>
+							<p>
+								<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+<PRE class="prettyprint"> comboBox.addEventListener('close', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan38">closing</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the drop down list is closing.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>closing</strong> event by type: smartComboBox
+							</p>
+							<p>
+								<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+<PRE class="prettyprint"> comboBox.addEventListener('closing', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan39">open</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the drop down list is opened.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>open</strong> event by type: smartComboBox
+							</p>
+							<p>
+								<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+<PRE class="prettyprint"> comboBox.addEventListener('open', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan40">opening</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the drop down list is opening.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>opening</strong> event by type: smartComboBox
+							</p>
+							<p>
+								<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+<PRE class="prettyprint"> comboBox.addEventListener('opening', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan41">resizeStart</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when user starts resizing the drop down.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>resizeStart</strong> event by type: smartComboBox
+							</p>
+							<p>
+								<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+<PRE class="prettyprint"> comboBox.addEventListener('resizeStart', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan42">resizeEnd</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when user finishes resizing the drop down.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>resizeEnd</strong> event by type: smartComboBox
+							</p>
+							<p>
+								<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+<PRE class="prettyprint"> comboBox.addEventListener('resizeEnd', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan43">scrollBottomReached</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when user scrolls to the end of the dropDown list.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>scrollBottomReached</strong> event by type: smartComboBox
+							</p>
+							<p>
+								<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+<PRE class="prettyprint"> comboBox.addEventListener('scrollBottomReached', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan44">scrollTopReached</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when user scrolls to the start of the dropDown list.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>scrollTopReached</strong> event by type: smartComboBox
+							</p>
+							<p>
+								<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+<PRE class="prettyprint"> comboBox.addEventListener('scrollTopReached', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Methods
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan45">clearItems</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Removes all items from the drop down list.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>clearItems</strong> method. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+ 							<PRE class="prettyprint"> comboBox.clearItems(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan46">clearSelection</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Unselects all items.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>clearSelection</strong> method. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+ 							<PRE class="prettyprint"> comboBox.clearSelection(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan47">close</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Closes the dropDown list.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>close</strong> method. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+ 							<PRE class="prettyprint"> comboBox.close(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan48">getItem</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Returns an item instance from the dropDown list.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>value</em></td>
+											<td><em>string</em></td>
+											<td><em>The value of an item from the drop down list.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>HTMLElement</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>getItem</strong> method. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+ 							<PRE class="prettyprint"> comboBox.getItem(First); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan49">items</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Returns an array with the items from the dropDownList.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>Array</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>items</strong> method. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+ 							<PRE class="prettyprint"> comboBox.items(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan50">insert</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Inserts a new item at a specified position.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>position</em></td>
+											<td><em>number</em></td>
+											<td><em>The position where the item must be inserted.</em></td>
+										</tr>
+										<tr>
+											<td><em>value</em></td>
+											<td><em>any</em></td>
+											<td><em>The value of the new item.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>insert</strong> method. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+ 							<PRE class="prettyprint"> comboBox.insert(5); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan51">open</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Opens the dropDown list.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>open</strong> method. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+ 							<PRE class="prettyprint"> comboBox.open(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan52">remove</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Removes an item at a specified position.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>position</em></td>
+											<td><em>number</em></td>
+											<td><em>The position of the removed item.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>remove</strong> method. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+ 							<PRE class="prettyprint"> comboBox.remove(5); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan53">select</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Selects an item from the dropDown list. 
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>item</em></td>
+											<td><em>String/HTMLElement</em></td>
+											<td><em>A string, representing the value of the item or an HTML Element referencing an item from the list</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>select</strong> method. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+ 							<PRE class="prettyprint"> comboBox.select(First Item); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan54">unselect</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Unselects an item from the dropDown list. 
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>item</em></td>
+											<td><em>String/HTMLElement</em></td>
+											<td><em>A string, representing the value of the item or an HTML Element referencing an item from the list</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>unselect</strong> method. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+ 							<PRE class="prettyprint"> comboBox.unselect(First Item); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan55">update</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Updates an item from the dropDown list.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>position</em></td>
+											<td><em>number</em></td>
+											<td><em>The position where the item must be updated.</em></td>
+										</tr>
+										<tr>
+											<td><em>value</em></td>
+											<td><em>any</em></td>
+											<td><em>The value of the updated item.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>update</strong> method. </P>
+							<PRE class="prettyprint"> let comboBox = document.querySelector('smart-combo-box'); </PRE>
+ 							<PRE class="prettyprint"> comboBox.update(5); </PRE>
+
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

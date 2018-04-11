@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="styles/smart.apireference.css" type="text/css" />
+	<title>Expander API Reference</title>
+</head>
+<body>
+	<div id="properties">
+		<h2 class="documentation-top-header">Properties</h2>
+		<table class="documentation-table">
+			<tbody>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan0">expandedIndexes</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the expanded item(s). If the property expandMode is set to either 'single', 'singleFitHeight', 'toggle' or 'none', only the item corresponding to the first value in the array is expanded. If the property expandMode is set to either 'single' or 'singleFitHeight' and the expandedIndexes array is empty, the first item is expanded automatically.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>expandedIndexes</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-expander expanded-indexes='[0,1]'&gt;&lt;/smart-expander&gt;</PRE><br/>							<P>Set the <strong>expandedIndexes</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+ 
+							<PRE class="prettyprint"> expander.expandedIndexes = [2,3];</PRE><br/>
+ 
+
+							<P>Get the <strong>expandedIndexes</strong> property. </P>
+							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+							<PRE class="prettyprint"> let expandedIndexes = expander.expandedIndexes;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan1">expandMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						singleFitHeight
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets navigation expander's expand mode. Possible values:  'single', 'singleFitHeight', 'multiple', 'toggle', 'none'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>expandMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-expander expand-mode='multiple'&gt;&lt;/smart-expander&gt;</PRE><br/>							<P>Set the <strong>expandMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+ 
+							<PRE class="prettyprint"> expander.expandMode = 'none';</PRE><br/>
+ 
+
+							<P>Get the <strong>expandMode</strong> property. </P>
+							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+							<PRE class="prettyprint"> let expandMode = expander.expandMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan2">expandAnimationMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						slide
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the animation type. Possible values:  'slide', 'fade', 'none'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>expandAnimationMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-expander expand-animation-mode='fade'&gt;&lt;/smart-expander&gt;</PRE><br/>							<P>Set the <strong>expandAnimationMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+ 
+							<PRE class="prettyprint"> expander.expandAnimationMode = 'none';</PRE><br/>
+ 
+
+							<P>Get the <strong>expandAnimationMode</strong> property. </P>
+							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+							<PRE class="prettyprint"> let expandAnimationMode = expander.expandAnimationMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan3">messages</span>
+					</td>
+					<td>
+						<span>object</span>
+					</td>
+					<td>
+						{ "en": { "missingReference": "{{elementType}}: Missing reference to {{files}}.", "significantPrecisionDigits": "{{elementType}}: the properties significantDigits and precisionDigits cannot be set at the same time." } }
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets an object specifying strings used in the widget that can be localized. Used in conjunction with the property <strong>language</strong>. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-expander messages='{ "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "significantPrecisionDigits": "{{elementType}}: Die Eigenschaften significantDigits und precisionDigits koennen nicht gleichzeitig eingestellt werden." } }'&gt;&lt;/smart-expander&gt;</PRE><br/>							<P>Set the <strong>messages</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+ 
+							<PRE class="prettyprint"> expander.messages = { "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "significantPrecisionDigits": "{{elementType}}: Die Eigenschaften significantDigits und precisionDigits koennen nicht gleichzeitig eingestellt werden." } };</PRE><br/>
+ 
+
+							<P>Get the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+							<PRE class="prettyprint"> let messages = expander.messages;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Events
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan4">collapse</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when an item is collapsed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>collapse</strong> event by type: smartExpander
+							</p>
+							<p>
+								<PRE class="prettyprint"> let expander = document.querySelector('smart-expander'); </PRE>
+<PRE class="prettyprint"> expander.addEventListener('collapse', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">expand</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when an item is expanded.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>expand</strong> event by type: smartExpander
+							</p>
+							<p>
+								<PRE class="prettyprint"> let expander = document.querySelector('smart-expander'); </PRE>
+<PRE class="prettyprint"> expander.addEventListener('expand', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

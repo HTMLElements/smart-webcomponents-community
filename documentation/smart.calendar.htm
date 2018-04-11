@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="styles/smart.apireference.css" type="text/css" />
+	<title>Calendar API Reference</title>
+</head>
+<body>
+	<div id="properties">
+		<h2 class="documentation-top-header">Properties</h2>
+		<table class="documentation-table">
+			<tbody>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan0">animationSettings</span>
+					</td>
+					<td>
+						<span>object</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Applies new animation settings when it is enabled.<br/><br/> Properties:<br/><b>startSpeed</b> - Determines the initial speed of the animation.<br/><b>easeThreshold</b> - Determines the point at which the animation starts to slow down - the "ease effect".<br/><b>step</b> - Determines the step ( scrolling interval ) at which the animation will run. <br/><b>stepEaseSize</b> - Coefficient that is used to calculated the new step once the threshold has been passed. <br/><b>resetThreshold</b> - Determines the threshold for animation reset. When it's reached the animation will start over.<br/></p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>animationSettings</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar animation-settings=''&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>animationSettings</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.animationSettings = { startSpeed: 0.2, easeThreshold : 0.5, step : 0.25, stepEaseSize : 200, resetThreshold : 0.2  };</PRE><br/>
+ 
+
+							<P>Get the <strong>animationSettings</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let animationSettings = calendar.animationSettings;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan1">calendarMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						default
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the header mode of the Calendar. Classic mode consists of a DropDownList for the month selection and an Input for the year selection. <br/>Default mode displays different views for the month and year selection. The header becomes clickable when Defaut mode is enabled.<br/> Possible values:  'default', 'classic'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>calendarMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar calendar-mode='classic'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>calendarMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.calendarMode = 'default';</PRE><br/>
+ 
+
+							<P>Get the <strong>calendarMode</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let calendarMode = calendar.calendarMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan2">dayNameFormat</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						firstTwoLetters
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the format of calendar's day names. <br/> Possible values:  'narrow', 'firstTwoLetters', 'long', 'short'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dayNameFormat</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar day-name-format='long'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>dayNameFormat</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.dayNameFormat = 'short';</PRE><br/>
+ 
+
+							<P>Get the <strong>dayNameFormat</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let dayNameFormat = calendar.dayNameFormat;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan3">dateFormatFunction</span>
+					</td>
+					<td>
+						<span>function</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the format of the month names when Months property is greater than 1. Also determines the format of the month name in the header when CalenarMode is Default.<br/></p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dateFormatFunction</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar date-format-function='null'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>dateFormatFunction</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.dateFormatFunction = function(date) { return  date.getDate() + " - " + date.getMonth() + " - " + date.getFullYear() };</PRE><br/>
+ 
+
+							<P>Get the <strong>dateFormatFunction</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let dateFormatFunction = calendar.dateFormatFunction;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan4">disabled</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables or disables the Calendar.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar disabled&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.disabled = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let disabled = calendar.disabled;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">disableAutoNavigation</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Disables auto navigation when the user clicks on a date that's not from month in view.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>disableAutoNavigation</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar disable-auto-navigation&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>disableAutoNavigation</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.disableAutoNavigation = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>disableAutoNavigation</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let disableAutoNavigation = calendar.disableAutoNavigation;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan6">displayMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						month
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the date view of the calendar. Wheather it shows months, years or decades. Possible values:  'month', 'year', 'decade'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>displayMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar display-mode='year'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>displayMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.displayMode = 'decade';</PRE><br/>
+ 
+
+							<P>Get the <strong>displayMode</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let displayMode = calendar.displayMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan7">displayModeView</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						table
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the type of the month/year view when calendarMode is set to Default. Possible values:  'table', 'list'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>displayModeView</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar display-mode-view='list'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>displayModeView</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.displayModeView = 'table';</PRE><br/>
+ 
+
+							<P>Get the <strong>displayModeView</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let displayModeView = calendar.displayModeView;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan8">firstDayOfWeek</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						0
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the first day of the week. From 0(Sunday) to 6(Saturday)</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>firstDayOfWeek</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar first-day-of-week='1'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>firstDayOfWeek</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.firstDayOfWeek = 0;</PRE><br/>
+ 
+
+							<P>Get the <strong>firstDayOfWeek</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let firstDayOfWeek = calendar.firstDayOfWeek;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan9">footerTemplate</span>
+					</td>
+					<td>
+						<span>any</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets a custom footer template. Accepts the id of an HTMLTemplateElement or a reference ot it.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>footerTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar footer-template='footerTemplateId1'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>footerTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.footerTemplate = footerTemplate;</PRE><br/>
+ 
+
+							<P>Get the <strong>footerTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let footerTemplate = calendar.footerTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan10">headerTemplate</span>
+					</td>
+					<td>
+						<span>any</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets custom header template. Accepts the id of an HTMLTemplateElement or a reference ot it.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>headerTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar header-template='headerTemplateId1'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>headerTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.headerTemplate = headerTemplate;</PRE><br/>
+ 
+
+							<P>Get the <strong>headerTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let headerTemplate = calendar.headerTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan11">hideDayNames</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Hides the names of the weekdays.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>hideDayNames</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar hide-day-names&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>hideDayNames</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.hideDayNames = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>hideDayNames</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let hideDayNames = calendar.hideDayNames;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan12">hideOtherMonthDays</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines if dates from other months are visible or not.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>hideOtherMonthDays</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar hide-other-month-days&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>hideOtherMonthDays</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.hideOtherMonthDays = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>hideOtherMonthDays</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let hideOtherMonthDays = calendar.hideOtherMonthDays;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan13">hideTooltipArrow</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Hides the arrow of the tooltip.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>hideTooltipArrow</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar hide-tooltip-arrow&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>hideTooltipArrow</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.hideTooltipArrow = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>hideTooltipArrow</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let hideTooltipArrow = calendar.hideTooltipArrow;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan14">importantDates</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets dates, displayed as important</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>importantDates</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar important-dates='["2017, 6, 9", "2017-7-30"]'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>importantDates</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.importantDates = ["2017-1-2", "2017-2-1"];</PRE><br/>
+ 
+
+							<P>Get the <strong>importantDates</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let importantDates = calendar.importantDates;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan15">importantDatesTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets a template for the important dates. Accepts the id of or a reference to an HTMLTemplateElement.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>importantDatesTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar important-dates-template='importantDatesTemplateId1'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>importantDatesTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.importantDatesTemplate = 'importantDatesTemplateId2';</PRE><br/>
+ 
+
+							<P>Get the <strong>importantDatesTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let importantDatesTemplate = calendar.importantDatesTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan16">locale</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						en
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p> Determines the language of the Calendar. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>locale</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar locale='de'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>locale</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.locale = 'en';</PRE><br/>
+ 
+
+							<P>Get the <strong>locale</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let locale = calendar.locale;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan17">max</span>
+					</td>
+					<td>
+						<span>any</span>
+					</td>
+					<td>
+						new Date(2100, 1, 1)
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the max date for the Calendar.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>max</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar max='2100, 1, 2'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>max</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.max = new Date(2025, 0, 1);</PRE><br/>
+ 
+
+							<P>Get the <strong>max</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let max = calendar.max;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan18">min</span>
+					</td>
+					<td>
+						<span>any</span>
+					</td>
+					<td>
+						new Date(1900, 1, 1)
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the min date for the Calendar.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>min</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar min='1900, 1, 2'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>min</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.min = new Date(2000, 1, 2);</PRE><br/>
+ 
+
+							<P>Get the <strong>min</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let min = calendar.min;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan19">months</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						1
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the number of months to be displayed.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>months</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar months='2'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>months</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.months = 3;</PRE><br/>
+ 
+
+							<P>Get the <strong>months</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let months = calendar.months;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan20">monthNameFormat</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						long
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the format of the month names in the header when DisplayMode is set to Default or when Months property is greater than 1. <br/> Possible values:  'narrow', 'firstTwoLetters', 'long', 'short', '2-digit', 'numeric'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>monthNameFormat</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar month-name-format='long'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>monthNameFormat</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.monthNameFormat = 'short';</PRE><br/>
+ 
+
+							<P>Get the <strong>monthNameFormat</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let monthNameFormat = calendar.monthNameFormat;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan21">restrictedDates</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets restricted dates.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>restrictedDates</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar restricted-dates='["2017-7-25", "2017, 7, 15"]'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>restrictedDates</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.restrictedDates = ["2017, 2, 10", "2017, 2, 11", "2017, 2, 13"];</PRE><br/>
+ 
+
+							<P>Get the <strong>restrictedDates</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let restrictedDates = calendar.restrictedDates;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan22">scrollButtonsNavigationMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						landscape
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p> Determines the direction of the navigation buttons located in the header.  Possible values:  'portrait', 'landscape'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>scrollButtonsNavigationMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar scroll-buttons-navigation-mode='portrait'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>scrollButtonsNavigationMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.scrollButtonsNavigationMode = 'landscape';</PRE><br/>
+ 
+
+							<P>Get the <strong>scrollButtonsNavigationMode</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let scrollButtonsNavigationMode = calendar.scrollButtonsNavigationMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan23">scrollButtonsPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						both
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p> Determines the position of the navigation buttons located in the header.  Possible values:  'near', 'far', 'both'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>scrollButtonsPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar scroll-buttons-position='far'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>scrollButtonsPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.scrollButtonsPosition = 'both';</PRE><br/>
+ 
+
+							<P>Get the <strong>scrollButtonsPosition</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let scrollButtonsPosition = calendar.scrollButtonsPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan24">selectedDates</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets selected dates.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>selectedDates</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar selected-dates='["2017-7-24", "2017-7-27"]'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>selectedDates</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.selectedDates = ["2017-7-24","2017-7-27", "2017-2-1", "2017-5-20"];</PRE><br/>
+ 
+
+							<P>Get the <strong>selectedDates</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let selectedDates = calendar.selectedDates;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan25">selectionMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						default
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the selection mode. Possible values:  'none', 'default', 'one', 'many', 'zeroOrMany', 'oneOrMany', 'zeroOrOne', 'week'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>selectionMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar selection-mode='one'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>selectionMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.selectionMode = 'zeroOrMany';</PRE><br/>
+ 
+
+							<P>Get the <strong>selectionMode</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let selectionMode = calendar.selectionMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan26">spinButtonsDelay</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						80
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the delay between clicks of the navigation buttons located in the header of the Calendar. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>spinButtonsDelay</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar spin-buttons-delay='100'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>spinButtonsDelay</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.spinButtonsDelay = 200;</PRE><br/>
+ 
+
+							<P>Get the <strong>spinButtonsDelay</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let spinButtonsDelay = calendar.spinButtonsDelay;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan27">spinButtonsInitialDelay</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						0
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the initial delay before the action of the navigation buttons located in the header of the Calendar. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>spinButtonsInitialDelay</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar spin-buttons-initial-delay='500'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>spinButtonsInitialDelay</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.spinButtonsInitialDelay = '1000';</PRE><br/>
+ 
+
+							<P>Get the <strong>spinButtonsInitialDelay</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let spinButtonsInitialDelay = calendar.spinButtonsInitialDelay;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan28">titleTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets a template for the title section of the Calendar. Accepts the id of or a reference to an HTMLTemplateElement.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>titleTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar title-template='titleTemplateId1'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>titleTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.titleTemplate = 'titleTemplateId2';</PRE><br/>
+ 
+
+							<P>Get the <strong>titleTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let titleTemplate = calendar.titleTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan29">tooltip</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables/Disabled the tooltip for the important dates.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>tooltip</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar tooltip&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>tooltip</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.tooltip = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>tooltip</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let tooltip = calendar.tooltip;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan30">tooltipDelay</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						100
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the delay of the tooltip before it appears.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>tooltipDelay</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar tooltip-delay='500'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>tooltipDelay</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.tooltipDelay = 300;</PRE><br/>
+ 
+
+							<P>Get the <strong>tooltipDelay</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let tooltipDelay = calendar.tooltipDelay;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan31">tooltipPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						top
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the position of the tooltip. Possible values:  'bottom', 'top', 'left', 'right', 'absolute'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>tooltipPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar tooltip-position='left'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>tooltipPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.tooltipPosition = 'right';</PRE><br/>
+ 
+
+							<P>Get the <strong>tooltipPosition</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let tooltipPosition = calendar.tooltipPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan32">tooltipTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets a template for the tooltip's content. Accepts the id of or a reference to an HTMLTemplateElement.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>tooltipTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar tooltip-template='tooltipTemplateId1'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>tooltipTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.tooltipTemplate = 'tooltipTemplateId2';</PRE><br/>
+ 
+
+							<P>Get the <strong>tooltipTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let tooltipTemplate = calendar.tooltipTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan33">view</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						portrait
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the orientation of the Calendar.  Possible values:  'landscape', 'portrait'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>view</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar view='portrait'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>view</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.view = 'landscape';</PRE><br/>
+ 
+
+							<P>Get the <strong>view</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let view = calendar.view;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan34">viewSections</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						header
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the visible sections of the Calendar. The view sections are : title, header, footer. Multiple sections can be applied at the same time.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>viewSections</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar view-sections='["title", "header"]'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>viewSections</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.viewSections = ["header", "footer"];</PRE><br/>
+ 
+
+							<P>Get the <strong>viewSections</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let viewSections = calendar.viewSections;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan35">weekNumbers</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables/Disabled week numbering. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>weekNumbers</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar week-numbers&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>weekNumbers</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.weekNumbers = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>weekNumbers</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let weekNumbers = calendar.weekNumbers;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan36">weeks</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						6
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the number of visible weeks.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>weeks</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar weeks='2'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>weeks</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.weeks = 1;</PRE><br/>
+ 
+
+							<P>Get the <strong>weeks</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let weeks = calendar.weeks;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan37">yearFormat</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						numeric
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the year format in the header when DisplayMode is set to Default or when Months property is greater than 1.<br/> Possible values:  '2-digit', 'numeric'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>yearFormat</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-calendar year-format='long'&gt;&lt;/smart-calendar&gt;</PRE><br/>							<P>Set the <strong>yearFormat</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+ 
+							<PRE class="prettyprint"> calendar.yearFormat = 'short';</PRE><br/>
+ 
+
+							<P>Get the <strong>yearFormat</strong> property. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar');</PRE>
+							<PRE class="prettyprint"> let yearFormat = calendar.yearFormat;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Events
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan38">change</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when a new date has been selected/unselected.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>change</strong> event by type: smartCalendar
+							</p>
+							<p>
+								<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar'); </PRE>
+<PRE class="prettyprint"> calendar.addEventListener('change', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan39">displayModeChanging</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the displayMode is about to change. Event.detail contains info about the previous and the next view that will be displayed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>displayModeChanging</strong> event by type: smartCalendar
+							</p>
+							<p>
+								<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar'); </PRE>
+<PRE class="prettyprint"> calendar.addEventListener('displayModeChanging', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan40">displayModeChange</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the display mode has changed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>displayModeChange</strong> event by type: smartCalendar
+							</p>
+							<p>
+								<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar'); </PRE>
+<PRE class="prettyprint"> calendar.addEventListener('displayModeChange', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Methods
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan41">clearSelection</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Clears the selection. Removes all seleceted dates.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>clearSelection</strong> method. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar'); </PRE>
+ 							<PRE class="prettyprint"> calendar.clearSelection(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan42">setFocusable</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Determines if the element is focusable or not.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>focusable</em></td>
+											<td><em>boolean</em></td>
+											<td><em>Determines if the elements is focusable or not.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>setFocusable</strong> method. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar'); </PRE>
+ 							<PRE class="prettyprint"> calendar.setFocusable(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan43">navigate</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Navigates forwards/backwards depending on the argument.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>step</em></td>
+											<td><em>number</em></td>
+											<td><em>The number of months to go forwards or backwards.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>navigate</strong> method. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar'); </PRE>
+ 							<PRE class="prettyprint"> calendar.navigate(1); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan44">select</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Selects/Unselects a date
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>date</em></td>
+											<td><em>date</em></td>
+											<td><em>The date to be selected or unselected.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>select</strong> method. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar'); </PRE>
+ 							<PRE class="prettyprint"> calendar.select(2017-7-24); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan45">today</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Selects today's date.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>today</strong> method. </P>
+							<PRE class="prettyprint"> let calendar = document.querySelector('smart-calendar'); </PRE>
+ 							<PRE class="prettyprint"> calendar.today(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

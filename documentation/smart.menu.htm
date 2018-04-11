@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="styles/smart.apireference.css" type="text/css" />
+	<title>Menu API Reference</title>
+</head>
+<body>
+	<div id="properties">
+		<h2 class="documentation-top-header">Properties</h2>
+		<table class="documentation-table">
+			<tbody>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan0">autoFocusOnMouseenter</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>If set to <em>true</em>, on mouseenter, smartMenu receives focus automatically.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>autoFocusOnMouseenter</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu auto-focus-on-mouseenter&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>autoFocusOnMouseenter</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.autoFocusOnMouseenter = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>autoFocusOnMouseenter</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let autoFocusOnMouseenter = menu.autoFocusOnMouseenter;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan1">checkable</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Allows top-level Menu items to be checkable. Other levels are controlled by setting <strong>checkable</strong> to the respective smart-menu-items-group.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>checkable</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu checkable&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>checkable</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.checkable = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>checkable</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let checkable = menu.checkable;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan2">checkboxes</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Allows checkboxes in the Menu.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>checkboxes</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu checkboxes&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>checkboxes</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.checkboxes = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>checkboxes</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let checkboxes = menu.checkboxes;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan3">checkMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						checkbox
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the check mode of top-level Menu items. The behavior of checking could be as checkboxes or radio buttons. Other levels are controlled by setting <strong>checkMode</strong> to the respective smart-menu-items-group. Possible values:  'checkbox', 'radioButton'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>checkMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu check-mode='radioButton'&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>checkMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.checkMode = 'checkbox';</PRE><br/>
+ 
+
+							<P>Get the <strong>checkMode</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let checkMode = menu.checkMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan4">dataSource</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the data source that will be loaded to the Menu.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dataSource</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu data-source='[{ label: "File" }, { label: "Help" }]'&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>dataSource</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.dataSource = [{ label: 'File', items: [{ label: 'New', shortcut: 'Ctrl+N' }] }];</PRE><br/>
+ 
+
+							<P>Get the <strong>dataSource</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let dataSource = menu.dataSource;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">disabled</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables or disables smartMenu.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu disabled&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.disabled = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let disabled = menu.disabled;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan6">dropDownAppendTo</span>
+					</td>
+					<td>
+						<span>string/HTMLElement</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets custom outer container, where all dropdown containers must be appednded. By default they are in the menu. The value of the property can be an HTML element or the id of an HTML element.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownAppendTo</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu drop-down-append-to='body'&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>dropDownAppendTo</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.dropDownAppendTo = 'customContainer';</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownAppendTo</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let dropDownAppendTo = menu.dropDownAppendTo;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan7">dropDownPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						auto
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the open direction of Menu dropdowns. Possible values:  'top-left', 'top-right', 'bottom-left', 'bottom-right', 'overlay-left', 'overlay-right', 'auto'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu drop-down-position='top-left'&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>dropDownPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.dropDownPosition = 'top-right';</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownPosition</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let dropDownPosition = menu.dropDownPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan8">minimizeIconTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Used to load a custom minimize icon from an HTMLTemplateElement object. The HTMLTemplateElement is selected by it's id.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>minimizeIconTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu minimize-icon-template='template1'&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>minimizeIconTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.minimizeIconTemplate = 'template2';</PRE><br/>
+ 
+
+							<P>Get the <strong>minimizeIconTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let minimizeIconTemplate = menu.minimizeIconTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan9">minimizeWidth</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the minimum width of the Menu at which it will switch from normal to minimized mode. If set to <em>null</em>, the Menu does not minimize automatically.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>minimizeWidth</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu minimize-width='100'&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>minimizeWidth</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.minimizeWidth = 200;</PRE><br/>
+ 
+
+							<P>Get the <strong>minimizeWidth</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let minimizeWidth = menu.minimizeWidth;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan10">mode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						horizontal
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the menu's display mode. Possible values:  'horizontal', 'vertical', 'dropDown', 'tree'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>mode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu mode='vertical'&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>mode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.mode = 'dropDown';</PRE><br/>
+ 
+
+							<P>Get the <strong>mode</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let mode = menu.mode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan11">opened</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Opens or closes thte menu when it's in <em>'dropDown'</em> <strong>mode</strong>.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>opened</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu opened&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>opened</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.opened = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>opened</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let opened = menu.opened;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan12">overflow</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						auto
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the menu's scroll buttons behavior. Applicable only when <strong>dropDownAppendTo</strong> is not <em>null</em>. Possible values:  'auto', 'hidden', 'scroll'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>overflow</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu overflow='hidden'&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>overflow</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.overflow = 'scroll';</PRE><br/>
+ 
+
+							<P>Get the <strong>overflow</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let overflow = menu.overflow;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan13">selectionMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						click
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the menu's selection mode Possible values:  'click', 'mouseenter'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>selectionMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-menu selection-mode='mouseenter'&gt;&lt;/smart-menu&gt;</PRE><br/>							<P>Set the <strong>selectionMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+ 
+							<PRE class="prettyprint"> menu.selectionMode = 'click';</PRE><br/>
+ 
+
+							<P>Get the <strong>selectionMode</strong> property. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu');</PRE>
+							<PRE class="prettyprint"> let selectionMode = menu.selectionMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Events
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan14">close</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the menu is closed. The event is fired only in <em>'dropDown'</em> <strong>mode</strong>.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>close</strong> event by type: smartMenu
+							</p>
+							<p>
+								<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+<PRE class="prettyprint"> menu.addEventListener('close', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan15">closing</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the menu is about to be closed. The closing operation can be canceled by calling event.preventDefault() in the event handler function. The event is fired only in <em>'dropDown'</em> <strong>mode</strong>.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>closing</strong> event by type: smartMenu
+							</p>
+							<p>
+								<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+<PRE class="prettyprint"> menu.addEventListener('closing', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan16">collapse</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when a smart-menu-items-group is collapsed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>collapse</strong> event by type: smartMenu
+							</p>
+							<p>
+								<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+<PRE class="prettyprint"> menu.addEventListener('collapse', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan17">expand</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when a smart-menu-items-group is expanded.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>expand</strong> event by type: smartMenu
+							</p>
+							<p>
+								<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+<PRE class="prettyprint"> menu.addEventListener('expand', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan18">itemCheckChange</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when a menu item check state is changed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>itemCheckChange</strong> event by type: smartMenu
+							</p>
+							<p>
+								<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+<PRE class="prettyprint"> menu.addEventListener('itemCheckChange', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan19">itemClick</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when a menu item is clicked.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>itemClick</strong> event by type: smartMenu
+							</p>
+							<p>
+								<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+<PRE class="prettyprint"> menu.addEventListener('itemClick', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan20">open</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the menu is opened. The event is fired only in <em>'dropDown'</em> <strong>mode</strong>.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>open</strong> event by type: smartMenu
+							</p>
+							<p>
+								<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+<PRE class="prettyprint"> menu.addEventListener('open', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan21">opening</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the menu is about to be opened. The opening operation can be canceled by calling event.preventDefault() in the event handler function. The event is fired only in <em>'dropDown'</em> <strong>mode</strong>.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>opening</strong> event by type: smartMenu
+							</p>
+							<p>
+								<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+<PRE class="prettyprint"> menu.addEventListener('opening', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Methods
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan22">addItem</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Adds an item.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Item</em></td>
+											<td><em>HTMLElement</em></td>
+											<td><em>A smart-menu-item to add to the Menu.</em></td>
+										</tr>
+										<tr>
+											<td><em>Parent</em></td>
+											<td><em>String/HTMLElement</em></td>
+											<td><em>The smart-menu-items-group (or its id or numeric path) to add the item to.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>addItem</strong> method. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+ 							<PRE class="prettyprint"> menu.addItem(document.createElement('smart-menu-item')); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan23">checkItem</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Checks an item.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>id</em></td>
+											<td><em>string</em></td>
+											<td><em>The id or numeric path of an item</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>checkItem</strong> method. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+ 							<PRE class="prettyprint"> menu.checkItem(0.0); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan24">close</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Closes the Menu when <strong>mode</strong> is <em>'dropDown'</em>.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>close</strong> method. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+ 							<PRE class="prettyprint"> menu.close(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan25">collapseItem</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Collapses an item.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>id</em></td>
+											<td><em>string</em></td>
+											<td><em>The id or numeric path of an item</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>collapseItem</strong> method. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+ 							<PRE class="prettyprint"> menu.collapseItem(0.0); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan26">expandItem</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Expands an item.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>id</em></td>
+											<td><em>string</em></td>
+											<td><em>The id or numeric path of an item</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>expandItem</strong> method. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+ 							<PRE class="prettyprint"> menu.expandItem(1.2); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan27">getItem</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Gets an item by its id or numeric path.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>id</em></td>
+											<td><em>string</em></td>
+											<td><em>The id or numeric path of an item</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>HTMLElement</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>getItem</strong> method. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+ 							<PRE class="prettyprint"> menu.getItem(0.0); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan28">maximize</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Maximizes the Menu.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>maximize</strong> method. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+ 							<PRE class="prettyprint"> menu.maximize(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan29">minimize</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Minimizes the Menu.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>minimize</strong> method. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+ 							<PRE class="prettyprint"> menu.minimize(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan30">open</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Opens the Menu when <strong>mode</strong> is <em>'dropDown'</em>.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>left</em></td>
+											<td><em>Number</em></td>
+											<td><em>Horizontal position</em></td>
+										</tr>
+										<tr>
+											<td><em>top</em></td>
+											<td><em>Number</em></td>
+											<td><em>Vertical position</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>open</strong> method. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+ 							<PRE class="prettyprint"> menu.open(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan31">removeItem</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Removes an item.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>item</em></td>
+											<td><em>HTMLElement/String</em></td>
+											<td><em>The smart-menu-item/smart-menu-items-group (or its id or numeric path) to remove.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>removeItem</strong> method. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+ 							<PRE class="prettyprint"> menu.removeItem(0.0); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan32">setFocusable</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Sets whether the element can be focused.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>focusable</em></td>
+											<td><em>Boolean</em></td>
+											<td><em>Whether the element can be focused.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>setFocusable</strong> method. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+ 							<PRE class="prettyprint"> menu.setFocusable(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan33">uncheckItem</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Unchecks an item.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>id</em></td>
+											<td><em>string</em></td>
+											<td><em>The id or numeric path of an item</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>uncheckItem</strong> method. </P>
+							<PRE class="prettyprint"> let menu = document.querySelector('smart-menu'); </PRE>
+ 							<PRE class="prettyprint"> menu.uncheckItem(0.0); </PRE>
+
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="styles/smart.apireference.css" type="text/css" />
+	<title>ProgressBar API Reference</title>
+</head>
+<body>
+	<div id="properties">
+		<h2 class="documentation-top-header">Properties</h2>
+		<table class="documentation-table">
+			<tbody>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan0">indeterminate</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the value of the Progress bar to indeterminate state(null) and starts the animation.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>indeterminate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-progress-bar indeterminate&gt;&lt;/smart-progress-bar&gt;</PRE><br/>							<P>Set the <strong>indeterminate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+ 
+							<PRE class="prettyprint"> progressBar.indeterminate = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>indeterminate</strong> property. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+							<PRE class="prettyprint"> let indeterminate = progressBar.indeterminate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan1">inverted</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the filling direction of the Progress Bar.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>inverted</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-progress-bar inverted&gt;&lt;/smart-progress-bar&gt;</PRE><br/>							<P>Set the <strong>inverted</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+ 
+							<PRE class="prettyprint"> progressBar.inverted = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>inverted</strong> property. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+							<PRE class="prettyprint"> let inverted = progressBar.inverted;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan2">formatFunction</span>
+					</td>
+					<td>
+						<span>function</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>A callback function defining the new format for the label of the Progress Bar.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>formatFunction</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-progress-bar format-function='function(value) { return value + "$" }'&gt;&lt;/smart-progress-bar&gt;</PRE><br/>							<P>Set the <strong>formatFunction</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+ 
+							<PRE class="prettyprint"> progressBar.formatFunction = function(value) { return "$" + value };</PRE><br/>
+ 
+
+							<P>Get the <strong>formatFunction</strong> property. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+							<PRE class="prettyprint"> let formatFunction = progressBar.formatFunction;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan3">max</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						100
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets progress bars maximum possible value.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>max</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-progress-bar max='10'&gt;&lt;/smart-progress-bar&gt;</PRE><br/>							<P>Set the <strong>max</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+ 
+							<PRE class="prettyprint"> progressBar.max = 50;</PRE><br/>
+ 
+
+							<P>Get the <strong>max</strong> property. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+							<PRE class="prettyprint"> let max = progressBar.max;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan4">min</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						0
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets progress bars minimum possible value.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>min</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-progress-bar min='5'&gt;&lt;/smart-progress-bar&gt;</PRE><br/>							<P>Set the <strong>min</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+ 
+							<PRE class="prettyprint"> progressBar.min = 10;</PRE><br/>
+ 
+
+							<P>Get the <strong>min</strong> property. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+							<PRE class="prettyprint"> let min = progressBar.min;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">orientation</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						horizontal
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the orientation of the progress bar Possible values:  'horizontal', 'vertical'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>orientation</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-progress-bar orientation='horizontal'&gt;&lt;/smart-progress-bar&gt;</PRE><br/>							<P>Set the <strong>orientation</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+ 
+							<PRE class="prettyprint"> progressBar.orientation = 'vertical';</PRE><br/>
+ 
+
+							<P>Get the <strong>orientation</strong> property. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+							<PRE class="prettyprint"> let orientation = progressBar.orientation;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan6">showProgressValue</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables/Disabled the label for the Progress Bar.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>showProgressValue</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-progress-bar show-progress-value&gt;&lt;/smart-progress-bar&gt;</PRE><br/>							<P>Set the <strong>showProgressValue</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+ 
+							<PRE class="prettyprint"> progressBar.showProgressValue = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>showProgressValue</strong> property. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+							<PRE class="prettyprint"> let showProgressValue = progressBar.showProgressValue;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan7">value</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						19
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets/Gets the value of the progress bar</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>value</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-progress-bar value='5'&gt;&lt;/smart-progress-bar&gt;</PRE><br/>							<P>Set the <strong>value</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+ 
+							<PRE class="prettyprint"> progressBar.value = 45;</PRE><br/>
+ 
+
+							<P>Get the <strong>value</strong> property. </P>
+							<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar');</PRE>
+							<PRE class="prettyprint"> let value = progressBar.value;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Events
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan8">change</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the value is changed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>change</strong> event by type: smartProgressBar
+							</p>
+							<p>
+								<PRE class="prettyprint"> let progressBar = document.querySelector('smart-progress-bar'); </PRE>
+<PRE class="prettyprint"> progressBar.addEventListener('change', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

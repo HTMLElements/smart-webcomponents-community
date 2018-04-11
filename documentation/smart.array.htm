@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="styles/smart.apireference.css" type="text/css" />
+	<title>Array API Reference</title>
+</head>
+<body>
+	<div id="properties">
+		<h2 class="documentation-top-header">Properties</h2>
+		<table class="documentation-table">
+			<tbody>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan0">arrayIndexingMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						LabVIEW
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the indexing mode of the Array. Possible values:  'LabVIEW', 'JavaScript'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>arrayIndexingMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array array-indexing-mode='JavaScript'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>arrayIndexingMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.arrayIndexingMode = 'LabVIEW';</PRE><br/>
+ 
+
+							<P>Get the <strong>arrayIndexingMode</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let arrayIndexingMode = array.arrayIndexingMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan1">changeProperty</span>
+					</td>
+					<td>
+						<span>function</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>A callback function that is called when the width, height or disabled properties of an inner element need to be updated. Applicable only when <strong>type</strong> is <em>'custom'</em>.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>changeProperty</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array change-property='changePropertyFunction1'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>changeProperty</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.changeProperty = changePropertyFunction2;</PRE><br/>
+ 
+
+							<P>Get the <strong>changeProperty</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let changeProperty = array.changeProperty;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan2">columns</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						1
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the number of visible columns in the Array.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>columns</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array columns='2'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>columns</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.columns = 5;</PRE><br/>
+ 
+
+							<P>Get the <strong>columns</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let columns = array.columns;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan3">customWidgetDefaultValue</span>
+					</td>
+					<td>
+						<span>any</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the default value of inner elements when <strong>type</strong> is <em>'custom'</em>.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>customWidgetDefaultValue</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array custom-widget-default-value='0'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>customWidgetDefaultValue</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.customWidgetDefaultValue = 1;</PRE><br/>
+ 
+
+							<P>Get the <strong>customWidgetDefaultValue</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let customWidgetDefaultValue = array.customWidgetDefaultValue;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan4">dimensions</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						1
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the dimensions of the Array.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dimensions</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array dimensions='1'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>dimensions</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.dimensions = 5;</PRE><br/>
+ 
+
+							<P>Get the <strong>dimensions</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let dimensions = array.dimensions;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">disabled</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets disabled state of the Array.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array disabled&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.disabled = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let disabled = array.disabled;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan6">elementHeight</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						25
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the height of Array elements (row height).</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>elementHeight</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array element-height='100'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>elementHeight</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.elementHeight = 80;</PRE><br/>
+ 
+
+							<P>Get the <strong>elementHeight</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let elementHeight = array.elementHeight;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan7">elementTemplate</span>
+					</td>
+					<td>
+						<span>function</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>A callback function that can be used for applying settings to element widgets. When <strong>type</strong> is <em>'custom'</em>, widgets have to be initialized in this callback function.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>elementTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array element-template='elementTemplateFunction1'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>elementTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.elementTemplate = elementTemplateFunction2;</PRE><br/>
+ 
+
+							<P>Get the <strong>elementTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let elementTemplate = array.elementTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan8">elementWidth</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						75
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the width of Array elements (column width).</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>elementWidth</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array element-width='50'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>elementWidth</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.elementWidth = 150;</PRE><br/>
+ 
+
+							<P>Get the <strong>elementWidth</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let elementWidth = array.elementWidth;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan9">getElementValue</span>
+					</td>
+					<td>
+						<span>function</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>A callback function that can be used for getting the value of element widgets.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>getElementValue</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array get-element-value='getElementValueFunction1'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>getElementValue</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.getElementValue = getElementValueFunction2;</PRE><br/>
+ 
+
+							<P>Get the <strong>getElementValue</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let getElementValue = array.getElementValue;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan10">indexerHeight</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						25
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the height of indexers.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>indexerHeight</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array indexer-height='30'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>indexerHeight</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.indexerHeight = 20;</PRE><br/>
+ 
+
+							<P>Get the <strong>indexerHeight</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let indexerHeight = array.indexerHeight;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan11">indexerWidth</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						50
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the width of indexers.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>indexerWidth</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array indexer-width='100'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>indexerWidth</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.indexerWidth = 60;</PRE><br/>
+ 
+
+							<P>Get the <strong>indexerWidth</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let indexerWidth = array.indexerWidth;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan12">language</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						en
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the language. Used in conjunction with the property <strong>messages</strong>. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>language</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array language='de'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>language</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.language = 'fr';</PRE><br/>
+ 
+
+							<P>Get the <strong>language</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let language = array.language;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan13">messages</span>
+					</td>
+					<td>
+						<span>object</span>
+					</td>
+					<td>
+						{ "en": { "callbackFunctionRequired": "smart-array: When 'type' is 'custom', the {{callback}} callback function has to be implemented.", "missingReference": "smart-array: Missing reference to {{files}}." } }
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets an object specifying strings used in the widget that can be localized. Used in conjunction with the property <strong>language</strong>. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array messages='{ "de": { "callbackFunctionRequired": "smart-array: Wenn �type� �custom� ist, muss die R�ckruffunktion {{callback}} implementiert werden.", "missingReference": "smart-array: Fehlender Hinweis auf {{files}}." } }'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>messages</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.messages = { 'en': { 'callbackFunctionRequired': 'smart-array: When "type" is "custom", the {{callback}} callback function has to be implemented.', 'missingReference': 'smart-array: Missing reference to {{files}}.' } };</PRE><br/>
+ 
+
+							<P>Get the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let messages = array.messages;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan14">rows</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						1
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the number of visible rows in the Array.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>rows</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array rows='2'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>rows</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.rows = 8;</PRE><br/>
+ 
+
+							<P>Get the <strong>rows</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let rows = array.rows;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan15">setElementValue</span>
+					</td>
+					<td>
+						<span>function</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>A callback function that can be used for setting the value of element widgets.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>setElementValue</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array set-element-value='setElementValueFunction1'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>setElementValue</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.setElementValue = setElementValueFunction2;</PRE><br/>
+ 
+
+							<P>Get the <strong>setElementValue</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let setElementValue = array.setElementValue;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan16">showHorizontalScrollbar</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets whether to display the horizontal scrollbar.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>showHorizontalScrollbar</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array show-horizontal-scrollbar&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>showHorizontalScrollbar</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.showHorizontalScrollbar = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>showHorizontalScrollbar</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let showHorizontalScrollbar = array.showHorizontalScrollbar;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan17">showIndexDisplay</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets whether to display the array indexers.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>showIndexDisplay</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array show-index-display&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>showIndexDisplay</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.showIndexDisplay = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>showIndexDisplay</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let showIndexDisplay = array.showIndexDisplay;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan18">showSelection</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets whether to highlight selected elements.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>showSelection</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array show-selection&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>showSelection</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.showSelection = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>showSelection</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let showSelection = array.showSelection;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan19">showVerticalScrollbar</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets whether to display the vertical scrollbar.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>showVerticalScrollbar</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array show-vertical-scrollbar&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>showVerticalScrollbar</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.showVerticalScrollbar = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>showVerticalScrollbar</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let showVerticalScrollbar = array.showVerticalScrollbar;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan20">type</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						none
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the data type and element widgets to be used in the Array. Possible values:  'none', 'boolean', 'numeric', 'string', 'custom'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>type</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array type='boolean'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>type</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.type = 'string';</PRE><br/>
+ 
+
+							<P>Get the <strong>type</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let type = array.type;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan21">value</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the value of the Array.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>value</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-array value='[1, 2, 3]'&gt;&lt;/smart-array&gt;</PRE><br/>							<P>Set the <strong>value</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+ 
+							<PRE class="prettyprint"> array.value = [10, 20, 30];</PRE><br/>
+ 
+
+							<P>Get the <strong>value</strong> property. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array');</PRE>
+							<PRE class="prettyprint"> let value = array.value;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Events
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan22">arraySizeChange</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when a visible row or column has been added or removed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>arraySizeChange</strong> event by type: smartArray
+							</p>
+							<p>
+								<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+<PRE class="prettyprint"> array.addEventListener('arraySizeChange', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan23">change</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the value of the Array is changed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>change</strong> event by type: smartArray
+							</p>
+							<p>
+								<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+<PRE class="prettyprint"> array.addEventListener('change', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan24">dimensionChange</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when a dimension has been added or removed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>dimensionChange</strong> event by type: smartArray
+							</p>
+							<p>
+								<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+<PRE class="prettyprint"> array.addEventListener('dimensionChange', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan25">elementClick</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when an Array element has been clicked.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>elementClick</strong> event by type: smartArray
+							</p>
+							<p>
+								<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+<PRE class="prettyprint"> array.addEventListener('elementClick', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan26">scroll</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the Array is scrolled with one of the scrollbars.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>scroll</strong> event by type: smartArray
+							</p>
+							<p>
+								<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+<PRE class="prettyprint"> array.addEventListener('scroll', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan27">sizeChange</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the column width or the row height has been changed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>sizeChange</strong> event by type: smartArray
+							</p>
+							<p>
+								<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+<PRE class="prettyprint"> array.addEventListener('sizeChange', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Methods
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan28">addDimension</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Adds a dimension to the array.<br /> <em>Note:</em> when adding multiple dimensions simultaneously, it is recommended to do so by dynamically setting the <strong>dimensions</strong> property.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>addDimension</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.addDimension(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan29">clearSelection</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Clears the selection.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>clearSelection</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.clearSelection(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan30">copyElementValueToClipboard</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Copies the value of an Array element to the clipboard.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Row visible index</em></td>
+											<td><em>number</em></td>
+											<td><em>The visible index of the row (y coordinate) of the element.</em></td>
+										</tr>
+										<tr>
+											<td><em>Column visible index</em></td>
+											<td><em>number</em></td>
+											<td><em>The visible index of the column (x coordinate) of the element.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>copyElementValueToClipboard</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.copyElementValueToClipboard(1); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan31">deleteColumn</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Deletes a column in the <strong>value</strong> array.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Column index</em></td>
+											<td><em>number</em></td>
+											<td><em>Index of the column to be deleted.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>deleteColumn</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.deleteColumn(1); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan32">deleteRow</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Deletes a row in the <strong>value</strong> array.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Row index</em></td>
+											<td><em>number</em></td>
+											<td><em>Index of the row to be deleted.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>deleteRow</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.deleteRow(2); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan33">emptyArray</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Empties the <strong>value</strong> array.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>emptyArray</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.emptyArray(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan34">endSelection</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Designates the end of a selection started with the method <strong>startSelection</strong>.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Row bound index</em></td>
+											<td><em>number</em></td>
+											<td><em>The bound index of the row (y coordinate) to end the selection to.</em></td>
+										</tr>
+										<tr>
+											<td><em>Column bound index</em></td>
+											<td><em>number</em></td>
+											<td><em>The bound index of the column (x coordinate) to end the selection to.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>endSelection</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.endSelection(0); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan35">getElement</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Returns the HTML element at the specified visible row and column coordinates of the Array.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Row visible index</em></td>
+											<td><em>number</em></td>
+											<td><em>The visible index of the row (y coordinate) of the element.</em></td>
+										</tr>
+										<tr>
+											<td><em>Column visible index</em></td>
+											<td><em>number</em></td>
+											<td><em>The visible index of the column (x coordinate) of the element.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>HTMLElement</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>getElement</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.getElement(0); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan36">getElementSize</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Returns an object with the values of the Array element width and height.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>object</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>getElementSize</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.getElementSize(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan37">getIndexerValue</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Gets an array with the values of all indexers.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>array</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>getIndexerValue</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.getIndexerValue(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan38">hitTest</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Returns an HTML element from the Array at the specified page coordinates and other information about this element.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Page x coordinate</em></td>
+											<td><em>number</em></td>
+											<td><em></em></td>
+										</tr>
+										<tr>
+											<td><em>Page y coordinate</em></td>
+											<td><em>number</em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>object</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>hitTest</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.hitTest(100); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan39">insertColumnBefore</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Inserts a column in the <strong>value</strong> array before the specified column. The new column is filled with default values.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Column index</em></td>
+											<td><em>number</em></td>
+											<td><em>Index of the column to add a new column before.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>insertColumnBefore</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.insertColumnBefore(5); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan40">insertRowBefore</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Inserts a row in the <strong>value</strong> array before the specified row. The new row is filled with default values.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Row index</em></td>
+											<td><em>number</em></td>
+											<td><em>Index of the row to add a new row before.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>insertRowBefore</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.insertRowBefore(5); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan41">reinitializeArray</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Sets all <strong>value</strong> array members to the default value.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>reinitializeArray</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.reinitializeArray(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan42">removeDimension</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Removes a dimension from the array.<br /> <em>Note:</em> when removing multiple dimensions simultaneously, it is recommended to do so by dynamically setting the <strong>dimensions</strong> property.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>removeDimension</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.removeDimension(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan43">reset</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Sets the array's <strong>type</strong> to <em>'none'</em>.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>reset</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.reset(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan44">resizeElement</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Resizes Array elements (changes both the column width and the row height).
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Element width</em></td>
+											<td><em>number</em></td>
+											<td><em>The new element (column) width.</em></td>
+										</tr>
+										<tr>
+											<td><em>Element height</em></td>
+											<td><em>number</em></td>
+											<td><em>The new element (row) height.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>resizeElement</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.resizeElement(100); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan45">selectAll</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Selects all members of the array.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>selectAll</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.selectAll(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan46">selectElement</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Selects an element with the passed row and column bound indexes.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Row bound index</em></td>
+											<td><em>number</em></td>
+											<td><em></em></td>
+										</tr>
+										<tr>
+											<td><em>Column bound index</em></td>
+											<td><em>number</em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>selectElement</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.selectElement(2); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan47">setColumnWidth</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Sets the column (element) width.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Column width</em></td>
+											<td><em>number</em></td>
+											<td><em>The new column width.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>setColumnWidth</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.setColumnWidth(300); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan48">setDefaultValue</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Sets the default value of array members.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Default value</em></td>
+											<td><em>any</em></td>
+											<td><em>The new default value. Its data type should correspond to the <strong>type</strong> of the Array.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>setDefaultValue</strong> method. </P>
+							// Get the value. 							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> let setDefaultValue = array.setDefaultValue(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan49">setIndexerValue</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Sets the value of one or more Array indexers.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Settings</em></td>
+											<td><em>array</em></td>
+											<td><em>An array of objects with the fields index and value.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>setIndexerValue</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.setIndexerValue([object Object],[object Object],[object Object]); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan50">setRowHeight</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Sets the row (element) height.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Row height</em></td>
+											<td><em>number</em></td>
+											<td><em>The new row height.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>setRowHeight</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.setRowHeight(100); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan51">showLastElement</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Makes the last array member visible.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>showLastElement</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.showLastElement(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan52">startSelection</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Designates the start of a selection. To end a selection, call <strong>endSelection</strong>.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>Row bound index</em></td>
+											<td><em>number</em></td>
+											<td><em>The bound index of the row (y coordinate) to start the selection from.</em></td>
+										</tr>
+										<tr>
+											<td><em>Column bound index</em></td>
+											<td><em>number</em></td>
+											<td><em>The bound index of the column (x coordinate) to start the selection from.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>startSelection</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.startSelection(0); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan53">toggleElementGap</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Increases or decreases the visual gap between Array elements.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>toggleElementGap</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.toggleElementGap(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan54">transposeArray</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Transposes the array. Applicable only when <strong>dimensions</strong> is <em>2</em> (2D array).
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>transposeArray</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.transposeArray(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan55">val</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Sets or gets the value of the whole array or sets the value of a member of the array.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>New value</em></td>
+											<td><em>array/any</em></td>
+											<td><em>If the method is used for setting the value of the whole array, the expected value is an array. If it is used for setting the value of an array member, the value can be of any applicable type.</em></td>
+										</tr>
+										<tr>
+											<td><em>Element indexes</em></td>
+											<td><em>number</em></td>
+											<td><em>If this parameter is passed, only the value of the array member with the provided dimension indexes is set. Dimension indexes that are not passed are considered to be 0.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>array</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>val</strong> method. </P>
+							<PRE class="prettyprint"> let array = document.querySelector('smart-array'); </PRE>
+ 							<PRE class="prettyprint"> array.val(40); </PRE>
+
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

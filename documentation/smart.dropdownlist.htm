@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="styles/smart.apireference.css" type="text/css" />
+	<title>DropDownList API Reference</title>
+</head>
+<body>
+	<div id="properties">
+		<h2 class="documentation-top-header">Properties</h2>
+		<table class="documentation-table">
+			<tbody>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan0">dataSource</span>
+					</td>
+					<td>
+						<span>any</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the data source that will be loaded to the drop down list.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dataSource</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list data-source='["item 1", "item 2"]'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>dataSource</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.dataSource = ["new item 1", "new item 2"];</PRE><br/>
+ 
+
+							<P>Get the <strong>dataSource</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let dataSource = dropDownList.dataSource;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan1">disabled</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables or disables the dropDown list.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list disabled&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.disabled = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let disabled = dropDownList.disabled;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan2">displayLoadingIndicator</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Displays or hides the loading indicator</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>displayLoadingIndicator</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list display-loading-indicator&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>displayLoadingIndicator</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.displayLoadingIndicator = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>displayLoadingIndicator</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let displayLoadingIndicator = dropDownList.displayLoadingIndicator;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan3">displayMember</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						""
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the displayMember. The displayMember specifies the name of an object property to display. The name is contained in the collection specified by the 'dataSource' property.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>displayMember</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list display-member='label'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>displayMember</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.displayMember = 'name';</PRE><br/>
+ 
+
+							<P>Get the <strong>displayMember</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let displayMember = dropDownList.displayMember;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan4">dropDownAppendTo</span>
+					</td>
+					<td>
+						<span>string?</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the parent container of the dropDown list (the popup). Used when a CSS property of unknowned parent is interfering with the visibility of the dropDown list.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownAppendTo</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list drop-down-append-to='body'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>dropDownAppendTo</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.dropDownAppendTo = null;</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownAppendTo</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let dropDownAppendTo = dropDownList.dropDownAppendTo;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">dropDownButtonPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						right
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines position of the drop down button. Possible values:  'left', 'right', 'bottom', 'top'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownButtonPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list drop-down-button-position='top'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>dropDownButtonPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.dropDownButtonPosition = 'bottom';</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownButtonPosition</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let dropDownButtonPosition = dropDownList.dropDownButtonPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan6">dropDownHeight</span>
+					</td>
+					<td>
+						<span>string?</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the height of the drop down. Default value of null means that CSS variables are used. This property should be used when the browser doesn"t support CSS variables.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownHeight</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list drop-down-height='auto'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>dropDownHeight</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.dropDownHeight = 500;</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownHeight</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let dropDownHeight = dropDownList.dropDownHeight;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan7">dropDownOpenMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						default
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines when to open the dropDown list. Possible values:  'none', 'default', 'dropDownButton', 'auto'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownOpenMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list drop-down-open-mode='dropDownButton'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>dropDownOpenMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.dropDownOpenMode = 'auto';</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownOpenMode</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let dropDownOpenMode = dropDownList.dropDownOpenMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan8">dropDownPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						overlay
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the vertical position of the dropDown list. 'Auto' means its automatically determined depending on the viewport size. Possible values:  'auto', 'top', 'bottom', 'overlay-bottom', 'overlay-center', 'overlay-top', 'center-bottom', 'center-top'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list drop-down-position='top'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>dropDownPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.dropDownPosition = 'bottom';</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownPosition</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let dropDownPosition = dropDownList.dropDownPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan9">dropDownWidth</span>
+					</td>
+					<td>
+						<span>string?</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the width of the drop down. Default value of null means that CSS variables are used. This property should be used when the browser doesn"t support CSS variables.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownWidth</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list drop-down-width='auto'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>dropDownWidth</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.dropDownWidth = 500;</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownWidth</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let dropDownWidth = dropDownList.dropDownWidth;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan10">filterable</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines whether the Filtering is enabled.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>filterable</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list filterable&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>filterable</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.filterable = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>filterable</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let filterable = dropDownList.filterable;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan11">filterMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						startsWithIgnoreCase
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the filtering for the drop down list mode. Possible values:  'contains', 'containsIgnoreCase', 'doesNotContain', 'doesNotContainIgnoreCase', 'equals', 'equalsIgnoreCase', 'startsWith', 'startsWithIgnoreCase', 'endsWith', 'endsWithIgnoreCase', 'matchMetaData'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>filterMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list filter-mode='contains'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>filterMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.filterMode = 'equals';</PRE><br/>
+ 
+
+							<P>Get the <strong>filterMode</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let filterMode = dropDownList.filterMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan12">filterInputPlaceholder</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the placeholder for the drop down list filter input field.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>filterInputPlaceholder</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list filter-input-placeholder='Enter a value:'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>filterInputPlaceholder</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.filterInputPlaceholder = 'Awaiting entry:';</PRE><br/>
+ 
+
+							<P>Get the <strong>filterInputPlaceholder</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let filterInputPlaceholder = dropDownList.filterInputPlaceholder;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan13">grouped</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>If enabled, the items will be grouped by their first letter. Can't be applied if the dataSource already contains groups.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>grouped</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list grouped&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>grouped</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.grouped = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>grouped</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let grouped = dropDownList.grouped;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan14">groupMember</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the groupMember. If it's not set, by default is used 'group' property of the source object.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>groupMember</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list group-member='group'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>groupMember</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.groupMember = 'section';</PRE><br/>
+ 
+
+							<P>Get the <strong>groupMember</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let groupMember = dropDownList.groupMember;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan15">incrementalSearchDelay</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						700
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets ot gets the incrementalSearchDelay property. The incrementalSearchDelay specifies the time-interval in milliseconds after which the previous search string is deleted. The timer starts when you stop typing.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>incrementalSearchDelay</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list incremental-search-delay='100'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>incrementalSearchDelay</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.incrementalSearchDelay = 500;</PRE><br/>
+ 
+
+							<P>Get the <strong>incrementalSearchDelay</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let incrementalSearchDelay = dropDownList.incrementalSearchDelay;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan16">incrementalSearchMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						startsWith
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets ot gets the mode of the incremental search mode. Possible values:  'contains', 'containsIgnoreCase', 'doesNotContain', 'doesNotContainIgnoreCase', 'equals', 'equalsIgnoreCase', 'startsWith', 'startsWithIgnoreCase', 'endsWith', 'endsWithIgnoreCase', 'matchMetaData'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>incrementalSearchMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list incremental-search-mode='contains'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>incrementalSearchMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.incrementalSearchMode = 'endsWith';</PRE><br/>
+ 
+
+							<P>Get the <strong>incrementalSearchMode</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let incrementalSearchMode = dropDownList.incrementalSearchMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan17">itemHeight</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the height of the items.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>itemHeight</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list item-height='20'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>itemHeight</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.itemHeight = 'auto';</PRE><br/>
+ 
+
+							<P>Get the <strong>itemHeight</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let itemHeight = dropDownList.itemHeight;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan18">itemTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>The itemTemplate property is a string that represents the id of an HTMLTemplateElement in the DOM. It's used to load list items from the HTMLTemplateElement.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>itemTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list item-template='templateA'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>itemTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.itemTemplate = 'templateB';</PRE><br/>
+ 
+
+							<P>Get the <strong>itemTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let itemTemplate = dropDownList.itemTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan19">listBoxPlaceholder</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						No Items
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the placeholder for the list box, displayed when there are no items in it.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>listBoxPlaceholder</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list list-box-placeholder='No Items'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>listBoxPlaceholder</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.listBoxPlaceholder = 'Empty';</PRE><br/>
+ 
+
+							<P>Get the <strong>listBoxPlaceholder</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let listBoxPlaceholder = dropDownList.listBoxPlaceholder;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan20">loadingIndicatorPlaceholder</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						Loading...
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the text that will be displayed next to the loading indicator when the loader is visible and it's position is top or bottom.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>loadingIndicatorPlaceholder</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list loading-indicator-placeholder='Incoming data'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>loadingIndicatorPlaceholder</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.loadingIndicatorPlaceholder = 'LOADING...';</PRE><br/>
+ 
+
+							<P>Get the <strong>loadingIndicatorPlaceholder</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let loadingIndicatorPlaceholder = dropDownList.loadingIndicatorPlaceholder;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan21">loadingIndicatorPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						center
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>The position of the loading indicator. Possible values:  'bottom', 'center', 'top'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>loadingIndicatorPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list loading-indicator-position='bottom'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>loadingIndicatorPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.loadingIndicatorPosition = 'top';</PRE><br/>
+ 
+
+							<P>Get the <strong>loadingIndicatorPosition</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let loadingIndicatorPosition = dropDownList.loadingIndicatorPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan22">messages</span>
+					</td>
+					<td>
+						<span>object</span>
+					</td>
+					<td>
+						{ "en": { "missingReference": "{{elementType}}: Missing reference to {{files}}.", "overridingProperties": "{{elementType}}: Overriding properties {{property1}} and {{property2}} applied. {{property1}} is applied.",  } }
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets an object specifying strings used in the widget that can be localized. Used in conjunction with the property <strong>language</strong>. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list messages='{ "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "overridingProperties": "{{elementType}}: Übergeordnete Eigenschaften {{property1}} und {{property2}} wurden angewendet. {{property1}} angewendet wird." } }'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>messages</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.messages = { "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "overridingProperties": "{{elementType}}: Übergeordnete Eigenschaften {{property1}} und {{property2}} wurden angewendet. {{property1}} angewendet wird." } };</PRE><br/>
+ 
+
+							<P>Get the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let messages = dropDownList.messages;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan23">opened</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines whether the popup is opened or closed</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>opened</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list opened&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>opened</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.opened = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>opened</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let opened = dropDownList.opened;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan24">placeholder</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						Please Select:
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the element's placeholder, displayed in the element's selection field.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>placeholder</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list placeholder='Choose:'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>placeholder</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.placeholder = 'Submit';</PRE><br/>
+ 
+
+							<P>Get the <strong>placeholder</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let placeholder = dropDownList.placeholder;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan25">readonly</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Disables user interaction with the element.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>readonly</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list readonly&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>readonly</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.readonly = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>readonly</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let readonly = dropDownList.readonly;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan26">resizeIndicator</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines whether the resize indicator in the bottom right corner is visible or not.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>resizeIndicator</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list resize-indicator&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>resizeIndicator</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.resizeIndicator = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>resizeIndicator</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let resizeIndicator = dropDownList.resizeIndicator;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan27">resizeMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						none
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines of the dropDown popup can be resized or not. Four: different modes are available: <br /> - none - resizing is disabled. <br /> - vertical - vertical resizing is allowed. <br /> - horizontal - horizontal resizing is allowed. <br /> - both - horizontal and vertical resizing is allowed. <br /><br /> Possible values:  'none', 'horizontal', 'vertical', 'both'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>resizeMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list resize-mode='horizontal'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>resizeMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.resizeMode = 'vertical';</PRE><br/>
+ 
+
+							<P>Get the <strong>resizeMode</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let resizeMode = dropDownList.resizeMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan28">selectionDisplayMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						plain
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines what will be displayed in the dropDown selection field. Possible values:  'plain', 'placeholder', 'tokens'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>selectionDisplayMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list selection-display-mode='placeholder'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>selectionDisplayMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.selectionDisplayMode = 'default';</PRE><br/>
+ 
+
+							<P>Get the <strong>selectionDisplayMode</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let selectionDisplayMode = dropDownList.selectionDisplayMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan29">selectedIndexes</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets elected indexes.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>selectedIndexes</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list selected-indexes='["item 1"]'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>selectedIndexes</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.selectedIndexes = ["item 2"];</PRE><br/>
+ 
+
+							<P>Get the <strong>selectedIndexes</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let selectedIndexes = dropDownList.selectedIndexes;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan30">selectedValues</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets elected indexes.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>selectedValues</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list selected-values='[1,2,3]'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>selectedValues</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.selectedValues = [4,5,6];</PRE><br/>
+ 
+
+							<P>Get the <strong>selectedValues</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let selectedValues = dropDownList.selectedValues;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan31">selectionMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						zeroOrOne
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines how many items can be selected. Possible values:  'none', 'oneOrManyExtended', 'zeroOrMany', 'oneOrMany', 'zeroOrOne', 'one', 'checkBox', 'radioButton'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>selectionMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list selection-mode='zeroOrMany'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>selectionMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.selectionMode = 'oneOrMany';</PRE><br/>
+ 
+
+							<P>Get the <strong>selectionMode</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let selectionMode = dropDownList.selectionMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan32">sorted</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines whether the items are sorted alphabetically or not</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>sorted</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list sorted&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>sorted</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.sorted = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>sorted</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let sorted = dropDownList.sorted;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan33">valueMember</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						""
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the value member of an item. Stored as value in the item object.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>valueMember</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list value-member='value'&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>valueMember</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.valueMember = 'newValue';</PRE><br/>
+ 
+
+							<P>Get the <strong>valueMember</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let valueMember = dropDownList.valueMember;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan34">virtualized</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines weather or not Virtualization is used for the dropDownList.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>virtualized</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-drop-down-list virtualized&gt;&lt;/smart-drop-down-list&gt;</PRE><br/>							<P>Set the <strong>virtualized</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+ 
+							<PRE class="prettyprint"> dropDownList.virtualized = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>virtualized</strong> property. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list');</PRE>
+							<PRE class="prettyprint"> let virtualized = dropDownList.virtualized;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Events
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan35">change</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when selection is changed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>change</strong> event by type: smartDropDownList
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+<PRE class="prettyprint"> dropDownList.addEventListener('change', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan36">close</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the drop down list is closed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>close</strong> event by type: smartDropDownList
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+<PRE class="prettyprint"> dropDownList.addEventListener('close', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan37">closing</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the drop down list is closing.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>closing</strong> event by type: smartDropDownList
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+<PRE class="prettyprint"> dropDownList.addEventListener('closing', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan38">open</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the drop down list is opened.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>open</strong> event by type: smartDropDownList
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+<PRE class="prettyprint"> dropDownList.addEventListener('open', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan39">opening</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the drop down list is opening.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>opening</strong> event by type: smartDropDownList
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+<PRE class="prettyprint"> dropDownList.addEventListener('opening', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan40">resizeStart</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when user starts resizing the drop down.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>resizeStart</strong> event by type: smartDropDownList
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+<PRE class="prettyprint"> dropDownList.addEventListener('resizeStart', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan41">resizeEnd</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when user finishes resizing the drop down.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>resizeEnd</strong> event by type: smartDropDownList
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+<PRE class="prettyprint"> dropDownList.addEventListener('resizeEnd', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan42">scrollBottomReached</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when user scrolls to the end of the dropDown list.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>scrollBottomReached</strong> event by type: smartDropDownList
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+<PRE class="prettyprint"> dropDownList.addEventListener('scrollBottomReached', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan43">scrollTopReached</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when user scrolls to the start of the dropDown list.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>scrollTopReached</strong> event by type: smartDropDownList
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+<PRE class="prettyprint"> dropDownList.addEventListener('scrollTopReached', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Methods
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan44">clearItems</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Removes all items from the drop down list.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>clearItems</strong> method. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+ 							<PRE class="prettyprint"> dropDownList.clearItems(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan45">clearSelection</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Unselects all items.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>clearSelection</strong> method. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+ 							<PRE class="prettyprint"> dropDownList.clearSelection(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan46">close</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Closes the dropDown list.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>close</strong> method. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+ 							<PRE class="prettyprint"> dropDownList.close(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan47">getItem</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Returns an item instance from the dropDown list.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>value</em></td>
+											<td><em>string</em></td>
+											<td><em>The value of an item from the drop down list.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>HTMLElement</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>getItem</strong> method. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+ 							<PRE class="prettyprint"> dropDownList.getItem(First); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan48">items</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Returns an array with the items from the dropDown list.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>Array</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>items</strong> method. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+ 							<PRE class="prettyprint"> dropDownList.items(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan49">insert</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Inserts a new item at a specified position.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>position</em></td>
+											<td><em>number</em></td>
+											<td><em>The position where the item must be inserted.</em></td>
+										</tr>
+										<tr>
+											<td><em>value</em></td>
+											<td><em>any</em></td>
+											<td><em>The value of the new item.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>insert</strong> method. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+ 							<PRE class="prettyprint"> dropDownList.insert(5); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan50">open</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Opens the dropDown list.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>open</strong> method. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+ 							<PRE class="prettyprint"> dropDownList.open(undefined); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan51">remove</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Removes an item at a specified position.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>position</em></td>
+											<td><em>number</em></td>
+											<td><em>The position of the removed item.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>remove</strong> method. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+ 							<PRE class="prettyprint"> dropDownList.remove(5); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan52">select</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Selects an item from the dropDown list. 
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>item</em></td>
+											<td><em>String/HTMLElement</em></td>
+											<td><em>A string, representing the value of the item or an HTML Element referencing an item from the list</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>select</strong> method. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+ 							<PRE class="prettyprint"> dropDownList.select(First Item); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan53">unselect</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Unselects an item from the dropDown list. 
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>item</em></td>
+											<td><em>String/HTMLElement</em></td>
+											<td><em>A string, representing the value of the item or an HTML Element referencing an item from the list</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>unselect</strong> method. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+ 							<PRE class="prettyprint"> dropDownList.unselect(First Item); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan54">update</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Updates an item from the dropDown list.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>position</em></td>
+											<td><em>number</em></td>
+											<td><em>The position where the item must be updated.</em></td>
+										</tr>
+										<tr>
+											<td><em>value</em></td>
+											<td><em>any</em></td>
+											<td><em>The value of the updated item.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>update</strong> method. </P>
+							<PRE class="prettyprint"> let dropDownList = document.querySelector('smart-drop-down-list'); </PRE>
+ 							<PRE class="prettyprint"> dropDownList.update(5); </PRE>
+
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

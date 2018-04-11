@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="styles/smart.apireference.css" type="text/css" />
+	<title>DateTimePicker API Reference</title>
+</head>
+<body>
+	<div id="properties">
+		<h2 class="documentation-top-header">Properties</h2>
+		<table class="documentation-table">
+			<tbody>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan0">animationSettings</span>
+					</td>
+					<td>
+						<span>object</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Applies new animation settings to the calendar pop-up when it is enabled.<br/><br/> Properties:<br/><b>startSpeed</b> - Determines the initial speed of the animation.<br/><b>easeThreshold</b> - Determines the point at which the animation starts to slow down - the "ease effect".<br/><b>step</b> - Determines the step ( scrolling interval ) at which the animation will run. <br/><b>stepEaseSize</b> - Coefficient that is used to calculated the new step once the threshold has been passed. <br/><b>resetThreshold</b> - Determines the threshold for animation reset. When it's reached the animation will start over.<br/></p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>animationSettings</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker animation-settings=''&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>animationSettings</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.animationSettings = { startSpeed: 0.2, easeThreshold : 0.5, step : 0.25, stepEaseSize : 200, resetThreshold : 0.2  };</PRE><br/>
+ 
+
+							<P>Get the <strong>animationSettings</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let animationSettings = dateTimePicker.animationSettings;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan1">calendarButton</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets whether the calendar button is displayed.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>calendarButton</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker calendar-button&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>calendarButton</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.calendarButton = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>calendarButton</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let calendarButton = dateTimePicker.calendarButton;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan2">calendarButtonPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						right
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the position of the calendar button. Possible values:  'right', 'left'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>calendarButtonPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker calendar-button-position='left'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>calendarButtonPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.calendarButtonPosition = 'right';</PRE><br/>
+ 
+
+							<P>Get the <strong>calendarButtonPosition</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let calendarButtonPosition = dateTimePicker.calendarButtonPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan3">calendarMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						default
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the header mode of the calendar pop-up. Classic mode consists of a DropDownList for the month selection and an Input for the year selection. <br/>Default mode displays different views for the month and year selection. The header becomes clickable when Defaut mode is enabled.<br/> Possible values:  'default', 'classic'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>calendarMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker calendar-mode='classic'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>calendarMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.calendarMode = 'default';</PRE><br/>
+ 
+
+							<P>Get the <strong>calendarMode</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let calendarMode = dateTimePicker.calendarMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan4">dayNameFormat</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						firstTwoLetters
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the format of calendar pop-up's day names. <br/> Possible values:  'narrow', 'firstTwoLetters', 'long', 'short'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dayNameFormat</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker day-name-format='long'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>dayNameFormat</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.dayNameFormat = 'short';</PRE><br/>
+ 
+
+							<P>Get the <strong>dayNameFormat</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let dayNameFormat = dateTimePicker.dayNameFormat;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">disabled</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables or disables the element.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker disabled&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.disabled = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let disabled = dateTimePicker.disabled;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan6">disableAutoNavigation</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Disables auto navigation of the calendar pop-up when the user clicks on a date that's not from month in view.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>disableAutoNavigation</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker disable-auto-navigation&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>disableAutoNavigation</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.disableAutoNavigation = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>disableAutoNavigation</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let disableAutoNavigation = dateTimePicker.disableAutoNavigation;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan7">displayModeView</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						table
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the type of the month/year view in the calendar pop-up when calendarMode is set to Default. Possible values:  'table', 'list'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>displayModeView</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker display-mode-view='list'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>displayModeView</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.displayModeView = 'table';</PRE><br/>
+ 
+
+							<P>Get the <strong>displayModeView</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let displayModeView = dateTimePicker.displayModeView;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan8">dropDownDisplayMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						default
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the pop-up mode (what components appear in it, and its behaviour). Possible values:  'default', 'classic', 'calendar', 'timePicker'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownDisplayMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker drop-down-display-mode='dateAndTime'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>dropDownDisplayMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.dropDownDisplayMode = 'default';</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownDisplayMode</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let dropDownDisplayMode = dateTimePicker.dropDownDisplayMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan9">dropDownPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						bottom
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the pop-up position. Possible values:  'bottom', 'overlay-top', 'overlay-center', 'overlay-bottom', 'top', 'center-bottom', 'center-top'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dropDownPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker drop-down-position='center-bottom'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>dropDownPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.dropDownPosition = 'overlay-center';</PRE><br/>
+ 
+
+							<P>Get the <strong>dropDownPosition</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let dropDownPosition = dateTimePicker.dropDownPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan10">editMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						default
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the edit mode. Possible values:  'default', 'full', 'partial'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>editMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker edit-mode='full'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>editMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.editMode = 'partial';</PRE><br/>
+ 
+
+							<P>Get the <strong>editMode</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let editMode = dateTimePicker.editMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan11">enableMouseWheelAction</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets whether the value can be incremented/decremented with the mouse wheel when the mouse is over the input.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>enableMouseWheelAction</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker enable-mouse-wheel-action&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>enableMouseWheelAction</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.enableMouseWheelAction = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>enableMouseWheelAction</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let enableMouseWheelAction = dateTimePicker.enableMouseWheelAction;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan12">firstDayOfWeek</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						0
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the first day of the week of the calendar pop-up. From 0(Sunday) to 6(Saturday)</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>firstDayOfWeek</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker first-day-of-week='1'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>firstDayOfWeek</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.firstDayOfWeek = 0;</PRE><br/>
+ 
+
+							<P>Get the <strong>firstDayOfWeek</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let firstDayOfWeek = dateTimePicker.firstDayOfWeek;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan13">footerTemplate</span>
+					</td>
+					<td>
+						<span>string/HTMLTemplateElement</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the footer template of the calendar pop-up. The value of this property can be the id of an HTMLTemplateElement or the HTMLTemplateElement itself. If set to <em>null</em>, a default template is applied.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>footerTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker footer-template='template1'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>footerTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.footerTemplate = document.getElementsByTagName('template')[0];</PRE><br/>
+ 
+
+							<P>Get the <strong>footerTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let footerTemplate = dateTimePicker.footerTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan14">formatString</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						dd-MMM-yy HH:mm:ss.fff
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the pattern which the input value is displayed in.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>formatString</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker format-string='dddd-MMMM-yyyy'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>formatString</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.formatString = 'FP';</PRE><br/>
+ 
+
+							<P>Get the <strong>formatString</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let formatString = dateTimePicker.formatString;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan15">headerTemplate</span>
+					</td>
+					<td>
+						<span>any</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets custom header template for the calendar pop-up. Accepts the id of an HTMLTemplateElement or a reference ot it.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>headerTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker header-template='headerTemplateId1'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>headerTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.headerTemplate = headerTemplate;</PRE><br/>
+ 
+
+							<P>Get the <strong>headerTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let headerTemplate = dateTimePicker.headerTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan16">hideDayNames</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Hides the names of the weekdays in the calendar pop-up.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>hideDayNames</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker hide-day-names&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>hideDayNames</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.hideDayNames = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>hideDayNames</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let hideDayNames = dateTimePicker.hideDayNames;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan17">hideOtherMonthDays</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines if dates from other months are visible or not in the calendar pop-up.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>hideOtherMonthDays</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker hide-other-month-days&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>hideOtherMonthDays</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.hideOtherMonthDays = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>hideOtherMonthDays</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let hideOtherMonthDays = dateTimePicker.hideOtherMonthDays;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan18">hideTooltipArrow</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Hides the arrow of the tooltip in the calendar pop-up.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>hideTooltipArrow</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker hide-tooltip-arrow&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>hideTooltipArrow</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.hideTooltipArrow = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>hideTooltipArrow</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let hideTooltipArrow = dateTimePicker.hideTooltipArrow;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan19">importantDates</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets dates, displayed as important in the calendar pop-up.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>importantDates</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker important-dates='["2017, 6, 9", "2017-7-30"]'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>importantDates</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.importantDates = ["2017-1-2", "2017-2-1"];</PRE><br/>
+ 
+
+							<P>Get the <strong>importantDates</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let importantDates = dateTimePicker.importantDates;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan20">importantDatesTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets a template for the important dates of the calendar pop-up. Accepts the id of or a reference to an HTMLTemplateElement.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>importantDatesTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker important-dates-template='importantDatesTemplateId1'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>importantDatesTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.importantDatesTemplate = 'importantDatesTemplateId2';</PRE><br/>
+ 
+
+							<P>Get the <strong>importantDatesTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let importantDatesTemplate = dateTimePicker.importantDatesTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan21">interval</span>
+					</td>
+					<td>
+						<span>TimeSpan/number</span>
+					</td>
+					<td>
+						new Smart.Utilities.TimeSpan(0, 0, 1)
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the increment/decrement interval when a time part has not been highlighted. The default interval is 1 second. If a numeric value is passed, it represents milliseconds.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>interval</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker interval='2000'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>interval</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.interval = new Smart.Utilities.TimeSpan(0, 1, 0);</PRE><br/>
+ 
+
+							<P>Get the <strong>interval</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let interval = dateTimePicker.interval;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan22">locale</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						en
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the locale that determines the language strings in the DateTimePicker are localized in.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>locale</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker locale='de'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>locale</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.locale = 'ja';</PRE><br/>
+ 
+
+							<P>Get the <strong>locale</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let locale = dateTimePicker.locale;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan23">max</span>
+					</td>
+					<td>
+						<span>DateTime/Date</span>
+					</td>
+					<td>
+						new Smart.Utilities.DateTime(3001, 1, 1)
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the maximum allowed value.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>max</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker max='new Smart.Utilities.DateTime(2050, 10, 30)'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>max</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.max = new Date(2020, 2, 11);</PRE><br/>
+ 
+
+							<P>Get the <strong>max</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let max = dateTimePicker.max;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan24">messages</span>
+					</td>
+					<td>
+						<span>object</span>
+					</td>
+					<td>
+						{ "en": { "missingReference": "smart-date-time-picker: Missing reference to {{files}}.", "now": "Now" } }
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets an object specifying strings used in the widget that can be localized. Used in conjunction with the property <strong>locale</strong>. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker messages='{ "de": { "missingReference": "smart-date-time-picker: Fehlender Hinweis auf {{files}}.", "now": "jetzt" } }'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>messages</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.messages = { 'en': { 'missingReference': 'smart-date-time-picker: Missing reference to {{files}}.', 'now': 'Now' } };</PRE><br/>
+ 
+
+							<P>Get the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let messages = dateTimePicker.messages;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan25">min</span>
+					</td>
+					<td>
+						<span>DateTime/Date</span>
+					</td>
+					<td>
+						new Smart.Utilities.DateTime(1600, 1, 1)
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the minimum allowed value.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>min</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker min='new Smart.Utilities.DateTime(2000, 10, 30)'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>min</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.min = new Date(1900, 2, 11);</PRE><br/>
+ 
+
+							<P>Get the <strong>min</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let min = dateTimePicker.min;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan26">nullable</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables or disables the setting of the <strong>value</strong> property to <em>null</em> or empty string. If the property is enabled and the value in the input is deleted, the <strong>value</strong> will be set to <em>null</em> and the placeholder will be displayed. Otherwise, the current date and time will be set.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>nullable</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker nullable&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>nullable</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.nullable = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>nullable</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let nullable = dateTimePicker.nullable;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan27">opened</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets whether the calendar pop-up is opened.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>opened</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker opened&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>opened</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.opened = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>opened</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let opened = dateTimePicker.opened;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan28">placeholder</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						Enter date
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the placeholder text to be shown in the input when <strong>value</strong> is <em>null</em>.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>placeholder</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker placeholder='Please select...'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>placeholder</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.placeholder = 'Choose a date';</PRE><br/>
+ 
+
+							<P>Get the <strong>placeholder</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let placeholder = dateTimePicker.placeholder;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan29">readonly</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Disables user interaction with the element.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>readonly</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker readonly&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>readonly</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.readonly = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>readonly</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let readonly = dateTimePicker.readonly;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan30">restrictedDates</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						[]
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets an array of dates (DateTime or Date objects) that cannot be selected.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>restrictedDates</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker restricted-dates='["new Date(2017, 2, 1)", "new Date(2017, 2, 2)"]'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>restrictedDates</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.restrictedDates = [new Smart.Utilities.DateTime(2000, 1, 1), new Smart.Utilities.DateTime(2010, 1, 1)];</PRE><br/>
+ 
+
+							<P>Get the <strong>restrictedDates</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let restrictedDates = dateTimePicker.restrictedDates;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan31">spinButtons</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets whether the spin buttons are displayed.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>spinButtons</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker spin-buttons&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>spinButtons</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.spinButtons = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>spinButtons</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let spinButtons = dateTimePicker.spinButtons;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan32">spinButtonsDelay</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						75
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the delay between repeats of spin buttons in miliseconds.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>spinButtonsDelay</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker spin-buttons-delay='50'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>spinButtonsDelay</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.spinButtonsDelay = 100;</PRE><br/>
+ 
+
+							<P>Get the <strong>spinButtonsDelay</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let spinButtonsDelay = dateTimePicker.spinButtonsDelay;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan33">spinButtonsInitialDelay</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						0
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets a delay before the first repeat iteration of spin buttons in miliseconds.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>spinButtonsInitialDelay</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker spin-buttons-initial-delay='25'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>spinButtonsInitialDelay</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.spinButtonsInitialDelay = 50;</PRE><br/>
+ 
+
+							<P>Get the <strong>spinButtonsInitialDelay</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let spinButtonsInitialDelay = dateTimePicker.spinButtonsInitialDelay;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan34">spinButtonsPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						right
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the position of the spin buttons. Possible values:  'right', 'left'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>spinButtonsPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker spin-buttons-position='left'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>spinButtonsPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.spinButtonsPosition = 'right';</PRE><br/>
+ 
+
+							<P>Get the <strong>spinButtonsPosition</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let spinButtonsPosition = dateTimePicker.spinButtonsPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan35">tooltip</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables/Disabled the tooltip for the important dates in the calendar pop-up.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>tooltip</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker tooltip&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>tooltip</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.tooltip = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>tooltip</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let tooltip = dateTimePicker.tooltip;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan36">tooltipDelay</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						100
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the delay of the calendar pop-up's tooltip before it appears.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>tooltipDelay</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker tooltip-delay='500'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>tooltipDelay</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.tooltipDelay = 300;</PRE><br/>
+ 
+
+							<P>Get the <strong>tooltipDelay</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let tooltipDelay = dateTimePicker.tooltipDelay;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan37">tooltipPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						top
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the position of the tooltip in the calendar pop-up. Possible values:  'bottom', 'top', 'left', 'right', 'absolute'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>tooltipPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker tooltip-position='left'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>tooltipPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.tooltipPosition = 'right';</PRE><br/>
+ 
+
+							<P>Get the <strong>tooltipPosition</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let tooltipPosition = dateTimePicker.tooltipPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan38">tooltipTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets a template for the content of the calendar pop-up's tooltip. Accepts the id of or a reference to an HTMLTemplateElement.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>tooltipTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker tooltip-template='tooltipTemplateId1'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>tooltipTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.tooltipTemplate = 'tooltipTemplateId2';</PRE><br/>
+ 
+
+							<P>Get the <strong>tooltipTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let tooltipTemplate = dateTimePicker.tooltipTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan39">value</span>
+					</td>
+					<td>
+						<span>DateTime/Date</span>
+					</td>
+					<td>
+						new Smart.Utilities.DateTime()
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the value.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>value</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker value='new Date(2018, 2, 11)'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>value</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.value = new Smart.Utilities.DateTime(2017, 10, 30);</PRE><br/>
+ 
+
+							<P>Get the <strong>value</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let value = dateTimePicker.value;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan40">weekNumbers</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables/Disabled week numbering in the calendar pop-up. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>weekNumbers</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker week-numbers&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>weekNumbers</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.weekNumbers = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>weekNumbers</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let weekNumbers = dateTimePicker.weekNumbers;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan41">weeks</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						6
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Determines the number of visible weeks in the calendar pop-up.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>weeks</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-date-time-picker weeks='2'&gt;&lt;/smart-date-time-picker&gt;</PRE><br/>							<P>Set the <strong>weeks</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+ 
+							<PRE class="prettyprint"> dateTimePicker.weeks = 1;</PRE><br/>
+ 
+
+							<P>Get the <strong>weeks</strong> property. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker');</PRE>
+							<PRE class="prettyprint"> let weeks = dateTimePicker.weeks;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Events
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan42">change</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the value is changed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>change</strong> event by type: smartDateTimePicker
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker'); </PRE>
+<PRE class="prettyprint"> dateTimePicker.addEventListener('change', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan43">close</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the calendar pop-up is closed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>close</strong> event by type: smartDateTimePicker
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker'); </PRE>
+<PRE class="prettyprint"> dateTimePicker.addEventListener('close', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan44">closing</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the calendar pop-up is about to be closed. The closing operation can be canceled by calling event.preventDefault() in the event handler function.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>closing</strong> event by type: smartDateTimePicker
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker'); </PRE>
+<PRE class="prettyprint"> dateTimePicker.addEventListener('closing', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan45">open</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the calendar pop-up is opened.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>open</strong> event by type: smartDateTimePicker
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker'); </PRE>
+<PRE class="prettyprint"> dateTimePicker.addEventListener('open', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan46">opening</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the calendar pop-up is about to be opened. The opening operation can be canceled by calling event.preventDefault() in the event handler function.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>opening</strong> event by type: smartDateTimePicker
+							</p>
+							<p>
+								<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker'); </PRE>
+<PRE class="prettyprint"> dateTimePicker.addEventListener('opening', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Methods
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan47">close</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Closes the calendar pop-up.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>close</strong> method. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker'); </PRE>
+ 							<PRE class="prettyprint"> dateTimePicker.close(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan48">focus</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Focuses the input.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>focus</strong> method. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker'); </PRE>
+ 							<PRE class="prettyprint"> dateTimePicker.focus(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan49">open</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Opens the calendar pop-up.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>open</strong> method. </P>
+							<PRE class="prettyprint"> let dateTimePicker = document.querySelector('smart-date-time-picker'); </PRE>
+ 							<PRE class="prettyprint"> dateTimePicker.open(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

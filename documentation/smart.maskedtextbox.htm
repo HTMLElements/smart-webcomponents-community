@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="styles/smart.apireference.css" type="text/css" />
+	<title>MaskedTextBox API Reference</title>
+</head>
+<body>
+	<div id="properties">
+		<h2 class="documentation-top-header">Properties</h2>
+		<table class="documentation-table">
+			<tbody>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan0">allowPromptAsInput</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Gets or sets a value indicating whether PromptChar can be entered as valid data by the user.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>allowPromptAsInput</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box allow-prompt-as-input&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>allowPromptAsInput</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.allowPromptAsInput = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>allowPromptAsInput</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let allowPromptAsInput = maskedTextBox.allowPromptAsInput;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan1">asciiOnly</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Gets or sets a value indicating whether the MaskedTextBox control accepts characters outside of the ASCII character set.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>asciiOnly</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box ascii-only&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>asciiOnly</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.asciiOnly = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>asciiOnly</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let asciiOnly = maskedTextBox.asciiOnly;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan2">autoFocus</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Specifyes that a text box should have focus when the page loads.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>autoFocus</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box auto-focus&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>autoFocus</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.autoFocus = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>autoFocus</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let autoFocus = maskedTextBox.autoFocus;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan3">autoShowMask</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>If is set to true, mask is shown/hidden on focus/blur even if is not set placeholder value.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>autoShowMask</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box auto-show-mask&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>autoShowMask</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.autoShowMask = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>autoShowMask</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let autoShowMask = maskedTextBox.autoShowMask;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan4">cutCopyMaskFormat</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						excludePromptAndLiterals
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Gets or sets a value that determines how literals and prompt characters are copied to the clipboard. Possible values:  'excludePromptAndLiterals', 'includePrompt', 'includeLiterals', 'includePromptAndLiterals'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>cutCopyMaskFormat</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box cut-copy-mask-format='includePrompt'&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>cutCopyMaskFormat</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.cutCopyMaskFormat = 'includeLiterals';</PRE><br/>
+ 
+
+							<P>Get the <strong>cutCopyMaskFormat</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let cutCopyMaskFormat = maskedTextBox.cutCopyMaskFormat;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">disabled</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables or disables the widget.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box disabled&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.disabled = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let disabled = maskedTextBox.disabled;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan6">hidePromptOnLeave</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Gets or sets a value indicating whether the prompt characters in the input mask are hidden when the masked text box loses focus.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>hidePromptOnLeave</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box hide-prompt-on-leave&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>hidePromptOnLeave</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.hidePromptOnLeave = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>hidePromptOnLeave</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let hidePromptOnLeave = maskedTextBox.hidePromptOnLeave;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan7">hint</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets additional helper text below the element. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>hint</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box hint='Helper text'&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>hint</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.hint = 'Hint';</PRE><br/>
+ 
+
+							<P>Get the <strong>hint</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let hint = maskedTextBox.hint;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan8">isOverwriteMode</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Gets a value that specifies whether new user input overwrites existing input.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>isOverwriteMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box is-overwrite-mode&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>isOverwriteMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.isOverwriteMode = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>isOverwriteMode</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let isOverwriteMode = maskedTextBox.isOverwriteMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan9">label</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets label above the element. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>label</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box label='Helper text'&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>label</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.label = 'Hint';</PRE><br/>
+ 
+
+							<P>Get the <strong>label</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let label = maskedTextBox.label;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan10">mask</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						#####
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>The mask string of the control.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>mask</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box mask='##-###'&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>mask</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.mask = '(##)###';</PRE><br/>
+ 
+
+							<P>Get the <strong>mask</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let mask = maskedTextBox.mask;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan11">maskCompleted</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Gets a value indicating whether all required inputs have been entered into the input mask.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>maskCompleted</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box mask-completed&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>maskCompleted</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.maskCompleted = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>maskCompleted</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let maskCompleted = maskedTextBox.maskCompleted;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan12">maskFull</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Gets a value indicating whether all required and optional inputs have been entered into the input mask.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>maskFull</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box mask-full&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>maskFull</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.maskFull = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>maskFull</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let maskFull = maskedTextBox.maskFull;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan13">maxLength</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets/gets the maximum number of characters that the user can enter.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>maxLength</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box max-length='120'&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>maxLength</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.maxLength = 150;</PRE><br/>
+ 
+
+							<P>Get the <strong>maxLength</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let maxLength = maskedTextBox.maxLength;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan14">messages</span>
+					</td>
+					<td>
+						<span>object</span>
+					</td>
+					<td>
+						{ "en": { "missingReference": "{{elementType}}: Missing reference to {{files}}." } }
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets an object specifying strings used in the widget that can be localized. Used in conjunction with the property <strong>language</strong>. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box messages='{ "de": { "missingReference": "smartTank: Fehlende Bezugnahme auf {{files}}." } }'&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>messages</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.messages = { "de": { "missingReference": "smartTank: Fehlende Bezugnahme auf {{files}}." } };</PRE><br/>
+ 
+
+							<P>Get the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let messages = maskedTextBox.messages;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan15">name</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>The name of the control.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>name</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box name='TextArea'&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>name</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.name = 'textarea';</PRE><br/>
+ 
+
+							<P>Get the <strong>name</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let name = maskedTextBox.name;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan16">placeholder</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>A hint to the user of what can be entered in the control. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>placeholder</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box placeholder='(650)303-6565'&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>placeholder</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.placeholder = '4147-9687-1385-6921';</PRE><br/>
+ 
+
+							<P>Get the <strong>placeholder</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let placeholder = maskedTextBox.placeholder;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan17">promptChar</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						_
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>The prompt char of the control.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>promptChar</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box prompt-char='*'&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>promptChar</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.promptChar = '-';</PRE><br/>
+ 
+
+							<P>Get the <strong>promptChar</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let promptChar = maskedTextBox.promptChar;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan18">readonly</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>If the widgets is readonly, the users cannot iteract with the element.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>readonly</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box readonly&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>readonly</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.readonly = true;</PRE><br/>
+ 
+
+							<P>Get the <strong>readonly</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let readonly = maskedTextBox.readonly;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan19">rejectInputOnFirstFailure</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Gets or sets a value indicating whether the parsing of user input should stop after the first invalid character is reached.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>rejectInputOnFirstFailure</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box reject-input-on-first-failure&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>rejectInputOnFirstFailure</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.rejectInputOnFirstFailure = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>rejectInputOnFirstFailure</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let rejectInputOnFirstFailure = maskedTextBox.rejectInputOnFirstFailure;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan20">required</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Specifies that the user must fill in a value before submitting a form</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>required</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box required&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>required</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.required = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>required</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let required = maskedTextBox.required;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan21">resetOnPrompt</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Gets or sets a value that determines how an input character that matches the prompt character should be handled.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>resetOnPrompt</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box reset-on-prompt&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>resetOnPrompt</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.resetOnPrompt = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>resetOnPrompt</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let resetOnPrompt = maskedTextBox.resetOnPrompt;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan22">resetOnSpace</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Gets or sets a value that determines how a space input character should be handled.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>resetOnSpace</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box reset-on-space&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>resetOnSpace</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.resetOnSpace = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>resetOnSpace</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let resetOnSpace = maskedTextBox.resetOnSpace;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan23">selectAllOnFocus</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Specifies whether the content of the Text Area will be selected on focus.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>selectAllOnFocus</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box select-all-on-focus&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>selectAllOnFocus</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.selectAllOnFocus = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>selectAllOnFocus</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let selectAllOnFocus = maskedTextBox.selectAllOnFocus;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan24">textMaskFormat</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						excludePromptAndLiterals
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Gets or sets a value with or without prompt/ literals. Possible values:  'excludePromptAndLiterals', 'includePrompt', 'includeLiterals', 'includePromptAndLiterals'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>textMaskFormat</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box text-mask-format='includePrompt'&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>textMaskFormat</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.textMaskFormat = 'includeLiterals';</PRE><br/>
+ 
+
+							<P>Get the <strong>textMaskFormat</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let textMaskFormat = maskedTextBox.textMaskFormat;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan25">value</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the value of the text box. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>value</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box value='Demo value.'&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>value</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.value = 'New demo value.';</PRE><br/>
+ 
+
+							<P>Get the <strong>value</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let value = maskedTextBox.value;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan26">validatingType</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Gets or sets the data type used to verify the data input by the user.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>validatingType</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-masked-text-box validating-type='type1'&gt;&lt;/smart-masked-text-box&gt;</PRE><br/>							<P>Set the <strong>validatingType</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+ 
+							<PRE class="prettyprint"> maskedTextBox.validatingType = 'type2';</PRE><br/>
+ 
+
+							<P>Get the <strong>validatingType</strong> property. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box');</PRE>
+							<PRE class="prettyprint"> let validatingType = maskedTextBox.validatingType;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Events
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan27">change</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the value of the Text Box is changed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>change</strong> event by type: smartMaskedTextBox
+							</p>
+							<p>
+								<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box'); </PRE>
+<PRE class="prettyprint"> maskedTextBox.addEventListener('change', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Methods
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan28">focus</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Focuses the text box. 
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>focus</strong> method. </P>
+							<PRE class="prettyprint"> let maskedTextBox = document.querySelector('smart-masked-text-box'); </PRE>
+ 							<PRE class="prettyprint"> maskedTextBox.focus(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="styles/smart.apireference.css" type="text/css" />
+	<title>Accordion API Reference</title>
+</head>
+<body>
+	<div id="properties">
+		<h2 class="documentation-top-header">Properties</h2>
+		<table class="documentation-table">
+			<tbody>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan0">disabled</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables or disables the accordion. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-accordion disabled&gt;&lt;/smart-accordion&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion');</PRE>
+ 
+							<PRE class="prettyprint"> accordion.disabled = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion');</PRE>
+							<PRE class="prettyprint"> let disabled = accordion.disabled;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan1">expandedIndexes</span>
+					</td>
+					<td>
+						<span>array</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the expanded item(s). If the property expandMode is set to either 'single', 'singleFitHeight', 'toggle' or 'none', only the item corresponding to the first value in the array is expanded. If the property expandMode is set to either 'single' or 'singleFitHeight' and the expandedIndexes array is empty, the first item is expanded automatically.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>expandedIndexes</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-accordion expanded-indexes='[0,1]'&gt;&lt;/smart-accordion&gt;</PRE><br/>							<P>Set the <strong>expandedIndexes</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion');</PRE>
+ 
+							<PRE class="prettyprint"> accordion.expandedIndexes = [2,3];</PRE><br/>
+ 
+
+							<P>Get the <strong>expandedIndexes</strong> property. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion');</PRE>
+							<PRE class="prettyprint"> let expandedIndexes = accordion.expandedIndexes;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan2">expandMode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						singleFitHeight
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets navigation expander's expand mode. Possible values:  'single', 'singleFitHeight', 'multiple', 'toggle', 'none'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>expandMode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-accordion expand-mode='multiple'&gt;&lt;/smart-accordion&gt;</PRE><br/>							<P>Set the <strong>expandMode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion');</PRE>
+ 
+							<PRE class="prettyprint"> accordion.expandMode = 'none';</PRE><br/>
+ 
+
+							<P>Get the <strong>expandMode</strong> property. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion');</PRE>
+							<PRE class="prettyprint"> let expandMode = accordion.expandMode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan3">messages</span>
+					</td>
+					<td>
+						<span>object</span>
+					</td>
+					<td>
+						{ "en": { "missingReference": "{{elementType}}: Missing reference to {{files}}.", "significantPrecisionDigits": "{{elementType}}: the properties significantDigits and precisionDigits cannot be set at the same time." } }
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets an object specifying strings used in the widget that can be localized. Used in conjunction with the property <strong>language</strong>. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-accordion messages='{ "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "significantPrecisionDigits": "{{elementType}}: Die Eigenschaften significantDigits und precisionDigits koennen nicht gleichzeitig eingestellt werden." } }'&gt;&lt;/smart-accordion&gt;</PRE><br/>							<P>Set the <strong>messages</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion');</PRE>
+ 
+							<PRE class="prettyprint"> accordion.messages = { "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "significantPrecisionDigits": "{{elementType}}: Die Eigenschaften significantDigits und precisionDigits koennen nicht gleichzeitig eingestellt werden." } };</PRE><br/>
+ 
+
+							<P>Get the <strong>messages</strong> property. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion');</PRE>
+							<PRE class="prettyprint"> let messages = accordion.messages;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan4">readonly</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>If the widgets is readonly, the users cannot iteract with the element.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>readonly</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-accordion readonly&gt;&lt;/smart-accordion&gt;</PRE><br/>							<P>Set the <strong>readonly</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion');</PRE>
+ 
+							<PRE class="prettyprint"> accordion.readonly = true;</PRE><br/>
+ 
+
+							<P>Get the <strong>readonly</strong> property. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion');</PRE>
+							<PRE class="prettyprint"> let readonly = accordion.readonly;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">reorder</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets whether the accordion items could be reordered.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>reorder</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-accordion reorder&gt;&lt;/smart-accordion&gt;</PRE><br/>							<P>Set the <strong>reorder</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion');</PRE>
+ 
+							<PRE class="prettyprint"> accordion.reorder = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>reorder</strong> property. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion');</PRE>
+							<PRE class="prettyprint"> let reorder = accordion.reorder;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Events
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan6">collapsed</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when an item is collapsed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>collapsed</strong> event by type: smartAccordion
+							</p>
+							<p>
+								<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion'); </PRE>
+<PRE class="prettyprint"> accordion.addEventListener('collapsed', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan7">collapsing</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when an item is going to be collapsed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>collapsing</strong> event by type: smartAccordion
+							</p>
+							<p>
+								<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion'); </PRE>
+<PRE class="prettyprint"> accordion.addEventListener('collapsing', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan8">expanded</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when an item is expanded.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>expanded</strong> event by type: smartAccordion
+							</p>
+							<p>
+								<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion'); </PRE>
+<PRE class="prettyprint"> accordion.addEventListener('expanded', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan9">expanding</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when an item is going to be expanded.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>expanding</strong> event by type: smartAccordion
+							</p>
+							<p>
+								<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion'); </PRE>
+<PRE class="prettyprint"> accordion.addEventListener('expanding', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan10">reorderEnd</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the item drag for reorder ends. The event could be fired only when reorder is true.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>reorderEnd</strong> event by type: smartAccordion
+							</p>
+							<p>
+								<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion'); </PRE>
+<PRE class="prettyprint"> accordion.addEventListener('reorderEnd', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan11">reorderStart</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the item drag for reorder starts. The event could be fired only when reorder is true.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>reorderStart</strong> event by type: smartAccordion
+							</p>
+							<p>
+								<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion'); </PRE>
+<PRE class="prettyprint"> accordion.addEventListener('reorderStart', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Methods
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan12">collapse</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Collapses an item at a specified position.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>position</em></td>
+											<td><em>number</em></td>
+											<td><em>The position of the collapsed item.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>collapse</strong> method. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion'); </PRE>
+ 							<PRE class="prettyprint"> accordion.collapse(0); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan13">expand</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Expands an item at a specified position.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>position</em></td>
+											<td><em>number</em></td>
+											<td><em>The position of the expanded item.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>expand</strong> method. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion'); </PRE>
+ 							<PRE class="prettyprint"> accordion.expand(0); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan14">insert</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Inserts a new item at a specified position.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>position</em></td>
+											<td><em>number</em></td>
+											<td><em>The position where the item must be inserted.</em></td>
+										</tr>
+										<tr>
+											<td><em>value</em></td>
+											<td><em>any</em></td>
+											<td><em>The value of the new item.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>insert</strong> method. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion'); </PRE>
+ 							<PRE class="prettyprint"> accordion.insert(0, {"label":"New item","content":"New item content" }); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan15">remove</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Removes an item at a specified position.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>position</em></td>
+											<td><em>number</em></td>
+											<td><em>The position of the removed item.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>remove</strong> method. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion'); </PRE>
+ 							<PRE class="prettyprint"> accordion.remove(0); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan16">setFocusable</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Allows/denies a component to be focussed.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>value</em></td>
+											<td><em>boolean</em></td>
+											<td><em>If the value is true, the component could be focussed.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>setFocusable</strong> method. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion'); </PRE>
+ 							<PRE class="prettyprint"> accordion.setFocusable(true); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan17">update</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Updates an item from the dropDown list.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>position</em></td>
+											<td><em>number</em></td>
+											<td><em>The position where the item must be updated.</em></td>
+										</tr>
+										<tr>
+											<td><em>value</em></td>
+											<td><em>any</em></td>
+											<td><em>The value of the updated item.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>update</strong> method. </P>
+							<PRE class="prettyprint"> let accordion = document.querySelector('smart-accordion'); </PRE>
+ 							<PRE class="prettyprint"> accordion.update(0, {"label":"Updated item","content":"Updated item content" }); </PRE>
+
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
