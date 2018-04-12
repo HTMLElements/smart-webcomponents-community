@@ -98,7 +98,7 @@ describe('Testing smart-drop-down-list loaded from fixture', function () {
             expect(typeof dropDownList.selectedValues).toBe('object');
             expect(dropDownList.selectedValues.length).toBe(0);
         });
-        it('selectionMode="one"', function () {
+        it('selectionMode="zeroOrOne"', function () {
             expect(dropDownList.selectionMode).toBe('one');
         });
         it('sorted=false', function () {
@@ -229,11 +229,11 @@ describe('Testing smart-drop-down-list loaded from fixture', function () {
             dropDownList.insert(0, ['Audi', 'BMW', 'Mercedess', 'VW', 'Bently', 'Maybach']);
             dropDownList.selectedIndexes = [1];
 
-            dropDownList.selectionDisplayMode = 'default';
-            expect(dropDownList.selectionDisplayMode).toBe('default');
+            dropDownList.selectionDisplayMode = 'plain';
+            expect(dropDownList.selectionDisplayMode).toBe('plain');
 
-            dropDownList.selectionDisplayMode = 'advanced';
-            expect(dropDownList.selectionDisplayMode).toBe('advanced');
+            dropDownList.selectionDisplayMode = 'tokens';
+            expect(dropDownList.selectionDisplayMode).toBe('tokens');
         });
         it('sorted = true', function () {
             dropDownList.sorted = true;

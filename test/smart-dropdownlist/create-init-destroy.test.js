@@ -206,7 +206,7 @@ describe('Testing smart-drop-down-list, created via script and dynamicaly change
             document.body.appendChild(dropDownList);
 
             //dropDownList.dataSource = ['item 1', 'item 2', 'item 3', 'item 4'];
-            dropDownList.selectionMode = 'default';
+            dropDownList.selectionMode = 'oneOrManyExtended';
 
             dropDownList.selectedIndexes = [1, 2, 3];
             expect(dropDownList.selectedIndexes).toEqual([1, 2, 3]);
@@ -222,7 +222,7 @@ describe('Testing smart-drop-down-list, created via script and dynamicaly change
             document.body.appendChild(dropDownList);
 
             //dropDownList.dataSource = ['item 1', 'item 2', 'item 3', 'item 4'];
-            //dropDownList.selectionMode = 'default';
+            //dropDownList.selectionMode = 'oneOrManyExtended';
 
             dropDownList.selectedValues = ['item 1', 'item 2', 'item 3'];
             expect(dropDownList.selectedValues).toEqual(['item 1', 'item 2', 'item 3']);
@@ -235,7 +235,7 @@ describe('Testing smart-drop-down-list, created via script and dynamicaly change
          
         it('can set dynamically the "selectionMode" property', function () {
             let dropDownList = document.createElement('smart-drop-down-list'),
-                allowedValues = ['default', 'zeroOrMany', 'none', 'one'];
+                allowedValues = ['oneOrManyExtended', 'zeroOrMany', 'none', 'one'];
 
             document.body.appendChild(dropDownList);
             //Test cases

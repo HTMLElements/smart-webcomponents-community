@@ -29,7 +29,7 @@ describe('Testing smart-window created with script', function () {
             smartWindow.collapsed = true;
 
             expect(smartWindow.collapsed).toBe(true);
-            expect(smartWindow.offsetHeight).toBe(smartWindow.$.headerContainer.offsetHeight);
+            expect(smartWindow.offsetHeight).toBe(smartWindow.$.headerSection.offsetHeight);
 
             smartWindow.collapsed = false;
 
@@ -150,7 +150,7 @@ describe('Testing smart-window created with script', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetTop).not.toBe(expectedTop);
 
@@ -164,13 +164,13 @@ describe('Testing smart-window created with script', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetTop).toBe(expectedTop);
             smartWindow.opened = false;
         });
 
-        it('resizable', function () {
+        it('resizeMode = "horizontal"', function () {
             var event = {
                 originalEvent: {
                     target: smartWindow
@@ -182,10 +182,8 @@ describe('Testing smart-window created with script', function () {
             },
             expectedLeft = smartWindow.offsetLeft - 5;
 
-            smartWindow.resizable = true;
+            smartWindow.resizeMode = 'horizontal';
             smartWindow.opened = true;
-
-            expect(smartWindow.resizable).toBe(true);
 
             smartWindow.$.container.classList.add('smart-window-resizing-left');
 
@@ -195,17 +193,17 @@ describe('Testing smart-window created with script', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetLeft).toBe(expectedLeft);
 
-            smartWindow.resizable = false;
+            smartWindow.resizeMode = 'none';
 
-            expect(smartWindow.resizable).toBe(false);
+            expect(smartWindow.resizeMode).toBe('none');
 
             smartWindow._downHandler(event);
             smartWindow._documentMoveHandler(event);
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetLeft).toBe(expectedLeft);
             smartWindow.opened = false;
@@ -223,11 +221,10 @@ describe('Testing smart-window created with script', function () {
             },
             expectedWidth = smartWindow.offsetWidth;
 
-            smartWindow.resizable = true;
-            smartWindow.resizeMode = 'corner';
+            smartWindow.resizeMode = 'vertical';
             smartWindow.opened = true;
 
-            expect(smartWindow.resizable).toBe(true);
+            expect(smartWindow.resizeMode).toBe('vertical');
 
             smartWindow._moveHandler(event); //Determines the resizing side
             smartWindow._downHandler(event);
@@ -236,21 +233,26 @@ describe('Testing smart-window created with script', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetWidth).toBe(expectedWidth);
 
+            smartWindow.resizeMode = 'horizontal';
+
+            expect(smartWindow.resizeMode).toBe('horizontal');
+            
             event.pageX = event.clientX = smartWindow.offsetLeft + smartWindow.offsetWidth - 2.5;
             event.pageY = event.clientY = smartWindow.offsetTop + smartWindow.offsetHeight - 2.5;
 
             smartWindow._moveHandler(event); //Determines the resizing side
             smartWindow._downHandler(event);
 
+
             event.pageX -= 5;
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetWidth).not.toBe(expectedWidth);
             expect(smartWindow.offsetWidth).toBe(expectedWidth - 5);

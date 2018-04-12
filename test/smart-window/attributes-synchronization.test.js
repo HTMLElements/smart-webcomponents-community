@@ -62,8 +62,7 @@ describe('Testing smart-window loaded from fixture', function () {
         { name: 'modal', value: false, type: 'boolean', newValue: true },
         { name: 'opened', value: false, type: 'boolean', newValue: true },
         { name: 'pinned', value: false, type: 'boolean', newValue: true },
-        { name: 'resizable', value: false, type: 'boolean', newValue: true },
-        { name: 'resizeMode', value: 'default', type: 'string', newValue: 'corner' },
+        { name: 'resizeMode', value: 'none', type: 'string', newValue: 'both' },
         { name: 'windowParent', value: 'jasmine-fixtures', type: 'any', newValue: 'windowContainer' }
     ];
 

@@ -26,7 +26,6 @@ describe('Testing smart-calendar, created via script and dynamicaly changing it\
             expect(calendar).not.toBeInDOM();
         });
 
-
         it('can set dynamically the "calendarMode"', function () {
             let calendar = document.createElement('smart-calendar');
             document.body.appendChild(calendar);
@@ -285,11 +284,9 @@ describe('Testing smart-calendar, created via script and dynamicaly changing it\
 
             calendar.locale = 'de';
             expect(calendar.locale).toEqual('de');
-            expect(calendar.getAttribute('locale')).toEqual('de');
 
             calendar.locale = 'bg';
             expect(calendar.locale).toEqual('bg');
-            expect(calendar.getAttribute('locale')).toEqual('bg');
 
             document.body.removeChild(document.querySelector('smart-calendar'));
             expect(calendar).not.toBeInDOM();
@@ -299,7 +296,7 @@ describe('Testing smart-calendar, created via script and dynamicaly changing it\
             let calendar = document.createElement('smart-calendar');
             document.body.appendChild(calendar);
 
-            calendar.max = new Date(2000, 0, 1);
+            calendar.max = new Date(2000, 0,1);
             expect(new Date(calendar.max)).toEqual(new Date(2000, 0, 1));
             expect(calendar.getAttribute('max')).toEqual(calendar.max.toString());
 
@@ -369,7 +366,7 @@ describe('Testing smart-calendar, created via script and dynamicaly changing it\
             expect(calendar.restrictedDates[0].toDateString()).toEqual(new Date('2017-1-1').toDateString());
             expect(calendar.restrictedDates[1].toDateString()).toEqual(new Date('2017-1-2').toDateString());
             expect(calendar.restrictedDates[2].toDateString()).toEqual(new Date('2017-1-3').toDateString());
-
+            
             calendar.restrictedDates = [];
             expect(calendar.restrictedDates).toEqual([]);
             expect(calendar.getAttribute('restrictedDates')).toBeNull();
@@ -425,7 +422,7 @@ describe('Testing smart-calendar, created via script and dynamicaly changing it\
             expect(calendar.selectedDates[1]).toEqual(date2);
             expect(calendar._selectedDates.length).toBe(1);
             expect(calendar._selectedDates[0].value.toDateString()).toEqual(date2.toDateString());
-
+            
             date1 = new Date('2017-10-2');
 
             calendar.selectedDates = ['2017-10-2'];
@@ -567,7 +564,7 @@ describe('Testing smart-calendar, created via script and dynamicaly changing it\
             //calendar.view = ['title', 'header', 'footer'];
             calendar.view = 'portrait';
             expect(calendar.view).toEqual('portrait');
-            expect(calendar.getAttribute('view')).toBeNull();
+            //expect(calendar.getAttribute('view')).toBeNull();
 
             calendar.view = 'landscape';
             expect(calendar.view).toBe('landscape');
@@ -586,7 +583,7 @@ describe('Testing smart-calendar, created via script and dynamicaly changing it\
             expect(calendar.getAttribute('view-sections')).toEqual('["title","header","footer"]');
 
             calendar.viewSections = ['title', 'header'];
-            expect(calendar.viewSections).toEqual(['title', 'header']);
+            expect(calendar.viewSections).toEqual(['title','header']);
             expect(calendar.getAttribute('view-sections')).toEqual('["title","header"]');
 
             document.body.removeChild(document.querySelector('smart-calendar'));

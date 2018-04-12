@@ -84,27 +84,28 @@ describe('Testing smart-button, created via script and dynamicaly changed it\'s 
             expect(button).not.toBeInDOM();
         });
     });
-    describe('testing setFocusable method', function () {
-        it('on disable', function () {
-            let button = document.createElement('smart-button');
-
-            document.body.appendChild(button);
-
-            button.disabled=true;
-            button.setFocusable();
-            expect(button.hasAttribute('tabindex')).toEqual(false);
-
-            document.body.removeChild(document.querySelector('smart-button'));
-            expect(button).not.toBeInDOM();
-        });
+    describe('testing if the element is focusable', function () {
         it('on disable', function () {
             let button = document.createElement('smart-button');
 
             document.body.appendChild(button);
 
             button.disabled = true;
-            button.setFocusable();
             expect(button.hasAttribute('tabindex')).toEqual(false);
+
+            document.body.removeChild(document.querySelector('smart-button'));
+            expect(button).not.toBeInDOM();
+        });
+        it('on "unfocusable" change', function () {
+            let button = document.createElement('smart-button');
+
+            document.body.appendChild(button);
+
+            button.unfocusable = true;
+            expect(button.$.button.getAttribute('tabindex')).toEqual('-1');
+
+            button.unfocusable = false;
+            expect(button.$.button.getAttribute('tabindex')).toEqual('0');
 
             document.body.removeChild(document.querySelector('smart-button'));
             expect(button).not.toBeInDOM();

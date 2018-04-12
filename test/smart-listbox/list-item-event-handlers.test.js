@@ -107,7 +107,7 @@ describe('Testing private functions of smart-list-box', function () {
            Smart.ListBox.DragDrop.Dragging = true;
 
            testedItem._itemOnMouseMove(event);
-           expect(testedItem).toHaveClass('smart-list-item-line-feedback');
+           expect(testedItem).toHaveClass('smart-list-item-bottom-line-feedback');
 
            event.pageY = 250;
            testedItem._itemOnMouseMove(event);

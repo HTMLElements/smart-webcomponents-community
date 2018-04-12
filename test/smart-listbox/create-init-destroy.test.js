@@ -312,7 +312,7 @@ describe('Testing smart-list-box, created via script and dynamicaly changed it\'
             document.body.appendChild(smartListBox);
 
             smartListBox.dataSource = ['item 1', 'item 2', 'item 3', 'item 4'];
-            smartListBox.selectionMode = 'default';
+            smartListBox.selectionMode = 'oneOrManyExtended';
 
 
             smartListBox.selectedIndexes = [1,2,3];
@@ -327,7 +327,7 @@ describe('Testing smart-list-box, created via script and dynamicaly changed it\'
             document.body.appendChild(smartListBox);
 
             smartListBox.dataSource = ['item 1', 'item 2', 'item 3', 'item 4'];
-            smartListBox.selectionMode = 'default';
+            smartListBox.selectionMode = 'oneOrManyExtended';
 
             smartListBox.selectedValues = ['item 1', 'item 2', 'item 3'];
             expect(smartListBox.selectedValues.length).toBe(3);

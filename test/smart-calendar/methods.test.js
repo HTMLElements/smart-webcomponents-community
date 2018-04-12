@@ -79,8 +79,8 @@ describe('Testing smart-calendar\'s methods', function () {
             expect(calendar._selectedDates.length).toBe(0);
         });
 
-        it('setFocusable', function () {
-            calendar.setFocusable(false);
+        it('_setFocusable', function () {
+            calendar.unfocusable = true;
             expect(calendar.$.nextMonthButton.$.button.tabIndex).toBe(-1);
             expect(calendar.$.previousMonthButton.$.button.tabIndex).toBe(-1);
             expect(calendar.$.monthElement.tabIndex).toBe(-1);
@@ -88,7 +88,7 @@ describe('Testing smart-calendar\'s methods', function () {
             expect(calendar.$.decrementYearButton.$.button.tabIndex).toBe(-1);
             expect(calendar.$.content.tabIndex).toBe(-1);
 
-            calendar.setFocusable(true);
+            calendar.unfocusable = false;
             //expect(calendar.$.nextMonthButton.$.button.tabIndex).toBe(0); //Fails only in Travis
             //expect(calendar.$.previousMonthButton.$.button.tabIndex).toBe(0); //Fails only in Travis
             expect(calendar.$.monthElement.tabIndex).toBe(0);
@@ -164,7 +164,7 @@ describe('Testing smart-calendar\'s methods', function () {
             calendar.select(new Date(newDate.getFullYear(), newDate.getMonth(), 1));
 
             var event = { originalEvent: { target: calendar._getDayInstanceByValue(new Date(newDate.getFullYear(), newDate.getMonth(), 2)), stopPropagation: function () { } } };
-
+            
             calendar._downHandler(event);
 
             expect(calendar.selectedDates.length).toBe(1);
@@ -454,17 +454,11 @@ describe('Testing smart-calendar\'s methods', function () {
             event.key = 'Shift';
             calendar._keyDownHandler(event);
 
-            var context = calendar.context;
-
-            calendar.context = calendar;
-
             event.key = 'ArrowRight';
             calendar._keyDownHandler(event);
 
             expect(calendar.selectionMode).toBe('default');
             expect(calendar.selectedDates.length).toBe(2);
-
-            calendar.context = context;
 
             event.key = 'Control';
             calendar._keyDownHandler(event);

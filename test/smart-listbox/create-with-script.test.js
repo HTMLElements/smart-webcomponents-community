@@ -81,8 +81,8 @@ describe('Testing smart-list-box created with script', function () {
         it('seting all possible selectionModes', function () {
             smartListBox.selectionMode = 'zeroOrMany';
             expect(smartListBox.selectionMode).toBe('zeroOrMany');
-            smartListBox.selectionMode = 'default';
-            expect(smartListBox.selectionMode).toBe('default');
+            smartListBox.selectionMode = 'oneOrManyExtended';
+            expect(smartListBox.selectionMode).toBe('oneOrManyExtended');
             smartListBox.selectionMode = 'checkBox';
             expect(smartListBox.selectionMode).toBe('checkBox');
             smartListBox.selectionMode = 'radioButton';

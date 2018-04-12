@@ -5,6 +5,51 @@ var describe,
     it,
     expect,
     document;
+
+function createProperty(value) {
+    var _value = value;
+
+    function _get() {
+        return _value;
+    }
+
+    function _set(v) {
+        _value = v;
+    }
+
+    return {
+        'get': _get,
+        'set': _set
+    };
+}
+
+function makePropertyWritable(objBase, objScopeName, propName, initValue) {
+    var newProp,
+        initObj;
+
+    if (objBase && objScopeName in objBase && propName in objBase[objScopeName]) {
+        if (typeof initValue === 'undefined') {
+            initValue = objBase[objScopeName][propName];
+        }
+
+        newProp = createProperty(initValue);
+
+        try {
+            Object.defineProperty(objBase[objScopeName], propName, newProp);
+        }
+        catch (e) {
+            initObj = {};
+            initObj[propName] = newProp;
+            try {
+                objBase[objScopeName] = Object.create(objBase[objScopeName], initObj);
+            }
+            catch (e) {
+                //stuff
+            }
+        }
+    }
+}
+
 describe('Testing smart-list-box loaded from fixture', function () {
     'use strict';
     let smartListBox;
@@ -122,10 +167,12 @@ describe('Testing smart-list-box loaded from fixture', function () {
             expect(smartListBox.items.length).toEqual(5);
         });
         it('dropAction = "move" on Mobile device ', function () {
-            var event = { pageX: 10, pageY: 20, originalEvent: { target: smartListBox.items[0] }, target: smartListBox.items[0] };
+            var oldUserAgent = window.navigator.userAgent,
+                event = { pageX: 10, pageY: 20, originalEvent: { target: smartListBox.items[0] }, target: smartListBox.items[0] };
 
-            delete Smart.Utilities.Core.isMobile;
-            Smart.Utilities.Core.isMobile = true;
+            makePropertyWritable(window, 'navigator', 'userAgent');
+            window.navigator.userAgent = 'android';
+
             smartListBox.dropAction = 'move';
             smartListBox._downHandler(event);
             expect(smartListBox.items[0].selected).toBe(true);
@@ -144,9 +191,9 @@ describe('Testing smart-list-box loaded from fixture', function () {
             event.stopPropagation = function () { };
 
             //When moveHandler is called on Mobile
-            Smart.Utilities.Core.isMobile = false; //circumvent a Date check.
+            window.navigator.userAgent = oldUserAgent; //circumvent a Date check.
             smartListBox._moveHandler(event);
-            Smart.Utilities.Core.isMobile = true;
+            window.navigator.userAgent = 'android';
 
             expect(Smart.ListBox.DragDrop.Dragging).toBe(true);
 
@@ -161,9 +208,9 @@ describe('Testing smart-list-box loaded from fixture', function () {
             expect(smartListBox.items.length).toEqual(5);
 
             //When moveHandler is called on Mobile
-            Smart.Utilities.Core.isMobile = false; //circumvent a Date check.
+            window.navigator.userAgent = oldUserAgent; //circumvent a Date check.
             smartListBox._moveHandler(event);
-            Smart.Utilities.Core.isMobile = true;
+            window.navigator.userAgent = 'android';
 
             expect(Smart.ListBox.DragDrop.Dragging).toBe(false);
 
@@ -184,7 +231,7 @@ describe('Testing smart-list-box loaded from fixture', function () {
             expect(smartListBox.selectedIndexes).toEqual([0]);
             expect(smartListBox.items.length).toEqual(5);
 
-            Smart.Utilities.Core.isMobile = false;
+            window.navigator.userAgent = oldUserAgent;
         });
     });
 });

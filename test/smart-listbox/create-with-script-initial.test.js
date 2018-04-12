@@ -83,8 +83,8 @@ describe('Testing smart-list-box created with script', function () {
             expect(typeof smartListBox.selectedValues).toBe('object');
             //expect(smartListBox.selectedValues.length).toBe(0);
         });
-        it('selectionMode="default"', function () {
-            expect(smartListBox.selectionMode).toBe('default');
+        it('selectionMode="oneOrManyExtended"', function () {
+            expect(smartListBox.selectionMode).toBe('oneOrManyExtended');
         });
         it('sorted=false', function () {
             expect(smartListBox.sorted).toBe(false);

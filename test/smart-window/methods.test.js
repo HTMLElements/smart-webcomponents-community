@@ -45,7 +45,7 @@ describe('Testing smart-window\'s methods', function () {
 
             smartWindow.expand();
 
-            expect(smartWindow.offsetHeight).toBe(document.documentElement.clientHeight);
+            expect(smartWindow.offsetHeight).toBe(document.documentElement.scrollHeight);
 
             smartWindow.windowParent = null;
         });
@@ -98,7 +98,7 @@ describe('Testing smart-window\'s methods', function () {
             expect(smartWindow.offsetWidth).toBe(400);
             expect(smartWindow.offsetHeight).toBe(400);
 
-            smartWindow.resizable = true;
+            smartWindow.resizeMode = 'both';
 
             smartWindow._moveHandler(event);
             smartWindow._downHandler(event);
@@ -192,7 +192,7 @@ describe('Testing smart-window\'s methods', function () {
 
             expect(smartWindow).not.toHaveClass('smart-visibility-hidden');
 
-            smartWindow._downHandler(event);
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow).toHaveClass('smart-visibility-hidden');
 
@@ -201,30 +201,30 @@ describe('Testing smart-window\'s methods', function () {
 
             event.originalEvent.target = smartWindow.$.pinButton;
 
-            smartWindow._downHandler(event);
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.pinned).toBe(true);
             expect(smartWindow).not.toHaveClass('smart-visibility-hidden');
 
-            smartWindow._downHandler(event);
+            smartWindow._documentUpHandler(event);
             expect(smartWindow.pinned).toBe(false);
 
             //Collapse button
             event.originalEvent.target = smartWindow.$.collapseButton;
 
-            smartWindow._downHandler(event);
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.collapsed).toBe(true);
             expect(smartWindow).not.toHaveClass('smart-visibility-hidden');
 
-            smartWindow._downHandler(event);
+            smartWindow._documentUpHandler(event);
             expect(smartWindow.collapsed).toBe(false);
 
             //Maximize button
             event.originalEvent.target = smartWindow.$.maximizeButton;
 
             smartWindow.windowParent = document.body;
-            smartWindow._downHandler(event);
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetWidth).toBeGreaterThan(400);
             expect(smartWindow.offsetHeight).toBeGreaterThan(400);
@@ -232,7 +232,7 @@ describe('Testing smart-window\'s methods', function () {
             expect(smartWindow.maximized).toBe(true);
             expect(smartWindow).not.toHaveClass('smart-visibility-hidden');
 
-            smartWindow._downHandler(event);
+            smartWindow._documentUpHandler(event);
             expect(smartWindow.maximized).toBe(false);
             smartWindow.windowParent = 'jasmine-fixtures';
         });
@@ -269,7 +269,7 @@ describe('Testing smart-window\'s methods', function () {
 
             var expectedLeft = smartWindow.offsetLeft - 5;
 
-            smartWindow.resizable = true;
+            smartWindow.resizeMode = 'both';
 
             smartWindow._moveHandler(event); //Set the resizing side
             smartWindow._downHandler(event);
@@ -278,7 +278,7 @@ describe('Testing smart-window\'s methods', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetLeft).toBe(expectedLeft);
 
@@ -297,7 +297,7 @@ describe('Testing smart-window\'s methods', function () {
                 clientY: smartWindow.offsetTop + smartWindow.offsetHeight / 2
             };
 
-            smartWindow.resizable = true;
+            smartWindow.resizeMode = 'both';
 
             //Left
             smartWindow._moveHandler(event);
@@ -378,7 +378,8 @@ describe('Testing smart-window\'s methods', function () {
                 key: 'ArrowUp',
                 altKey: true,
                 ctrlKey: false,
-                preventDefault: function () { }
+                preventDefault: function () { },
+                stopPropagation: function () { }
             };
 
             //Maximize
@@ -533,6 +534,8 @@ describe('Testing smart-window\'s methods', function () {
         it('_resize', function () {
             smartWindow.opened = true;
             smartWindow.windowParent = document.body;
+             //PropertyChangedHandler is not called in latest FireFox so i call it manually
+             smartWindow._setElementParent(smartWindow.windowParent);
 
             var event = {
                 originalEvent: {
@@ -547,7 +550,7 @@ describe('Testing smart-window\'s methods', function () {
             expectedWidth = smartWindow.offsetWidth,
             expectedHeight = smartWindow.offsetHeight;
 
-            smartWindow.resizable = true;
+            smartWindow.resizeMode = 'both';
 
             //Left side
             smartWindow._moveHandler(event); //Set the resizing side
@@ -557,7 +560,7 @@ describe('Testing smart-window\'s methods', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetLeft).toBe(expectedLeft);
             expect(smartWindow.offsetWidth).toBe(expectedWidth + 5);
@@ -576,7 +579,7 @@ describe('Testing smart-window\'s methods', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetWidth).toBe(expectedWidth);
             expect(smartWindow.offsetHeight).toBe(expectedHeight - 5);
@@ -595,7 +598,7 @@ describe('Testing smart-window\'s methods', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetWidth).toBe(expectedWidth + 5);
             expect(smartWindow.offsetHeight).toBe(expectedHeight);
@@ -611,7 +614,7 @@ describe('Testing smart-window\'s methods', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetLeft).toBe(expectedLeft);
             expect(smartWindow.offsetWidth).toBe(expectedWidth);
@@ -630,7 +633,7 @@ describe('Testing smart-window\'s methods', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetWidth).toBe(expectedWidth - 5);
             expect(smartWindow.offsetHeight).toBe(expectedHeight - 5);
@@ -649,14 +652,14 @@ describe('Testing smart-window\'s methods', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetWidth).toBe(expectedWidth - 10);
             expect(smartWindow.offsetHeight).toBe(expectedHeight - 10);
 
             //ResizeMode  "corner"
 
-            smartWindow.resizeMode = 'corner';
+            smartWindow.resizeMode = 'both';
 
             //Right-Bottom corner
             event.clientX = smartWindow.offsetLeft + smartWindow.offsetWidth - 2.5;
@@ -672,7 +675,7 @@ describe('Testing smart-window\'s methods', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
             expect(smartWindow.offsetWidth).toBe(expectedWidth - 5);
             expect(smartWindow.offsetHeight).toBe(expectedHeight - 5);
@@ -691,15 +694,17 @@ describe('Testing smart-window\'s methods', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
-            expect(smartWindow.offsetWidth).toBe(expectedWidth - 5);
-            expect(smartWindow.offsetHeight).toBe(expectedHeight - 5);
+            expect(smartWindow.offsetWidth).toBe(expectedWidth);
+            expect(smartWindow.offsetHeight).toBe(expectedHeight);
 
             smartWindow.windowParent = null;
+             //PropertyChangedHandler is not called in latest FireFox so i call it manually
+             smartWindow._setElementParent(smartWindow.windowParent);
 
             //Top side
-            smartWindow.resizeMode = 'default';
+            smartWindow.resizeMode = 'vertical';
 
             event.clientX = event.pageX = smartWindow.offsetLeft + smartWindow.offsetWidth / 2;
             event.clientY = event.pageY = smartWindow.offsetTop - 2.5;
@@ -711,10 +716,10 @@ describe('Testing smart-window\'s methods', function () {
 
             smartWindow._documentMoveHandler(event);
 
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
-            expect(smartWindow.offsetWidth).toBe(expectedWidth - 5);
-            expect(smartWindow.offsetHeight).toBe(expectedHeight);
+            expect(smartWindow.offsetWidth).toBe(expectedWidth);
+            expect(smartWindow.offsetHeight).toBe(expectedHeight + 5);
 
             //Bottom side
             event.clientX = event.pageX = smartWindow.offsetLeft + smartWindow.offsetWidth / 2;
@@ -727,10 +732,10 @@ describe('Testing smart-window\'s methods', function () {
 
             smartWindow._documentMoveHandler(event);
             
-            smartWindow._documentUpHandler();
+            smartWindow._documentUpHandler(event);
 
-            expect(smartWindow.offsetWidth).toBe(expectedWidth - 5);
-            expect(smartWindow.offsetHeight).toBe(expectedHeight);
+            expect(smartWindow.offsetWidth).toBe(expectedWidth);
+            expect(smartWindow.offsetHeight).toBe(expectedHeight + 5);
 
             smartWindow.windowParent = null;
         });
@@ -742,10 +747,14 @@ describe('Testing smart-window\'s methods', function () {
             document.body.appendChild(container);
 
             smartWindow.windowParent = container;
+            //PropertyChangedHandler is not called in latest FireFox so i call it manually
+            smartWindow._setElementParent(smartWindow.windowParent);
 
             expect(smartWindow.parentElement).toEqual(container);
 
             smartWindow.windowParent = 'body';
+            //PropertyChangedHandler is not called in latest FireFox so i call it manually
+            smartWindow._setElementParent(smartWindow.windowParent);
 
             expect(smartWindow.parentElement).toEqual(document.body);
 
@@ -753,10 +762,15 @@ describe('Testing smart-window\'s methods', function () {
             expect(smartWindow.parentElement).toEqual(container);
 
             smartWindow.windowParent = document.body;
+            //PropertyChangedHandler is not called in latest FireFox so i call it manually
+            smartWindow._setElementParent(smartWindow.windowParent);
 
             expect(smartWindow.parentElement).toEqual(document.body)
 
             smartWindow.windowParent = 'jasmine-fixtures';
+            //PropertyChangedHandler is not called in latest FireFox so i call it manually
+            smartWindow._setElementParent(smartWindow.windowParent);
+
             document.body.removeChild(container);
         });
 

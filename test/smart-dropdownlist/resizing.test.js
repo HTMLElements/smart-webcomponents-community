@@ -54,7 +54,10 @@ describe('Testing smart-drop-down-list resizing', function () {
             expect(dropDownList.$.dropDownContainer).toHaveClass('smart-visibility-hidden');
         });
 
-        it('resizeMode = "center"', function () {
+        it('resizeMode = "vertical"', function () {
+            dropDownList.resizeMode = 'vertical';
+            dropDownList.$.dropDownContainer.style.maxHeight = '400px';
+
             var event = {
                 target: document,
                 originalEvent: { target: dropDownList.$.resizeBar },
@@ -67,7 +70,6 @@ describe('Testing smart-drop-down-list resizing', function () {
             popupHeight = dropDownList.$.dropDownContainer.offsetHeight;
 
             dropDownList.open();
-            dropDownList.resizeMode = 'center';
             dropDownList._documentDownHandler(event);
 
             expect(dropDownList._resizeDetails).not.toBeUndefined();
@@ -86,7 +88,7 @@ describe('Testing smart-drop-down-list resizing', function () {
             expect(dropDownList.$.dropDownContainer).not.toHaveClass('smart-visibility-hidden');
         });
 
-        it('resizeMode = "corner"', function () {
+        it('resizeMode = "horizontal"', function () {
             var event = {
                 target: document,
                 originalEvent: { target: dropDownList.$.resizeBar },
@@ -100,12 +102,12 @@ describe('Testing smart-drop-down-list resizing', function () {
 
             //Resizing from the left side of the resize bar - not allowed
             dropDownList.open();
-            dropDownList.resizeMode = 'corner';
+            dropDownList.resizeMode = 'horizontal';
             dropDownList._documentDownHandler(event);
 
             expect(dropDownList._resizeDetails).not.toBeUndefined();
 
-            event.pageX = event.pageY += 10;
+            event.pageY += 10;
 
             dropDownList._documentMoveHandler(event);
 
@@ -122,7 +124,7 @@ describe('Testing smart-drop-down-list resizing', function () {
             event.pageX = event.clientX = dropDownList.offsetLeft + dropDownList.$.resizeBar.offsetLeft + dropDownList.$.resizeBar.offsetWidth - 10;
 
             dropDownList.open();
-            dropDownList.resizeMode = 'corner';
+            dropDownList.resizeMode = 'horizontal';
             dropDownList._documentDownHandler(event);
 
             expect(dropDownList._resizeDetails).not.toBeUndefined();
@@ -162,14 +164,15 @@ describe('Testing smart-drop-down-list resizing', function () {
 
             expect(dropDownList._resizeDetails).not.toBeUndefined();
 
-            event.pageX = event.pageY += 10;
+            event.pageX += 10;
+            event.pageY += 10;
 
             dropDownList._dragStartHandler(event);
             dropDownList._documentMoveHandler(event);
 
             expect(dropDownList).toHaveAttr('resizing', '');
             expect(dropDownList.$.dropDownContainer.offsetHeight).toBe(popupHeight + 10);
-            expect(dropDownList.$.dropDownContainer.offsetWidth).toBe(popupWidth);
+            expect(dropDownList.$.dropDownContainer.offsetWidth).toBe(popupWidth + 10);
 
             dropDownList._documentUpHandler(event);
 
@@ -191,7 +194,7 @@ describe('Testing smart-drop-down-list resizing', function () {
 
             expect(dropDownList).toHaveAttr('resizing', '');
             expect(dropDownList.$.dropDownContainer.offsetHeight).toBe(popupHeight + 20);
-            expect(dropDownList.$.dropDownContainer.offsetWidth).toBe(popupWidth + 10);
+            expect(dropDownList.$.dropDownContainer.offsetWidth).toBe(popupWidth + 20);
 
             dropDownList._documentUpHandler(event);
 
@@ -201,7 +204,7 @@ describe('Testing smart-drop-down-list resizing', function () {
     });
 
     describe('if it\'s working properly when the popup is over the dropDownList element', function () {
-        it('resizeMode = "center"', function () {
+        it('resizeMode = "vertical"', function () {
             var event = {
                 target: document,
                 originalEvent: { target: dropDownList.$.resizeBar },
@@ -213,15 +216,17 @@ describe('Testing smart-drop-down-list resizing', function () {
             popupWidth = dropDownList.$.dropDownContainer.offsetWidth,
             popupHeight = dropDownList.$.dropDownContainer.offsetHeight;
 
-            dropDownList.style.marginTop = '250px';
+            dropDownList.style.marginTop = '300px';
 
+            dropDownList._calculateDropDownSize();
+            
             dropDownList.dropDownPosition = 'top';
             dropDownList.open();
-            dropDownList.resizeMode = 'center';
+            dropDownList.resizeMode = 'vertical';
             dropDownList._documentDownHandler(event);
-
+            
             expect(dropDownList._resizeDetails).not.toBeUndefined();
-
+            
             event.pageX = event.pageY += 5;
 
             dropDownList._documentMoveHandler(event);
@@ -236,7 +241,7 @@ describe('Testing smart-drop-down-list resizing', function () {
             expect(dropDownList.$.dropDownContainer).not.toHaveClass('smart-visibility-hidden');
         });
 
-        it('resizeMode = "corner"', function () {
+        it('resizeMode = "horizontal"', function () {
             var event = {
                 target: document,
                 originalEvent: { target: dropDownList.$.resizeBar },
@@ -251,18 +256,19 @@ describe('Testing smart-drop-down-list resizing', function () {
             //Resizing from the left side of the resize bar - not allowed
             dropDownList.dropDownPosition = 'top';
             dropDownList.open();
-            dropDownList.resizeMode = 'corner';
+            dropDownList.resizeMode = 'horizontal';
             dropDownList._documentDownHandler(event);
 
             expect(dropDownList._resizeDetails).not.toBeUndefined();
 
-            event.pageX = event.pageY += 10;
+            event.pageX += 10; 
+            event.pageY += 10;
 
             dropDownList._documentMoveHandler(event);
 
             expect(dropDownList).toHaveAttr('resizing', '');
             expect(dropDownList.$.dropDownContainer.offsetHeight).toBe(popupHeight);
-            expect(dropDownList.$.dropDownContainer.offsetWidth).toBe(popupWidth);
+            expect(dropDownList.$.dropDownContainer.offsetWidth).toBe(popupWidth + 10);
 
             dropDownList._documentUpHandler(event);
 
@@ -273,18 +279,17 @@ describe('Testing smart-drop-down-list resizing', function () {
             event.pageX = event.clientX = dropDownList.offsetLeft + dropDownList.$.resizeBar.offsetLeft + dropDownList.$.resizeBar.offsetWidth - 10;
 
             dropDownList.open();
-            dropDownList.resizeMode = 'corner';
+            dropDownList.resizeMode = 'both';
             dropDownList._documentDownHandler(event);
 
             expect(dropDownList._resizeDetails).not.toBeUndefined();
 
-            event.pageX += 10;
             event.pageY += 10;
 
             dropDownList._documentMoveHandler(event);
 
             expect(dropDownList).toHaveAttr('resizing', '');
-            expect(dropDownList.$.dropDownContainer.offsetHeight).toBe(popupHeight);
+            expect(dropDownList.$.dropDownContainer.offsetHeight).toBe(popupHeight - 10);
             expect(dropDownList.$.dropDownContainer.offsetWidth).toBe(popupWidth + 10);
 
             dropDownList._documentUpHandler(event);
@@ -314,14 +319,15 @@ describe('Testing smart-drop-down-list resizing', function () {
 
             expect(dropDownList._resizeDetails).not.toBeUndefined();
 
-            event.pageX = event.pageY += 10;
+            event.pageX += 10; 
+            event.pageY += 10;
 
             dropDownList._dragStartHandler(event);
             dropDownList._documentMoveHandler(event);
 
             expect(dropDownList).toHaveAttr('resizing', '');
             expect(dropDownList.$.dropDownContainer.offsetHeight).toBe(popupHeight - 10);
-            expect(dropDownList.$.dropDownContainer.offsetWidth).toBe(popupWidth);
+            expect(dropDownList.$.dropDownContainer.offsetWidth).toBe(popupWidth + 10);
 
             dropDownList._documentUpHandler(event);
 
@@ -343,7 +349,7 @@ describe('Testing smart-drop-down-list resizing', function () {
 
             expect(dropDownList).toHaveAttr('resizing', '');
             expect(dropDownList.$.dropDownContainer.offsetHeight).toBe(popupHeight - 20);
-            expect(dropDownList.$.dropDownContainer.offsetWidth).toBe(popupWidth + 10);
+            expect(dropDownList.$.dropDownContainer.offsetWidth).toBe(popupWidth + 20);
 
             dropDownList._documentUpHandler(event);
 
