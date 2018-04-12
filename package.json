@@ -50,7 +50,9 @@
     "karma-coveralls": "^1.1.2",
     "rimraf": "^2.6.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^1.0.22"
+  },
   "main": "index.js",
   "directories": {},
   "keywords": [
