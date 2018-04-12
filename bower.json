@@ -23,6 +23,6 @@
     "**/tests"
   ],
   "dependencies": {
-   
+     htmlelements/smart-button
   }
 }
