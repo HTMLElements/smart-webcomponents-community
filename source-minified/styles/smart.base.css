@@ -15,7 +15,16 @@
     --smart-active-color: #111; /* Default color when an element is active */
     --smart-active-border-color: #A9A9A9; /* Default border color for elements in active state */
     --smart-active-background-color: #BDBDBD; /* Default  background-color when an element is active*/
-    --smart-disabled-color: #555; /* Default disabled color */
+    --smart-alternation-index0-color: #111; /* Alternation color for index0 */
+    --smart-alternation-index0-border-color: #FFFF8D; /* Alternation border color for index0 */
+    --smart-alternation-index0-background-color: #FFFF8D; /* Alternation background color for index0 */ 
+    --smart-alternation-index1-color: #111; /*Alternation color for index1 */
+    --smart-alternation-index1-border-color: #9BBB59; /* Alternation border color for index1 */
+    --smart-alternation-index1-background-color: #9BBB59; /* Alternation background color for index1 */ 
+    --smart-alternation-index2-color: #fff; /*Alternation color for index2 */
+    --smart-alternation-index2-border-color: #FC3752; /* Alternation border color for index2 */
+    --smart-alternation-index2-background-color: #FC3752; /* Alternation background color for index2 */ 
+    --smart-disabled-color: #333; /* Default disabled color */
     --smart-disabled-border-color: #A9A9A9; /* Default border color when an element is disabled */
     --smart-disabled-background-color: transparent; /* Default background-color of an element when it's disabled */
     --smart-focus-color: #555; /* Default color when an element is focused */
@@ -2116,7 +2125,7 @@ smart-text-box smart-list-box,
     height: 100%;
     border: initial;
     padding: initial;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .smart-drop-down:not([resize-mode='none']) smart-list-box {
@@ -2993,7 +3002,9 @@ smart-list-items-group {
     smart-list-item[selected] {
         background-color: rgba(255,187,0, 0.3);
     }
-
+    smart-list-item[selected][focused] {
+        background-color: rgba(255,187,0, 0.3);
+    }
     smart-list-item[display-mode="radioButton"][selected],
     smart-list-item[display-mode="checkBox"][selected] {
         background-color: inherit;
@@ -3098,7 +3109,35 @@ smart-list-items-group .smart-list-items-group-label {
     white-space: nowrap;
 }
 
-smart-list-item.hovered, smart-list-item[selected].hovered {
+
+smart-list-box smart-list-item[alternation-index="0"],
+smart-list-item[display-mode="radioButton"][selected][alternation-index="0"],
+smart-list-item[display-mode="checkBox"][selected][alternation-index="0"]
+ {
+     background-color: var(--smart-alternation-index0-background-color);
+     color: var(--smart-alternation-index0-color);
+     border-color: var(--smart-alternation-index0-border-color);
+}
+
+smart-list-box smart-list-item[alternation-index="1"],
+smart-list-item[display-mode="radioButton"][selected][alternation-index="1"],
+smart-list-item[display-mode="checkBox"][selected][alternation-index="1"]
+ {
+     background-color: var(--smart-alternation-index1-background-color);
+     color: var(--smart-alternation-index1-color);
+     border-color: var(--smart-alternation-index1-border-color);
+}
+smart-list-box smart-list-item[alternation-index="2"],
+smart-list-item[display-mode="radioButton"][selected][alternation-index="2"],
+smart-list-item[display-mode="checkBox"][selected][alternation-index="2"]
+ {
+     background-color: var(--smart-alternation-index2-background-color);
+     color: var(--smart-alternation-index2-color);
+     border-color: var(--smart-alternation-index2-border-color);
+}
+
+
+smart-list-box smart-list-item.hovered, smart-list-item.hovered, smart-list-item[selected].hovered {
     color: var(--smart-hover-color);
 }
 
@@ -3256,6 +3295,7 @@ smart-list-box {
         color: #0078D7;
     }
 
+    
     smart-list-box:focus:not([selection-mode="checkBox"]):not([selection-mode="radioButton"]) smart-list-item[selected]:not([focused]) {
         background-color: rgba(255,187,0, 0.3);
     }
@@ -5967,9 +6007,6 @@ smart-slider .smart-tooltip {
     padding: 5px;
     background-color: #EFEFEF;
     opacity: 0.7;
-}
-
-smart-slider .smart-tooltip {
     left: calc(-1 * var(--smart-slider-tooltip-width) / 2 + var(--smart-slider-thumb-width) / 2 - 1px);
     top: calc(-1 * var(--smart-slider-tooltip-height) - 3px);
 }
