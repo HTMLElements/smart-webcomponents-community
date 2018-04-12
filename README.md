@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/HTMLElements/smarthtmlelements-core.svg?branch=master](https://travis-ci.org/HTMLElements/smarthtmlelements-core)
+[![Build Status](https://travis-ci.org/HTMLElements/smarthtmlelements-core.svg?branch=master)](https://travis-ci.org/HTMLElements/smarthtmlelements-core)
+
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/owner/my-element)
 
 
