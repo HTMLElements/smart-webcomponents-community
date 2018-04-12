@@ -5,7 +5,7 @@
    "scripts": { 
     "test": "karma start karma-minified.conf.js",
     "eslint": "eslint source/*.js --quiet",
-    "coverage": "node node_modules/karma/bin/karma start --single-run --coverage",
+    "coverage": "node node_modules/karma/bin/karma start --single-run --coverage"
   },
   "repository": {
     "type": "git",
