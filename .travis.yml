@@ -5,7 +5,6 @@ addons:
   firefox: latest
 script:
 - npm run test
-- npm run eslint
 before_install:
 - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 - export DISPLAY=:99.0
@@ -13,19 +12,10 @@ before_install:
 before_script:
 - npm install
 before_deploy:
-- npm run mkdirsourceminified
-- npm run copystylesandimageses5
-- npm run copystylesandimagesminified
-- npm run renamebasestylees5
-- npm run renamebasestyleminified
-- npm run gulprunalltasks
-- npm run deletegulpfile
 after_deploy:
 - npm run test
 notifications:
   email: false
-  slack:
-    secure: ty71vuOhNiPERIWsehZYfL42DKpgORd/XNAGxfsGF3KAmZyoDOtosRTBIkgIFdEjg+OAm39rNSLM2wGfqTSJLaKMhrjnH0u0IXkxt69B004CBecdbnCf7dvDmKO2uz2qcPCTtgEbO4GXXysHuW5Xpd+eHB0unIbl9oWwEcq1SeHHKX4F0gThV8o7wVj/PVMcNCmXhKfia18cJ3adm00A0Z14UhIFh20k76L9W6AiHwmw/TUyF6cyklGGvkRR3/1dXG+OIgWNqoMhIu9VxThTGtB0o5YxsQrfFGq6n4v70vDd4vUtNs6DYyJlbJY5U/Qr287NOLw9wIsPGj5rsHEFOCfLaE+YXVIu7lpr7u9Ymgmg5anatH3o9jRUzpCEfNtryNDBYoXaBh6PrIcTazRLhyr5RRlCJut0gJMR++rofuRj2VgmgNjF/c0eEhWy5bCpUbYGuPvPWNGKBE4ZJw+bUA32AT2kp/dR5eLcWWVVDh8LvcnMazifhakAX4phDte7LOPMRJiVd42KN8IzEh7EMSV4NgjQMl3mbsSXc9TYOfrX+WjMgEEtWI12h90rXAaCbQbG/jwSflkTHWbAhhZy2tAXdhSO1IolCz1YYNbB3qBEmkRXEmpohgiVMRJh/9HjEx6KTT3l4+KEIi/HHtVBrR6ndYfCDE/CoWsYimjnE3g=
 deploy:
   provider: npm
   email: boikom@jqwidgets.com
@@ -34,4 +24,4 @@ deploy:
     secure: OiJSSFdpZ2KSYGxgI/a+Kx4upsp9Xf/fLLqzilxkdmVBKGdWKcD2nEvYOMxtSPh+T8lKvHQx55XIOyi0PgCZmYXH5CU6kes0PVcJZmVrAaIBmtE8lqPB1yBUZYEXTqvQj2+vT7Iq5UeL5m2cmGI3VXHHUnJrQaxaVCVmJF+xwcInOyoEQsspOAU8HPWCSZWu7UbEC26j9QzuNe3+jFBNEv01w5uzE1807soTtHs3Gw7hJNP6Ku3aAFA9R0yj53bDiDLA8tis7XJ57vZUxMCgzOx+E7H1iuK7Uz2HPrL1YNbKx28LLJOO1olYxcUUrh9Q9nlEuR+6hwykq2ITqAU3XLKf4hqLHt08pgPayg7f02AAohJDTHJmpeWMjaaRi7pUnYcthCyhoC++Iy7678n+rPSvDkbWkuYVfAFC/ZcKf+CYYjzL3Qc4UnVTraxTG9T/x1FVnMg5IssdZvRuiE738xUf2q3UvwQiQGRTxstA4UpivRP5hYgGO/uIf81MikLsZ+fJpirXxZ8UJ0cOruKh2pKVHuF+ehPbDYQ9dPkU0ZCRf9y9n/9wc+fR7C4NISxepDb/+UBrqoMy5dLjEleV/oHjCEdLsCgRSIAFxlQIPkXPt1h0XFa64CSMdLItYWMKHNhaJJayWLTJqtagHazpeCTIxzcJgnOI6lU2o1fPcdQ=
   on:
     tags: true
-    repo: ni-kismet/jqx
+    repo: htmlelements/smarthtmlelements-core
