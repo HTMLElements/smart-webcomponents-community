@@ -8,7 +8,7 @@ var describe,
 describe('Testing smart-power-button from fixture', function () {
     'use strict';
     let powerButton;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartpowerbutton/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-powerbutton/fixtures';
     jasmine.getFixtures().preload('smart-power-button-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-power-button-attributes-synchronization.htm');

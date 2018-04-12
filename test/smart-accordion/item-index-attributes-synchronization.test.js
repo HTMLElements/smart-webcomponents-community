@@ -8,7 +8,7 @@ var describe,
 describe('Testing smartAccordion attributes-synchronization fixture', function () {
     'use strict';
     let accordion;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartaccordion/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-accordion/fixtures';
     jasmine.getFixtures().preload('smart-accordion-item-index-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-accordion-item-index-attributes-synchronization.htm');

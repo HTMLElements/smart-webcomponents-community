@@ -10,7 +10,7 @@ describe('Testing smart-window loaded from fixture', function () {
     'use strict';
     let smartWindow;
 
-    jasmine.getFixtures().fixturesPath = 'base/test/smartwindow/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-window/fixtures';
     jasmine.getFixtures().preload('smart-window-attributes-synchronization.htm');
 
     beforeEach(function () {

@@ -10,7 +10,7 @@ window.testItem = { 'test': "" };
 
 describe('Testing additional functionalities of smart.element.js - ', function () {
     let TestElement2;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartelement/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-element/fixtures';
     jasmine.getFixtures().preload('smart-test-element.htm');
     beforeEach(function () {
         loadFixtures('smart-test-element.htm');

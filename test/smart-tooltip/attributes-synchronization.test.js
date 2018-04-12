@@ -8,7 +8,7 @@ var describe,
 describe('Testing smart-tooltip loaded from fixture', function () {
     'use strict';
     let tooltip;
-    jasmine.getFixtures().fixturesPath = 'base/test/smarttooltip/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-tooltip/fixtures';
     jasmine.getFixtures().preload('smart-tooltip-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-tooltip-attributes-synchronization.htm');

@@ -9,7 +9,7 @@ describe('Testing smart-calendar\'s methods', function () {
     'use strict';
     let calendar;
 
-    jasmine.getFixtures().fixturesPath = 'base/test/smartcalendar/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-calendar/fixtures';
     jasmine.getFixtures().preload('smart-calendar-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-calendar-attributes-synchronization.htm');

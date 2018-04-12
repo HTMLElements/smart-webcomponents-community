@@ -8,7 +8,7 @@ var describe,
 describe('Testing smartToggleButton attributes-synchronization fixture', function () {
     'use strict';
     let toggleButton;
-    jasmine.getFixtures().fixturesPath = 'base/test/smarttogglebutton/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-togglebutton/fixtures';
     jasmine.getFixtures().preload('smart-toggle-button-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-toggle-button-attributes-synchronization.htm');

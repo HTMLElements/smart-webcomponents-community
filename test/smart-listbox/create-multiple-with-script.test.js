@@ -7,7 +7,7 @@
 //    'use strict';
 //    let listbox;
 
-//    jasmine.getFixtures().fixturesPath = 'base/test/smartlistbox/fixtures';
+//    jasmine.getFixtures().fixturesPath = 'base/test/smart-listbox/fixtures';
 //    jasmine.getFixtures().preload('smart-list-box-attributes-synchronization.htm');
 //    beforeEach(function () {
 //        loadFixtures('smart-list-box-attributes-synchronization.htm');

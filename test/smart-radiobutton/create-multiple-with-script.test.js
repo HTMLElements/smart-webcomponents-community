@@ -6,7 +6,7 @@ var describe,
 describe('Testing smart-progress-bar create-with-script', function () {
     'use strict';
     let radioButton;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartradiobuttton/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-radiobuttton/fixtures';
     jasmine.getFixtures().preload('smart-radio-button-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-radio-button-attributes-synchronization.htm');

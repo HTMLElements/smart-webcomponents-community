@@ -8,7 +8,7 @@ var describe,
 describe('Testing smart-radio-button from fixture', function () {
     'use strict';
     let radioButton;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartradiobutton/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-radiobutton/fixtures';
     jasmine.getFixtures().preload('smart-radio-button-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-radio-button-attributes-synchronization.htm');

@@ -18,7 +18,7 @@ describe('Testing programmatic reorder functionality of smart-tabs', function ()
     onReady();
 
     let tabsScroll, tabsDropdown, tabsWrap, tabsShrink;
-    jasmine.getFixtures().fixturesPath = 'base/test/smarttabs/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-tabs/fixtures';
     jasmine.getFixtures().preload('smart-tabs-layout.htm');
     beforeEach(function () {
         loadFixtures('smart-tabs-layout.htm');

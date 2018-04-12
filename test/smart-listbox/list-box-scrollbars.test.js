@@ -9,7 +9,7 @@ describe('Testing smart-list-box scrollbarTest with fixture', function () {
     'use strict';
     let listBox;
 
-    jasmine.getFixtures().fixturesPath = 'base/test/smartlistbox/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-listbox/fixtures';
     jasmine.getFixtures().preload('smart-list-box-array-source.htm');
     beforeEach(function () {
         loadFixtures('smart-list-box-array-source.htm');

@@ -14,7 +14,7 @@ describe('Testing dynamic creation of smart-tabs', function () {
     onReady();
 
     let tabsContainer;
-    jasmine.getFixtures().fixturesPath = 'base/test/smarttabs/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-tabs/fixtures';
     jasmine.getFixtures().preload('smart-tabs-dynamic-creation.htm');
     beforeEach(function () {
         loadFixtures('smart-tabs-dynamic-creation.htm');

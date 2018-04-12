@@ -7,7 +7,7 @@ describe('Testing smart-drop-down-list create-multiple-with-script', function ()
     'use strict';
     let dropDownList;
 
-    jasmine.getFixtures().fixturesPath = 'base/test/smartdropdownlist/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-dropdownlist/fixtures';
     jasmine.getFixtures().preload('smart-drop-down-list-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-drop-down-list-attributes-synchronization.htm');

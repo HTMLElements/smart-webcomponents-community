@@ -8,7 +8,7 @@ var describe,
 describe('Testing smart-switch-button from fixture', function () {
     'use strict';
     let switchButton;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartswitchbutton/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-switchbutton/fixtures';
     jasmine.getFixtures().preload('smart-switch-button-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-switch-button-attributes-synchronization.htm');

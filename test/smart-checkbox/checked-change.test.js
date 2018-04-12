@@ -9,7 +9,7 @@ describe('Testing changing the checked state of a smart-check-box', function () 
     'use strict';
     let checkbox, checkboxInput, checkboxLabel;
 
-    jasmine.getFixtures().fixturesPath = 'base/test/smartcheckbox/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-checkbox/fixtures';
     jasmine.getFixtures().preload('smart-check-box-with-label.htm');
     beforeEach(function () {
         loadFixtures('smart-check-box-with-label.htm');

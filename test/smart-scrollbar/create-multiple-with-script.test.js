@@ -6,7 +6,7 @@
 //describe('Testing smart-button create-multiple-with-script', function () {
 //    'use strict';
 //    let button;
-//    jasmine.getFixtures().fixturesPath = 'base/test/smartbutton/fixtures';
+//    jasmine.getFixtures().fixturesPath = 'base/test/smart-button/fixtures';
 //    jasmine.getFixtures().preload('smart-button-attributes-synchronization.htm');
 //    beforeEach(function () {
 //        loadFixtures('smart-button-attributes-synchronization.htm');

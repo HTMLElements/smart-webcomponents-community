@@ -8,7 +8,7 @@ var describe,
 describe('Testing smart-pager loaded from fixture', function () {
     'use strict';
     let maskedTextBox;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartpager/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-pager/fixtures';
     jasmine.getFixtures().preload('smart-pager-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-pager-attributes-synchronization.htm');

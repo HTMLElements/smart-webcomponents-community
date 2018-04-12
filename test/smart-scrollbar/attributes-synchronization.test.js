@@ -8,7 +8,7 @@ var describe,
 describe('Testing smart-scroll-bar loaded from fixture', function () {
     'use strict';
     let smartScrollBar;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartscrollbar/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-scrollbar/fixtures';
     jasmine.getFixtures().preload('smart-scroll-bar-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-scroll-bar-attributes-synchronization.htm');

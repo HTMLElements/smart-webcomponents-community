@@ -8,7 +8,7 @@ var describe,
 describe('Testing smart-led from fixture', function () {
     'use strict';
     let LED;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartled/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-led/fixtures';
     jasmine.getFixtures().preload('smart-led-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-led-attributes-synchronization.htm');

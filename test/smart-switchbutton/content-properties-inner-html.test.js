@@ -8,7 +8,7 @@ var describe,
 describe('Testing if smart-switch-button loaded from fixture could set content properties', function () {
     'use strict';
     let switchButton;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartswitchbutton/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-switchbutton/fixtures';
     jasmine.getFixtures().preload('smart-switch-button-content-properties-inner-html.htm');
     beforeEach(function () {
         loadFixtures('smart-switch-button-content-properties-inner-html.htm');

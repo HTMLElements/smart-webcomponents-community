@@ -8,7 +8,7 @@ var describe,
 describe('Testing smartRepeatButton attributes-synchronization', function () {
     'use strict';
     let repeatButton;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartrepeatbutton/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-repeatbutton/fixtures';
     jasmine.getFixtures().preload('smart-repeat-button-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-repeat-button-attributes-synchronization.htm');

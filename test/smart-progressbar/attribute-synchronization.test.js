@@ -9,7 +9,7 @@ describe('Testing smart-progressbar-demo', function () {
     'use strict';
     let progressBarLinear,
     progressBarCircular;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartprogressbar/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-progressbar/fixtures';
     jasmine.getFixtures().preload('smart-progress-bar-attribute-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-progress-bar-attribute-synchronization.htm');

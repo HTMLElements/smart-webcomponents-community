@@ -8,7 +8,7 @@ var describe,
 describe('Testing smartCheckBox attributes-synchronization fixture', function () {
     'use strict';
     let checkbox;
-    jasmine.getFixtures().fixturesPath = 'base/test/smartcheckbox/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-checkbox/fixtures';
     jasmine.getFixtures().preload('smart-check-box-attributes-synchronization.htm');
     beforeEach(function () {
         loadFixtures('smart-check-box-attributes-synchronization.htm');

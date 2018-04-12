@@ -18,7 +18,7 @@ describe('Testing the overriden methods "appendChild", "insertBefore" and "remov
     onReady();
 
     let smartTabs;
-    jasmine.getFixtures().fixturesPath = 'base/test/smarttabs/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-tabs/fixtures';
     jasmine.getFixtures().preload('smart-tabs-simple.htm');
     beforeEach(function () {
         loadFixtures('smart-tabs-simple.htm');

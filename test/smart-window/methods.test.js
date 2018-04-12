@@ -9,7 +9,7 @@ describe('Testing smart-window\'s methods', function () {
     'use strict';
     let smartWindow;
 
-    jasmine.getFixtures().fixturesPath = 'base/test/smartwindow/fixtures';
+    jasmine.getFixtures().fixturesPath = 'base/test/smart-window/fixtures';
     jasmine.getFixtures().preload('smart-window-methods.htm');
     beforeEach(function () {
         //setStyleFixtures('#jasmine-fixtures { width: 700px; height: 700px; }');
