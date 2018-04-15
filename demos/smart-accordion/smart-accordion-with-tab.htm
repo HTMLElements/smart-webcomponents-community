@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // IE/Edge polyfill.
+        if (!window.customElements) {
+            document.writeln('<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.23/webcomponents-lite.js"><\/script>');
+            document.write('<!--');
+        }
+    </script>
+    <script type="text/javascript" src="../../source-minified/native-shim.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.0.22/webcomponents-lite.js"></script>
+    <!--! do not remove -->
+    <script>
+       // IE polyfill.
+        if (!(window.CSS && window.CSS.supports && window.CSS.supports('(--fake-var: 0)'))) {
+            document.writeln('<link rel="stylesheet" href="../../source-minified/styles/smart.base-novars.css" type="text/css" />');
+            document.write('<!--');
+        }
+    </script>
+    <link rel="stylesheet" href="../../source-minified/styles/smart.base.css" type="text/css" />
+    <!--! do not remove -->
+    <link rel="stylesheet" href="../styles/demos.css" type="text/css" />
+    <script type="text/javascript" src="../../source-minified/smart.element-polyfills.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.element.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.accordion.js"></script>
+    <script type="text/javascript" src="../../source-minified/smart.tabs.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px auto 0px auto;
+            padding: 0px 0px 0px 0px;
+            height:100vh;
+        }
+
+        smart-accordion {
+            float: left;
+            width: 100%;
+            height: 100%;
+            margin-right: 50px;
+        }
+
+        .demoTabs {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <smart-accordion id="accordion">
+        <smart-accordion-item index="0" label="Tabs 1">
+            <smart-tabs class="demoTabs" selected-index="1">
+                <smart-tab-item label="TAB 1">Content 1</smart-tab-item>
+            </smart-tabs>
+        </smart-accordion-item>
+        <smart-accordion-item index="1" label="Tabs 2">
+            <smart-tabs class="demoTabs" selected-index="1">
+                <smart-tab-item label="TAB 1">Content 1</smart-tab-item>
+                <smart-tab-item label="TAB 2">Content 2</smart-tab-item>
+            </smart-tabs>
+        </smart-accordion-item>
+        <smart-accordion-item index="2" label="Tabs 3">
+            <smart-tabs class="demoTabs" selected-index="1">
+                <smart-tab-item label="TAB 1">Content 1</smart-tab-item>
+                <smart-tab-item label="TAB 2">Content 2</smart-tab-item>
+                <smart-tab-item label="TAB 3">Content 3</smart-tab-item>
+            </smart-tabs>
+        </smart-accordion-item>
+        <smart-accordion-item index="3" label="Tabs 4">
+            <smart-tabs class="demoTabs" selected-index="1">
+                <smart-tab-item label="TAB 1">Content 1</smart-tab-item>
+                <smart-tab-item label="TAB 2">Content 2</smart-tab-item>
+                <smart-tab-item label="TAB 3">Content 3</smart-tab-item>
+                <smart-tab-item label="TAB 4">Content 4</smart-tab-item>
+            </smart-tabs>
+        </smart-accordion-item>
+    </smart-accordion>
+</body>
+</html>
