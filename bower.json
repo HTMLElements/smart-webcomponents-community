@@ -23,7 +23,6 @@
     "**/tests"
   ],
   "dependencies": {
-  "smart-button": "HTMLElements/smart-button",
-  "smart-accordion": "HTMLElements/smart-accordion"
+
   }
 }
