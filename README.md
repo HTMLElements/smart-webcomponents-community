@@ -49,34 +49,20 @@ Download and Installation
     
     ##### Files for elements. Include depending on project needs:
     
-    *   smart.alert.js: Alert element
     *   smart.accordion.js: Accordion element
     *   smart.button.js: Button, Toggle Button, Repeat Button elements.
     *   smart.calendar.js: Calendar element
-    *   smart.combobox.js: ComboBox element
-    *   smart.datetimepicker.js: Date/Time picker element
     *   smart.dropdownlist.js: DropDownList element
-    *   smart.gauge.js: Gauge element
     *   smart.led.js: LED element
     *   smart.listbox.js: ListBox element
-    *   smart.listmenu.js: ListMenu element
-    *   smart.maskedtextbox.js: Masked TextBox element
-    *   smart.menu.js: Menu/Tree Menu element
-    *   smart.multilinetextbox.js: Multiline TextBox/TextArea element
-    *   smart.multisplitbutton.js: Multi Split Button element
-    *   smart.numerictextbox.js: Numeric TextBox element
     *   smart.pager.js: Pager element
-    *   smart.passwordtextbox.js: Password TextBox element
     *   smart.powerbutton.js: Power Button element
     *   smart.progressbar.js: Progress Bar element
     *   smart.radiobutton.js: Radio Button element
     *   smart.scrollbar.js: ScrollBar element
-    *   smart.slider.js: Slider element
     *   smart.switchbutton.js: Switch Button element
     *   smart.tabs.js: Tabs element
-    *   smart.tank.js: Tank element
     *   smart.tooltip.js: Tooltip element
-    *   smart.timepicker.js: Time Picker element
     *   smart.window.js: Window element
 *   ### Examples
     
