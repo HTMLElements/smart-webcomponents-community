@@ -23,7 +23,8 @@
     "**/tests"
   ],
   "dependencies": {
+   "smart-accordion": "HTMLElements/smart-accordion",
    "smart-button": "HTMLElements/smart-button",
-   "smart-accordion": "HTMLElements/smart-accordion"
+   "smart-calendar": "HTMLElements/smart-calendar"  
   }
 }
