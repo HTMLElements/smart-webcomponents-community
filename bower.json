@@ -13,7 +13,13 @@
     "components",
     "webcomponents",
     "web-components",
-    "element-collection"
+    "element-collection",
+    "tabs",
+    "calendar custom element",
+    "datepicker custom element",
+    "tabs custom element",
+    "button custom element",
+    "accordion custom element"
   ],
   "main": "",
   "ignore": [
@@ -25,6 +31,7 @@
   "dependencies": {
    "smart-accordion": "HTMLElements/smart-accordion",
    "smart-button": "HTMLElements/smart-button",
-   "smart-calendar": "HTMLElements/smart-calendar"  
+   "smart-calendar": "HTMLElements/smart-calendar",
+    "smart-tabs": "HTMLElements/smart-tabs"
   }
 }
