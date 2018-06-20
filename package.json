@@ -12,7 +12,7 @@
     "url": "git+https://github.com/HTMLElements/smarthtmlelements-core.git"
   },
   "author": "Smart HTML Elements",
-  "license": "SEE LICENSE IN http://www.htmlelements.com/pricing/",
+  "license": "SEE LICENSE IN http://www.htmlelements.com/license/",
   "bugs": {
     "url": "https://github.com/HTMLElements/smarthtmlelements-core"
   },
@@ -51,7 +51,7 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^1.0.22"
+    "@webcomponents/webcomponentsjs": "^1.2.0"
   },
   "main": "index.js",
   "directories": {},
