@@ -32,6 +32,7 @@
    "smart-accordion": "HTMLElements/smart-accordion",
    "smart-button": "HTMLElements/smart-button",
    "smart-calendar": "HTMLElements/smart-calendar",
-    "smart-tabs": "HTMLElements/smart-tabs"
+   "smart-listbox": "HTMLElements/smart-listbox",
+   "smart-tabs": "HTMLElements/smart-tabs"
   }
 }
