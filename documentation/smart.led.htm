@@ -30,13 +30,13 @@
 
 							<P>Set the <strong>checked</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-led checked&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>checked</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
  
 							<PRE class="prettyprint"> led.checked = false;</PRE><br/>
  
 
 							<P>Get the <strong>checked</strong> property. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
 							<PRE class="prettyprint"> let checked = led.checked;</PRE>
 						</div>
 					</td>
@@ -61,13 +61,13 @@
 
 							<P>Set the <strong>clickMode</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-led click-mode='press'&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>clickMode</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
  
 							<PRE class="prettyprint"> led.clickMode = 'pressAndRelease';</PRE><br/>
  
 
 							<P>Get the <strong>clickMode</strong> property. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
 							<PRE class="prettyprint"> let clickMode = led.clickMode;</PRE>
 						</div>
 					</td>
@@ -92,13 +92,13 @@
 
 							<P>Set the <strong>disabled</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-led disabled&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
  
 							<PRE class="prettyprint"> led.disabled = false;</PRE><br/>
  
 
 							<P>Get the <strong>disabled</strong> property. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
 							<PRE class="prettyprint"> let disabled = led.disabled;</PRE>
 						</div>
 					</td>
@@ -123,13 +123,13 @@
 
 							<P>Set the <strong>falseContent</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-led false-content='OFF'&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>falseContent</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
  
 							<PRE class="prettyprint"> led.falseContent = 'False';</PRE><br/>
  
 
 							<P>Get the <strong>falseContent</strong> property. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
 							<PRE class="prettyprint"> let falseContent = led.falseContent;</PRE>
 						</div>
 					</td>
@@ -137,7 +137,38 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan4">indeterminate</span>
+						<span id="propertiesSpan4">falseTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets custom template about LED's false state.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>falseTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-led false-template='templateId1'&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>falseTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
+ 
+							<PRE class="prettyprint"> led.falseTemplate = 'templateId2';</PRE><br/>
+ 
+
+							<P>Get the <strong>falseTemplate</strong> property. </P>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> let falseTemplate = led.falseTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">indeterminate</span>
 					</td>
 					<td>
 						<span>boolean</span>
@@ -154,13 +185,13 @@
 
 							<P>Set the <strong>indeterminate</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-led indeterminate&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>indeterminate</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
  
 							<PRE class="prettyprint"> led.indeterminate = false;</PRE><br/>
  
 
 							<P>Get the <strong>indeterminate</strong> property. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
 							<PRE class="prettyprint"> let indeterminate = led.indeterminate;</PRE>
 						</div>
 					</td>
@@ -168,7 +199,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan5">indeterminateContent</span>
+						<span id="propertiesSpan6">indeterminateContent</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -185,13 +216,13 @@
 
 							<P>Set the <strong>indeterminateContent</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-led indeterminate-content='NULL'&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>indeterminateContent</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
  
 							<PRE class="prettyprint"> led.indeterminateContent = 'Indeterminate';</PRE><br/>
  
 
 							<P>Get the <strong>indeterminateContent</strong> property. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
 							<PRE class="prettyprint"> let indeterminateContent = led.indeterminateContent;</PRE>
 						</div>
 					</td>
@@ -199,7 +230,38 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan6">name</span>
+						<span id="propertiesSpan7">indeterminateTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets custom template about LED's indeterminate state.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>indeterminateTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-led indeterminate-template='templateId1'&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>indeterminateTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
+ 
+							<PRE class="prettyprint"> led.indeterminateTemplate = 'templateId2';</PRE><br/>
+ 
+
+							<P>Get the <strong>indeterminateTemplate</strong> property. </P>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> let indeterminateTemplate = led.indeterminateTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan8">name</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -216,13 +278,13 @@
 
 							<P>Set the <strong>name</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-led name='Name'&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>name</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
  
 							<PRE class="prettyprint"> led.name = 'New Name';</PRE><br/>
  
 
 							<P>Get the <strong>name</strong> property. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
 							<PRE class="prettyprint"> let name = led.name;</PRE>
 						</div>
 					</td>
@@ -230,7 +292,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan7">readonly</span>
+						<span id="propertiesSpan9">readonly</span>
 					</td>
 					<td>
 						<span>boolean</span>
@@ -247,13 +309,13 @@
 
 							<P>Set the <strong>readonly</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-led readonly&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>readonly</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
  
 							<PRE class="prettyprint"> led.readonly = true;</PRE><br/>
  
 
 							<P>Get the <strong>readonly</strong> property. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
 							<PRE class="prettyprint"> let readonly = led.readonly;</PRE>
 						</div>
 					</td>
@@ -261,7 +323,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan8">shape</span>
+						<span id="propertiesSpan10">shape</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -278,13 +340,13 @@
 
 							<P>Set the <strong>shape</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-led shape='square'&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>shape</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
  
 							<PRE class="prettyprint"> led.shape = 'round';</PRE><br/>
  
 
 							<P>Get the <strong>shape</strong> property. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
 							<PRE class="prettyprint"> let shape = led.shape;</PRE>
 						</div>
 					</td>
@@ -292,7 +354,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan9">trueContent</span>
+						<span id="propertiesSpan11">trueContent</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -309,13 +371,13 @@
 
 							<P>Set the <strong>trueContent</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-led true-content='ON'&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>trueContent</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
  
 							<PRE class="prettyprint"> led.trueContent = 'True';</PRE><br/>
  
 
 							<P>Get the <strong>trueContent</strong> property. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
 							<PRE class="prettyprint"> let trueContent = led.trueContent;</PRE>
 						</div>
 					</td>
@@ -323,7 +385,38 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan10">value</span>
+						<span id="propertiesSpan12">trueTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets custom template about LED's true state.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>trueTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-led true-template='templateId1'&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>trueTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
+ 
+							<PRE class="prettyprint"> led.trueTemplate = 'templateId2';</PRE><br/>
+ 
+
+							<P>Get the <strong>trueTemplate</strong> property. </P>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> let trueTemplate = led.trueTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan13">value</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -340,13 +433,13 @@
 
 							<P>Set the <strong>value</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-led value='Value'&gt;&lt;/smart-led&gt;</PRE><br/>							<P>Set the <strong>value</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
  
 							<PRE class="prettyprint"> led.value = 'New Value';</PRE><br/>
  
 
 							<P>Get the <strong>value</strong> property. </P>
-							<PRE class="prettyprint"> let led = document.querySelector('smart-led');</PRE>
+							<PRE class="prettyprint"> const led = document.querySelector('smart-led');</PRE>
 							<PRE class="prettyprint"> let value = led.value;</PRE>
 						</div>
 					</td>
@@ -361,7 +454,7 @@
 				</tr>
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan11">change</span>
+						<span id="propertiesSpan14">change</span>
 					</td>
 					<td>
 						<span>Event</span>
@@ -382,7 +475,7 @@
 								Bind to the <strong>change</strong> event by type: smartLed
 							</p>
 							<p>
-								<PRE class="prettyprint"> let led = document.querySelector('smart-led'); </PRE>
+								<PRE class="prettyprint"> const led = document.querySelector('smart-led'); </PRE>
 <PRE class="prettyprint"> led.addEventListener('change', function (event) {
      // event handling code goes here.
  }

@@ -1,0 +1,349 @@
+﻿      /* ------------ Google fonts ------------ */
+.smart-demo-container {
+	line-height:initial;
+}
+        /* fallback */
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/materialicons/v31/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+        }
+
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ------------ */
+
+        .smart-demo-container {
+            
+            /*line-height: 24px;*/
+            font-size: 13px;
+        	
+            margin-left: 0;
+            margin: 5% 10%;
+            padding-top: 50px;
+        }
+
+            .smart-demo-container section h2 {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 40px;
+                margin-bottom: 30px;
+                color: #3949ab;
+            }
+
+            .smart-demo-container section:first-of-type h2 {
+                font-size: 34px;
+            }
+
+            .smart-demo-container section:first-of-type div h2 {
+                font-size: 20px;
+            }
+
+            .smart-demo-container section > h2:first-of-type {
+                padding-top: 80px;
+                border-top: 1px solid rgba(0,0,0,.12);
+            }
+.smart-demo-container section h2 {
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 40px;
+		margin-bottom: 30px;
+		color: #764ebe;
+	}
+        #overviewHeading,
+        #usageHeading {
+            border-top: none !important;
+        }
+
+        .smart-demo-container section {
+            margin-top: 80px;
+        }
+
+            .smart-demo-container section:first-of-type {
+                margin-top: 0;
+            }
+
+            .smart-demo-container section div h2 {
+                color: #212121;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 32px;
+                margin-bottom: 20px;
+                max-width: 940px;
+            }
+
+        .smart-demo-container nav {
+            display: block;
+            border-left: 5px #3949ab solid;
+            padding-left: 20px;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            -webkit-font-smoothing: antialiased;
+            font: inherit;
+            margin-top: 60px;
+        }
+
+            .smart-demo-container nav ul {
+                list-style: none;
+                margin-top: 0;
+                padding-left: 0;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font: inherit;
+                vertical-align: baseline;
+                display: block;
+                list-style-type: disc;
+            }
+
+            .smart-demo-container nav li {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+                font-size: 20px;
+                line-height: 40px;
+            }
+
+                .smart-demo-container nav li a {
+                    text-decoration: none;
+                }
+
+            .smart-demo-container nav h2 {
+                font-size: 15px;
+                line-height: 16px;
+                padding-bottom: 12px;
+                font-weight: 400;
+                color: #757575;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font: inherit;
+                vertical-align: baseline;
+                -webkit-margin-before: 1em;
+                -webkit-margin-after: 1em;
+                -webkit-margin-start: 0px;
+                -webkit-margin-end: 0px;
+            }
+
+        .module {
+            width: calc(100% / 4);
+            height: auto;
+            display: inline-block;
+            font: inherit;
+            margin-right: 40px;
+            min-width: 355px;
+            vertical-align: top;
+            position: relative;
+        }
+
+        .smart-demo-container .raised-demo-start {
+            background-image: url(../images/raised-button-demo.png);
+        }
+
+        .module-wide {
+            min-width: 755px;
+            width: 800px;
+            display: inline-block;
+        }
+
+        section .light-theme {
+            background-color: #EEEEEE;
+            padding: 120px 60px 120px 60px;
+        }
+
+        section .dark-theme {
+            background-color: #333333;
+            padding: 120px 60px 120px 60px;
+        }
+
+        .module h3 {
+            margin-top: 30px;
+        }
+
+        .module p {
+            margin-bottom: 20px;
+        }
+
+        .module img {
+            width: 100%;
+        }
+
+        .module > div:nth-child(odd) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 360px;
+            height: 304px;
+            background-size: 100%;
+            position: relative;
+        }
+
+        .module.desktop > div:nth-child(odd) {
+            width: 760px;
+            height: 220px;
+        }
+
+        /*smart-tabs-specific styles*/
+        smart-tabs {
+            position: relative;
+            height: 200px;
+        }
+
+            smart-tabs.mobile,
+            smart-tabs.desktop,
+            #tabs5 {
+                width: 100%;
+            }
+
+                smart-tabs.mobile .smart-tab-label-container {
+                    width: calc(100% / 3);
+                }
+
+                smart-tabs.mobile .smart-tab-label-text-container {
+                    text-align: center;
+                }
+
+            smart-tabs.padding .smart-tabs-header-section {
+                padding-left: 60px;
+            }
+
+            smart-tabs.desktop {
+                top: 117px;
+            }
+
+        .default-mobile-tabs-container {
+            background-image: url(../images/components-tabs-usage-mobile3.png);
+        }
+
+        #tabs1,
+        #tabs5 {
+            top: 93px;
+        }
+
+        #tabs2Container {
+            background-image: url(../images/components-tabs-usage-mobile1.png);
+        }
+
+        #tabs2 {
+            top: 149px;
+        }
+
+        #tabs3Container {
+            background-image: url(../images/components-tabs-usage-mobile6.png);
+        }
+
+        #tabs3 {
+            top: 13px;
+        }
+
+        #tabs4Container {
+            background-image: url(../images/components-tabs-usage-mobile2.png);
+        }
+
+        #tabs4 {
+            top: 101px;
+        }
+
+        #tabs6 {
+            top: 82px;
+        }
+
+        .default-desktop-tabs-container {
+            background-image: url(../images/components-tabs-usage-desktop1.png);
+        }
+
+        #tabs8 {
+            width: 560px;
+        }
+
+        #tabs9 {
+            --smart-tabs-header-button-size: 40px;
+        }
+
+        #tabs10Container,
+        #tabs11Container,
+        #tabs14Container,
+        #tabs15Container {
+            height: 320px;
+        }
+
+        #tabs10Container {
+            background-image: url(../images/components-tabs-usage-desktop2.png);
+        }
+
+        #tabs11Container {
+            background-image: url(../images/components-tabs-usage-desktop3.png);
+        }
+
+        #tabs10,
+        #tabs11,
+        #tabs14,
+        #tabs15 {
+            top: 105px;
+        }
+
+        .desktop-bottom-tabs-container {
+            height: 220px;
+            background-image: url(../images/components-tabs-usage-desktop4.png);
+        }
+
+        #tabs12,
+        #tabs16 {
+            top: 22px;
+        }
+
+        #tabs12 {
+            height: 150px;
+        }
+
+        #tabs13 {
+            top: 85px;
+        }
+
+        #tabs14Container {
+            background-image: url(../images/components-tabs-usage-desktop5.png);
+        }
+
+        #tabs14,
+        #tabs15 {
+            --smart-tabs-header-button-size: 36px;
+        }
+
+        #tabs15Container {
+            background-image: url(../images/components-tabs-usage-desktop6.png);
+        }
+
+        #tabs16 {
+            height: 160px;
+        }
+
+        #tabs18Container {
+            width: 360px;
+            height: 640px;
+            background-image: url(../images/components-tabs-usage-example3.png);
+        }
+
+        #tabs18 {
+            width: 100%;
+            height: 410px;
+            top: 89px;
+        }

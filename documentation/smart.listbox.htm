@@ -30,13 +30,13 @@
 
 							<P>Set the <strong>dataSource</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box data-source='["item 1", "item 2"]'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>dataSource</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.dataSource = ["new item 1", "new item 2"];</PRE><br/>
  
 
 							<P>Get the <strong>dataSource</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let dataSource = listBox.dataSource;</PRE>
 						</div>
 					</td>
@@ -61,13 +61,13 @@
 
 							<P>Set the <strong>disabled</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box disabled&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.disabled = false;</PRE><br/>
  
 
 							<P>Get the <strong>disabled</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let disabled = listBox.disabled;</PRE>
 						</div>
 					</td>
@@ -92,13 +92,13 @@
 
 							<P>Set the <strong>displayLoadingIndicator</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box display-loading-indicator&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>displayLoadingIndicator</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.displayLoadingIndicator = false;</PRE><br/>
  
 
 							<P>Get the <strong>displayLoadingIndicator</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let displayLoadingIndicator = listBox.displayLoadingIndicator;</PRE>
 						</div>
 					</td>
@@ -123,13 +123,13 @@
 
 							<P>Set the <strong>displayMember</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box display-member='label'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>displayMember</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.displayMember = 'name';</PRE><br/>
  
 
 							<P>Get the <strong>displayMember</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let displayMember = listBox.displayMember;</PRE>
 						</div>
 					</td>
@@ -154,13 +154,13 @@
 
 							<P>Set the <strong>dropAction</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box drop-action='copy'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>dropAction</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.dropAction = 'move';</PRE><br/>
  
 
 							<P>Get the <strong>dropAction</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let dropAction = listBox.dropAction;</PRE>
 						</div>
 					</td>
@@ -185,13 +185,13 @@
 
 							<P>Set the <strong>filterable</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box filterable&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>filterable</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.filterable = false;</PRE><br/>
  
 
 							<P>Get the <strong>filterable</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let filterable = listBox.filterable;</PRE>
 						</div>
 					</td>
@@ -216,13 +216,13 @@
 
 							<P>Set the <strong>filterCallback</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box filter-callback='function(item, searchQuery) { return item.value.toLowerCase() === searchQuery.toLowerCase() }'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>filterCallback</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.filterCallback = function(item, searchQuery) { return item.value > 5 };</PRE><br/>
  
 
 							<P>Get the <strong>filterCallback</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let filterCallback = listBox.filterCallback;</PRE>
 						</div>
 					</td>
@@ -247,13 +247,13 @@
 
 							<P>Set the <strong>filterMode</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box filter-mode='contains'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>filterMode</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.filterMode = 'equals';</PRE><br/>
  
 
 							<P>Get the <strong>filterMode</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let filterMode = listBox.filterMode;</PRE>
 						</div>
 					</td>
@@ -278,13 +278,13 @@
 
 							<P>Set the <strong>filterInputPlaceholder</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box filter-input-placeholder='Enter a value:'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>filterInputPlaceholder</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.filterInputPlaceholder = 'Awaiting entry:';</PRE><br/>
  
 
 							<P>Get the <strong>filterInputPlaceholder</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let filterInputPlaceholder = listBox.filterInputPlaceholder;</PRE>
 						</div>
 					</td>
@@ -309,13 +309,13 @@
 
 							<P>Set the <strong>grouped</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box grouped&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>grouped</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.grouped = false;</PRE><br/>
  
 
 							<P>Get the <strong>grouped</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let grouped = listBox.grouped;</PRE>
 						</div>
 					</td>
@@ -340,13 +340,13 @@
 
 							<P>Set the <strong>groupMember</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box group-member='group'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>groupMember</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.groupMember = 'section';</PRE><br/>
  
 
 							<P>Get the <strong>groupMember</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let groupMember = listBox.groupMember;</PRE>
 						</div>
 					</td>
@@ -371,13 +371,13 @@
 
 							<P>Set the <strong>incrementalSearchDelay</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box incremental-search-delay='group'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>incrementalSearchDelay</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.incrementalSearchDelay = mygroup;</PRE><br/>
  
 
 							<P>Get the <strong>incrementalSearchDelay</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let incrementalSearchDelay = listBox.incrementalSearchDelay;</PRE>
 						</div>
 					</td>
@@ -402,13 +402,13 @@
 
 							<P>Set the <strong>incrementalSearchMode</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box incremental-search-mode='contains'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>incrementalSearchMode</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.incrementalSearchMode = 'endsWith';</PRE><br/>
  
 
 							<P>Get the <strong>incrementalSearchMode</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let incrementalSearchMode = listBox.incrementalSearchMode;</PRE>
 						</div>
 					</td>
@@ -433,13 +433,13 @@
 
 							<P>Set the <strong>itemTemplate</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box item-template='templateA'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>itemTemplate</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.itemTemplate = 'templateB';</PRE><br/>
  
 
 							<P>Get the <strong>itemTemplate</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let itemTemplate = listBox.itemTemplate;</PRE>
 						</div>
 					</td>
@@ -464,13 +464,13 @@
 
 							<P>Set the <strong>loadingIndicatorPlaceholder</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box loading-indicator-placeholder='Incoming data'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>loadingIndicatorPlaceholder</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.loadingIndicatorPlaceholder = 'LOADING...';</PRE><br/>
  
 
 							<P>Get the <strong>loadingIndicatorPlaceholder</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let loadingIndicatorPlaceholder = listBox.loadingIndicatorPlaceholder;</PRE>
 						</div>
 					</td>
@@ -495,13 +495,13 @@
 
 							<P>Set the <strong>loadingIndicatorPosition</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box loading-indicator-position='bottom'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>loadingIndicatorPosition</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.loadingIndicatorPosition = 'top';</PRE><br/>
  
 
 							<P>Get the <strong>loadingIndicatorPosition</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let loadingIndicatorPosition = listBox.loadingIndicatorPosition;</PRE>
 						</div>
 					</td>
@@ -526,13 +526,13 @@
 
 							<P>Set the <strong>messages</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box messages='{ "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "overridingProperties": "{{elementType}}: �bergeordnete Eigenschaften {{property1}} und {{property2}} wurden angewendet. {{property1}} angewendet wird." } }'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>messages</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.messages = { "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "overridingProperties": "{{elementType}}: �bergeordnete Eigenschaften {{property1}} und {{property2}} wurden angewendet. {{property1}} angewendet wird." } };</PRE><br/>
  
 
 							<P>Get the <strong>messages</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let messages = listBox.messages;</PRE>
 						</div>
 					</td>
@@ -557,13 +557,13 @@
 
 							<P>Set the <strong>placeholder</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box placeholder='Placeholder'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>placeholder</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.placeholder = 'New Placeholder';</PRE><br/>
  
 
 							<P>Get the <strong>placeholder</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let placeholder = listBox.placeholder;</PRE>
 						</div>
 					</td>
@@ -588,13 +588,13 @@
 
 							<P>Set the <strong>reorder</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box reorder&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>reorder</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.reorder = false;</PRE><br/>
  
 
 							<P>Get the <strong>reorder</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let reorder = listBox.reorder;</PRE>
 						</div>
 					</td>
@@ -619,13 +619,13 @@
 
 							<P>Set the <strong>selectedIndexes</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box selected-indexes='["item 1"]'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>selectedIndexes</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.selectedIndexes = ["item 2"];</PRE><br/>
  
 
 							<P>Get the <strong>selectedIndexes</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let selectedIndexes = listBox.selectedIndexes;</PRE>
 						</div>
 					</td>
@@ -650,13 +650,13 @@
 
 							<P>Set the <strong>selectedValues</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box selected-values='[1,2,3]'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>selectedValues</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.selectedValues = [4,5,6];</PRE><br/>
  
 
 							<P>Get the <strong>selectedValues</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let selectedValues = listBox.selectedValues;</PRE>
 						</div>
 					</td>
@@ -681,13 +681,13 @@
 
 							<P>Set the <strong>selectionMode</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box selection-mode='zeroOrMany'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>selectionMode</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.selectionMode = 'zeroOrOne';</PRE><br/>
  
 
 							<P>Get the <strong>selectionMode</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let selectionMode = listBox.selectionMode;</PRE>
 						</div>
 					</td>
@@ -712,13 +712,13 @@
 
 							<P>Set the <strong>sorted</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box sorted&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>sorted</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.sorted = false;</PRE><br/>
  
 
 							<P>Get the <strong>sorted</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let sorted = listBox.sorted;</PRE>
 						</div>
 					</td>
@@ -743,13 +743,13 @@
 
 							<P>Set the <strong>valueMember</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box value-member='value'&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>valueMember</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.valueMember = 'newValue';</PRE><br/>
  
 
 							<P>Get the <strong>valueMember</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let valueMember = listBox.valueMember;</PRE>
 						</div>
 					</td>
@@ -774,13 +774,13 @@
 
 							<P>Set the <strong>virtualized</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-list-box virtualized&gt;&lt;/smart-list-box&gt;</PRE><br/>							<P>Set the <strong>virtualized</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
  
 							<PRE class="prettyprint"> listBox.virtualized = false;</PRE><br/>
  
 
 							<P>Get the <strong>virtualized</strong> property. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box');</PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box');</PRE>
 							<PRE class="prettyprint"> let virtualized = listBox.virtualized;</PRE>
 						</div>
 					</td>
@@ -816,7 +816,7 @@
 								Bind to the <strong>change</strong> event by type: smartListBox
 							</p>
 							<p>
-								<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+								<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
 <PRE class="prettyprint"> listBox.addEventListener('change', function (event) {
      // event handling code goes here.
  }
@@ -848,7 +848,7 @@
 								Bind to the <strong>dragEnd</strong> event by type: smartListBox
 							</p>
 							<p>
-								<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+								<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
 <PRE class="prettyprint"> listBox.addEventListener('dragEnd', function (event) {
      // event handling code goes here.
  }
@@ -880,7 +880,7 @@
 								Bind to the <strong>dragStart</strong> event by type: smartListBox
 							</p>
 							<p>
-								<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+								<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
 <PRE class="prettyprint"> listBox.addEventListener('dragStart', function (event) {
      // event handling code goes here.
  }
@@ -912,7 +912,7 @@
 								Bind to the <strong>scrollBottomReached</strong> event by type: smartListBox
 							</p>
 							<p>
-								<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+								<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
 <PRE class="prettyprint"> listBox.addEventListener('scrollBottomReached', function (event) {
      // event handling code goes here.
  }
@@ -944,7 +944,7 @@
 								Bind to the <strong>scrollTopReached</strong> event by type: smartListBox
 							</p>
 							<p>
-								<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+								<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
 <PRE class="prettyprint"> listBox.addEventListener('scrollTopReached', function (event) {
      // event handling code goes here.
  }
@@ -976,7 +976,7 @@
 								Bind to the <strong>swipeleft</strong> event by type: smartListBox
 							</p>
 							<p>
-								<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+								<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
 <PRE class="prettyprint"> listBox.addEventListener('swipeleft', function (event) {
      // event handling code goes here.
  }
@@ -1008,7 +1008,7 @@
 								Bind to the <strong>swiperight</strong> event by type: smartListBox
 							</p>
 							<p>
-								<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+								<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
 <PRE class="prettyprint"> listBox.addEventListener('swiperight', function (event) {
      // event handling code goes here.
  }
@@ -1062,7 +1062,7 @@
 
 							<h4>Code examples</h4>
 							<P>Invoke the <strong>clearItems</strong> method. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
  							<PRE class="prettyprint"> listBox.clearItems(undefined); </PRE>
 
 						</div>
@@ -1107,7 +1107,7 @@
 
 							<h4>Code examples</h4>
 							<P>Invoke the <strong>clearSelection</strong> method. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
  							<PRE class="prettyprint"> listBox.clearSelection(undefined); </PRE>
 
 						</div>
@@ -1152,7 +1152,7 @@
 
 							<h4>Code examples</h4>
 							<P>Invoke the <strong>getItem</strong> method. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
  							<PRE class="prettyprint"> listBox.getItem(First); </PRE>
 
 						</div>
@@ -1197,7 +1197,7 @@
 
 							<h4>Code examples</h4>
 							<P>Invoke the <strong>items</strong> method. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
  							<PRE class="prettyprint"> listBox.items(undefined); </PRE>
 
 						</div>
@@ -1247,7 +1247,7 @@
 
 							<h4>Code examples</h4>
 							<P>Invoke the <strong>insert</strong> method. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
  							<PRE class="prettyprint"> listBox.insert(5); </PRE>
 
 						</div>
@@ -1292,7 +1292,7 @@
 
 							<h4>Code examples</h4>
 							<P>Invoke the <strong>remove</strong> method. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
  							<PRE class="prettyprint"> listBox.remove(5); </PRE>
 
 						</div>
@@ -1337,7 +1337,7 @@
 
 							<h4>Code examples</h4>
 							<P>Invoke the <strong>select</strong> method. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
  							<PRE class="prettyprint"> listBox.select(First Item); </PRE>
 
 						</div>
@@ -1382,7 +1382,7 @@
 
 							<h4>Code examples</h4>
 							<P>Invoke the <strong>unselect</strong> method. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
  							<PRE class="prettyprint"> listBox.unselect(First Item); </PRE>
 
 						</div>
@@ -1432,7 +1432,7 @@
 
 							<h4>Code examples</h4>
 							<P>Invoke the <strong>update</strong> method. </P>
-							<PRE class="prettyprint"> let listBox = document.querySelector('smart-list-box'); </PRE>
+							<PRE class="prettyprint"> const listBox = document.querySelector('smart-list-box'); </PRE>
  							<PRE class="prettyprint"> listBox.update(5); </PRE>
 
 						</div>

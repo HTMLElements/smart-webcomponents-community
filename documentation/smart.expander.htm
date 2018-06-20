@@ -30,13 +30,13 @@
 
 							<P>Set the <strong>expandedIndexes</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-expander expanded-indexes='[0,1]'&gt;&lt;/smart-expander&gt;</PRE><br/>							<P>Set the <strong>expandedIndexes</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+							<PRE class="prettyprint"> const expander = document.querySelector('smart-expander');</PRE>
  
 							<PRE class="prettyprint"> expander.expandedIndexes = [2,3];</PRE><br/>
  
 
 							<P>Get the <strong>expandedIndexes</strong> property. </P>
-							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+							<PRE class="prettyprint"> const expander = document.querySelector('smart-expander');</PRE>
 							<PRE class="prettyprint"> let expandedIndexes = expander.expandedIndexes;</PRE>
 						</div>
 					</td>
@@ -61,13 +61,13 @@
 
 							<P>Set the <strong>expandMode</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-expander expand-mode='multiple'&gt;&lt;/smart-expander&gt;</PRE><br/>							<P>Set the <strong>expandMode</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+							<PRE class="prettyprint"> const expander = document.querySelector('smart-expander');</PRE>
  
 							<PRE class="prettyprint"> expander.expandMode = 'none';</PRE><br/>
  
 
 							<P>Get the <strong>expandMode</strong> property. </P>
-							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+							<PRE class="prettyprint"> const expander = document.querySelector('smart-expander');</PRE>
 							<PRE class="prettyprint"> let expandMode = expander.expandMode;</PRE>
 						</div>
 					</td>
@@ -92,13 +92,13 @@
 
 							<P>Set the <strong>expandAnimationMode</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-expander expand-animation-mode='fade'&gt;&lt;/smart-expander&gt;</PRE><br/>							<P>Set the <strong>expandAnimationMode</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+							<PRE class="prettyprint"> const expander = document.querySelector('smart-expander');</PRE>
  
 							<PRE class="prettyprint"> expander.expandAnimationMode = 'none';</PRE><br/>
  
 
 							<P>Get the <strong>expandAnimationMode</strong> property. </P>
-							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+							<PRE class="prettyprint"> const expander = document.querySelector('smart-expander');</PRE>
 							<PRE class="prettyprint"> let expandAnimationMode = expander.expandAnimationMode;</PRE>
 						</div>
 					</td>
@@ -123,13 +123,13 @@
 
 							<P>Set the <strong>messages</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-expander messages='{ "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "significantPrecisionDigits": "{{elementType}}: Die Eigenschaften significantDigits und precisionDigits koennen nicht gleichzeitig eingestellt werden." } }'&gt;&lt;/smart-expander&gt;</PRE><br/>							<P>Set the <strong>messages</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+							<PRE class="prettyprint"> const expander = document.querySelector('smart-expander');</PRE>
  
 							<PRE class="prettyprint"> expander.messages = { "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "significantPrecisionDigits": "{{elementType}}: Die Eigenschaften significantDigits und precisionDigits koennen nicht gleichzeitig eingestellt werden." } };</PRE><br/>
  
 
 							<P>Get the <strong>messages</strong> property. </P>
-							<PRE class="prettyprint"> let expander = document.querySelector('smart-expander');</PRE>
+							<PRE class="prettyprint"> const expander = document.querySelector('smart-expander');</PRE>
 							<PRE class="prettyprint"> let messages = expander.messages;</PRE>
 						</div>
 					</td>
@@ -165,7 +165,7 @@
 								Bind to the <strong>collapse</strong> event by type: smartExpander
 							</p>
 							<p>
-								<PRE class="prettyprint"> let expander = document.querySelector('smart-expander'); </PRE>
+								<PRE class="prettyprint"> const expander = document.querySelector('smart-expander'); </PRE>
 <PRE class="prettyprint"> expander.addEventListener('collapse', function (event) {
      // event handling code goes here.
  }
@@ -197,7 +197,7 @@
 								Bind to the <strong>expand</strong> event by type: smartExpander
 							</p>
 							<p>
-								<PRE class="prettyprint"> let expander = document.querySelector('smart-expander'); </PRE>
+								<PRE class="prettyprint"> const expander = document.querySelector('smart-expander'); </PRE>
 <PRE class="prettyprint"> expander.addEventListener('expand', function (event) {
      // event handling code goes here.
  }

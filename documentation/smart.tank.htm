@@ -30,13 +30,13 @@
 
 							<P>Set the <strong>coerce</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank coerce&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>coerce</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.coerce = false;</PRE><br/>
  
 
 							<P>Get the <strong>coerce</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let coerce = tank.coerce;</PRE>
 						</div>
 					</td>
@@ -61,13 +61,13 @@
 
 							<P>Set the <strong>customInterval</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank custom-interval&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>customInterval</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.customInterval = false;</PRE><br/>
  
 
 							<P>Get the <strong>customInterval</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let customInterval = tank.customInterval;</PRE>
 						</div>
 					</td>
@@ -91,14 +91,14 @@
 							<h4>Code examples</h4>
 
 							<P>Set the <strong>customTicks</strong> property. </P>
-							<PRE class="prettyprint"> &lt;smart-tank custom-ticks='['100', '200', '1000', '8000', '10000']'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>customTicks</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> &lt;smart-tank custom-ticks='[100, 200, 1000, 8000, 10000]'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>customTicks</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.customTicks = [1, 3, 5, 8];</PRE><br/>
  
 
 							<P>Get the <strong>customTicks</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let customTicks = tank.customTicks;</PRE>
 						</div>
 					</td>
@@ -106,7 +106,38 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan3">decimalSeparator</span>
+						<span id="propertiesSpan3">dateLabelFormatString</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						d
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the pattern which labels are displayed in when <strong>mode</strong> is <em>'date'</em>.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>dateLabelFormatString</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-tank date-label-format-string='dddd-MMMM-yyyy'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>dateLabelFormatString</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+ 
+							<PRE class="prettyprint"> tank.dateLabelFormatString = 'FP';</PRE><br/>
+ 
+
+							<P>Get the <strong>dateLabelFormatString</strong> property. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> let dateLabelFormatString = tank.dateLabelFormatString;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan4">decimalSeparator</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -123,13 +154,13 @@
 
 							<P>Set the <strong>decimalSeparator</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank decimal-separator=','&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>decimalSeparator</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.decimalSeparator = '.';</PRE><br/>
  
 
 							<P>Get the <strong>decimalSeparator</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let decimalSeparator = tank.decimalSeparator;</PRE>
 						</div>
 					</td>
@@ -137,7 +168,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan4">disabled</span>
+						<span id="propertiesSpan5">disabled</span>
 					</td>
 					<td>
 						<span>boolean</span>
@@ -154,13 +185,13 @@
 
 							<P>Set the <strong>disabled</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank disabled&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.disabled = false;</PRE><br/>
  
 
 							<P>Get the <strong>disabled</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let disabled = tank.disabled;</PRE>
 						</div>
 					</td>
@@ -168,7 +199,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan5">interval</span>
+						<span id="propertiesSpan6">interval</span>
 					</td>
 					<td>
 						<span>any</span>
@@ -185,13 +216,13 @@
 
 							<P>Set the <strong>interval</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank interval='2'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>interval</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.interval = 10;</PRE><br/>
  
 
 							<P>Get the <strong>interval</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let interval = tank.interval;</PRE>
 						</div>
 					</td>
@@ -199,7 +230,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan6">inverted</span>
+						<span id="propertiesSpan7">inverted</span>
 					</td>
 					<td>
 						<span>boolean</span>
@@ -216,13 +247,13 @@
 
 							<P>Set the <strong>inverted</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank inverted&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>inverted</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.inverted = false;</PRE><br/>
  
 
 							<P>Get the <strong>inverted</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let inverted = tank.inverted;</PRE>
 						</div>
 					</td>
@@ -230,7 +261,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan7">labelFormatFunction</span>
+						<span id="propertiesSpan8">labelFormatFunction</span>
 					</td>
 					<td>
 						<span>function</span>
@@ -247,13 +278,13 @@
 
 							<P>Set the <strong>labelFormatFunction</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank label-format-function='function (value) { return value + '%'; }'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>labelFormatFunction</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.labelFormatFunction = function (value) { return value + '$'; };</PRE><br/>
  
 
 							<P>Get the <strong>labelFormatFunction</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let labelFormatFunction = tank.labelFormatFunction;</PRE>
 						</div>
 					</td>
@@ -261,7 +292,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan8">labelsVisibility</span>
+						<span id="propertiesSpan9">labelsVisibility</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -278,13 +309,13 @@
 
 							<P>Set the <strong>labelsVisibility</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank labels-visibility='endPoints'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>labelsVisibility</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.labelsVisibility = 'none';</PRE><br/>
  
 
 							<P>Get the <strong>labelsVisibility</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let labelsVisibility = tank.labelsVisibility;</PRE>
 						</div>
 					</td>
@@ -292,7 +323,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan9">language</span>
+						<span id="propertiesSpan10">locale</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -304,26 +335,26 @@
 				<tr>
 					<td colspan="3" style="width: 100%">
 						<div class="documentation-option-description property-content" style="display: none;">
-							<p>Sets or gets the language. Used in conjunction with the property <strong>messages</strong>. </p>
+							<p>Sets or gets the locale. Used in conjunction with the property <strong>messages</strong>. </p>
 							<h4>Code examples</h4>
 
-							<P>Set the <strong>language</strong> property. </P>
-							<PRE class="prettyprint"> &lt;smart-tank language='de'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>language</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<P>Set the <strong>locale</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-tank locale='de'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>locale</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
-							<PRE class="prettyprint"> tank.language = 'fr';</PRE><br/>
+							<PRE class="prettyprint"> tank.locale = 'fr';</PRE><br/>
  
 
-							<P>Get the <strong>language</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
-							<PRE class="prettyprint"> let language = tank.language;</PRE>
+							<P>Get the <strong>locale</strong> property. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> let locale = tank.locale;</PRE>
 						</div>
 					</td>
 				</tr>
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan10">logarithmicScale</span>
+						<span id="propertiesSpan11">logarithmicScale</span>
 					</td>
 					<td>
 						<span>boolean</span>
@@ -340,13 +371,13 @@
 
 							<P>Set the <strong>logarithmicScale</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank logarithmic-scale&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>logarithmicScale</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.logarithmicScale = false;</PRE><br/>
  
 
 							<P>Get the <strong>logarithmicScale</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let logarithmicScale = tank.logarithmicScale;</PRE>
 						</div>
 					</td>
@@ -354,7 +385,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan11">max</span>
+						<span id="propertiesSpan12">max</span>
 					</td>
 					<td>
 						<span>any</span>
@@ -371,13 +402,13 @@
 
 							<P>Set the <strong>max</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank max='20'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>max</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.max = 50;</PRE><br/>
  
 
 							<P>Get the <strong>max</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let max = tank.max;</PRE>
 						</div>
 					</td>
@@ -385,7 +416,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan12">mechanicalAction</span>
+						<span id="propertiesSpan13">mechanicalAction</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -402,13 +433,13 @@
 
 							<P>Set the <strong>mechanicalAction</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank mechanical-action='switchWhenReleased'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>mechanicalAction</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.mechanicalAction = 'switchUntilReleased';</PRE><br/>
  
 
 							<P>Get the <strong>mechanicalAction</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let mechanicalAction = tank.mechanicalAction;</PRE>
 						</div>
 					</td>
@@ -416,30 +447,30 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan13">messages</span>
+						<span id="propertiesSpan14">messages</span>
 					</td>
 					<td>
 						<span>object</span>
 					</td>
 					<td>
-						{ "en": { "missingReference": "smartTank: Missing reference to {{files}}.", "significantPrecisionDigits": "smartTank: the properties significantDigits and precisionDigits cannot be set at the same time.", "invalidMinOrMax": "smartTank: Invalid {{property}} value. Max cannot be lower than Min.", "noInteger": "smartTank: precisionDigits could be set only on floatingPoint scaleType." } }
+						{ "en": { "missingReference": "{{elementType}}: Missing reference to {{files}}.", "significantPrecisionDigits": "{{elementType}}: the properties significantDigits and precisionDigits cannot be set at the same time.", "invalidMinOrMax": "{{elementType}}: Invalid {{property}} value. Max cannot be lower than Min.", "noInteger": "{{elementType}}: precisionDigits could be set only on floatingPoint scaleType." } }
 					</td>
 				</tr>
 				<tr>
 					<td colspan="3" style="width: 100%">
 						<div class="documentation-option-description property-content" style="display: none;">
-							<p>Sets or gets an object specifying strings used in the widget that can be localized. Used in conjunction with the property <strong>language</strong>. </p>
+							<p>Sets or gets an object specifying strings used in the widget that can be localized. Used in conjunction with the property <strong>locale</strong>. </p>
 							<h4>Code examples</h4>
 
 							<P>Set the <strong>messages</strong> property. </P>
-							<PRE class="prettyprint"> &lt;smart-tank messages='{ "de": { "missingReference": "smartTank: Fehlende Bezugnahme auf {{files}}.", "significantPrecisionDigits": "smartTank: Die Eigenschaften significantDigits und precisionDigits koennen nicht gleichzeitig eingestellt werden." } }'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>messages</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> &lt;smart-tank messages='{ "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "significantPrecisionDigits": "{{elementType}}: Die Eigenschaften significantDigits und precisionDigits koennen nicht gleichzeitig eingestellt werden." } }'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>messages</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
-							<PRE class="prettyprint"> tank.messages = { "de": { "missingReference": "smartTank: Fehlende Bezugnahme auf {{files}}.", "significantPrecisionDigits": "smartTank: Die Eigenschaften significantDigits und precisionDigits koennen nicht gleichzeitig eingestellt werden." } };</PRE><br/>
+							<PRE class="prettyprint"> tank.messages = { "de": { "missingReference": "{{elementType}}: Fehlende Bezugnahme auf {{files}}.", "significantPrecisionDigits": "{{elementType}}: Die Eigenschaften significantDigits und precisionDigits koennen nicht gleichzeitig eingestellt werden." } };</PRE><br/>
  
 
 							<P>Get the <strong>messages</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let messages = tank.messages;</PRE>
 						</div>
 					</td>
@@ -447,7 +478,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan14">min</span>
+						<span id="propertiesSpan15">min</span>
 					</td>
 					<td>
 						<span>any</span>
@@ -464,13 +495,13 @@
 
 							<P>Set the <strong>min</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank min='20'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>min</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.min = 50;</PRE><br/>
  
 
 							<P>Get the <strong>min</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let min = tank.min;</PRE>
 						</div>
 					</td>
@@ -478,7 +509,69 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan15">orientation</span>
+						<span id="propertiesSpan16">mode</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						numeric
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets whether the widget works with numbers or dates. Possible values:  'numeric', 'date'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>mode</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-tank mode='date'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>mode</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+ 
+							<PRE class="prettyprint"> tank.mode = 'numeric';</PRE><br/>
+ 
+
+							<P>Get the <strong>mode</strong> property. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> let mode = tank.mode;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan17">name</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the element's name, which is used as a reference when the data is submitted.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>name</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-tank name='tank1'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>name</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+ 
+							<PRE class="prettyprint"> tank.name = 'tank2';</PRE><br/>
+ 
+
+							<P>Get the <strong>name</strong> property. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> let name = tank.name;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan18">orientation</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -495,13 +588,13 @@
 
 							<P>Set the <strong>orientation</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank orientation='vertical'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>orientation</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.orientation = 'horizontal';</PRE><br/>
  
 
 							<P>Get the <strong>orientation</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let orientation = tank.orientation;</PRE>
 						</div>
 					</td>
@@ -509,7 +602,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan16">precisionDigits</span>
+						<span id="propertiesSpan19">precisionDigits</span>
 					</td>
 					<td>
 						<span>number</span>
@@ -526,13 +619,13 @@
 
 							<P>Set the <strong>precisionDigits</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank precision-digits='5'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>precisionDigits</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.precisionDigits = 6;</PRE><br/>
  
 
 							<P>Get the <strong>precisionDigits</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let precisionDigits = tank.precisionDigits;</PRE>
 						</div>
 					</td>
@@ -540,7 +633,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan17">readonly</span>
+						<span id="propertiesSpan20">readonly</span>
 					</td>
 					<td>
 						<span>boolean</span>
@@ -557,13 +650,13 @@
 
 							<P>Set the <strong>readonly</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank readonly&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>readonly</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.readonly = true;</PRE><br/>
  
 
 							<P>Get the <strong>readonly</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let readonly = tank.readonly;</PRE>
 						</div>
 					</td>
@@ -571,7 +664,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan18">scalePosition</span>
+						<span id="propertiesSpan21">scalePosition</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -588,13 +681,13 @@
 
 							<P>Set the <strong>scalePosition</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank scale-position='far'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>scalePosition</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.scalePosition = 'both';</PRE><br/>
  
 
 							<P>Get the <strong>scalePosition</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let scalePosition = tank.scalePosition;</PRE>
 						</div>
 					</td>
@@ -602,7 +695,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan19">scaleType</span>
+						<span id="propertiesSpan22">scaleType</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -619,13 +712,13 @@
 
 							<P>Set the <strong>scaleType</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank scale-type='integer'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>scaleType</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.scaleType = 'floatingPoint';</PRE><br/>
  
 
 							<P>Get the <strong>scaleType</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let scaleType = tank.scaleType;</PRE>
 						</div>
 					</td>
@@ -633,7 +726,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan20">scientificNotation</span>
+						<span id="propertiesSpan23">scientificNotation</span>
 					</td>
 					<td>
 						<span>boolean</span>
@@ -650,13 +743,13 @@
 
 							<P>Set the <strong>scientificNotation</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank scientific-notation&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>scientificNotation</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.scientificNotation = true;</PRE><br/>
  
 
 							<P>Get the <strong>scientificNotation</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let scientificNotation = tank.scientificNotation;</PRE>
 						</div>
 					</td>
@@ -664,7 +757,38 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan21">showTooltip</span>
+						<span id="propertiesSpan24">showThumbLabel</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Enables/disables displaying of the thumb label.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>showThumbLabel</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-tank show-thumb-label&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>showThumbLabel</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+ 
+							<PRE class="prettyprint"> tank.showThumbLabel = true;</PRE><br/>
+ 
+
+							<P>Get the <strong>showThumbLabel</strong> property. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> let showThumbLabel = tank.showThumbLabel;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan25">showTooltip</span>
 					</td>
 					<td>
 						<span>boolean</span>
@@ -681,13 +805,13 @@
 
 							<P>Set the <strong>showTooltip</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank show-tooltip&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>showTooltip</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.showTooltip = true;</PRE><br/>
  
 
 							<P>Get the <strong>showTooltip</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let showTooltip = tank.showTooltip;</PRE>
 						</div>
 					</td>
@@ -695,7 +819,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan22">showUnit</span>
+						<span id="propertiesSpan26">showUnit</span>
 					</td>
 					<td>
 						<span>boolean</span>
@@ -712,13 +836,13 @@
 
 							<P>Set the <strong>showUnit</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank show-unit&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>showUnit</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.showUnit = false;</PRE><br/>
  
 
 							<P>Get the <strong>showUnit</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let showUnit = tank.showUnit;</PRE>
 						</div>
 					</td>
@@ -726,7 +850,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan23">significantDigits</span>
+						<span id="propertiesSpan27">significantDigits</span>
 					</td>
 					<td>
 						<span>number</span>
@@ -743,13 +867,13 @@
 
 							<P>Set the <strong>significantDigits</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank significant-digits='1'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>significantDigits</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.significantDigits = 2;</PRE><br/>
  
 
 							<P>Get the <strong>significantDigits</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let significantDigits = tank.significantDigits;</PRE>
 						</div>
 					</td>
@@ -757,7 +881,69 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan24">ticksPosition</span>
+						<span id="propertiesSpan28">theme</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the element's visual theme. </p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>theme</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-tank theme='material'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>theme</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+ 
+							<PRE class="prettyprint"> tank.theme = 'material-purple';</PRE><br/>
+ 
+
+							<P>Get the <strong>theme</strong> property. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> let theme = tank.theme;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan29">thumbLabelPosition</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						near
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the position of the thumb label. Possible values:  'near', 'far'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>thumbLabelPosition</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-tank thumb-label-position='far'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>thumbLabelPosition</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+ 
+							<PRE class="prettyprint"> tank.thumbLabelPosition = 'near';</PRE><br/>
+ 
+
+							<P>Get the <strong>thumbLabelPosition</strong> property. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> let thumbLabelPosition = tank.thumbLabelPosition;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan30">ticksPosition</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -774,13 +960,13 @@
 
 							<P>Set the <strong>ticksPosition</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank ticks-position='track'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>ticksPosition</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.ticksPosition = 'scale';</PRE><br/>
  
 
 							<P>Get the <strong>ticksPosition</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let ticksPosition = tank.ticksPosition;</PRE>
 						</div>
 					</td>
@@ -788,7 +974,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan25">ticksVisibility</span>
+						<span id="propertiesSpan31">ticksVisibility</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -805,13 +991,13 @@
 
 							<P>Set the <strong>ticksVisibility</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank ticks-visibility='major'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>ticksVisibility</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.ticksVisibility = 'none';</PRE><br/>
  
 
 							<P>Get the <strong>ticksVisibility</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let ticksVisibility = tank.ticksVisibility;</PRE>
 						</div>
 					</td>
@@ -819,7 +1005,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan26">tooltipPosition</span>
+						<span id="propertiesSpan32">tooltipPosition</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -836,13 +1022,13 @@
 
 							<P>Set the <strong>tooltipPosition</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank tooltip-position='far'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>tooltipPosition</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.tooltipPosition = 'near';</PRE><br/>
  
 
 							<P>Get the <strong>tooltipPosition</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let tooltipPosition = tank.tooltipPosition;</PRE>
 						</div>
 					</td>
@@ -850,7 +1036,38 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan27">unit</span>
+						<span id="propertiesSpan33">unfocusable</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets if the element can be focused.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>unfocusable</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-tank unfocusable&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>unfocusable</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+ 
+							<PRE class="prettyprint"> tank.unfocusable = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>unfocusable</strong> property. </P>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> let unfocusable = tank.unfocusable;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan34">unit</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -867,13 +1084,13 @@
 
 							<P>Set the <strong>unit</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank unit='mm'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>unit</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.unit = 'cm';</PRE><br/>
  
 
 							<P>Get the <strong>unit</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let unit = tank.unit;</PRE>
 						</div>
 					</td>
@@ -881,7 +1098,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan28">value</span>
+						<span id="propertiesSpan35">value</span>
 					</td>
 					<td>
 						<span>number</span>
@@ -898,13 +1115,13 @@
 
 							<P>Set the <strong>value</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank value='50'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>value</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.value = 100;</PRE><br/>
  
 
 							<P>Get the <strong>value</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let value = tank.value;</PRE>
 						</div>
 					</td>
@@ -912,7 +1129,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan29">wordLength</span>
+						<span id="propertiesSpan36">wordLength</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -929,13 +1146,13 @@
 
 							<P>Set the <strong>wordLength</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-tank word-length='int8'&gt;&lt;/smart-tank&gt;</PRE><br/>							<P>Set the <strong>wordLength</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
  
 							<PRE class="prettyprint"> tank.wordLength = 'int16';</PRE><br/>
  
 
 							<P>Get the <strong>wordLength</strong> property. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank');</PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank');</PRE>
 							<PRE class="prettyprint"> let wordLength = tank.wordLength;</PRE>
 						</div>
 					</td>
@@ -950,7 +1167,7 @@
 				</tr>
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan30">change</span>
+						<span id="propertiesSpan37">change</span>
 					</td>
 					<td>
 						<span>Event</span>
@@ -971,7 +1188,7 @@
 								Bind to the <strong>change</strong> event by type: smartTank
 							</p>
 							<p>
-								<PRE class="prettyprint"> let tank = document.querySelector('smart-tank'); </PRE>
+								<PRE class="prettyprint"> const tank = document.querySelector('smart-tank'); </PRE>
 <PRE class="prettyprint"> tank.addEventListener('change', function (event) {
      // event handling code goes here.
  }
@@ -989,7 +1206,7 @@
 				</tr>
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan31">focus</span>
+						<span id="propertiesSpan38">focus</span>
 					</td>
 					<td>
 						<span>Method</span>
@@ -1025,7 +1242,7 @@
 
 							<h4>Code examples</h4>
 							<P>Invoke the <strong>focus</strong> method. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank'); </PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank'); </PRE>
  							<PRE class="prettyprint"> tank.focus(); </PRE>
 
 						</div>
@@ -1034,7 +1251,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan32">getOptimalSize</span>
+						<span id="propertiesSpan39">getOptimalSize</span>
 					</td>
 					<td>
 						<span>Method</span>
@@ -1070,7 +1287,7 @@
 
 							<h4>Code examples</h4>
 							<P>Invoke the <strong>getOptimalSize</strong> method. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank'); </PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank'); </PRE>
  							<PRE class="prettyprint"> tank.getOptimalSize(); </PRE>
 
 						</div>
@@ -1079,7 +1296,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan33">val</span>
+						<span id="propertiesSpan40">val</span>
 					</td>
 					<td>
 						<span>Method</span>
@@ -1107,11 +1324,6 @@
 											<td><em>string/number</em></td>
 											<td><em>The value to be set. If no parameter is passed, returns the displayed value of the tank. </em></td>
 										</tr>
-										<tr>
-											<td><em>suppressValidation</em></td>
-											<td><em>boolean</em></td>
-											<td><em>If <em>true</em> is passed, the passed value will be set to the tank without validation. </em></td>
-										</tr>
 									</tbody>
 								</table>
 								<strong>Return Value</strong><br />
@@ -1120,8 +1332,8 @@
 
 							<h4>Code examples</h4>
 							<P>Invoke the <strong>val</strong> method. </P>
-							<PRE class="prettyprint"> let tank = document.querySelector('smart-tank'); </PRE>
- 							<PRE class="prettyprint"> tank.val(10, true); </PRE>
+							<PRE class="prettyprint"> const tank = document.querySelector('smart-tank'); </PRE>
+ 							<PRE class="prettyprint"> tank.val(10); </PRE>
 
 						</div>
 					</td>

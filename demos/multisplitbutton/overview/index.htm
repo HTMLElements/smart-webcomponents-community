@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MultiSplitButton Overview Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
+	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
+	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body class="viewport">
+    <div class="smart-demo-container">              
+	      <section id="multi-split-button">
+            <div class="module">
+                <p>
+                    The split button allows having multiple buttons inside one.
+                </p>
+                <p>
+                    The Multi Split Button is a composite control with which the user can select a default value bound to a primary button,
+                    or select from a list of mutually exclusive values displayed in a drop-down list bound to a secondary button.
+                </p>
+            </div>
+            <div class="module">
+                <div class="multi-split-button-container-light">
+                    <smart-multi-split-button data-source='["item 1", "item 2"]' id="multiSplitButtonLight" class="animation">Multi Split Button</smart-multi-split-button> <br />
+                    *default state
+					<br/>
+					<smart-multi-split-button data-source='["item 1", "item 2"]' class="animation" disabled>Multi Split Button</smart-multi-split-button>
+					*disabled
+				</div>
+            </div>
+        </section>
+   </div>
+</body>
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="styles/smart.apireference.css" type="text/css" />
+	<title>Alert API Reference</title>
+</head>
+<body>
+	<div id="properties">
+		<h2 class="documentation-top-header">Properties</h2>
+		<table class="documentation-table">
+			<tbody>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan0">appendTo</span>
+					</td>
+					<td>
+						<span>any</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Specifies the container where new openned alert items will be displayed. The value can be an <b>HTMLElement</b> or element's <b>id</b>. This property is in relation with <b>modal</b>(lower priority than modal) and <b>position</b>(higher priority than position) properties.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>appendTo</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-alert append-to='container'&gt;&lt;/smart-alert&gt;</PRE><br/>							<P>Set the <strong>appendTo</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+ 
+							<PRE class="prettyprint"> alert.appendTo = newContainer;</PRE><br/>
+ 
+
+							<P>Get the <strong>appendTo</strong> property. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+							<PRE class="prettyprint"> let appendTo = alert.appendTo;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan1">autoClose</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets whether the alert will automatically close after duration equal to the <b>autoCloseDelay</b> property.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>autoClose</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-alert auto-close&gt;&lt;/smart-alert&gt;</PRE><br/>							<P>Set the <strong>autoClose</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+ 
+							<PRE class="prettyprint"> alert.autoClose = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>autoClose</strong> property. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+							<PRE class="prettyprint"> let autoClose = alert.autoClose;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan2">autoCloseDelay</span>
+					</td>
+					<td>
+						<span>number</span>
+					</td>
+					<td>
+						3000
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets the duration after which the alert automatically closes (works only if the <b>autoClose</b> property is set to true).</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>autoCloseDelay</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-alert auto-close-delay='4000'&gt;&lt;/smart-alert&gt;</PRE><br/>							<P>Set the <strong>autoCloseDelay</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+ 
+							<PRE class="prettyprint"> alert.autoCloseDelay = 5000;</PRE><br/>
+ 
+
+							<P>Get the <strong>autoCloseDelay</strong> property. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+							<PRE class="prettyprint"> let autoCloseDelay = alert.autoCloseDelay;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan3">autoOpen</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets whether the alert will open automatically immediately after widget's initialization.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>autoOpen</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-alert auto-open&gt;&lt;/smart-alert&gt;</PRE><br/>							<P>Set the <strong>autoOpen</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+ 
+							<PRE class="prettyprint"> alert.autoOpen = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>autoOpen</strong> property. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+							<PRE class="prettyprint"> let autoOpen = alert.autoOpen;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan4">disabled</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>The user will not be able to interact with alert items when disabled is set to true.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-alert disabled&gt;&lt;/smart-alert&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+ 
+							<PRE class="prettyprint"> alert.disabled = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>disabled</strong> property. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+							<PRE class="prettyprint"> let disabled = alert.disabled;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">itemTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets custom item template.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>itemTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-alert item-template='templateId1'&gt;&lt;/smart-alert&gt;</PRE><br/>							<P>Set the <strong>itemTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+ 
+							<PRE class="prettyprint"> alert.itemTemplate = 'templateId2';</PRE><br/>
+ 
+
+							<P>Get the <strong>itemTemplate</strong> property. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+							<PRE class="prettyprint"> let itemTemplate = alert.itemTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan6">modal</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>In modal mode the alert item is positioned in the center of the screen. This property is with higher priority than <b>position</b> and <b>appendTo</b>. If <b>modal</b> is set to true these properties are disregarded.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>modal</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-alert modal&gt;&lt;/smart-alert&gt;</PRE><br/>							<P>Set the <strong>modal</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+ 
+							<PRE class="prettyprint"> alert.modal = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>modal</strong> property. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+							<PRE class="prettyprint"> let modal = alert.modal;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan7">position</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						top-right
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets the part of the browser window where the alert will be positioned. The position property is disregarded if <b>appendTo</b> or <b>modal</b> are set. Possible values:  'top-left', 'top-right', 'bottom-left', 'bottom-right'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>position</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-alert position='bottom-left'&gt;&lt;/smart-alert&gt;</PRE><br/>							<P>Set the <strong>position</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+ 
+							<PRE class="prettyprint"> alert.position = 'bottom-right';</PRE><br/>
+ 
+
+							<P>Get the <strong>position</strong> property. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+							<PRE class="prettyprint"> let position = alert.position;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan8">showCloseButton</span>
+					</td>
+					<td>
+						<span>boolean</span>
+					</td>
+					<td>
+						false
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets or gets whether to show the alert item's close button.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>showCloseButton</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-alert show-close-button&gt;&lt;/smart-alert&gt;</PRE><br/>							<P>Set the <strong>showCloseButton</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+ 
+							<PRE class="prettyprint"> alert.showCloseButton = false;</PRE><br/>
+ 
+
+							<P>Get the <strong>showCloseButton</strong> property. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+							<PRE class="prettyprint"> let showCloseButton = alert.showCloseButton;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan9">type</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						info
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets speciffic CSS settings and icon to the alert items. Possible values:  'info', 'warning', 'success', 'error', 'mail', 'time'.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>type</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-alert type='warning'&gt;&lt;/smart-alert&gt;</PRE><br/>							<P>Set the <strong>type</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+ 
+							<PRE class="prettyprint"> alert.type = 'success';</PRE><br/>
+ 
+
+							<P>Get the <strong>type</strong> property. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+							<PRE class="prettyprint"> let type = alert.type;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan10">value</span>
+					</td>
+					<td>
+						<span>any</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets a text value to an alert item.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>value</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-alert value='Alert !'&gt;&lt;/smart-alert&gt;</PRE><br/>							<P>Set the <strong>value</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+ 
+							<PRE class="prettyprint"> alert.value = Alert !!!;</PRE><br/>
+ 
+
+							<P>Get the <strong>value</strong> property. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert');</PRE>
+							<PRE class="prettyprint"> let value = alert.value;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Events
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan11">click</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the alert item is clicked.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>click</strong> event by type: smartAlert
+							</p>
+							<p>
+								<PRE class="prettyprint"> let alert = document.querySelector('smart-alert'); </PRE>
+<PRE class="prettyprint"> alert.addEventListener('click', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan12">close</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the alert item is closed.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>close</strong> event by type: smartAlert
+							</p>
+							<p>
+								<PRE class="prettyprint"> let alert = document.querySelector('smart-alert'); </PRE>
+<PRE class="prettyprint"> alert.addEventListener('close', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan13">open</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered when the alert item is opened.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>open</strong> event by type: smartAlert
+							</p>
+							<p>
+								<PRE class="prettyprint"> let alert = document.querySelector('smart-alert'); </PRE>
+<PRE class="prettyprint"> alert.addEventListener('open', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan14">swipebottom</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered on swipebottom over an alert item.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>swipebottom</strong> event by type: smartAlert
+							</p>
+							<p>
+								<PRE class="prettyprint"> let alert = document.querySelector('smart-alert'); </PRE>
+<PRE class="prettyprint"> alert.addEventListener('swipebottom', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan15">swipeleft</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered on swipeleft over an alert item.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>swipeleft</strong> event by type: smartAlert
+							</p>
+							<p>
+								<PRE class="prettyprint"> let alert = document.querySelector('smart-alert'); </PRE>
+<PRE class="prettyprint"> alert.addEventListener('swipeleft', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan16">swiperight</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered on swiperight over an alert item.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>swiperight</strong> event by type: smartAlert
+							</p>
+							<p>
+								<PRE class="prettyprint"> let alert = document.querySelector('smart-alert'); </PRE>
+<PRE class="prettyprint"> alert.addEventListener('swiperight', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan17">swipetop</span>
+					</td>
+					<td>
+						<span>Event</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								This event is triggered on swipetop over an alert item.
+							</p>
+							<h4>Code examples</h4>
+
+							<p>
+								Bind to the <strong>swipetop</strong> event by type: smartAlert
+							</p>
+							<p>
+								<PRE class="prettyprint"> let alert = document.querySelector('smart-alert'); </PRE>
+<PRE class="prettyprint"> alert.addEventListener('swipetop', function (event) {
+     // event handling code goes here.
+ }
+ </PRE>							</p>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<h2 class="documentation-top-header">
+							Methods
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan18">closeAll</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Closes all opened alert items.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>closeAll</strong> method. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert'); </PRE>
+ 							<PRE class="prettyprint"> alert.closeAll(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan19">closeItem</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Closes particular alert item.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>item</em></td>
+											<td><em>HTMLElement/String</em></td>
+											<td><em>The alert item (or its id) to remove.</em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>closeItem</strong> method. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert'); </PRE>
+ 							<PRE class="prettyprint"> alert.closeItem(item5); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan20">closeLast</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Closes the last opened alert item.
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>closeLast</strong> method. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert'); </PRE>
+ 							<PRE class="prettyprint"> alert.closeLast(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan21">open</span>
+					</td>
+					<td>
+						<span>Method</span>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>
+								Opens a new alert item. 
+							</p>
+							<div class="methodArgs">
+								<table class="arguments">
+									<tbody>
+										<tr>
+											<th>Parameter</th>
+											<th>Type</th>
+											<th>Description</th>
+										</tr>
+										<tr>
+											<td><em>None</em></td>
+											<td><em></em></td>
+											<td><em></em></td>
+										</tr>
+									</tbody>
+								</table>
+								<strong>Return Value</strong><br />
+								<em>None</em>
+							</div>
+
+							<h4>Code examples</h4>
+							<P>Invoke the <strong>open</strong> method. </P>
+							<PRE class="prettyprint"> let alert = document.querySelector('smart-alert'); </PRE>
+ 							<PRE class="prettyprint"> alert.open(); </PRE>
+
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

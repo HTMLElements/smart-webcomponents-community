@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tabs Overview Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
+	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	
+    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
+	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body class="viewport">
+    <div class="smart-demo-container">             
+	  <section>
+            <div>
+                <h2>Tabs make it easy to explore and switch between different views.</h2>
+                <div class="module">
+                    <p>Tabs enable content organization at a high level, such as switching between views, data sets, or functional aspects of an app.</p>
+                </div>
+                <div class="module">
+                    <h3>Types</h3>
+                    <p>
+                        Fixed
+                        <br />
+                        Scrollable
+                    </p>
+                    <h3>Tab labels</h3>
+                    <p>Tab labels may include icons and text.</p>
+                    <h3>Color</h3>
+                    <p>Apply your app’s accent color, or a contrasting color, to text fields and the text field cursor.</p>
+                </div>
+                <div class="module">
+                    <figure>
+                        <img alt="" src="https://htmlelements.com/demos/images/components-tabs.png">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <nav>
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#tabs-usage">Usage</a></li>
+                <li><a href="#tabs-mobile">Mobile tabs</a></li>
+                <li><a href="#tabs-desktop">Desktop tabs</a></li>
+            </ul>
+        </nav>
+        <section id="tabs-usage">
+            <h2 id="usageHeading">Usage</h2>
+
+            <div>
+                <p>A tab provides the affordance for displaying grouped content. A tab label succinctly describes the tab’s associated grouping of content.</p>
+            </div>
+        </section>
+
+        <section id="tabs-mobile">
+            <h2>Mobile tabs</h2>
+            <div class="module">
+                <div class="default-mobile-tabs-container">
+                    <smart-tabs id="tabs1" class="animation mobile">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Item Three">Content Three</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Default app bar and fixed tab bar</div>
+            </div>
+
+            <div class="module">
+                <div id="tabs2Container">
+                    <smart-tabs id="tabs2" class="animation mobile">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Item Three">Content Three</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Extended app bar and fixed tab bar</div>
+            </div>
+
+            <div class="module">
+                <div id="tabs3Container">
+                    <smart-tabs id="tabs3" class="animation mobile">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Item Three">Content Three</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Fixed tab bar pinned to top with scrolled content</div>
+            </div>
+
+            <div class="module">
+                <div id="tabs4Container">
+                    <smart-tabs id="tabs4" class="animation mobile">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Item Three">Content Three</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Inset search, app bar, and fixed tab bar</div>
+            </div>
+
+            <div class="module">
+                <div class="default-mobile-tabs-container">
+                    <smart-tabs id="tabs5" class="animation padding" overflow="hidden">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="The Third">Content Three</smart-tab-item>
+                        <smart-tab-item label="Fourth Item">Content Four</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Default app bar and scrollable tab bar</div>
+            </div>
+
+            <div class="module">
+                <div class="default-mobile-tabs-container">
+                    <smart-tabs id="tabs6" class="animation mobile">
+                        <smart-tab-item label="<i class='material-icons'>phone</i>">Calls</smart-tab-item>
+                        <smart-tab-item label="<i class='material-icons'>favorite</i>">Favorites</smart-tab-item>
+                        <smart-tab-item label="<i class='material-icons'>perm_contact_calendar</i>">Contacts</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Default app bar and fixed tab bar with icons</div>
+            </div>
+        </section>
+
+        <section id="tabs-desktop">
+            <h2>Desktop tabs</h2>
+
+            <div class="module">
+            </div>
+
+            <div class="module desktop">
+                <div class="default-desktop-tabs-container">
+                    <smart-tabs id="tabs7" class="animation desktop padding">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Item Three">Content Three</smart-tab-item>
+                        <smart-tab-item label="Item Four">Content Four</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Default app and tab bars</div>
+
+                <div class="default-desktop-tabs-container">
+                    <smart-tabs id="tabs8" class="animation desktop padding" tab-layout="dropdown">
+                        <smart-tab-item label="Web">Web Content</smart-tab-item>
+                        <smart-tab-item label="Shopping">Shopping Content</smart-tab-item>
+                        <smart-tab-item label="Videos">Videos Content</smart-tab-item>
+                        <smart-tab-item label="Images">Images Content</smart-tab-item>
+                        <smart-tab-item label="News">News Content</smart-tab-item>
+                        <smart-tab-item label="Maps">Maps Content</smart-tab-item>
+                        <smart-tab-item label="Books">Books Content</smart-tab-item>
+                        <smart-tab-item label="Flights">Flights Content</smart-tab-item>
+                        <smart-tab-item label="Apps">Apps Content</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Tabs with a dropdown menu</div>
+
+                <div class="default-desktop-tabs-container">
+                    <smart-tabs id="tabs9" class="animation desktop">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Item Three">Content Three</smart-tab-item>
+                        <smart-tab-item label="Item Four">Content Four</smart-tab-item>
+                        <smart-tab-item label="Item Five">Content Five</smart-tab-item>
+                        <smart-tab-item label="Item Six">Content Six</smart-tab-item>
+                        <smart-tab-item label="Item Seven">Content Seven</smart-tab-item>
+                        <smart-tab-item label="Item Eight">Content Eight</smart-tab-item>
+                        <smart-tab-item label="Item Nine">Content Nine</smart-tab-item>
+                        <smart-tab-item label="Item Ten">Content Ten</smart-tab-item>
+                        <smart-tab-item label="Item Eleven">Content Eleven</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Tabs with overflow pagination</div>
+
+                <div id="tabs10Container">
+                    <smart-tabs id="tabs10" class="animation desktop" tab-position="left">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Item Three">Content Three</smart-tab-item>
+                        <smart-tab-item label="Item Four">Content Four</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Tab bar on the left</div>
+
+                <div id="tabs11Container">
+                    <smart-tabs id="tabs11" class="animation desktop" tab-position="right">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Item Three">Content Three</smart-tab-item>
+                        <smart-tab-item label="Item Four">Content Four</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Tab bar on the right</div>
+
+                <div class="desktop-bottom-tabs-container">
+                    <smart-tabs id="tabs12" class="animation desktop" tab-position="bottom">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Item Three">Content Three</smart-tab-item>
+                        <smart-tab-item label="Item Four">Content Four</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Tab bar on the bottom</div>
+
+                <div class="default-desktop-tabs-container">
+                    <smart-tabs id="tabs13" class="animation desktop" tab-text-orientation="vertical">
+                        <smart-tab-item label="One">Content One</smart-tab-item>
+                        <smart-tab-item label="Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Three">Content Three</smart-tab-item>
+                        <smart-tab-item label="Four">Content Four</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Tab labels with vertical text</div>
+
+                <div id="tabs14Container">
+                    <smart-tabs id="tabs14" class="animation desktop" tab-position="left" tab-text-orientation="vertical">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Item Three">Content Three</smart-tab-item>
+                        <smart-tab-item label="Item Four">Content Four</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Tab bar on the left with vertical labels</div>
+
+                <div id="tabs15Container">
+                    <smart-tabs id="tabs15" class="animation desktop" tab-position="right" tab-text-orientation="vertical">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Item Three">Content Three</smart-tab-item>
+                        <smart-tab-item label="Item Four">Content Four</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Tab bar on the right with vertical labels</div>
+
+                <div class="desktop-bottom-tabs-container">
+                    <smart-tabs id="tabs16" class="animation desktop" tab-position="bottom" tab-text-orientation="vertical">
+                        <smart-tab-item label="Item One">Content One</smart-tab-item>
+                        <smart-tab-item label="Item Two">Content Two</smart-tab-item>
+                        <smart-tab-item label="Item Three">Content Three</smart-tab-item>
+                        <smart-tab-item label="Item Four">Content Four</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Tab bar on the bottom with vertical labels</div>
+
+                <div class="default-desktop-tabs-container">
+                    <smart-tabs id="tabs17" class="animation desktop">
+                        <smart-tab-items-group label="Fruits">
+                            <smart-tab-item label="Apple">Apple information</smart-tab-item>
+                            <smart-tab-item label="Lime">Lime information</smart-tab-item>
+                            <smart-tab-item label="Orange">Orange information</smart-tab-item>
+                        </smart-tab-items-group>
+                        <smart-tab-items-group label="Vegetables">
+                            <smart-tab-item label="Carrot">Carrot information</smart-tab-item>
+                            <smart-tab-item label="Raddish">Raddish information</smart-tab-item>
+                        </smart-tab-items-group>
+                        <smart-tab-item label="Meat">Meat information</smart-tab-item>
+                        <smart-tab-item label="Fish">Fish information</smart-tab-item>
+                    </smart-tabs>
+                </div>
+                <div>Tabs with grouping</div>
+            </div>
+        </section>
+
+        <section id="tabs-dark-theme">
+
+            <div class="module">
+            </div>
+
+            <div class="module">
+                <div id="tabs18Container">
+                    <smart-tabs id="tabs18" class="animation padding">
+                        <smart-tab-item label="Pop">
+                            <img src="https://htmlelements.com/demos/images/albums_pop.png" />
+                        </smart-tab-item>
+                        <smart-tab-item label="Alternative">
+                            <img src="https://htmlelements.com/demos/images/albums_alternative.png" />
+                        </smart-tab-item>
+                        <smart-tab-item label="Rock">
+                            <img src="https://htmlelements.com/demos/images/albums_rock.png" />
+                        </smart-tab-item>
+                        <smart-tab-item label="R & B">
+                            <img src="https://htmlelements.com/demos/images/albums_rnb.png" />
+                        </smart-tab-item>
+                    </smart-tabs>
+                </div>
+            </div>
+        </section>
+   </div>
+</body>
+</html>

@@ -30,13 +30,13 @@
 
 							<P>Set the <strong>clickMode</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-switch-button click-mode='press'&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>clickMode</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
  
 							<PRE class="prettyprint"> switchButton.clickMode = 'pressAndRelease';</PRE><br/>
  
 
 							<P>Get the <strong>clickMode</strong> property. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
 							<PRE class="prettyprint"> let clickMode = switchButton.clickMode;</PRE>
 						</div>
 					</td>
@@ -61,13 +61,13 @@
 
 							<P>Set the <strong>checked</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-switch-button checked&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>checked</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
  
 							<PRE class="prettyprint"> switchButton.checked = false;</PRE><br/>
  
 
 							<P>Get the <strong>checked</strong> property. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
 							<PRE class="prettyprint"> let checked = switchButton.checked;</PRE>
 						</div>
 					</td>
@@ -92,13 +92,13 @@
 
 							<P>Set the <strong>disabled</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-switch-button disabled&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>disabled</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
  
 							<PRE class="prettyprint"> switchButton.disabled = false;</PRE><br/>
  
 
 							<P>Get the <strong>disabled</strong> property. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
 							<PRE class="prettyprint"> let disabled = switchButton.disabled;</PRE>
 						</div>
 					</td>
@@ -123,13 +123,13 @@
 
 							<P>Set the <strong>falseContent</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-switch-button false-content='OFF'&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>falseContent</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
  
 							<PRE class="prettyprint"> switchButton.falseContent = 'False';</PRE><br/>
  
 
 							<P>Get the <strong>falseContent</strong> property. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
 							<PRE class="prettyprint"> let falseContent = switchButton.falseContent;</PRE>
 						</div>
 					</td>
@@ -137,7 +137,38 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan4">indeterminate</span>
+						<span id="propertiesSpan4">falseTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets custom template about false state.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>falseTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-switch-button false-template='templateId1'&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>falseTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
+ 
+							<PRE class="prettyprint"> switchButton.falseTemplate = 'templateId2';</PRE><br/>
+ 
+
+							<P>Get the <strong>falseTemplate</strong> property. </P>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> let falseTemplate = switchButton.falseTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan5">indeterminate</span>
 					</td>
 					<td>
 						<span>boolean</span>
@@ -154,13 +185,13 @@
 
 							<P>Set the <strong>indeterminate</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-switch-button indeterminate&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>indeterminate</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
  
 							<PRE class="prettyprint"> switchButton.indeterminate = false;</PRE><br/>
  
 
 							<P>Get the <strong>indeterminate</strong> property. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
 							<PRE class="prettyprint"> let indeterminate = switchButton.indeterminate;</PRE>
 						</div>
 					</td>
@@ -168,7 +199,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan5">inverted</span>
+						<span id="propertiesSpan6">inverted</span>
 					</td>
 					<td>
 						<span>boolean</span>
@@ -185,13 +216,13 @@
 
 							<P>Set the <strong>inverted</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-switch-button inverted&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>inverted</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
  
 							<PRE class="prettyprint"> switchButton.inverted = false;</PRE><br/>
  
 
 							<P>Get the <strong>inverted</strong> property. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
 							<PRE class="prettyprint"> let inverted = switchButton.inverted;</PRE>
 						</div>
 					</td>
@@ -199,7 +230,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan6">name</span>
+						<span id="propertiesSpan7">name</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -216,13 +247,13 @@
 
 							<P>Set the <strong>name</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-switch-button name='Name'&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>name</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
  
 							<PRE class="prettyprint"> switchButton.name = 'New Name';</PRE><br/>
  
 
 							<P>Get the <strong>name</strong> property. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
 							<PRE class="prettyprint"> let name = switchButton.name;</PRE>
 						</div>
 					</td>
@@ -230,7 +261,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan7">orientation</span>
+						<span id="propertiesSpan8">orientation</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -247,13 +278,13 @@
 
 							<P>Set the <strong>orientation</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-switch-button orientation='vertical'&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>orientation</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
  
 							<PRE class="prettyprint"> switchButton.orientation = 'horizontal';</PRE><br/>
  
 
 							<P>Get the <strong>orientation</strong> property. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
 							<PRE class="prettyprint"> let orientation = switchButton.orientation;</PRE>
 						</div>
 					</td>
@@ -261,7 +292,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan8">readonly</span>
+						<span id="propertiesSpan9">readonly</span>
 					</td>
 					<td>
 						<span>boolean</span>
@@ -278,13 +309,13 @@
 
 							<P>Set the <strong>readonly</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-switch-button readonly&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>readonly</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
  
 							<PRE class="prettyprint"> switchButton.readonly = false;</PRE><br/>
  
 
 							<P>Get the <strong>readonly</strong> property. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
 							<PRE class="prettyprint"> let readonly = switchButton.readonly;</PRE>
 						</div>
 					</td>
@@ -292,7 +323,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan9">trueContent</span>
+						<span id="propertiesSpan10">trueContent</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -309,13 +340,13 @@
 
 							<P>Set the <strong>trueContent</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-switch-button true-content='ON'&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>trueContent</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
  
 							<PRE class="prettyprint"> switchButton.trueContent = 'True';</PRE><br/>
  
 
 							<P>Get the <strong>trueContent</strong> property. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
 							<PRE class="prettyprint"> let trueContent = switchButton.trueContent;</PRE>
 						</div>
 					</td>
@@ -323,7 +354,38 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan10">switchMode</span>
+						<span id="propertiesSpan11">trueTemplate</span>
+					</td>
+					<td>
+						<span>string</span>
+					</td>
+					<td>
+						null
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="width: 100%">
+						<div class="documentation-option-description property-content" style="display: none;">
+							<p>Sets custom template about true state.</p>
+							<h4>Code examples</h4>
+
+							<P>Set the <strong>trueTemplate</strong> property. </P>
+							<PRE class="prettyprint"> &lt;smart-switch-button true-template='templateId1'&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>trueTemplate</strong> property by using the HTML Element's instance. </P>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
+ 
+							<PRE class="prettyprint"> switchButton.trueTemplate = 'templateId2';</PRE><br/>
+ 
+
+							<P>Get the <strong>trueTemplate</strong> property. </P>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> let trueTemplate = switchButton.trueTemplate;</PRE>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td class="documentation-option-type-click">
+						<span id="propertiesSpan12">switchMode</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -340,13 +402,13 @@
 
 							<P>Set the <strong>switchMode</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-switch-button switch-mode='click'&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>switchMode</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
  
 							<PRE class="prettyprint"> switchButton.switchMode = 'drag';</PRE><br/>
  
 
 							<P>Get the <strong>switchMode</strong> property. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
 							<PRE class="prettyprint"> let switchMode = switchButton.switchMode;</PRE>
 						</div>
 					</td>
@@ -354,7 +416,7 @@
 
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan11">value</span>
+						<span id="propertiesSpan13">value</span>
 					</td>
 					<td>
 						<span>string</span>
@@ -371,13 +433,13 @@
 
 							<P>Set the <strong>value</strong> property. </P>
 							<PRE class="prettyprint"> &lt;smart-switch-button value='Value'&gt;&lt;/smart-switch-button&gt;</PRE><br/>							<P>Set the <strong>value</strong> property by using the HTML Element's instance. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
  
 							<PRE class="prettyprint"> switchButton.value = 'New Value';</PRE><br/>
  
 
 							<P>Get the <strong>value</strong> property. </P>
-							<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button');</PRE>
+							<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button');</PRE>
 							<PRE class="prettyprint"> let value = switchButton.value;</PRE>
 						</div>
 					</td>
@@ -392,7 +454,7 @@
 				</tr>
 				<tr>
 					<td class="documentation-option-type-click">
-						<span id="propertiesSpan12">change</span>
+						<span id="propertiesSpan14">change</span>
 					</td>
 					<td>
 						<span>Event</span>
@@ -413,7 +475,7 @@
 								Bind to the <strong>change</strong> event by type: smartSwitchButton
 							</p>
 							<p>
-								<PRE class="prettyprint"> let switchButton = document.querySelector('smart-switch-button'); </PRE>
+								<PRE class="prettyprint"> const switchButton = document.querySelector('smart-switch-button'); </PRE>
 <PRE class="prettyprint"> switchButton.addEventListener('change', function (event) {
      // event handling code goes here.
  }
