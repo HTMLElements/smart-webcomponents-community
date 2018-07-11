@@ -33,6 +33,7 @@
    "smart-button": "HTMLElements/smart-button",
    "smart-calendar": "HTMLElements/smart-calendar",
    "smart-listbox": "HTMLElements/smart-listbox",
-   "smart-tabs": "HTMLElements/smart-tabs"
+   "smart-tabs": "HTMLElements/smart-tabs",
+   "smart-progressbar": "HTMLElements/smart-progressbar"
   }
 }
