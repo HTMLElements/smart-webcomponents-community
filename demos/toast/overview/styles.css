@@ -213,11 +213,7 @@
             font-size:25px;
         }
 
-        #toastButton4 button,
-        #toastButton5 button {
-            color:darkgray;
-            background-color:yellow;
-        }
+       
 
         #toastContainer1 .smart-info.material,
         #toastContainer2 .smart-info.material,

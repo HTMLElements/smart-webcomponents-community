@@ -31,8 +31,8 @@
             line-height: 24px;
             font-size: 13px;        	
             margin-left: 0;
-			margin: 5% 10%;
-            padding-top: 50px;
+			margin: 0px;
+            padding-top: 0px;
         }
 
             #materialListBoxContainer section h2 {
@@ -208,8 +208,14 @@ margin: 0;
             display: flex;
             justify-content: space-between;
             align-content: center;
+			width: 270px;
         }
-
+		smart-list-item {
+			overflow: visible;
+		}
+		smart-list-item .smart-container, smart-list-item .smart-content {
+			overflow: visible;
+		}
         #materialListBoxContainer #gestureListBox .secondLine {
             display: flex;
             justify-content: center;
@@ -218,7 +224,6 @@ margin: 0;
 
         #materialListBoxContainer #gestureListBox .secondLine {
             width: 50px;
-            transform: translateX(100px);
         }
 
         #materialListBoxContainer #gestureListBox .material-icons {
@@ -227,6 +232,7 @@ margin: 0;
 
         #materialListBoxContainer #gestureListBox .swipe-right .templateContainer {
             flex-direction: row-reverse;
+			width: 250px;
         }
 
         #materialListBoxContainer #gestureListBox .swipe-right-left .firstLine {
@@ -268,18 +274,44 @@ margin: 0;
             position: relative;
         }
 
-        #materialListBoxContainer #settingsMenu smart-list-item > .smart-container .smart-list-item-container,
-        #materialListBoxContainer #phoneBook smart-list-item > .smart-container .smart-list-item-container,
-        #materialListBoxContainer #appearance smart-list-item > .smart-container .smart-list-item-container {
-            width: 100%;
-        }
-
-        #materialListBoxContainer #behavior .secondaryAction smart-switch-button.material .smart-thumb::before,
-        #materialListBoxContainer #appearance .secondLine smart-switch-button.material .smart-thumb::before {
-            content: none;
-        }
-
-        #materialListBoxContainer #behavior .templateContainer {
+		#phoneBook smart-list-item,
+	    #settingsMenu  smart-list-item,
+		#appearance  smart-list-item
+		{
+			height: 50px;
+		 }
+		
+		#listBoxLight smart-list-item {
+			height: 60px;
+		}
+		
+		
+		#twoLineList smart-list-item,
+		#twoLineCheckList smart-list-item
+		{
+			height: 70px;
+		}
+		
+		#twoLineList smart-list-item .templateContainer,
+		#twoLineCheckList smart-list-item .templateContainer,
+		#listBoxLight smart-list-item  .templateContainer{
+			align-items: flex-start;
+			flex-direction: column;
+		}
+		#listBoxLight smart-list-item  .templateContainer.single-line {
+			flex-direction: row;
+		}
+		
+		#listBoxLight smart-list-item  .templateContainer.single-line .secondLine  {
+			justify-content: flex-end;
+		}
+		
+		#listBoxLight smart-list-item  .templateContainer .secondLine {
+			width: 100%;
+		}
+		
+		.templateContainer		{
+			width: 250px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -297,11 +329,15 @@ margin: 0;
                 margin-right: 5px;
             }
 
+			smart-switch-button  .smart-thumb:before {
+				opacity: 0;
+			}
+			
         #materialListBoxContainer #behavior smart-switch-button {
             width: 35px;
             height: 25px;
-            --smart-material-pressed-background-color: #2693E5;
-        }
+     
+		}
 
         #materialListBoxContainer #appearance smart-switch-button {
             width: 35px;
@@ -317,6 +353,11 @@ margin: 0;
             justify-content: center;
             align-items: center;
         }
+		
+		#gestureListBox smart-button,
+	    #phoneBook smart-button {
+			color:inherit;
+		}
 
         #materialListBoxContainer #phoneBook .primaryAction .material-icons {
             width: 35px;
@@ -404,7 +445,10 @@ margin: 0;
             opacity: 0.5;
             font-size: 12px;
         }
-
+		.swipe-right .secondLine smart-button {
+			left: -17px;
+		    position: relative;
+        }
         #materialListBoxContainer .checkList {
             position: relative;
         }
@@ -420,6 +464,7 @@ margin: 0;
 
                 #materialListBoxContainer .checkList #deleteButton .material-icons {
                     font-size: 25px;
+					margin-left:-3px;
                 }
 
                 #materialListBoxContainer .checkList #deleteButton.smart-visibility-hidden {
@@ -445,11 +490,7 @@ margin: 0;
                     font-size: 18px;
                 }
 
-            #materialListBoxContainer #appearance smart-list-box .single-line {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
+          
 
         #materialListBoxContainer #appearance smart-slider {
             width: 100%;

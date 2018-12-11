@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -29,7 +29,7 @@
 
             <div class="module">
                 <div id="listMenu1Container">
-                    <smart-list-menu id="listMenu1" class="material animation" filterable grouped overflow="hidden" filter-mode="contains" enable-mouse-wheel-action>
+                    <smart-list-menu id="listMenu1" filterable grouped overflow="hidden" filter-mode="contains" enable-mouse-wheel-action>
                         <smart-menu-items-group>
                             Janet Leverling
                             <smart-menu-item label="janetInfo"></smart-menu-item>
@@ -71,7 +71,7 @@
             </div>
             <div class="module">
                 <div id="listMenu3Container">
-                    <smart-list-menu id="listMenu3" class="material animation" overflow="hidden" enable-mouse-wheel-action>
+                    <smart-list-menu id="listMenu3" overflow="hidden" enable-mouse-wheel-action>
                         <smart-menu-items-group>
                             <i class="material-icons">&#xE53F;</i> Attractions
                             <smart-menu-item>Movies</smart-menu-item>
@@ -149,7 +149,7 @@
             </div>
             <div class="module">
                 <div id="listMenu4Container">
-                    <smart-list-menu id="listMenu4" class="material animation" overflow="hidden" enable-mouse-wheel-action>
+                    <smart-list-menu id="listMenu4" overflow="hidden" enable-mouse-wheel-action>
                         <smart-menu-items-group label="mail1Preview" separator>
                             <smart-menu-item label="mail1"></smart-menu-item>
                         </smart-menu-items-group>
@@ -172,73 +172,16 @@
                             <smart-menu-item label="mail7"></smart-menu-item>
                         </smart-menu-items-group>
                     </smart-list-menu>
-                    <smart-button id="plusButton" class="material floating">+</smart-button>
+                    <smart-button id="plusButton" class="primary floating">+</smart-button>
                 </div>
             </div>
         </section>
-
-        <section id="dark-theme">
-            <h2>Dark theme</h2>
-
-            <div class="module"></div>
-
-            <div class="module module-wide">
-                <div id="listMenu2Container">
-                    <smart-button id="menu7Token" class="material flat menu-token"><i class="material-icons">&#xE5D4;</i></smart-button>
-                    <smart-menu id="menu7" class="material-dark animation" mode="dropDown">
-                        <smart-menu-item label="Refresh"></smart-menu-item>
-                        <smart-menu-item label="Settings"></smart-menu-item>
-                        <smart-menu-item label="Send feedback"></smart-menu-item>
-                        <smart-menu-item label="Help"></smart-menu-item>
-                        <smart-menu-item label="Signout"></smart-menu-item>
-                    </smart-menu>
-                    <smart-list-menu id="listMenu2" class="material-dark animation" filterable grouped overflow="hidden" filter-mode="contains" enable-mouse-wheel-action>
-                        <smart-menu-items-group>
-                            Janet Leverling
-                            <smart-menu-item label="janetInfo"></smart-menu-item>
-                        </smart-menu-items-group>
-                        <smart-menu-items-group>
-                            Andrew Fuller
-                            <smart-menu-item label="andrewInfo"></smart-menu-item>
-                        </smart-menu-items-group>
-                        <smart-menu-items-group>
-                            Robert King
-                            <smart-menu-item label="robertInfo"></smart-menu-item>
-                        </smart-menu-items-group>
-                        <smart-menu-items-group>
-                            Anne Dodsworth
-                            <smart-menu-item label="anneInfo"></smart-menu-item>
-                        </smart-menu-items-group>
-                        <smart-menu-items-group>
-                            Margaret Peacock
-                            <smart-menu-item label="margaretInfo"></smart-menu-item>
-                        </smart-menu-items-group>
-                        <smart-menu-items-group>
-                            Michael Suyama
-                            <smart-menu-item label="michaelInfo"></smart-menu-item>
-                        </smart-menu-items-group>
-                        <smart-menu-items-group>
-                            Nancy Davolio
-                            <smart-menu-item label="nancyInfo"></smart-menu-item>
-                        </smart-menu-items-group>
-                        <smart-menu-items-group>
-                            Steven Buchanan
-                            <smart-menu-item label="stevenInfo"></smart-menu-item>
-                        </smart-menu-items-group>
-                        <smart-menu-items-group>
-                            Laura Callahan
-                            <smart-menu-item label="lauraInfo"></smart-menu-item>
-                        </smart-menu-items-group>
-                    </smart-list-menu>
-                </div>
-            </div>
-        </section>
-
+  
         <template id="andrewInfo">
             <table>
                 <tr>
                     <td>
-                        <img style="width: 50px; height: 50px;" src="../../images/phonebook/andrew.png" alt="" />
+                        <img style="width: 50px; height: 50px;" src="../../../images/phonebook/andrew.png" alt="" />
                     </td>
                     <td>
                         <b>Andrew Fuller</b>
@@ -328,7 +271,7 @@
             <table>
                 <tr>
                     <td>
-                        <img style="width: 50px; height: 50px;" src="../../images/phonebook/anne.png" alt="" />
+                        <img style="width: 50px; height: 50px;" src="../../../images/phonebook/anne.png" alt="" />
                     </td>
                     <td>
                         <b>Anne Dodsworth</b>
@@ -414,7 +357,7 @@
             <table>
                 <tr>
                     <td>
-                        <img style="width: 50px; height: 50px;" src="../../images/phonebook/janet.png" alt="" />
+                        <img style="width: 50px; height: 50px;" src="../../../images/phonebook/janet.png" alt="" />
                     </td>
                     <td>
                         <b>Janet Leverling</b>
@@ -501,7 +444,7 @@
             <table>
                 <tr>
                     <td>
-                        <img style="width: 50px; height: 50px;" src="../../images/phonebook/laura.png" alt="" />
+                        <img style="width: 50px; height: 50px;" src="../../../images/phonebook/laura.png" alt="" />
                     </td>
                     <td>
                         <b>Laura Callahan</b>
@@ -587,7 +530,7 @@
             <table>
                 <tr>
                     <td>
-                        <img style="width: 50px; height: 50px;" src="../../images/phonebook/margaret.png" alt="" />
+                        <img style="width: 50px; height: 50px;" src="../../../images/phonebook/margaret.png" alt="" />
                     </td>
                     <td>
                         <b>Margaret Peacock</b>
@@ -674,7 +617,7 @@
             <table>
                 <tr>
                     <td>
-                        <img style="width: 50px; height: 50px;" src="../../images/phonebook/michael.png" alt="" />
+                        <img style="width: 50px; height: 50px;" src="../../../images/phonebook/michael.png" alt="" />
                     </td>
                     <td>
                         <b>Michael Suyama</b>
@@ -762,7 +705,7 @@
             <table>
                 <tr>
                     <td>
-                        <img style="width: 50px; height: 50px;" src="../../images/phonebook/nancy.png" alt="" />
+                        <img style="width: 50px; height: 50px;" src="../../../images/phonebook/nancy.png" alt="" />
                     </td>
                     <td>
                         <b>Nancy Davolio</b>
@@ -848,7 +791,7 @@
             <table>
                 <tr>
                     <td>
-                        <img style="width: 50px; height: 50px;" src="../../images/phonebook/robert.png" alt="" />
+                        <img style="width: 50px; height: 50px;" src="../../../images/phonebook/robert.png" alt="" />
                     </td>
                     <td>
                         <b>Robert King</b>
@@ -936,7 +879,7 @@
             <table>
                 <tr>
                     <td>
-                        <img style="width: 50px; height: 50px;" src="../../images/phonebook/steven.png" alt="" />
+                        <img style="width: 50px; height: 50px;" src="../../../images/phonebook/steven.png" alt="" />
                     </td>
                     <td>
                         <b>Steven Buchanan</b>
@@ -1113,7 +1056,7 @@
                 <table>
                     <tr>
                         <td class="mail-name">Meghan</td>
-                        <td class="mail-time">8/16/17</td>
+                        <td class="mail-time"../../../17</td>
                     </tr>
                     <tr>
                         <td class="mail-title">Dinner tonight?</td>
@@ -1128,7 +1071,7 @@
         </template>
         <template id="mail4">
             <h2>Dinner tonight?</h2>
-            <p class="mail-time">8/16/17</p>
+            <p class="mail-time"../../../17</p>
             <p>Hi,</p>
             <p>how about a dinner at my parents' tonight?</p>
         </template>
@@ -1138,7 +1081,7 @@
                 <table>
                     <tr>
                         <td class="mail-name">Titus LDT</td>
-                        <td class="mail-time">7/11/17</td>
+                        <td class="mail-time"../../../17</td>
                     </tr>
                     <tr>
                         <td class="mail-title">About the interview</td>
@@ -1153,7 +1096,7 @@
         </template>
         <template id="mail5">
             <h2>About the interview</h2>
-            <p class="mail-time">7/11/17</p>
+            <p class="mail-time"../../../17</p>
             <p>Hello,</p>
             <p>We are writing to inform you that your application has been shortlisted and would like to invite you to a second interview in our office.</p>
             <p>
@@ -1168,7 +1111,7 @@
                 <table>
                     <tr>
                         <td class="mail-name">QuickShare</td>
-                        <td class="mail-time">5/30/17</td>
+                        <td class="mail-time"../../../17</td>
                     </tr>
                     <tr>
                         <td class="mail-title">Important update</td>
@@ -1183,7 +1126,7 @@
         </template>
         <template id="mail6">
             <h2>Important update</h2>
-            <p class="mail-time">5/30/17</p>
+            <p class="mail-time"../../../17</p>
             <p>Dear user,</p>
             <p>Our terms of service have changed. Please find attached the updated document.</p>
         </template>
@@ -1193,7 +1136,7 @@
                 <table>
                     <tr>
                         <td class="mail-name">QuickShare</td>
-                        <td class="mail-time">5/28/17</td>
+                        <td class="mail-time"../../../17</td>
                     </tr>
                     <tr>
                         <td class="mail-title">Welcome to our forums</td>
@@ -1208,7 +1151,7 @@
         </template>
         <template id="mail7">
             <h2>Welcome to our forums</h2>
-            <p class="mail-time">5/28/17</p>
+            <p class="mail-time"../../../17</p>
             <p>Dear user,</p>
             <p>Welcome to the QuickShare forums.</p>
         </template>

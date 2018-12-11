@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -19,19 +19,6 @@
 <body class="viewport">
     <div class="smart-demo-container">             
 	
-    <template id="itemTemplate">
-        <div class="templateContainer">
-            <div class="primaryAction"><i class="material-icons"></i>{{label}}</div>
-            <div class="secondaryAction"></div>
-        </div>
-    </template>
-
-    <template id="multiLineTemplate">
-        <div class="templateContainer">
-            <div class="firstLine">{{label}}</div>
-            <div class="secondLine"></div>
-        </div>
-    </template>
         <section>
             <div>
                 <h2>Password Text fields allow users to input and edit passwords.</h2>
@@ -70,33 +57,22 @@
                     When a field is active or contains an error, the line’s color and thickness vary.</p>
 
                     <h3>Cursor</h3>
-                    <p>The cursor indicates the user’s current input position. <br /><br /><br /></p>
+                    <p>The cursor indicates the user’s current input position. <br /><br /><b../../../p>
      
             <div>
  
                 <div class="module">
-                    <div class="light-theme">
-                        <smart-password-text-box class="material" label="Label" hint="Helper text"></smart-password-text-box><br />
-                        <smart-password-text-box class="material" label="Label" hint="Helper text" placeholder="Placeholder"></smart-password-text-box><br />
-                        <smart-password-text-box class="material" label="Label" hint="Helper text" value="Input" placeholder="Placeholder"></smart-password-text-box><br />
-                        <smart-password-text-box class="material" label="Label" hint="Helper text" id="validateMaterialPassword"></smart-password-text-box><br />
-                        <smart-password-text-box class="material" label="Label" hint="Helper text" value="Input" disabled></smart-password-text-box>
-                    </div>
+                        <smart-password-text-box ></smart-password-text-box>
+						<p>Password text box</p>
+                  
+						<br />
+                        <smart-password-text-box disabled></smart-password-text-box>
+						<p>Disabled</p>
                     <p>
                         Text field states in light and dark themes.
                     </p>
                 </div>
-                <div class="module">
-                    <div class="dark-theme">
-                        <smart-password-text-box class="material-dark" label="Label" hint="Helper text"></smart-password-text-box><br />
-                        <smart-password-text-box class="material-dark" label="Label" hint="Helper text" placeholder="Placeholder"></smart-password-text-box><br />
-                        <smart-password-text-box class="material-dark" label="Label" hint="Helper text" value="Input" placeholder="Placeholder"></smart-password-text-box><br />
-                        <smart-password-text-box class="material-dark" label="Label" hint="Helper text" id="validateMaterialDarkPassword"></smart-password-text-box><br />
-                        <smart-password-text-box class="material-dark" label="Label" hint="Helper text" value="Input" disabled></smart-password-text-box>
-                    </div>
-                    <p>
-                    </p>
-                </div>
+              
             </div>
         </section>
 

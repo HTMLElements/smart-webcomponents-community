@@ -172,7 +172,9 @@ margin: 0 !important;
             margin-top: 50px;
             margin-bottom: 80px;
         }
-
+		.discreteSliderLight smart-slider {
+			height:85px;
+		}
         #materialSliderContainer .continuousSliderLight table,
         #materialSliderContainer .continuousSliderDark table,
         #materialSliderContainer .discreteSliderLight table,
@@ -228,12 +230,12 @@ margin: 0 !important;
         }
 
         #materialSliderContainer #scaleSliders smart-slider {
-            --smart-tank-default-height: 50px;
+            --smart-slider-default-height: 85px;
         }
 
         #materialSliderContainer #scaleSliders .continuousScaleSlider,
         #materialSliderContainer #scaleSliders .discreteScaleSlider {
-            height: 200px;
+            height: 300px;
             margin-top: initial;
         }
 
@@ -243,7 +245,6 @@ margin: 0 !important;
             justify-content: space-evenly;
             align-items: center;
             height: 100%;
-            background-color: #EEEEEE;
         }
 
         #scaleSliders .continuousScaleSlider smart-slider:nth-of-type(3) {
@@ -251,7 +252,7 @@ margin: 0 !important;
         }
 
         #materialSliderContainer #verticalSliders smart-slider {
-            --smart-tank-default-height: 200px;
+            --smart-slider-default-height: 200px;
         }
 
         #materialSliderContainer #verticalSliders .module:nth-of-type(2) > div,
@@ -284,9 +285,9 @@ margin: 0 !important;
 
             #materialSliderContainer #demoSliders .media-controls > div,
             #materialSliderContainer #demoSliders .power-controls > div {
-  height: 71%;
-    width: 80%;
-    margin-top: 24%;
+				height: 71%;
+				width: 85%;
+				margin-top: 24%;
                 margin-left: 9%;
                 display: flex;
                 flex-direction: column;

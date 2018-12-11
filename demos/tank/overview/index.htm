@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -52,34 +52,10 @@
                 <p>
                     Use continuous tanks for subjective settings that do not require a specific value for the user to make meaningful adjustments.
                 </p>
-            </div>
-            <div class="module">
-                <h2>Light</h2>
-                <p>
-                    Fill: #009688, Opacity 100% <br />
-                    Track: Transparent
-                </p>
-                <p>Disabled: #000000, Opacity 20%</p>
-            </div>
-            <div id="scaleTanks" class="">
-			   <div class="module scaleTank">
-					<div>
-						<p>Normal</p>
-						<smart-tank class="animation" scale-position="none"></smart-tank>
-						<smart-tank class="animation" value="50" scale-position="none"></smart-tank>
-						<smart-tank class="animation" value="100" scale-position="none"></smart-tank>
-					</div>
-				</div>
-                 <div class="module scaleTank">
-					<div>
-						<p>Disabled</p>
-						<smart-tank disabled class="animation" scale-position="none"></smart-tank>
-						<smart-tank disabled class="animation" value="50" scale-position="none"></smart-tank>
-						<smart-tank disabled class="animation" value="100" scale-position="none"></smart-tank>
-					</div>
-				</div>
-               
-            </div>
+            </div>       
+			<smart-tank class="animation" scale-position="none"></smart-tank><br/><br/>
+			<smart-tank class="animation" value="50" scale-position="none"></smart-tank><br/><br/>
+			<smart-tank class="animation" value="100" scale-position="none"></smart-tank>	<br/><br/>
         </section>
 
         <section id="discreteTanks">
@@ -91,26 +67,8 @@
                 </p>
                 <p>The thumb label can re positioned on the near or the far side of the tank using the thumbLabelPosition property.</p>
             </div>
-        
-            <div id="scaleTanks">
-			  <div class="module scaleTank">
-					<div>
-						<p>Normal</p>
-						<smart-tank scale-type="integer" show-thumb-label class="animation" scale-position="none"></smart-tank>
-						<smart-tank scale-type="integer" show-thumb-label class="animation" value="50" scale-position="none"></smart-tank>
-						<smart-tank scale-type="integer" show-thumb-label class="animation" value="100" scale-position="none"></smart-tank>
-					</div>
-			</div>	
-			  <div class="module scaleTank">
-					<div>
-						<p>Disabled</p>
-						<smart-tank scale-type="integer" show-thumb-label disabled class="animation" scale-position="none"></smart-tank>
-						<smart-tank scale-type="integer" show-thumb-label disabled class="animation" value="50" scale-position="none"></smart-tank>
-						<smart-tank scale-type="integer" show-thumb-label disabled class="animation" value="100" scale-position="none"></smart-tank>
-					</div>
-			</div>
-              
-            </div>
+        	<smart-tank scale-type="integer" show-thumb-label value="50" coerce="10"></smart-tank>
+					
 
         </section>
 
@@ -121,9 +79,9 @@
             </div>
             <div class="module scaleTank">
                 <div>
-                    <smart-tank class="animation " scale-type="integer" scale-position="near" ticks-position="scale" ticks-visibility="major" value="25"></smart-tank>
-                    <smart-tank class="animation " scale-type="integer" ticks-position="track" ticks-visibility="major" value="50"></smart-tank>
-                    <smart-tank class="animation " scale-type="integer" scale-position="far" ticks-position="scale" ticks-visibility="major" value="75"></smart-tank>
+                    <smart-tank  scale-type="integer" scale-position="near" ticks-position="scale" ticks-visibility="major" value="25"></smart-tank><br/><br/>
+                    <smart-tank  scale-type="integer" ticks-position="track" ticks-visibility="major" value="50"></smart-tank><br/><br/>
+                    <smart-tank  scale-type="integer" scale-position="far" ticks-position="scale" ticks-visibility="major" value="75"></smart-tank><br/><br/>
                 </div>
                 <p>Continuous tanks with scale positions: near, track and far</p>
             </div>
@@ -137,15 +95,15 @@
             </div>
             <div class="module">
                 <div>
-                    <smart-tank class="animation " orientation="horizontal" show-thumb-label scale-type="integer" scale-position="none" value="50"></smart-tank>
-                    <smart-tank class="animation " orientation="horizontal" show-thumb-label thumb-label-position="far" scale-type="integer" scale-position="none" value="50" inverted></smart-tank>
+                    <smart-tank  orientation="horizontal" show-thumb-label scale-type="integer" scale-position="none" value="50"></smart-tank>
+                    <smart-tank  orientation="horizontal" show-thumb-label thumb-label-position="far" scale-type="integer" scale-position="none" value="50" inverted></smart-tank>
                 </div>
                 <p>Horizontal tank, thumbLabelPosition near / Horizontal inverted tank, thumbLabelPosition far</p>
             </div>
             <div class="module">
                 <div>
-                    <smart-tank class="animation " orientation="horizontal" show-thumb-label scale-type="integer" scale-position="near" value="50"></smart-tank>
-                    <smart-tank class="animation " orientation="horizontal" show-thumb-label thumb-label-position="far" scale-type="integer" scale-position="far" value="50" inverted></smart-tank>
+                    <smart-tank  orientation="horizontal" show-thumb-label scale-type="integer" scale-position="near" value="50"></smart-tank>
+                    <smart-tank  orientation="horizontal" show-thumb-label thumb-label-position="far" scale-type="integer" scale-position="far" value="50" inverted></smart-tank>
                 </div>
                 <p>Horizontal tank with a near positioned scale, thumbLabelPosition near / Horizontal inverted tank with a far position scale, thumbLabelPosition far</p>
             </div>

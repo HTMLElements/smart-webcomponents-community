@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -59,24 +59,16 @@
             <div class="module progress-bar-animations">
                 <div>
                     <h3>Determinate</h3>
-                    <smart-progress-bar class="animation determinate"></smart-progress-bar>
+                    <smart-progress-bar value="50" class="determinate"></smart-progress-bar>
                     <h3>Indeterminate</h3>
-                    <smart-progress-bar indeterminate class="material"></smart-progress-bar>
+                    <smart-progress-bar indeterminate class=""></smart-progress-bar>
                 </div>
                 <p>Linear progress indicators Light Theme</p>
             </div>
             <div class="module">
 
             </div>
-            <div class="module progress-bar-animations-dark">
-                <div>
-                    <h3>Determinate</h3>
-                    <smart-progress-bar class="material-dark animation determinate"></smart-progress-bar>
-                    <h3>Indeterminate</h3>
-                    <smart-progress-bar indeterminate class="material-dark"></smart-progress-bar>
-                </div>
-                <p>Linear progress indicators Dark Theme</p>
-            </div>
+         
             <div class="module progress-bar-behavior">
                 <h2>Demo usage</h2>
             </div>
@@ -89,7 +81,7 @@
             </div>
             <div class="module page-loading-progress">
                 <div>
-                    <smart-progress-bar class="material-dark" indeterminate></smart-progress-bar>
+                    <smart-progress-bar indeterminate></smart-progress-bar>
                 </div>
                 <p>Query indicator on a webpage</p>
             </div>
@@ -102,18 +94,18 @@
             <div class="module progress-bar-animations">
                 <div>
                     <h3>Determinate</h3>
-                    <smart-circular-progress-bar class="animation determinate"></smart-circular-progress-bar>
+                    <smart-circular-progress-bar class="determinate"></smart-circular-progress-bar>
                     <h3>Indeterminate</h3>
-                    <smart-circular-progress-bar indeterminate class="material"></smart-circular-progress-bar>
+                    <smart-circular-progress-bar indeterminate></smart-circular-progress-bar>
                 </div>
                 <p>Circular progress indicators Light Theme</p>
             </div>
-            <div class="module progress-bar-animations-dark">
+            <div class="module ">
                 <div>
                     <h3>Determinate</h3>
-                    <smart-circular-progress-bar class="material-dark animation determinate"></smart-circular-progress-bar>
+                    <smart-circular-progress-bar value=50 class="determinate"></smart-circular-progress-bar>
                     <h3>Indeterminate</h3>
-                    <smart-circular-progress-bar indeterminate class="material-dark"></smart-circular-progress-bar>
+                    <smart-circular-progress-bar indeterminate></smart-circular-progress-bar>
                 </div>
                 <p>Circular progress indicators Dark Theme</p>
             </div>
@@ -123,14 +115,14 @@
             <div class="module circular-loading-progress">
                 <div>
                     <smart-circular-progress-bar class="uploading">
-                        <smart-toggle-button class="material" id="toggleUploadButton"><i class="material-icons">cloud_upload</i></smart-toggle-button>
+                        <smart-toggle-button id="toggleUploadButton"><i class="material-icons">cloud_upload</i></smart-toggle-button>
                     </smart-circular-progress-bar>
                 </div>
                 <p>A circular loader may be integrated with a button.</p>
             </div>
             <div class="module page-refresh-progress">
                 <div>
-                    <smart-circular-progress-bar id="refreshing" class="material-dark smart-visibility-hidden" indeterminate></smart-circular-progress-bar>
+                    <smart-circular-progress-bar id="refreshing" class="smart-visibility-hidden" indeterminate></smart-circular-progress-bar>
                 </div>
                 <p>A circular loader may be used to load something on hover.</p>
             </div>

@@ -20,7 +20,7 @@ Smart('#grid', class {
 				]
 			}),
             columns: [
-				{ label: 'Country', dataField: 'Country', sortDirection: 'desc' },
+				{ label: 'Country', dataField: 'Country', sortOrder: 'desc' },
 				'Area',
 				'Population_Rural',
 				'Population_Total',

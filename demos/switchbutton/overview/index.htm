@@ -5,186 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 <body class="viewport">
-    <div class="smart-demo-container">             
-	<section id="switch-button">
-            <div class="module">
-                <p>
-                    On/off switches toggle the state of a single settings option. The option that the switch controls, as well as the state it’s in,
-                    should be made clear from the corresponding inline label. Switches take on the same visual properties of the radio button.
-                </p>
-                <p>Material switch buttons don't use labels.</p>
-            </div>
-            <div class="module">
-                <div class="switch-button-container-light">
-                    <smart-switch-button class="material" checked inverted></smart-switch-button>
-                    <smart-switch-button class="material" inverted></smart-switch-button>
-                </div>
-                <p>Light theme</p>
-            </div>
-            <div class="module">
-                <div class="switch-button-container-dark">
-                    <smart-switch-button class="material-dark" checked inverted></smart-switch-button>
-                    <smart-switch-button class="material-dark" inverted></smart-switch-button>
-                </div>
-                <p>Dark theme</p>
-            </div>
-        </section>
-
-        <section id="switch-button-light">
-            <div class="module">
-                <h2>Light</h2>
-                <p>Thumb On: #009788, Opacity 100%</p>
-                <p>Track On: #009788, Opacity 60%</p>
-
-                <p>Thumb Off: #000000, #FAFAFA, Opacity 30%</p>
-                <p>Track Off: #808080, Opacity 100%</p>
-
-                <p>Disabled: #000000, Opacity 25%</p>
-            </div>
-            <div class="module">
-                <div class="switch-button-table-light">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td colspan="1" rowspan="1">
-                                    <p></p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>hover </p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>focused</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>pressed</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>disabled</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="1" rowspan="1">
-                                    <p>On</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material" checked inverted></smart-switch-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material focused" checked inverted></smart-switch-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material pressed" checked inverted></smart-switch-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material" checked disabled inverted></smart-switch-button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="1" rowspan="1">
-                                    <p>Off</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material" inverted></smart-switch-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material focused" inverted></smart-switch-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material pressed" inverted></smart-switch-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material" disabled inverted></smart-switch-button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p>Light theme for switches in hover, focused, pressed, disabled states.</p>
-            </div>
-        </section>
-
-        <section id="switch-button-dark">
-            <div class="module">
-                <h2>Dark</h2>
-                <p>Thumb On: #00d2bd, Opacity 100%</p>
-                <p>Track On: #00d2bd, Opacity 60%</p>
-                <p>Thumb Off: #00000, Opacity 80%</p>
-                <p>Track Off: #00000, Opacity 40%</p>
-                <p>Disabled: #FFFFFF, Opacity 25%</p>
-            </div>
-            <div class="module">
-                <div class="switch-buttons-table-dark">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td colspan="1" rowspan="1">
-                                    <p></p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>hover </p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>focused</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>pressed</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>disabled</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="1" rowspan="1">
-                                    <p>On</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material-dark" checked inverted></smart-switch-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material-dark focused" checked inverted></smart-switch-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material-dark pressed" checked inverted></smart-switch-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material-dark" checked disabled inverted></smart-switch-button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="1" rowspan="1">
-                                    <p>Off</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material-dark" inverted></smart-switch-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material-dark focused" inverted></smart-switch-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material-dark pressed" inverted></smart-switch-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-switch-button class="material-dark" disabled inverted></smart-switch-button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p>Dark theme for switches in hover, focused, pressed, disabled states.</p>
-            </div>
-        </section>
-   </div>
+		<p>
+			On/off switches toggle the state of a single settings option. The option that the switch controls, as well as the state it’s in,
+			should be made clear from the corresponding inline label. Switches take on the same visual properties of the radio button.
+		</p>
+		<br/><br/>
+	<smart-switch-button  checked></smart-switch-button><br/><br/>
+	<smart-switch-button></smart-switch-button>
 </body>
 </html>

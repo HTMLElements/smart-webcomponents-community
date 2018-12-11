@@ -990,11 +990,6 @@
 	font-size: 35px;
 }
 
-.smart-demo-container .repeat-buttons-container smart-repeat-button {
-	width: 50px;
-	height: 50px;
-}
-
 .smart-demo-container #repeat-buttons-specs-behavior .module > div,
 .smart-demo-container #power-button .power-button-light > div,
 .smart-demo-container #power-button .power-button-dark > div,

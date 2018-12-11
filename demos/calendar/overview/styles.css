@@ -40,10 +40,13 @@
 
 .smart-demo-container {
 	
-	line-height: 24px;
-	font-size: 13px;
-	margin-left: 0;
-	margin: 5% 10%;
+    line-height: 24px;
+    font-size: 13px;
+    margin-left: 0;
+    /* margin: 5% 10%; */
+    padding-top: 0px;
+	margin-top:0px;
+	margin: 0px;
 }
 
 	.smart-demo-container section h2 {
@@ -139,12 +142,11 @@
 		}
 
 .module {
-	width: calc(100% / 4);
 	display: inline-block;
 	font: inherit;
-	margin-right: 40px;
-	min-width: 355px;
+	margin-right: 0px;
 	vertical-align: top;
+	min-width:5px;
 }
 
 .smart-demo-container #button-types .module:first-of-type {
@@ -200,7 +202,7 @@
 	line-height: 40px;
 	margin-bottom: 30px;
 	color: #3949ab;
-	padding-top: 80px;
+	padding-top: 0px;
 }
 
 
@@ -1120,7 +1122,7 @@
             line-height: 24px;
             font-size: 13px;
             margin-left: 0;
-	        padding-top: 50px;
+	        padding-top: 0px;
         }
 
             #materialPicker #timePickers smart-time-picker {
@@ -1149,7 +1151,7 @@
                 line-height: 40px;
                 margin-bottom: 30px;
                 color: #3949ab;
-                padding-top: 80px;
+                padding-top: 0px;
             }
 
             #materialPicker #usage h2 {
@@ -1241,12 +1243,13 @@
                 }
 
         .module {
-            width: calc(100% / 4);
-            display: inline-block;
-            font: inherit;
-            margin-right: 40px;
-            min-width: 355px;
-            vertical-align: top;
+			width: 100%;
+			display: inline-block;
+			font: inherit;
+			margin-right: 0px;
+			vertical-align: top;
+			overflow: hidden;
+			margin:0px;
         }
 
             .module h3 {
@@ -1271,32 +1274,10 @@
         margin-top: 50px;
         margin-bottom: 80px;*/
 
-        #materialPicker #datePickers .module:nth-of-type(4),
-        #materialPicker #datePickers .module:nth-of-type(5),
-        #materialPicker #datePickers .module:nth-of-type(6),
-        #materialPicker #datePickers .module:nth-of-type(7),
-        #materialPicker #datePickers .module:nth-of-type(8),
-        #materialPicker #datePickers .module:nth-of-type(9),
-        #materialPicker #timePickers .module:nth-of-type(4),
-        #materialPicker #timePickers .module:nth-of-type(5),
-        #materialPicker #timePickers .module:nth-of-type(6),
-        #materialPicker #timePickers .module:nth-of-type(7),
-        #materialPicker #timePickers .module:nth-of-type(8),
-        #materialPicker #timePickers .module:nth-of-type(9),
-        #materialPicker #dateTimePickers .module:nth-of-type(4),
-        #materialPicker #dateTimePickers .module:nth-of-type(5),
-        #materialPicker #dateTimePickers .module:nth-of-type(6) {
-            margin-top: 100px;
-        }
-
-        #materialPicker #datePickers smart-calendar[view="landscape"] {
-            height: 350px;
-        }
-
-        #materialPicker #datePickers smart-calendar,
-        #materialPicker #datePickers smart-calendar[view="portrait"] {
-            height: 450px
-        }
+		smart-calendar {
+			width: 274px;
+			min-width: 274px;
+		}
 		smart-date-time-picker smart-calendar {
 					height: var(--smart-date-time-picker-drop-down-height) !important;
 		}

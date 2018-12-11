@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -36,18 +36,18 @@
                 </div>
                 <div style="height: 5px;" class="module">
                     <figure style="visibility: hidden;">
-                        <img alt="" src="../../images/components-buttons.png">
+                        <img alt="" src="../../../images/components-buttons.png">
                     </figure>
                 </div>
                 <div class="module">
                 </div>
                 <div class="module preview">
-                    <smart-button class=" floating"><i class="material-icons">photo_camera</i></smart-button>
+                    <smart-button class="floating primary"><i class="material-icons">photo_camera</i></smart-button>
                     <div id="textFields">
                         <span>Name</span>
                         <div class="group">
                             <span>Phone</span>
-                            <smart-combo-box label="Phone" selection-mode="one" class="combos1 animation ">
+                            <smart-combo-box drop-down-position="bottom" label="Phone" selection-mode="one" class="combos1 ">
                                 <smart-list-item>Mobile</smart-list-item>
                                 <smart-list-item>Home</smart-list-item>
                                 <smart-list-item>Work</smart-list-item>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="group">
                             <span>Email</span>
-                            <smart-combo-box label="Email" selection-mode="one" class="combos1 animation ">
+                            <smart-combo-box drop-down-position="bottom" label="Email" selection-mode="one" class="combos1 ">
                                 <smart-list-item>Work</smart-list-item>
                                 <smart-list-item>Mobile</smart-list-item>
                                 <smart-list-item>Home</smart-list-item>
@@ -63,7 +63,7 @@
                         </div>
                         <div class="group">
                             <span>Address</span>
-                            <smart-combo-box label="Address" selection-mode="one" class="combos1 animation">
+                            <smart-combo-box drop-down-position="bottom" label="Address" selection-mode="one" class="combos1">
                                 <smart-list-item>Home</smart-list-item>
                                 <smart-list-item>Mobile</smart-list-item>
                                 <smart-list-item>Work</smart-list-item>
@@ -79,8 +79,6 @@
         </section>
 
 
-        <section id="usage">
-            <h2>Usage</h2>
             <div class="module">
                 <h2>Generic overflow combobox</h2>
                 <p>
@@ -88,22 +86,13 @@
                     Pressing an option on the menu navigates to further settings for that option.
                 </p>
                 <br />
-                  </div>
-            <div class="module dropDownListUsage">
-                <table>
-                    <tr>
-                        <td>
-                            <smart-combo-box class="animation ">
-                                <smart-list-item>Arial</smart-list-item>
-                                <smart-list-item selected>Calibri</smart-list-item>
-                                <smart-list-item>Courier</smart-list-item>
-                                <smart-list-item>Verdana</smart-list-item>
-                            </smart-combo-box>
-                        </td>
-					</tr>
-				
-                </table>
-            </div>
+			   <smart-combo-box drop-down-position="bottom">
+					<smart-list-item>Arial</smart-list-item>
+					<smart-list-item selected>Calibri</smart-list-item>
+					<smart-list-item>Courier</smart-list-item>
+					<smart-list-item>Verdana</smart-list-item>
+				</smart-combo-box>
+			  </div>
         </section>
 
         <section id="style">
@@ -114,7 +103,7 @@
                     <tr>
                         <td><p>Normal</p></td>
                         <td>
-                            <smart-combo-box class="animation ">
+                            <smart-combo-box drop-down-position="bottom">
                                 <smart-list-item selected>Home</smart-list-item>
                                 <smart-list-item>Mobile</smart-list-item>
                                 <smart-list-item>Work</smart-list-item>
@@ -126,7 +115,7 @@
                     <tr>
                         <td><p>Disabled</p></td>
                         <td>
-                            <smart-combo-box class="animation " disabled>
+                            <smart-combo-box drop-down-position="bottom" disabled>
                                 <smart-list-item>Home</smart-list-item>
                                 <smart-list-item>Mobile</smart-list-item>
                                 <smart-list-item>Work</smart-list-item>
@@ -152,7 +141,7 @@
                         <tr>
                             <td>Bottom</td>
                          <td>
-                                <smart-combo-box class="animation">
+                                <smart-combo-box drop-down-position="bottom">
                                     <smart-list-item>Africa</smart-list-item>
                                     <smart-list-item selected>America</smart-list-item>
                                     <smart-list-item>Asia</smart-list-item>
@@ -163,7 +152,7 @@
 						<tr>
 					      <td>Overlay-center</td>
                             <td>
-                                <smart-combo-box class="animation" drop-down-position="overlay-center">
+                                <smart-combo-box  drop-down-position="overlay-center">
                                     <smart-list-item>Yogurt</smart-list-item>
                                     <smart-list-item selected>Honey</smart-list-item>
                                     <smart-list-item>Strawberries</smart-list-item>
@@ -173,7 +162,7 @@
 						<tr>
 					         <td>Top</td>
                           <td>
-                                <smart-combo-box class="animation" drop-down-position="top">
+                                <smart-combo-box  drop-down-position="top">
                                     <smart-list-item>Peanuts</smart-list-item>
                                     <smart-list-item selected>Hazelnuts</smart-list-item>
                                     <smart-list-item>Almonds</smart-list-item>
@@ -191,53 +180,42 @@
             <div class="module">
                 <p>Smart.ComboBox has a variaty of selection modes allowing single or multiple item selection.</p>
             </div>
-            <div class="module dropDownSelections">
-                <table>
-                    <tbody>
-                    
-                        <tr>
-                          <td>One(Allows selection of single item)</td>
-                              <td>
-                                <smart-combo-box class="animation">
-                                    <smart-list-item selected>State 1</smart-list-item>
-                                    <smart-list-item>State 2</smart-list-item>
-                                    <smart-list-item>State 3</smart-list-item>
-                                </smart-combo-box>
-                            </td>
-						<tr>
-                                <td>OneOrManyExtended(Allows selection of multiple items with Shift or Ctrl keys)</td>
-                        <td>
-                                <smart-combo-box class="animation" selection-mode="oneOrManyExtended">
-                                    <smart-list-item>State 1</smart-list-item>
-                                    <smart-list-item selected>State 2</smart-list-item>
-                                    <smart-list-item>State 3</smart-list-item>
-                                </smart-combo-box>
-                            </td>
-						</tr>
-						<tr>
-					       <td>CheckBox(Allows selection of multiple items by clicking a Checkbox)</td>
-                     		<td>
-                                <smart-combo-box class="animation" selection-mode="checkBox">
-                                    <smart-list-item>Item 1</smart-list-item>
-                                    <smart-list-item selected>Item 2</smart-list-item>
-                                    <smart-list-item>Item 3</smart-list-item>
-                                </smart-combo-box>
-                            </td>
-						</tr>
-						<tr>
-                              <td>RadioButton(Allows selection of single item by clicking a radio button)</td>
-                          <td>
-                                <smart-combo-box class="animation" selection-mode="radioButton">
-                                    <smart-list-item>State 1</smart-list-item>
-                                    <smart-list-item>State 2</smart-list-item>
-                                    <smart-list-item selected>State 3</smart-list-item>
-                                </smart-combo-box>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+			<div>One(Selection of single item)</div>
+			<br/>
+		   <smart-combo-box drop-down-position="bottom">
+				<smart-list-item selected>State 1</smart-list-item>
+				<smart-list-item>State 2</smart-list-item>
+				<smart-list-item>State 3</smart-list-item>
+			</smart-combo-box>	
+			<br/>
+			<div>oneOrManyExtended - allows selection with shift and ctrl.</div>
+			<br/>
+			<smart-combo-box  drop-down-position="bottom" selection-mode="oneOrManyExtended">
+				<smart-list-item>State 1</smart-list-item>
+				<smart-list-item selected>State 2</smart-list-item>
+				<smart-list-item>State 3</smart-list-item>
+			</smart-combo-box>
+			<br/>
+			<div>checkBox</div>
+			<br/>
+			<smart-combo-box drop-down-position="bottom" selection-mode="checkBox">
+				<smart-list-item>Item 1</smart-list-item>
+				<smart-list-item selected>Item 2</smart-list-item>
+				<smart-list-item>Item 3</smart-list-item>
+			</smart-combo-box>
+			<br/>			
+			<div>radioButton</div>
+			<br/>
+			<smart-combo-box drop-down-position="bottom" selection-mode="radioButton">
+				<smart-list-item>Item 1</smart-list-item>
+				<smart-list-item selected>Item 2</smart-list-item>
+				<smart-list-item>Item 3</smart-list-item>
+			</smart-combo-box>
+			<br/>						
+            
+				
                 <p>Additional selection modes are "zeroOrOne", "OneOrMany", "zeroOrMany" and "none"</p>
-            </div>
+          
         </section>
 
         <section id="demoDropDown">
@@ -246,6 +224,7 @@
                 <p>ComboBoxes are controls that are used for making a selection from a list of options.</p>
             </div>
             <div class="module shipping">
+
                 <div>
                     <h2>Edit shipping info</h2>
                     <div>
@@ -260,7 +239,7 @@
                             </div>
                             <div>
                                 <span>Hoboken</span>
-                                <smart-combo-box class="animation" drop-down-position="overlay-center">
+                                <smart-combo-box  drop-down-position="overlay-center">
                                     <smart-list-item>NJ</smart-list-item>
                                     <smart-list-item selected>DE</smart-list-item>
                                     <smart-list-item>FL</smart-list-item>
@@ -296,10 +275,11 @@
                     </div>
                 </div>
             </div>
-            <div class="module welcome">
+            <br/><br/>
+			<div class="module welcome">
                 <div>
                     <h2>Welcome</h2>
-                    <smart-combo-box class="animation" drop-down-position="overlay-center" selection-mode="zeroOrOne" placeholder="Select Language">
+                    <smart-combo-box  drop-down-position="overlay-center" selection-mode="zeroOrOne" placeholder="Select Language">
                         <smart-list-item>English(US)</smart-list-item>
                         <smart-list-item>English(UK)</smart-list-item>
                         <smart-list-item>English(AU)</smart-list-item>
@@ -328,10 +308,9 @@
                         <smart-list-item>Ukrainian</smart-list-item>
                         <smart-list-item>Vietnamese</smart-list-item>
                     </smart-combo-box>
-                    <smart-button class="material floating"><i class="material-icons">&#xE5C8;</i></smart-button>
-                    <smart-button class="material flat"><i class="material-icons">&#xE0CD;</i><span>EMERGENCY</span></smart-button>
+                    <smart-button class="floating"><i class="material-icons">&#xE5C8;</i></smart-button>
+                    <smart-button class="raised error"><i class="material-icons">&#xE0CD;</i><span>EMERGENCY</span></smart-button>
                 </div>
-                <p>Android welcome screen</p>
             </div>
         </section>
    </div>

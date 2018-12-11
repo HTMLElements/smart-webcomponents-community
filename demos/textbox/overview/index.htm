@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -86,29 +86,9 @@
                     When a field is active or contains an error, the line’s color and thickness vary.</p>
 
                     <h2>Cursor</h2>
-                    <p>The cursor indicates the user’s current input position. <br /><br /><br /></p>
+                    <p>The cursor indicates the user’s current input position. <br /><br /><b../../../p>
                 </div>
-                <div class="module">
-                    <div class="light-theme">
-                        <smart-text-box class="material" label="Label"></smart-text-box>
-                    </div>
-                    <p>
-                        <b>Resting label text</b><br />
-                        Top padding: 16dp<br />
-                        Bottom padding: 8dp
-                    </p>
-                </div>
-                <div class="module">
-                    <div class="light-theme">
-                        <smart-text-box class="material" value="Input" label="Label"></smart-text-box>
-                    </div>
-                    <p>
-                        <b>Floating label text </b><br />
-                        Top padding above label: 16dp<br />
-                        Bottom padding below label: 8dp<br />
-                        Bottom padding below input: 8dp
-                    </p>
-                </div>
+              
             </div>
 
             <div>
@@ -117,17 +97,17 @@
                 </div>
                 <div class="module">
                     <div class="light-theme" id="requiredExample">
-                        <smart-text-box id="layoutName" class="material" label="Name *"></smart-text-box>
-                        <smart-text-box id="layoutAddress" class="material" label="Address"></smart-text-box>
-                        <smart-text-box id="layoutCity" class="material" label="City"></smart-text-box>
-                        <smart-combo-box id="layoutState" class="material animation" label="State">
+                        <smart-text-box id="layoutName"  placeholder="Name *"></smart-text-box>
+                        <smart-text-box id="layoutAddress"  placeholder="Address"></smart-text-box>
+                        <smart-text-box id="layoutCity"  placeholder="City"></smart-text-box>
+                        <smart-combo-box id="layoutState">
                             <smart-list-item>NY</smart-list-item>
                             <smart-list-item>NC</smart-list-item>
                             <smart-list-item>ND</smart-list-item>
                             <smart-list-item>OH</smart-list-item>
-                        </smart-combo-box>
-                        <smart-text-box id="layoutZip" class="material" label="Zip code"></smart-text-box>
-                        <smart-text-box id="layoutPhone" class="material" label="Phone number" hint="* Required fields"></smart-text-box>
+                        </smart-combo-box><br/>
+                        <smart-text-box id="layoutZip" placeholder="Zip"></smart-text-box>
+                        <smart-text-box id="layoutPhone" placeholder="Phone"></smart-text-box>
                     </div>
                     <p>
                         Name and zip code are the only required fields in the form.
@@ -135,15 +115,15 @@
                 </div>
                 <div class="module">
                     <div class="light-theme" id="optionalExample">
-                        <smart-text-box id="layoutProductName" class="material" label="Product name"></smart-text-box>
-                        <smart-text-box id="layoutPrice" class="material" label="Price"></smart-text-box>
-                        <smart-combo-box id="layoutProductCategory" class="material animation" label="Product category">
+                        <smart-text-box id="layoutProductName"  placeholder="Product name"></smart-text-box>
+                        <smart-text-box id="layoutPrice"  placeholder="Price"></smart-text-box>
+                        <smart-combo-box id="layoutProductCategory" class="material animation" placeholder="Product category">
                             <smart-list-item>Alabama</smart-list-item>
                             <smart-list-item>California</smart-list-item>
                             <smart-list-item>Delaware</smart-list-item>
-                        </smart-combo-box>
-                        <smart-text-box id="layoutLocation" class="material" label="Location"></smart-text-box>
-                        <smart-text-box id="layoutDescription" class="material" label="Description (optional)"></smart-text-box>
+                        </smart-combo-box><br/>
+                        <smart-text-box id="layoutLocation"  placeholder="Location"></smart-text-box>
+                        <smart-text-box id="layoutDescription"  placeholder="Description (optional)"></smart-text-box>
                     </div>
                     <p>
                         Description is the only optional field in the form.
@@ -162,14 +142,10 @@
                 </div>
                 <div class="module">
                     <div class="light-theme">
-                        <smart-text-box class="material" label="Label" hint="Idle & empty"></smart-text-box><br /><br /><br />
-                        <smart-text-box class="material" label="Label" hint="Press" placeholder="Placeholder"></smart-text-box><br /><br /><br />
-                        <smart-text-box class="material" label="Label" hint="Focus" value="Input" placeholder="Placeholder"></smart-text-box><br /><br /><br />
-                        <smart-text-box class="material" label="Label" hint="Error" id="validateMaterial"></smart-text-box><br /><br /><br />
-                        <smart-text-box class="material" label="Label" hint="Disabled" value="Input" disabled></smart-text-box>
+                        <smart-text-box disabled></smart-text-box>
                     </div>
                     <p>
-                        Text field states in light and dark themes.
+                        Text field is disabled.
                     </p>
                 </div>
             </div>

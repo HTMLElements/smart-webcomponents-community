@@ -23,7 +23,7 @@ window.onload = function () {
 	});
 
 	hoverArea.addEventListener('mouseout', function (event) {
-		if (event.relatedTarget.closest('smart-button')) {
+		if (event.relatedTarget && event.relatedTarget.closest('smart-button')) {
 			return;
 		}
 

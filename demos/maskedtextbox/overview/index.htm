@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -38,25 +38,17 @@
                 </div>
                 <div class="module">
                     <div class="light-theme">
-                        <smart-masked-text-box class="material" label="Label" hint="Idle & empty" mask="###-###-##-##"></smart-masked-text-box><br /><br /><br />
-                        <smart-masked-text-box class="material" label="Label" hint="Press" mask="###-###-##-##" placeholder="Placeholder"></smart-masked-text-box><br /><br /><br />
-                        <smart-masked-text-box class="material" label="Label" hint="Focus" mask="###-###-##-##" auto-show-mask></smart-masked-text-box><br /><br /><br />
-                        <smart-masked-text-box class="material" label="Label" hint="Disabled" mask="###-###-##-##" disabled></smart-masked-text-box>
-                    </div>
-                    <p>
-                        Text field states in light and dark themes.
-                    </p>
+                        <smart-masked-text-box  hint="Idle & empty" mask="###-###-##-##"></smart-masked-text-box>
+						<br/><label>Idle & empty</label><br/><br/>
+						<smart-masked-text-box  hint="Press" mask="###-###-##-##" placeholder="Placeholder"></smart-masked-text-box>
+                    	<br/><label>Placeholder</label><br/><br/>
+					    <smart-masked-text-box  hint="Focus" mask="###-###-##-##" auto-show-mask></smart-masked-text-box>
+                       	<br/><label>Auto-show mask</label><br/><br/>
+					    <smart-masked-text-box  hint="Disabled" mask="###-###-##-##" disabled></smart-masked-text-box>
+                    	<br/><label>Disabled</label><br/><br/><br/>
+					</div>
                 </div>
-                <div class="module">
-                    <div class="dark-theme">
-                        <smart-masked-text-box class="material-dark" label="Label" hint="Idle & empty" mask="###-###-##-##" ></smart-masked-text-box><br /><br /><br />
-                        <smart-masked-text-box class="material-dark" label="Label" hint="Press" mask="###-###-##-##" placeholder="Placeholder"></smart-masked-text-box><br /><br /><br />
-                        <smart-masked-text-box class="material-dark" label="Label" hint="Focus" mask="###-###-##-##" auto-show-mask></smart-masked-text-box><br /><br /><br />
-                        <smart-masked-text-box class="material-dark" label="Label" hint="Disabled" mask="###-###-##-##" disabled></smart-masked-text-box>
-                    </div>
-                    <p>
-                    </p>
-                </div>
+               
             </div>
 
             <div>
@@ -69,7 +61,7 @@
                 </div>
                 <div class="module">
                     <div class="light-theme">
-                        <smart-masked-text-box class="material" label="Phone number" hint="" value="6503036565" mask="(###) ### - ####"></smart-masked-text-box>
+                        <smart-masked-text-box hint="" value="6503036565" mask="(###) ### - ####"></smart-masked-text-box>
                     </div>
                     <p>
                         Input text grouped and formatted for a phone number
@@ -77,7 +69,7 @@
                 </div>
                 <div class="module">
                     <div class="light-theme">
-                        <smart-masked-text-box class="material" label="Credit card number" hint="" value="4147968713856921" mask="#### - #### - #### - ####"></smart-masked-text-box>
+                        <smart-masked-text-box hint="" value="4147968713856921" mask="#### - #### - #### - ####"></smart-masked-text-box>
                     </div>
                     <p>
                         Input text grouped and formatted for a credit card number

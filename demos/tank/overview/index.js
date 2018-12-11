@@ -1,9 +1,9 @@
 window.onload = function () {
-	var cpuTank = document.getElementById('cpuTank'),
+	let cpuTank = document.getElementById('cpuTank'),
 		batteryTank = document.getElementById('powerSaverTank');
 
 	function setTemperature() {
-		var color = '#0C9F59';
+		let color = '#0C9F59';
 
 		if (this.value === '0') {
 			color = '';
@@ -22,8 +22,9 @@ window.onload = function () {
 	cpuTank.labelFormatFunction = ((label) => { return label + '%' });
 
 	powerSaverTank.addEventListener('change', setTemperature);
+	
 
-	var cpu = document.getElementById('cpu');
+	let cpu = document.getElementById('cpu');
 
 	setInterval(function () {
 		cpuTank.value = Math.random() * 100;

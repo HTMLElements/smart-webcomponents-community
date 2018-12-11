@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -62,48 +62,19 @@
                     Use continuous sliders for subjective settings that do not require a specific value for the user to make meaningful adjustments.
                 </p>
             </div>
-            <div class="module">
-                <h2>Light</h2>
-                <p>
-                    Thumb ( value > min ): #009688, Opacity 100% <br />
-                    Track: #B9B9B9, Opacity 100%
-                </p>
-                <p>
-                    Thumb ( value === min ): #EEEEEE, Opacity 100% <br />
-                    Track : #B9B9B9, Opacity 100%
-                </p>
-                <p>
-                    Thumb focused: #009688, Opacity 100% <br />
-                    Track focused: #EEEEEE, Opacity 100%
-                </p>
-                <p>Disabled: #000000, Opacity 20%</p>
-            </div>
+         
             <div class="module continuousSliderLight">
                 <table>
                     <tr>
-                        <td><p>Normal</p></td>
-                    </tr>
-                    <tr>
-					     <td><smart-slider class="animation material" scale-position="none"></smart-slider></td>
+					     <td><smart-slider  scale-position="none"></smart-slider></td>
                     </tr>
 					<tr>
-					    <td><smart-slider class="animation material" scale-position="none" value="50"></smart-slider></td>
+					    <td><smart-slider  scale-position="none" value="50"></smart-slider></td>
                     </tr>
 					<tr>
-					    <td><smart-slider class="animation material" scale-position="none" value="100"></smart-slider></td>
+					    <td><smart-slider  scale-position="none" value="100"></smart-slider></td>
                     </tr>
-					<tr>
-                        <td><p>Disabled</p></td>
-                    </tr>
-					<tr>
-					     <td><smart-slider disabled class="animation material" scale-position="none"></smart-slider></td>
-                    </tr>
-					<tr>
-					    <td><smart-slider disabled class="animation material" scale-position="none" value="50"></smart-slider></td>
-                    </tr>
-					<tr>
-					    <td><smart-slider disabled class="animation material" scale-position="none" value="100"></smart-slider></td>
-                    </tr>
+				
 					   </table>
             </div>
 
@@ -125,30 +96,16 @@
             </div>
             <div class="module discreteSliderLight">
                 <table>
-                    <tr>
-                        <td><p>Normal</p></td>
+                	<tr>
+					     <td><smart-slider labels-visibility="end-points" interval="10" coerce ticks-visibility="major" show-thumb-label scale-type="integer" scale-position="far"></smart-slider></td>
                     </tr>
 					<tr>
-					     <td><smart-slider class="animation material" show-thumb-label scale-type="integer" scale-position="none"></smart-slider></td>
+					    <td><smart-slider labels-visibility="end-points" interval="10" coerce ticks-visibility="major" show-thumb-label scale-type="integer" scale-position="far" value="50"></smart-slider></td>
                     </tr>
 					<tr>
-					    <td><smart-slider class="animation material" show-thumb-label scale-type="integer" scale-position="none" value="50"></smart-slider></td>
-                    </tr>
-					<tr>
-					    <td><smart-slider class="animation material" show-thumb-label scale-type="integer" scale-position="none" value="100"></smart-slider></td>
+					    <td><smart-slider labels-visibility="end-points" interval="10" coerce ticks-visibility="major" show-thumb-label scale-type="integer" scale-position="far" value="100"></smart-slider></td>
                     </tr>					
-                    <tr>
-                        <td><p>Disabled</p></td>
-                    </tr>
-					<tr>
-					     <td><smart-slider class="animation material" disabled show-thumb-label scale-type="integer" scale-position="none"></smart-slider></td>
-                    </tr>
-					<tr>
-					    <td><smart-slider class="animation material" disabled  show-thumb-label scale-type="integer" scale-position="none" value="50"></smart-slider></td>
-                    </tr>
-					<tr>
-					    <td><smart-slider class="animation material" disabled show-thumb-label scale-type="integer" scale-position="none" value="100"></smart-slider></td>
-                    </tr>					
+                 				
                 </table>
             </div>
 
@@ -163,21 +120,21 @@
               <table>
 				<tr>
 					<td>
-                    <smart-slider class="animation material" scale-type="integer" scale-position="near" ticks-position="scale" ticks-visibility="major"></smart-slider>
+                    <smart-slider  scale-type="integer" scale-position="near" ticks-position="scale" ticks-visibility="major"></smart-slider>
 					</td>
 				</tr>
 				<tr>
 					<td>
-					 <smart-slider class="animation material" scale-type="integer" ticks-position="track" ticks-visibility="major"></smart-slider>
+					 <smart-slider scale-position="both" scale-type="integer" ticks-position="track" ticks-visibility="major"></smart-slider>
 					</td>
 				</tr>
 				<tr>
 					<td>
-		            <smart-slider class="animation material" scale-type="integer" scale-position="far" ticks-position="scale" ticks-visibility="major"></smart-slider>
+		            <smart-slider  scale-type="integer" scale-position="far" ticks-position="scale" ticks-visibility="major"></smart-slider>
 					</td>
         		</tr>
 			 </table>
-				<p>Continuous slider with scale positions: near, track and far</p>
+				<p>Continuous slider with scale positions: near, both and far</p>
             </div>
 
             <div class="module">
@@ -185,28 +142,37 @@
             </div>
             <div class="module discreteScaleSlider">
                 <div>
-                    <smart-slider class="animation material" show-thumb-label scale-type="integer" scale-position="none" ticks-position="track" ticks-visibility="major"></smart-slider>
+                    <smart-slider coerce interval="20" show-thumb-label scale-type="integer" scale-position="both" ticks-visibility="major"></smart-slider>
                 </div>
                 <p>Discrete slider </p>
             </div>
+		    <div class="module">
+                <p>Smart.Slider can have multiple thumbs</p>
+            </div>
+            <div class="module discreteScaleSlider">
+                <div>
+                    <smart-slider range-slider scale-type="integer" scale-position="both" ticks-visibility="major"></smart-slider>
+                </div>
+                <p>Range slider </p>
+            </div>	
         </section>
 
         <section id="verticalSliders">
             <h2>Orientation</h2>
             <div class="module">
-                <p>smartSlider can be horizontal or vertical depending on the orientation property.</p>
+                <p>Smart Slider can be horizontal or vertical depending on the orientation property.</p>
             </div>
             <div class="module">
                 <div>
-                    <smart-slider class="animation material" orientation="vertical" scale-position="none" value="50"></smart-slider>
-                    <smart-slider class="animation material" orientation="vertical" scale-position="none" value="75" inverted></smart-slider>
+                    <smart-slider  orientation="vertical" scale-position="none" value="50"></smart-slider>
+                    <smart-slider  orientation="vertical" scale-position="none" value="75" inverted></smart-slider>
                 </div>
                 <p>Vertical continuous slider / Vertical continuous slider inverted</p>
             </div>
             <div class="module">
                 <div>
-                    <smart-slider class="animation material" orientation="vertical" show-thumb-label scale-type="integer" scale-position="none" value="50"></smart-slider>
-                    <smart-slider class="animation material" orientation="vertical" show-thumb-label scale-type="integer" scale-position="none" value="25" inverted></smart-slider>
+                    <smart-slider coerce interval="20" orientation="vertical" show-thumb-label scale-type="integer" scale-position="both" value="50"></smart-slider>
+                    <smart-slider coerce interval="20" orientation="vertical" show-thumb-label scale-type="integer" scale-position="both" value="25" inverted></smart-slider>
                 </div>
                 <p>Vertical discrete slider / Vertical discrete slider inverted</p>
             </div>
@@ -224,21 +190,21 @@
                         <h3>Media volume</h3>
                         <div id="mediaControl" class="controls">
                             <i class="material-icons">&#xE04D;</i>
-                            <smart-slider id="mediaSlider" class="animation material" scale-position="none" value="25"></smart-slider>
+                            <smart-slider id="mediaSlider"  scale-position="none" value="25"></smart-slider>
                         </div>
                     </div>
                     <div>
                         <h3>Alarm volume</h3>
                         <div id="alarmControl" class="controls">
                             <i class="material-icons">&#xE855;</i>
-                            <smart-slider id="alarmSlider" class="animation material" scale-position="none" value="50"></smart-slider>
+                            <smart-slider id="alarmSlider"  scale-position="none" value="50"></smart-slider>
                         </div>
                     </div>
                     <div>
                         <h3>Ring volume</h3>
                         <div id="ringControl" class="controls">
                             <i class="material-icons">&#xE7F4;</i>
-                            <smart-slider id="volumeSlider" class="animation material" scale-position="none" value="75"></smart-slider>
+                            <smart-slider id="volumeSlider"  scale-position="none" value="75"></smart-slider>
                         </div>
                     </div>
                 </div>
@@ -250,14 +216,14 @@
                         <h3>Low battery alert on <b id="lowBatteryAlert">15</b> %</h3>
                         <div id="mediaControl" class="controls">
                             <i class="material-icons">&#xE8B2;</i>
-                            <smart-slider id="lowBatterySlider" class="animation material" scale-position="none" value="15" scale-type="integer" show-thumb-label></smart-slider>
+                            <smart-slider id="lowBatterySlider"  scale-position="none" value="15" scale-type="integer" show-thumb-label></smart-slider>
                         </div>
                     </div>
                     <div>
                         <h3>Power saver mode active on <b id="powerSaver">50</b>%</h3>
                         <div id="alarmControl" class="controls">
                             <i class="material-icons">&#xE19C;</i>
-                            <smart-slider id="powerSaverSlider" class="animation material" scale-position="none" value="50" scale-type="integer" show-thumb-label></smart-slider>
+                            <smart-slider id="powerSaverSlider"  scale-position="none" value="50" scale-type="integer" show-thumb-label></smart-slider>
                         </div>
                     </div>
                 </div>

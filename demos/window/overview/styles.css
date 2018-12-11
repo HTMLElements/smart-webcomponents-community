@@ -186,9 +186,6 @@ smart-tab-item .smart-container {
 		font-weight: 400;
 	}
 
-#materialWindowContainer smart-window .smart-buttons-container smart-button {
-	display: none;
-}
 
 #materialWindowContainer #appearance .module:nth-child(4),
 #materialWindowContainer #appearance .module:nth-child(5),
@@ -228,23 +225,13 @@ smart-tab-item .smart-container {
 
 #materialWindowContainer smart-window:first-of-type {
 	--smart-window-default-height: 250px;
-	--smart-window-default-width: 500px;
+	--smart-window-default-width: 250px;
 }
 
 #materialWindowContainer smart-window {
 	--smart-window-default-width: 400px;
 	--smart-window-default-height: 200px;
 }
-
-	#materialWindowContainer smart-window.content-window {
-		--smart-window-default-width: 150px;
-		--smart-window-default-height: 300px;
-		overflow:hidden;
-	}
-
-		#materialWindowContainer smart-window.content-window .smart-container > .smart-content {
-			padding: initial;
-		}
 
 		#materialWindowContainer smart-window.content-window smart-list-box {
 			height: 100%;
@@ -321,14 +308,10 @@ smart-tab-item .smart-container {
 	#materialWindowContainer .confirmation-window smart-list-items-group .smart-input,
 	#materialWindowContainer .confirmation-window2 smart-list-item .smart-input,
 	#materialWindowContainer .confirmation-window2 smart-list-items-group .smart-input {
-		color: #009788;
 		font-size: inherit;
 	}
 
-	#materialWindowContainer .confirmation-window smart-list-box,
-	#materialWindowContainer .confirmation-window2 smart-list-box {
-		font-size: 15px;
-	}
+
 
 	#materialWindowContainer .confirmation-window .smart-footer,
 	#materialWindowContainer .confirmation-window2 .smart-footer {
@@ -342,10 +325,6 @@ smart-tab-item .smart-container {
 			height: 100%;
 		}
 
-		#materialWindowContainer .confirmation-window .smart-footer button,
-		#materialWindowContainer .confirmation-window2 .smart-footer button {
-			color: #009788;
-		}
 
 	#materialWindowContainer .confirmation-window p,
 	#materialWindowContainer .confirmation-window2 p {
@@ -363,7 +342,6 @@ smart-tab-item .smart-container {
 #materialWindowContainer .window-themes1,
 #materialWindowContainer .window-modal,
 #materialWindowContainer .window-types {
-	background-color: #E0E0E0;
 	height: 500px;
 }
 
@@ -410,19 +388,8 @@ smart-tab-item .smart-container {
 		#materialWindowContainer .window-with-header-themes1 smart-window > .smart-container > .smart-content,
 		#materialWindowContainer .window-with-header-themes2 smart-window > .smart-container > .smart-content {
 			padding: 20px;
-			font-size: 15px;
 		}
 
-#materialWindowContainer .window-themes1 smart-window,
-#materialWindowContainer .window-themes2 smart-window,
-#materialWindowContainer .window-modal smart-window {
-	--smart-window-default-width: 250px;
-	--smart-window-default-height: 125px;
-	--smart-window-header-height: 0px;
-	--smart-window-footer-height: 50px;
-	min-width: 100px;
-	font-size: 15px;
-}
 
 #materialWindowContainer .window-themes1 > p,
 #materialWindowContainer .window-themes2 > p {
@@ -438,24 +405,6 @@ smart-tab-item .smart-container {
 #materialWindowContainer .window-themes2 smart-window smart-button,
 #materialWindowContainer .window-modal smart-window smart-button {
 	height: 100%;
-}
-
-#materialWindowContainer .window-themes1 smart-window button,
-#materialWindowContainer .window-themes2 smart-window button,
-#materialWindowContainer .window-modal smart-window button {
-	color: #2693E5
-}
-
-#materialWindowContainer .window-themes1 smart-window .smart-footer,
-#materialWindowContainer .window-themes2 smart-window .smart-footer,
-#materialWindowContainer .window-modal smart-window .smart-footer {
-	display: flex;
-	justify-content: flex-end;
-	background-color: initial;
-}
-
-#materialWindowContainer .header-controls smart-window .smart-footer {
-	display: none;
 }
 
 #materialWindowContainer .header-controls > smart-button,
@@ -478,8 +427,6 @@ smart-tab-item .smart-container {
 	--smart-window-header-height: 50px;
 	--smart-window-default-width: 250px;
 	--smart-window-default-height: 300px;
-	--smart-material-background-color: #2693E5;
-	--smart-material-color: white;
 }
 
 #materialWindowContainer .window-modal.header-controls smart-window.material-dark {
@@ -513,21 +460,12 @@ smart-tab-item .smart-container {
 	margin-top: 0;
 }
 
-#materialWindowContainer .window-themes1 .smart-header-section,
-#materialWindowContainer .window-themes2 .smart-header-section,
-#materialWindowContainer .window-modal .smart-header-section {
-	display: none;
-}
-
 #materialWindowContainer .window-modal.unpinned .smart-header-section,
 #materialWindowContainer .window-modal.scrollable-content .smart-header-section,
 #materialWindowContainer .window-modal.header-controls .smart-header-section {
 	display: flex;
 }
 
-#materialWindowContainer .window-modal.scrollable-content smart-window .smart-footer {
-	display: none;
-}
 .scrollable-content smart-window {
 	width:250px;
 	left: 0px;

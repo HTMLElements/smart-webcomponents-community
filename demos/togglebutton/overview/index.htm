@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -42,10 +42,10 @@
                 <div>
                     <div class="toggle-button-container toggle-button-exclusive-selection">
                         <div>
-                            <smart-toggle-button class="exclusive-selection" group="A"><i class="material-icons">format_align_left</i></smart-toggle-button>
-                            <smart-toggle-button class="exclusive-selection" group="A" checked><i class="material-icons">format_align_center</i></smart-toggle-button>
-                            <smart-toggle-button class="exclusive-selection" group="A"><i class="material-icons">format_align_right</i></smart-toggle-button>
-                            <smart-toggle-button class="exclusive-selection" group="A"><i class="material-icons">format_align_justify</i></smart-toggle-button>
+                            <smart-toggle-button class="primary" group="A"><i class="material-icons">format_align_left</i></smart-toggle-button>
+                            <smart-toggle-button class="secondary" group="A" checked><i class="material-icons">format_align_center</i></smart-toggle-button>
+                            <smart-toggle-button class="error" group="A"><i class="material-icons">format_align_right</i></smart-toggle-button>
+                            <smart-toggle-button class="success" group="A"><i class="material-icons">format_align_justify</i></smart-toggle-button>
                         </div>
                     </div>
                     <p>Exclusive selection</p>
@@ -82,10 +82,10 @@
                 <div>
                     <div class="toggle-button-container toggle-button-single-selection">
                         <div>
-                            <smart-toggle-button <i class="material-icons">format_bold</i></smart-toggle-button>
-                            <smart-toggle-button checked><i class="material-icons">format_italic</i></smart-toggle-button>
-                            <smart-toggle-button><i class="material-icons">format_underlined</i></smart-toggle-button>
-                            <smart-toggle-button><i class="material-icons">format_color_fill</i><i class="material-icons">arrow_drop_down</i></smart-toggle-button>
+                            <smart-toggle-button class="primary raised exclusive-selection"> <i class="material-icons">format_bold</i></smart-toggle-button>
+                            <smart-toggle-button class="primary raised exclusive-selection" checked><i class="material-icons">format_italic</i></smart-toggle-button>
+                            <smart-toggle-button class="primary raised exclusive-selection"><i class="material-icons">format_underlined</i></smart-toggle-button>
+                            <smart-toggle-button class="primary  raised exclusive-selection"><i class="material-icons">format_color_fill</i><i class="material-icons">arrow_drop_down</i></smart-toggle-button>
                         </div>
                     </div>
                     <p>One option is selected</p>
@@ -106,55 +106,22 @@
                     <h3>Toggles</h3>
                     <table>
                         <tbody>
-                            <tr>
-                                <td colspan="1" rowspan="1">
-                                    <p>normal </p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>hover</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>focused</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>pressed</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>inactive</p>
-                                </td>
-                            </tr>
+                      
                             <tr>
                                 <td colspan="1" rowspan="1">
                                     <smart-toggle-button class="normal"><i class="material-icons">wifi</i></smart-toggle-button>
                                 </td>
                                 <td colspan="1" rowspan="1">
-                                    <smart-toggle-button class="hover"><i class="material-icons">wifi</i></smart-toggle-button>
+                                    <smart-toggle-button class="error"><i class="material-icons">wifi</i></smart-toggle-button>
                                 </td>
                                 <td colspan="1" rowspan="1">
-                                    <smart-toggle-button class="focused"><i class="material-icons">wifi</i></smart-toggle-button>
+                                    <smart-toggle-button class="success"><i class="material-icons">wifi</i></smart-toggle-button>
                                 </td>
                                 <td colspan="1" rowspan="1">
-                                    <smart-toggle-button class="pressed"><i class="material-icons">wifi</i></smart-toggle-button>
+                                    <smart-toggle-button class="primary"><i class="material-icons">wifi</i></smart-toggle-button>
                                 </td>
                                 <td colspan="1" rowspan="1">
-                                    <smart-toggle-button class="material" disabled><i class="material-icons">wifi</i></smart-toggle-button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="1" rowspan="1">
-                                    <smart-toggle-button class="normal"><i class="material-icons">wifi</i></smart-toggle-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-toggle-button class="hover"><i class="material-icons">wifi</i></smart-toggle-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-toggle-button class="focused"><i class="material-icons">wifi</i></smart-toggle-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-toggle-button class="pressed"><i class="material-icons">wifi</i></smart-toggle-button>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-toggle-button disabled><i class="material-icons">wifi</i></smart-toggle-button>
+                                    <smart-toggle-button class="secondary"><i class="material-icons">wifi</i></smart-toggle-button>
                                 </td>
                             </tr>
                         </tbody>
@@ -167,30 +134,11 @@
             <div class="module">
                 <div class="toggle-button-icons-themes">
                     <div>
-                        <p>Light icon</p>
+                        <p>icon</p>
                         <smart-toggle-button checked><i class="material-icons">favorite</i></smart-toggle-button>
-                        <p>30% white</p>
                     </div>
-                    <div>
-                        <p>Dark icon</p>
-                        <smart-toggle-button checked><i class="material-icons">favorite</i></smart-toggle-button>
-                        <p>12% black</p>
-                    </div>
-                    <div>
-                        <p>Color icon</p>
-                        <smart-toggle-button checked><i class="material-icons">favorite</i></smart-toggle-button>
-                        <p>26% color</p>
-                    </div>
-                    <div>
-                        <p>Dark Theme</p>
-                        <smart-toggle-button checked><i class="material-icons">favorite</i></smart-toggle-button>
-                        <p>20% white</p>
-                    </div>
-                    <div>
-                        <p>Dark Theme</p>
-                        <smart-toggle-button checked><i class="material-icons">favorite</i></smart-toggle-button>
-                        <p>26% color</p>
-                    </div>
+                   
+               
                 </div>
                 <p>The icon toggle focus indicator color and opacity are related to the color of the icon.</p>
             </div>

@@ -24,40 +24,17 @@
 		-webkit-font-smoothing: antialiased;
 		margin-right: 10px;
 	}
+	.smart-menu-item-label-element .material-icons {
+		position: relative;
+		top: 6px;
+	}
+	
 #listMenu4 td {
 		padding: 0;
 	}
 	/* ------------ */
 
-	.smart-demo-container {
-		font-family: var(--smart-material-font-family);
-		/*line-height: 24px;*/
-		font-size: 13px;
-		margin-left: 0;
-		padding-top: 50px;
-		margin: 5% 10%;
-	}
-
-		.smart-demo-container section h2 {
-			font-weight: 400;
-			font-size: 24px;
-			line-height: 40px;
-			margin-bottom: 30px;
-			color: #3949ab;
-		}
-
-		.smart-demo-container section:first-of-type h2 {
-			font-size: 34px;
-		}
-
-		.smart-demo-container section:first-of-type div h2 {
-			font-size: 20px;
-		}
-
-		.smart-demo-container section > h2:first-of-type {
-			padding-top: 80px;
-			border-top: 1px solid rgba(0,0,0,.12);
-		}
+	
 
 	#overviewHeading,
 	#usageHeading {
@@ -353,13 +330,9 @@
 	}
 
 	#plusButton {
-		width: 50px;
-		height: 50px;
 		position: absolute;
 		bottom: 20px;
 		right: 20px;
-		background-color: cyan;
-		font-size: 33px;
 	}
 
 		#plusButton > button {

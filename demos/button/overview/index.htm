@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-	<script type="text/javascript" src="../../scripts/common.js"></script>
-    <script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -56,7 +56,7 @@
             </div>
             <div class="module">
                 <div class="button-container">
-                    <smart-button class="">button</smart-button>
+                    <smart-button class="raised">button</smart-button>
                 </div>
                 <p>Raised button</p>
             </div>
@@ -68,15 +68,15 @@
             </div>
             <div class="module">
                 <div class="floating-demo-start">
-                    <smart-button class=" floating"><i class="material-icons">directions_car</i></smart-button>
+                    <smart-button class="secondary floating"><i class="material-icons">directions_car</i></smart-button>
                 </div>
                 <p>Example of a floating action button</p>
             </div>
             <div class="module">
                 <div class="raised-demo-start">
-                    <smart-button>force stop</smart-button>
-                    <smart-button>uninstall</smart-button>
-                    <smart-button>clear data</smart-button>
+                    <smart-button class="primary">force stop</smart-button>
+                    <smart-button class="error">uninstall</smart-button>
+                    <smart-button class="success">clear data</smart-button>
                 </div>
                 <p>Example of a raised button </p>
             </div>
@@ -162,7 +162,25 @@
                 <p>For lengthy or complex forms, it is recommended to place buttons on the left of the form, with the affirmative button to the left of the dismissive button.</p>
             </div>
         </section>
-
+		<section id="button-flat">
+            <h2>Outlined buttons</h2>
+            <div class="module">
+                <h2>Specs & Behavior</h2>
+				<p>Outlined buttons are medium-emphasis buttons. They contain actions that are important, but aren’t the primary action in an app.</p>
+            </div>
+            <div class="module button-light">
+                <div>
+                    <smart-button class="primary outlined">normal</smart-button>
+                    <br />
+                    <smart-button focus class="primary outlined">focused</smart-button>
+                    <br />
+                    <smart-button active class="primary outlined">Pressed</smart-button>
+                    <br />
+                    <smart-button class="primary outlined" disabled>disabled</smart-button>
+                </div>
+            </div>
+           
+        </section>
         <section id="button-flat">
             <h2>Flat buttons</h2>
             <div class="module">
@@ -170,13 +188,13 @@
             </div>
             <div class="module button-light">
                 <div>
-                    <smart-button class=" flat">normal</smart-button>
+                    <smart-button class="primary flat">normal</smart-button>
                     <br />
-                    <smart-button class=" flat">focused</smart-button>
+                    <smart-button focus class="primary flat">focused</smart-button>
                     <br />
-                    <smart-button class=" flat">Pressed</smart-button>
+                    <smart-button active class="primary flat">Pressed</smart-button>
                     <br />
-                    <smart-button class=" flat" disabled>disabled</smart-button>
+                    <smart-button class="primary flat" disabled>disabled</smart-button>
                 </div>
             </div>
            
@@ -190,15 +208,15 @@
             </div>
             <div class="module">
                 <div class="flat-demo">
-                    <smart-button class=" flat">share</smart-button>
-                    <smart-button class=" flat">explore</smart-button>
+                    <smart-button class="primary flat">share</smart-button>
+                    <smart-button class="primary flat">explore</smart-button>
                 </div>
                 <p>Flat buttons minimize distraction from content.</p>
             </div>
             <div class="module">
                 <div class="flat-demo2">
-                    <smart-button class=" flat">button</smart-button>
-                    <smart-button class=" flat">button</smart-button>
+                    <smart-button class="primary flat">button</smart-button>
+                    <smart-button class="primary flat">button</smart-button>
                 </div>
                 <p>Flat buttons are appropriate in dialogs. </p>
             </div>
@@ -213,13 +231,13 @@
             </div>
             <div class="module button-light">
                 <div>
-                    <smart-button>normal</smart-button>
+                    <smart-button class="primary raised">normal</smart-button>
                     <br />
-                    <smart-button>focused</smart-button>
+                    <smart-button focus class="primary raised">focused</smart-button>
                     <br />
-                    <smart-button>Pressed</smart-button>
+                    <smart-button active class="primary raised">Pressed</smart-button>
                     <br />
-                    <smart-button  disabled>disabled</smart-button>
+                    <smart-button class="primary raised" disabled>disabled</smart-button>
                 </div>
             </div>
          
@@ -233,9 +251,9 @@
             </div>
             <div class="module">
                 <div class="raised-demo">
-                    <smart-button>force stop</smart-button>
-                    <smart-button>uninstall</smart-button>
-                    <smart-button>clear data</smart-button>
+                    <smart-button class="primary raised">force stop</smart-button>
+                    <smart-button class="primary raised error">uninstall</smart-button>
+                    <smart-button class="primary raised">clear data</smart-button>
                 </div>
                 <p>Raised buttons stand out more than flat buttons.</p>
             </div>
@@ -281,13 +299,13 @@
             </div>
             <div class="module button-light specs-behavior">
                 <div>
-                    <smart-button class="floating"><i class="material-icons">add_circle</i></smart-button>
+                    <smart-button class="secondary floating"><i class="material-icons">add_circle</i></smart-button>
                     <br />
-                    <smart-button class="floating"><i class="material-icons">call</i></smart-button>
+                    <smart-button class="success floating"><i class="material-icons">call</i></smart-button>
                     <br />
-                    <smart-button class="floating"><i class="material-icons">search</i></smart-button>
+                    <smart-button class="primary floating"><i class="material-icons">search</i></smart-button>
                     <br />
-                    <smart-button class="floating" disabled><i class="material-icons">replay</i></smart-button>
+                    <smart-button class="error floating" disabled><i class="material-icons">replay</i></smart-button>
                 </div>
           
             </div>
@@ -305,16 +323,16 @@
             </div>
             <div class="module">
                 <div class="floating-action-area">
-                    <smart-button class="floating" id="floating-click-action"><i class="material-icons">share</i></smart-button>
-                    <smart-button class="floating floating-click-sub-action smart-visibility-hidden "><i class="material-icons">cast</i></smart-button>
-                    <smart-button class="floating floating-click-sub-action smart-visibility-hidden"><i class="material-icons">cloud</i></smart-button>
+                    <smart-button class="secondary floating" id="floating-click-action"><i class="material-icons">share</i></smart-button>
+                    <smart-button class="secondary floating floating-click-sub-action smart-visibility-hidden "><i class="material-icons">cast</i></smart-button>
+                    <smart-button class="secondary floating floating-click-sub-action smart-visibility-hidden"><i class="material-icons">cloud</i></smart-button>
                 </div>
                 <p>A floating action button flinging out related actions</p>
             </div>
             <div class="module">
                 <div class="floating-action-area">
                     <div id="hover-area"></div>
-                    <smart-button class="floating smart-visibility-hidden" id="floating-hover-action"><i class="material-icons">apps</i></smart-button>
+                    <smart-button class="primary floating smart-visibility-hidden" id="floating-hover-action"><i class="material-icons">apps</i></smart-button>
                 </div>
                 <p>A floating action button that spans multiple lateral screens (such as tabbed screens) should briefly disappear, then reappear if its action changes.</p>
             </div>

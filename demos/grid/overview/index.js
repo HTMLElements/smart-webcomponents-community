@@ -1,7 +1,7 @@
 Smart('#grid', class {
 	get properties() {
 		return {
-			dataSource: new Smart.DataAdapter(
+		    dataSource: new Smart.DataAdapter(
 			{
 				dataSource: getCountriesData(),
 				dataFields:

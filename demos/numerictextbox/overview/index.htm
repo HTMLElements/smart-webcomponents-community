@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -26,40 +26,14 @@
                 </div>
                 
             </div>
-        </section>
-       
-<div>
-	<div class="module">
-		<p></p>
+        </section>    
+		<div>
+			<smart-numeric-text-box placeholder="Enter a number..." input-type="integer" hint="Idle & empty" nullable value="null"></smart-numeric-text-box><br /><br /><br />
+			<smart-numeric-text-box placeholder="Enter" show-unit nullable value="null"></smart-numeric-text-box><br /><br /><br />
+			<smart-numeric-text-box radix-display value="123" nullable></smart-numeric-text-box><br /><br /><br />
+			<smart-numeric-text-box disabled nullable></smart-numeric-text-box>
+			<p>disabled</p>
 		</div>
-	  <section id="masked-text-box-layout">         
-			<div>
-				<div class="module">
-					<p></p>
-				</div>
-				<div class="module">
-					<div class="light-theme">
-						<smart-numeric-text-box class="material" label="Label" placeholder="Enter a number..." input-type="integer" spin-buttons hint="Idle & empty" nullable value="null"></smart-numeric-text-box><br /><br /><br />
-						<smart-numeric-text-box class="material" label="Label" placeholder="Enter" show-unit hint="Press" nullable value="null"></smart-numeric-text-box><br /><br /><br />
-						<smart-numeric-text-box class="material" label="Label" hint="Focus" radix-display value="123" nullable></smart-numeric-text-box><br /><br /><br />
-						<smart-numeric-text-box class="material" label="Label" hint="Disabled" disabled nullable></smart-numeric-text-box>
-					</div>
-					<p>
-						Text field states in light and dark themes.
-					</p>
-				</div>
-				<div class="module">
-					<div class="dark-theme">
-						<smart-numeric-text-box class="material-dark" label="Label" placeholder="Enter a number..." input-type="integer" spin-buttons hint="Idle & empty" nullable value="null"></smart-numeric-text-box><br /><br /><br />
-						<smart-numeric-text-box class="material-dark" label="Label" placeholder="Enter" input-type="integer" show-unit hint="Press" nullable value="null"></smart-numeric-text-box><br /><br /><br />
-						<smart-numeric-text-box class="material-dark" label="Label" hint="Focus" radix-display value="123" nullable></smart-numeric-text-box><br /><br /><br />
-						<smart-numeric-text-box class="material-dark" label="Label" hint="Disabled" disabled nullable></smart-numeric-text-box>
-					</div>
-					<p>
-					</p>
-				</div>
-			</div>
-		</section>	
-   </div>
+	</div>
 </body>
 </html>

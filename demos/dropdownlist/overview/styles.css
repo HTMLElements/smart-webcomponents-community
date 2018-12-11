@@ -1,16 +1,16 @@
-      /* ------------ Google fonts ------------ */ /* APACHE LICENSE 2.0 ! */
-:root {
-	--smart-drop-down-element-max-height: 300px;
-}
+       /* ------------ Google fonts ------------ */ /* APACHE LICENSE 2.0 ! */
+
 td p {
 	position:relative;
 	top: 5px;
+}
+.smart-demo-container {
+	margin:0px;
 }
 .combos1{
 	position:relative;
 	top: 5px;
 }
-
         /* fallback */
         @font-face {
             font-family: 'Material Icons';
@@ -18,13 +18,7 @@ td p {
             font-weight: 400;
             src: url(https://fonts.gstatic.com/s/materialicons/v31/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
         }
-	.smart-demo-container section h2 {
-		font-weight: 400;
-		font-size: 24px;
-		line-height: 40px;
-		margin-bottom: 30px;
-		color: #764ebe;
-	}
+
         .material-icons {
             font-family: 'Material Icons';
             font-weight: normal;
@@ -40,20 +34,22 @@ td p {
             -webkit-font-feature-settings: 'liga';
             -webkit-font-smoothing: antialiased;
         }
-#materialDropDownListContainer .welcome h2 {
-	color:white;
-}
+
         /* ------------ */
 
         #materialDropDownListContainer {
-            
+            margin: 0px;
             line-height: 24px;
             font-size: 13px;
             margin-left: 0;
-           margin: 5% 10%;
-            padding-top: 50px;
-        }
-
+	    }
+		#materialDropDownListContainer section h2 {
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 40px;
+			margin-bottom: 30px;
+			color: #764ebe;
+		}
             #materialDropDownListContainer section h1 {
                 font-weight: 400;
                 font-size: 24px;
@@ -185,22 +181,18 @@ td p {
             height: 65px;
             left: 79%;
             font-size: 30px;
-            --smart-material-background-color: #FF4081;
-            --smart-material-hovered-background-color: #FF4081;
-            --smart-material-pressed-background-color: #FF4081;
-            --smart-material-focused-background-color: #FF4081;
+			opacity: 1;
         }
 
             #materialDropDownListContainer .preview smart-button .material-icons {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: white;
             }
 
         #materialDropDownListContainer .preview smart-drop-down-list {
             --smart-drop-down-element-height: auto;
-            --smart-drop-down-list-default-width: 40%;
+            --smart-drop-down-list-default-width: 30%;
         }
 
         #materialDropDownListContainer .preview #textFields {
@@ -254,6 +246,7 @@ td p {
         #materialDropDownListContainer #dropDownListSelectionModes .dropDownSelections,
         #materialDropDownListContainer #dropDownListOpenModes .dropDownOpenModes {
             width: calc(100% / 2 + 45px);
+            height: 300px;
             margin-top: 50px;
             margin-bottom: 80px;
         }
@@ -308,20 +301,7 @@ td p {
             padding: 50px;
             text-align: justify;
         }
-@media only screen and (max-width: 600px) {
-    #materialDropDownListContainer .dropDownListUsage table,
-        #materialDropDownListContainer .continuousTankLightTheme table,
-        #materialDropDownListContainer .continuousTankDarkTheme table,
-        #materialDropDownListContainer .dropDownListLightTheme table,
-        #materialDropDownListContainer .dropDownListDarkTheme table,
-        #materialDropDownListContainer .dropDownSelections table,
-        #materialDropDownListContainer .dropDownOpenModes table {
-            width: 100%;
-            height: 100%;
-            padding: 5px;
-            text-align: justify;
-        }
-}
+
         #materialDropDownListContainer .continuousTankLightTheme table,
         #materialDropDownListContainer .dropDownListLightTheme table,
         #materialDropDownListContainer .dropDownOpenModes table,
@@ -330,12 +310,7 @@ td p {
         }
 
 
-        #materialDropDownListContainer .dropDownListDarkTheme table,
-        #materialDropDownListContainer .continuousTankDarkTheme table {
-            color: white;
-            background-color: #000;
-        }
-
+        
         #materialDropDownListContainer #continuousTanks .module:nth-child(3),
         #materialDropDownListContainer #continuousTanks .module:nth-child(5),
         #materialDropDownListContainer #discreteTanks .module:nth-child(3) {
@@ -364,6 +339,7 @@ td p {
         #materialDropDownListContainer #dropDownListSelectionModes .dropDownSelections,
         #materialDropDownListContainer #dropDownListOpenModes .dropDownOpenModes,
         #materialDropDownListContainer #dropDownListSelectionModes .discreteScaleSlider {
+            height: 200px;
             margin-top: initial;
         }
 
@@ -446,19 +422,13 @@ td p {
             background-color: #000;
             height: 600px;
             padding: 10px;
-			margin-top:100px;
         }
-
-            #materialDropDownListContainer .welcome .material-icons {
-                font-size: 20px;
-            }
 
             #materialDropDownListContainer .welcome > div {
                 display: flex;
                 align-items: center;
                 flex-direction: column;
                 height: calc(100% - 60px);
-                color: white;
                 padding: 30px;
                 background-color: #1976D2;
             }
@@ -467,41 +437,37 @@ td p {
                 text-align: center;
                 margin-top: 50px;
                 font-size: 35px;
+				color: white;
             }
 
             #materialDropDownListContainer .welcome smart-drop-down-list {
-                --smart-drop-down-list-default-width: 175px;
                 margin-top: 150px;
-                color: black;
             }
 
-                #materialDropDownListContainer .welcome smart-drop-down-list .smart-action-button,
-                #materialDropDownListContainer .welcome smart-drop-down-list .smart-drop-down-button {
-                    color: white;
+                #materialDropDownListContainer .welcome smart-drop-down-list {
+                    margin-top: 150px;
                 }
 
+             
+
+     
             #materialDropDownListContainer .welcome smart-button:first-of-type {
-                margin-top: 30px;
+                margin-top: 50px;
 				min-height:40px;
             }
 
             #materialDropDownListContainer .welcome smart-button:last-of-type {
-                width: 135px;
                 margin-top: 100px;
-                --smart-material-hovered-background-color: rgba(255,255,255,0.25);
-                --smart-material-pressed-background-color: rgba(255,255,255,0.35);
-                --smart-material-focused-background-color: rgba(255,255,255,0.1);
             }
 
                 #materialDropDownListContainer .welcome smart-button:last-of-type button {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    color: white;
                 }
 
         #materialDropDownListContainer .shipping > div {
-            height: 275px;
+            height: 300px;
             background-color: white;
             border: 1px solid lightgray;
             padding: 25px;
@@ -529,7 +495,6 @@ td p {
             #materialDropDownListContainer .shipping .address i {
                 width: 15px;
                 margin-right: 15px;
-                font-size: 20px;
             }
 
             #materialDropDownListContainer .shipping .name > span,
@@ -560,10 +525,17 @@ td p {
             }
 
         #materialDropDownListContainer .shipping .address smart-drop-down-list {
-            --smart-drop-down-list-default-height: 100%;
-            --smart-drop-down-list-default-width: 85px;
+            --smart-drop-down-list-default-height: 25px;
             margin-left: 2.5%;
         }
+
+        #materialDropDownListContainer .shipping .address smart-drop-down-list .smart-drop-down-button {
+            padding: 12px;
+        }
+
+            #materialDropDownListContainer .shipping .address smart-drop-down-list:not([focused]) .smart-label {
+                top: calc(var(--smart-label-height) - 2px);
+            }
 
         #materialDropDownListContainer .shipping .address > div > span {
             height: 100%;

@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -72,11 +72,7 @@
                 <h3>Density</h3>
                 <p>When the mouse and keyboard are the primary input methods, measurements may be condensed to accommodate denser layouts.</p>
             </div>
-            <div class="module">
-                <img alt="" src="../../images/listBox-usage2.png">
-                <p>Typical list scanning pattern</p>
-            </div>
-        </section>
+         </section>
 
         <section id="behavior">
             <h2>Behavior</h2>
@@ -141,7 +137,7 @@
                 <p>Items can even be moved accross list boxes.</p>
             </div>
             <div class="module dragDrop">
-                <smart-list-box id="dragDrop" reorder>
+                <smart-list-box allow-drag allow-drop id="dragDrop" reorder>
                     <smart-list-item>Butter</smart-list-item>
                     <smart-list-item>Tacos</smart-list-item>
                     <smart-list-item>Bread</smart-list-item>
@@ -162,9 +158,7 @@
                 </smart-list-box>
 				<p></p>
                 <p>List box A</p>
-            </div>
-            <div class="module">
-                <smart-list-box reorder>
+     <smart-list-box allow-drag allow-drop>
                     <smart-list-item>Tofu</smart-list-item>
                     <smart-list-item>Buttered toast with Marmite</smart-list-item>
                     <smart-list-item>Marzipan</smart-list-item>
@@ -189,8 +183,9 @@
                     <smart-list-item>Arepas</smart-list-item>
                 </smart-list-box>
           	<p></p>
-                   <p>List box B</p>
+                   <p>List box B</p>				
             </div>
+          
             <div class="module">
                 <h2>Filtering and sorting</h2>
                 <p>List tiles can be sorted or filtered by date, file size, alphabetical order, or other parameters.</p>
@@ -223,7 +218,7 @@
                    <p>Alphabetical sorting makes information easier to find.</p>
             </div>
             <div class="module">
-                <smart-list-box id="settingsMenu" class="material" filterable filter-input-placeholder="Searching ...">
+                <smart-list-box id="settingsMenu" selection-mode="none" filterable filter-input-placeholder="Searching ...">
                     <smart-list-items-group label="Wireless & Networks">
                         <smart-list-item>Wi-Fi</smart-list-item>
                         <smart-list-item>Bluetooth</smart-list-item>
@@ -264,22 +259,13 @@
 
         <section id="multiLineLists">
             <div class="module">
-                <h2>Two-line list</h2>
-                <p>Lists can have multiple lines of text in a single tile.</p>
-            </div>
-            <div class="module">
-                <img alt="" src="../../images/two-line-list.png">
-                <p>Two-line list</p>
-            </div>
-            <div class="module">
-                <img alt="" src="../../images/two-line-list-icon.png">
-                <p>Two-line list with icon</p>
+                <p>Lists can have multiple lines of text.</p>
             </div>
             <div class="module">
                 <h2>Demo usage</h2>
             </div>
             <div class="module">
-                <smart-list-box id="twoLineList" class="material" sorted>
+                <smart-list-box id="twoLineList"  sorted>
                     <smart-list-item>Andrew Watson</smart-list-item>
                     <smart-list-item>Anne Kean</smart-list-item>
                     <smart-list-item>Avril Janin</smart-list-item>
@@ -302,7 +288,7 @@
                  <p>Example of a two-line list.</p>
             </div>
             <div class="module checkList">
-                <smart-list-box id="twoLineCheckList" class="material" sorted selection-mode="checkBox">
+                <smart-list-box id="twoLineCheckList"  sorted selection-mode="checkBox">
                     <smart-list-item>Alarms</smart-list-item>
                     <smart-list-item>Android</smart-list-item>
                     <smart-list-item>DCIM</smart-list-item>
@@ -321,7 +307,7 @@
                     <smart-list-item>New folder</smart-list-item>
                     <smart-list-item>Temp</smart-list-item>
                 </smart-list-box>
-                <smart-button id="deleteButton" class="floating smart-visibility-hidden"><i class="material-icons">&#xE16C;</i></smart-button>
+                <smart-button id="deleteButton" class="secondary floating smart-visibility-hidden"><i class="material-icons">&#xE16C;</i></smart-button>
             	<p></p>
                  <p>Example of a two-line list with icon.</p>
             </div>
@@ -330,7 +316,7 @@
         <section id="appearance">
             <h2>Appearance</h2>
             <div class="module">
-                <smart-list-box id="listBoxLight" >
+                <smart-list-box selection-mode="none" id="listBoxLight" >
                     <smart-list-items-group label="Sound">
                         <smart-list-item>Audio settings</smart-list-item>
                         <smart-list-item>Accessory settings</smart-list-item>

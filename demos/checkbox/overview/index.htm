@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -26,27 +26,15 @@
             </div>
             <div class="module">
                 <div class="check-box-container-light">
-                    <smart-check-box class="material" enable-container-click group-name="A" checked></smart-check-box>
-                    <smart-check-box class="material" group-name="A"></smart-check-box>
+                    <smart-check-box  enable-container-click group-name="A" checked></smart-check-box>
+                    <smart-check-box  group-name="A"></smart-check-box>
                 </div>
-                <p>Light theme for check boxes</p>
             </div>
-            <div class="module">
-                <div class="check-box-container-dark">
-                    <smart-check-box class="material-dark" group-name="B" checked></smart-check-box>
-                    <smart-check-box class="material-dark" group-name="B"></smart-check-box>
-                </div>
-                <p>Dark theme for check box</p>
-            </div>
+          
         </section>
 
         <section id="check-box-light">
-            <div class="module">
-                <h2>Light</h2>
-                <p>On: #009788, Opacity 100%</p>
-                <p>Off: #555, Opacity 100%</p>
-                <p>Disabled: #000000, Opacity 25%</p>
-            </div>
+   
             <div class="module">
                 <div class="check-box-table-light">
                     <table>
@@ -70,24 +58,24 @@
                             </tr>
                             <tr>
                                 <td colspan="1" rowspan="1">
-                                    <p style="position:relative; top:-20px;">On</p>
+                                    <p style="position:relative; top:-5px;">On</p>
                                 </td>
                                 <td colspan="1" rowspan="1">
-                                    <smart-check-box class="material" checked></smart-check-box>
+                                    <smart-check-box hover checked></smart-check-box>
                                 </td>
                                 <td colspan="1" rowspan="1">
-                                    <smart-check-box class="material focused" checked></smart-check-box>
+                                    <smart-check-box focus checked></smart-check-box>
                                 </td>
                                 <td colspan="1" rowspan="1">
-                                    <smart-check-box class="material" checked></smart-check-box>
+                                    <smart-check-box active checked></smart-check-box>
                                 </td>
                                 <td colspan="1" rowspan="1">
-                                    <smart-check-box class="material" checked disabled></smart-check-box>
+                                    <smart-check-box checked disabled></smart-check-box>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="1" rowspan="1">
-                                    <p style="position:relative; top:-20px;">Off</p>
+                                    <p style="position:relative; top:-5px;">Off</p>
                                 </td>
                                 <td colspan="1" rowspan="1">
                                     <smart-check-box class="material"></smart-check-box>
@@ -106,75 +94,6 @@
                     </table>
                 </div>
                 <p>Light theme for check box in hover, focused, pressed, disabled states.</p>
-            </div>
-        </section>
-
-        <section id="check-box-dark">
-            <div class="module">
-                <h2>Dark</h2>
-                <p>On: #009788, Opacity 100%</p>
-                <p>Off: #1978CC, Opacity 100%</p>
-                <p>Disabled: #FFFFFF, Opacity 25%</p>
-            </div>
-            <div class="module">
-                <div class="check-box-table-dark">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td colspan="1" rowspan="1">
-                                    <p></p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>hover </p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>focused</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>pressed</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <p>disabled</p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="1" rowspan="1">
-                                    <p style="position:relative; top:-20px;">On</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-check-box class="material-dark" checked></smart-check-box>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-check-box class="material-dark focused" checked></smart-check-box>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-check-box class="material-dark" checked></smart-check-box>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-check-box class="material-dark" checked disabled></smart-check-box>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="1" rowspan="1">
-                                    <p style="position:relative; top:-20px;">Off</p>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-check-box class="material-dark"></smart-check-box>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-check-box class="material-dark focused"></smart-check-box>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-check-box class="material-dark"></smart-check-box>
-                                </td>
-                                <td colspan="1" rowspan="1">
-                                    <smart-check-box class="material-dark" disabled></smart-check-box>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p>Dark theme for check box in hover, focused, pressed, disabled states.</p>
             </div>
         </section>
    </div>

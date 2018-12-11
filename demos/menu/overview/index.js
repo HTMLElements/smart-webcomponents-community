@@ -14,7 +14,7 @@ window.onload = function () {
 		document.body.addEventListener('contextmenu', function (event) {
 			let target = event.target;
 
-			if (menu1Container.contains(target) || menu3Container.contains(target) || listMenu2Container.contains(target)) {
+			if (menu1Container.contains(target) || menu3Container.contains(target)) {
 				event.preventDefault();
 			}
 		});

@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -47,11 +47,7 @@
                         Close
                     </p>
                 </div>
-                <div class="module">
-                    <figure>
-                        <img alt="" src="../../images/components-snackbars.png">
-                    </figure>
-                </div>
+            
             </div>
         </section>
         <nav>
@@ -84,10 +80,8 @@
             </div>
             <div class="module">
                 <div id="toastContainer1" class="toast-container"></div>
-                <smart-toast append-to="toastContainer1" auto-open item-template="toastTemplate1" class="snackbar">Message sent</smart-toast>
-                <template id="toastTemplate1">
-                    <span class="message smart-toast-item-content">{{message}}</span>
-                </template>
+                <smart-toast append-to="toastContainer1" auto-open class="snackbar">Message sent</smart-toast>
+              
             </div>
         </section>
 
@@ -105,7 +99,7 @@
                 <div id="toastContainer3" class="toast-container"></div>
                 <smart-toast append-to="toastContainer3" auto-open item-template="toastTemplate3" class="snackbar">Message sent</smart-toast>
                 <template id="toastTemplate3">
-                    <span class="message smart-toast-item-content">{{message}}</span> <smart-button>UNDO</smart-button>
+                    <span class="message smart-toast-item-content">{{message}}</span> <smart-button class="primary flat">UNDO</smart-button>
                 </template>
             </div>
         </section>
@@ -122,12 +116,12 @@
                 <div class="module">
                     <div class="light-theme" id="mobileDemo1">
                         <div id="toastContainer4" class="toast-container">
-                            <smart-button id="toastButton4" class="floating"><i class="material-icons">&#xE145;</i></smart-button>
+                            <smart-button id="toastButton4" class="primary floating"><i class="material-icons">&#xE145;</i></smart-button>
                         </div>
                         <smart-toast id="mobileToast1" append-to="toastContainer4" item-template="toastTemplate4" class="snackbar">Archived</smart-toast>
                         <template id="toastTemplate4">
                             <span class="message smart-toast-item-content">{{message}}</span>
-                            <smart-button>UNDO</smart-button>
+                            <smart-button class="success flat">UNDO</smart-button>
                         </template>
                     </div>
                     <p>
@@ -137,12 +131,12 @@
                 <div class="module">
                     <div class="light-theme" id="mobileDemo2">
                         <div id="toastContainer5" class="toast-container">
-                            <smart-button id="toastButton5" class="floating"><i class="material-icons">&#xE145;</i></smart-button>
+                            <smart-button id="toastButton5" class="primary floating"><i class="material-icons">&#xE145;</i></smart-button>
                         </div>
                         <smart-toast id="mobileToast2" append-to="toastContainer5" item-template="toastTemplate5" class="snackbar">Archived</smart-toast>
                         <template id="toastTemplate5">
                             <span class="message smart-toast-item-content">{{message}}</span>
-                            <smart-button>UNDO</smart-button>
+                            <smart-button class="success raised">UNDO</smart-button>
                         </template>
                     </div>
                     <p>
@@ -157,14 +151,14 @@
                 <p><strong>Desktop snackbar</strong></p>
                 <p>On open toasts are stacked vertically in order by their appearance. The open method adds a new element at the end of the existing toast column</p>
             </div>
-            <div class="module module-large">
+            <div>
                 <div class="light-theme" id="desktopDemo">
                     <div id="toastContainer6" class="toast-container">
                     </div>
                     <smart-toast id="desktopToast" append-to="toastContainer6" item-template="toastTemplate5" class="snackbar">Connection timed out. Showing limited messages.</smart-toast>
                     <template id="toastTemplate6">
                         <span class="message smart-toast-item-content">{{message}}</span>
-                        <smart-button>RETRY</smart-button>
+                        <smart-button class="raised primary">RETRY</smart-button>
                     </template>
                 </div>
             </div>
@@ -210,7 +204,7 @@
                             <h3>Justin Rhyss</h3>
                             <span class="smart-toast-item-content">{{message}}</span>
                         </div>
-                        <img src="../../images/notifications-icon2.png" class="profile-picture">
+                        <img src="../../../images/notifications-icon2.png" class="profile-picture">
                         <div class="message-footer smart-hidden"><smart-button>REPLY</smart-button> <smart-button>ARCHIVE</smart-button></div>
                      </div>
                 </template>

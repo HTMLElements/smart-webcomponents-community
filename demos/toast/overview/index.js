@@ -8,7 +8,7 @@ window.onload = function () {
 		toastContentOptions = ['Add a new label', 'This item alredy has the label "travel".'],
 		notificationsText = ['Hi!', 'How are you?', 'Do you want to see a movie tohinght?'];
 
-	setInterval(function () { toggleMobileToasts(); }, 3000);
+	setInterval(function () { toggleMobileToasts(); }, 2000);
 
 	function toggleMobileToasts() {
 		if (mobileToastsAreOpened) {

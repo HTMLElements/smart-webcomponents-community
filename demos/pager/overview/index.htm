@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -30,118 +30,18 @@
                 </div>
             </div>
         </section>
-        <nav>
-            <h2>Contents</h2>
-            <ul>
-                <li><a href="#usage">Usage</a></li>
-                <li><a href="#style">Style</a></li>
-                <li><a href="#mobile">Mobile</a></li>
-            </ul>
-        </nav>
-
         <section id="usage">
             <h2>Usage</h2>
             <div class="module">
-                <p>
-                    Pager with default settings allows the user to navigate between 3 items. This range can be changed by setting:
-                </p>
-                 <ul>
-                     <li><b>items</b> : total number of items </li>
-                     <li><b>itemsPerPage</b> : the number of items displayed on single page</li>
-                 </ul>
-                <br />
                 <h2>Navigation</h2>
                 <p>
                     User can navigate between pages and/or items via built-in optional buttons.
                 </p>
             </div>
-            <div class="module  dropDownListLightTheme" style="width:700px;">
-                <table>
-                    <tr>
-                        <td>Default</td>
-                    </tr>
-					<tr>
-				        <td>
-                            <smart-pager items="50" class="animation material" id="pager1a"></smart-pager>
-                        </td>
-                	</tr>
-                    <tr>
-                        <td>
-                            Navigation
-                        </td>
-                    </tr>
-				<tr>
-				          <td>
-                            <smart-pager items="50" prev-next-buttons class="animation material" id="pager1b"></smart-pager>
-                        </td>
-              	</tr>	
-                    <tr>
-                        <td>
-                            Wide range
-                        </td>
-                    </tr>
-					<tr>
-				        <td>
-                            <smart-pager items="50" items-per-page="10" class="animation material" id="pager1c"></smart-pager>
-                        </td>
-                	</tr>
-                    <tr>
-                        <td>
-                            First/last item navigation
-                        </td>
-                    </tr>
-					<tr>
-				        <td>
-                            <smart-pager items="50" items-per-page="10" first-last-buttons class="animation material" id="pager1d"></smart-pager>
-                        </td>
-                	</tr>
-                    <tr>
-                        <td>
-                            Ellipsis
-                        </td>
-                    </tr>
-					<tr>
-				        <td>
-                            <smart-pager items="50" items-per-page="10" prev-next-buttons ellipsis class="animation material" id="pager1e"></smart-pager>
-                        </td>
-                	</tr>
-                </table>
-
-            </div>
+			<smart-pager show-prev-next-navigation-buttons auto-ellipsis="both" show-page-index-selectors pages-count="20" page-index-selectors="10"></smart-pager>
         </section>
 
-        <section id="style">
-            <h2>Style</h2>
-            <div class="module">
-                <h2>Light</h2>
-                <p>
-                    Action button: Transparent<br />
-                    Drop down button: Transparent
-                </p>
-                <p>
-                    Action button (pressed): #FAFAFA<br />
-                    Drop down button (pressed): #FAFAFA
-                </p>
-                <p>Disabled: #000000, Opacity 20%</p>
-            </div>
-            <div class="module dropDownListLightTheme">
-                <table>
-                    <tr>
-                        <td><p>Normal</p></td>
-                        <td>
-                            <smart-pager items="50" hide-items prev-next-page-buttons show-range show-rows-count rows-count-options="[5,10,15]" class="animation material" id="pager2a"></smart-pager>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><p>Disabled</p></td>
-                        <td>
-                            <smart-pager items="50" hide-items prev-next-page-buttons show-range show-rows-count rows-count-options="[5,10,15]" class="animation material" id="pager2b" disabled></smart-pager>
-                        </td>
-
-                    </tr>
-                </table>
-            </div>
-        </section>
+     
 
         <section id="pager-mobile">
             <h2>Mobile</h2>
@@ -158,8 +58,8 @@
                             <img src="https://htmlelements.com/demos/images/albums_rock.png" />
                         </div>
                     </div>
-                    <smart-pager id="mobile" class="material-dark" items="3" item-template="mobileTemplate"></smart-pager>
-                    <template id="mobileTemplate"></template>
+                    <smart-pager id="mobile" show-page-index-selectors pages-count="5" page-index-selectors="5"></smart-pager>
+                    
                 </div>
             </div>
         </section>

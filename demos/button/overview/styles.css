@@ -17,7 +17,8 @@
 	line-height: 1;
 	letter-spacing: normal;
 	text-transform: none;
-	display: inline-block;
+	display: flex;
+	justify-content: center;
 	white-space: nowrap;
 	word-wrap: normal;
 	direction: ltr;
@@ -348,35 +349,19 @@
 	background-position: center;
 }
 
-	.smart-demo-container #button-raised-demo .raised-demo button,
-	.smart-demo-container #button-raised-demo .raised-demo2 button {
-		color: var(--smart-hover-color);
-	}
-
 	.smart-demo-container .raised-demo-start smart-button,
 	.smart-demo-container #button-raised-demo .raised-demo smart-button {
 		position: absolute;
 		top: 25%;
 		left: 18%;
-		width: 125px;
 	}
-
-		.smart-demo-container .raised-demo-start smart-button button,
-		.smart-demo-container #button-raised-demo .raised-demo smart-button button {
-			--smart-material-background-color: transparent;
-			color: #555;
-		}
 
 		.smart-demo-container .raised-demo-start smart-button:nth-child(2),
 		.smart-demo-container #button-raised-demo .raised-demo smart-button:nth-child(2) {
 			left: calc(22% + 125px);
 		}
 
-			.smart-demo-container .raised-demo-start smart-button:nth-child(2) button,
-			.smart-demo-container #button-raised-demo .raised-demo smart-button:nth-child(2) button {
-				background-color: #FF5252;
-				color: #fff;
-			}
+		
 
 		.smart-demo-container .raised-demo-start smart-button:nth-child(3),
 		.smart-demo-container #button-raised-demo .raised-demo smart-button:nth-child(3) {
@@ -441,16 +426,12 @@
 	.smart-demo-container #button-floating-demo .floating-action-area .floating-click-sub-action:nth-of-type(2) {
 		top: 60%;
 		transition: top 0.2s ease-in;
-		width: 45px;
-		height: 45px;
 		left: calc(100% - 65px);
 	}
 
 	.smart-demo-container #button-floating-demo .floating-action-area .floating-click-sub-action:nth-of-type(3) {
 		top: 50%;
 		transition: top 0.2s ease-in;
-		width: 45px;
-		height: 45px;
 		left: calc(100% - 65px);
 	}
 
@@ -498,15 +479,8 @@
 		left: calc(100% - 66px);
 		width: 60px;
 		height: 60px;
-		--smart-material-background-color: #0C9F59;
-		--smart-material-focused-background-color: #099955;
-		--smart-material-hovered-background-color: #0e874e;
-		--smart-material-pressed-background-color: #078449;
 	}
 
-	.smart-demo-container .floating-demo-start button {
-		color: #fff;
-	}
 
 .smart-demo-container .raised-demo-start {
 	background-image: url(../../images/raised-button-demo.png);
@@ -527,10 +501,7 @@
 			left: 62.5%;
 		}
 
-	.smart-demo-container .flat-demo-start button {
-		color: #2396F1;
-	}
-
+	
 .smart-demo-container #button-flat .button-dark smart-button,
 .smart-demo-container #button-flat .button-light smart-button,
 .smart-demo-container #button-raised .button-dark smart-button,
@@ -539,67 +510,6 @@
 .smart-demo-container #button-floating .button-light smart-button {
 	margin-top: 35px;
 }
-
-	.smart-demo-container #button-flat .button-light smart-button .ripple,
-	.smart-demo-container #button-raised .button-light smart-button .ripple,
-	.smart-demo-container #button-floating .button-light smart-button .ripple,
-	.smart-demo-container #floating-click-action .ripple,
-	.smart-demo-container .floating-click-sub-action .ripple {
-		--smart-ripple-color: rgba(0, 0, 0, 0.1);
-	}
-
-	.smart-demo-container #button-flat .button-light smart-button:nth-child(3) button {
-		background-color: var(--smart-material-focused-background-color);
-	}
-
-	.smart-demo-container #button-flat .button-light smart-button:nth-child(5) button {
-		background-color: var(--smart-material-pressed-background-color);
-	}
-
-	.smart-demo-container #button-flat .button-dark smart-button:nth-child(3) button {
-		background-color: var(--smart-material-focused-background-color);
-	}
-
-	.smart-demo-container #button-flat .button-dark smart-button:nth-child(5) button {
-		background-color: var(--smart-material-pressed-background-color);
-	}
-
-	.smart-demo-container #button-raised .button-light smart-button:nth-child(3) button {
-		background-color: var(--smart-material-pressed-background-color);
-	}
-
-	.smart-demo-container #button-raised .button-light smart-button:nth-child(5) button {
-		background-color: var(--smart-material-focused-background-color);
-	}
-
-	.smart-demo-container #button-raised .button-light smart-button:nth-child(5),
-	.smart-demo-container #button-floating .button-light smart-button:nth-child(5) {
-		box-shadow: 0.2px 5px 10px 3px rgba(189, 189, 189, 1);
-	}
-
-	.smart-demo-container #button-raised .button-dark smart-button:nth-child(3) button {
-		background-color: var(--smart-material-focused-background-color);
-	}
-
-	.smart-demo-container #button-raised .button-dark smart-button:nth-child(5) button {
-		background-color: var(--smart-material-pressed-background-color);
-	}
-
-	.smart-demo-container #button-floating .button-light smart-button:nth-child(3) button {
-		background-color: var(--smart-material-focused-background-color);
-	}
-
-	.smart-demo-container #button-floating .button-light smart-button:nth-child(5) button {
-		background-color: var(--smart-material-pressed-background-color);
-	}
-
-	.smart-demo-container #button-floating .button-dark smart-button:nth-child(3) button {
-		background-color: var(--smart-material-focused-background-color);
-	}
-
-	.smart-demo-container #button-floating .button-dark smart-button:nth-child(5) button {
-		background-color: var(--smart-material-pressed-background-color);
-	}
 
 .smart-demo-container #toggle-button .toggle-button-container {
 	background-color: #EEEEEE;
@@ -850,28 +760,13 @@
 		color: white;
 	}
 
-		.smart-demo-container .toggle-button-icons-themes div:nth-child(1) smart-toggle-button {
-			--smart-material-color: #fff;
-			--smart-material-pressed-color: #fff;
-			--smart-material-background-color: #2396F1;
-			--smart-material-focused-background-color: #729CE0;
-			--smart-material-hovered-background-color: #2076C3;
-			--smart-material-pressed-background-color: #009FEF;
-		}
+	
 
 	.smart-demo-container .toggle-button-icons-themes div:nth-child(2) {
 		background-color: #00BCD5;
 	}
 
-		.smart-demo-container .toggle-button-icons-themes div:nth-child(2) smart-toggle-button {
-			--smart-material-color: #fff;
-			--smart-material-pressed-color: #000;
-			--smart-material-background-color: #2396F1;
-			--smart-material-focused-background-color: #35A4B7;
-			--smart-material-hovered-background-color: #379BB2;
-			--smart-material-pressed-background-color: #00A5B9;
-		}
-
+		
 			.smart-demo-container .toggle-button-icons-themes div:nth-child(2) smart-toggle-button button {
 				color: #000;
 			}
@@ -881,18 +776,8 @@
 		color: #D94634;
 	}
 
-		.smart-demo-container .toggle-button-icons-themes div:nth-child(3) smart-toggle-button {
-			--smart-material-color: #fff;
-			--smart-material-pressed-color: #D94634;
-			--smart-material-background-color: #2396F1;
-			--smart-material-focused-background-color: #E5CEDA;
-			--smart-material-hovered-background-color: #E8B9C3;
-			--smart-material-pressed-background-color: #E9C2BD;
-		}
 
-			.smart-demo-container .toggle-button-icons-themes div:nth-child(3) smart-toggle-button button {
-				color: #D94634;
-			}
+	
 
 	.smart-demo-container .toggle-button-icons-themes div:nth-child(4) {
 		background-color: #000;

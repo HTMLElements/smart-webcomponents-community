@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.base.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/demos.css" />
-	<link rel="stylesheet" type="text/css" href="../../styles/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+	<link rel="stylesheet" type="text/css" href="../../../styles/common.css" />
 	
-    <script type="text/javascript" src="../../scripts/common.js"></script>
+    <script type="text/javascript" src="../../../scripts/common.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/1.2.0/webcomponents-lite.js"></script>
-	<script type="text/javascript" src="../../../source/smart.element.js"></script>
+	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
 	<script type="text/javascript" src="../../../source/smart.elements.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
@@ -26,61 +26,38 @@
             </div>
             <div class="module power-button-flat-light">
                 <div>
-                    <smart-power-button class="material flat"></smart-power-button>
+                    <smart-power-button></smart-power-button>
                     <br />
-                    <smart-power-button class="material flat"></smart-power-button>
+                    <smart-power-button hover></smart-power-button>
                     <br />
-                    <smart-power-button class="material flat" checked></smart-power-button>
+                    <smart-power-button checked ></smart-power-button>
                     <br />
-                    <smart-power-button class="material flat" disabled></smart-power-button>
+                    <smart-power-button disabled></smart-power-button>
                 </div>
-                <p>Flat power button Light/Light theme</p>
             </div>
-            <div class="module power-button-flat-dark">
-                <div>
-                    <smart-power-button class="material-dark flat"></smart-power-button>
-                    <br />
-                    <smart-power-button class="material-dark flat"></smart-power-button>
-                    <br />
-                    <smart-power-button class="material-dark flat" checked></smart-power-button>
-                    <br />
-                    <smart-power-button class="material-dark flat" disabled></smart-power-button>
-                </div>
-                <p>Flat power button Dark/Dark theme</p>
-            </div>
+        
             <div class="module">
             </div>
             <div class="module power-button-light">
                 <div>
-                    <smart-power-button class="material"></smart-power-button>
+                    <smart-power-button class="raised"></smart-power-button>
                     <br />
-                    <smart-power-button class="material"></smart-power-button>
+                    <smart-power-button class="raised"></smart-power-button>
                     <br />
-                    <smart-power-button class="material" checked></smart-power-button>
+                    <smart-power-button class="checked raised" checked></smart-power-button>
                     <br />
-                    <smart-power-button class="material" disabled></smart-power-button>
+                    <smart-power-button class="raised" disabled></smart-power-button>
                 </div>
-                <p>Raised Power button Light/Light theme</p>
+                <p>Raised Power button</p>
             </div>
-            <div class="module power-button-dark">
-                <div>
-                    <smart-power-button class="material-dark"></smart-power-button>
-                    <br />
-                    <smart-power-button class="material-dark"></smart-power-button>
-                    <br />
-                    <smart-power-button class="material-dark" checked></smart-power-button>
-                    <br />
-                    <smart-power-button class="material-dark" disabled></smart-power-button>
-                </div>
-                <p>Raised Power button Dark/Dark theme</p>
-            </div>
+          
             <div class="module power-button-dark">
                 <h2>Demo usage</h2>
             </div>
             <div class="module power-button">
                 <div>
-                    <smart-circular-progress-bar class="material" id="progressBarAnimated" indeterminate value="100">
-                        <smart-power-button class="material" id="powerButtonAnimation"></smart-power-button>
+                    <smart-circular-progress-bar id="progressBarAnimated" indeterminate value="100">
+                        <smart-power-button style="border:none;" id="powerButtonAnimation"></smart-power-button>
                     </smart-circular-progress-bar>
                 </div>
                 <p>A power button can control the loading process.</p>
