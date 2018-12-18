@@ -1,6 +1,6 @@
 {
   "name": "@smarthtmlelements/smarthtmlelements-core",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Smart HTML Elements Core",
    "scripts": { 
     "test": "karma start karma-minified.conf.js",
@@ -70,6 +70,11 @@
     "angular calendar",
     "angular tabs",
     "angular button",
+	"card",
+	"carousel",
+	"web-components",
+	"ui toolkit",
+	"ui controls",
     "angular datetimepicker",
     "html",
     "html5",
