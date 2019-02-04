@@ -54,6 +54,7 @@
    "smart-calendar": "HTMLElements/smart-calendar",
    "smart-listbox": "HTMLElements/smart-listbox",
    "smart-tooltip": "HTMLElements/smart-tooltip",
+   "smart-table": "HTMLElements/smart-table",
    "smart-tabs": "HTMLElements/smart-tabs",
    "smart-progressbar": "HTMLElements/smart-progressbar"
   }
