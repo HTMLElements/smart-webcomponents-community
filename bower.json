@@ -16,6 +16,11 @@
     "tooltip",
     "table web component",
     "table",
+    "autocomplete",
+    "typeahead",
+    "auto complete",
+    "input web component",	  
+    "auto suggest",
     "bootstrap table",
     "bootstrap tables",
     "tooltip web component",
@@ -56,9 +61,10 @@
    "smart-carousel": "HTMLElements/smart-carousel",
    "smart-card": "HTMLElements/smart-card",
    "smart-calendar": "HTMLElements/smart-calendar",
+   "smart-input": "HTMLElements/smart-input",
    "smart-listbox": "HTMLElements/smart-listbox",
    "smart-tooltip": "HTMLElements/smart-tooltip",
-   "smart-table": "HTMLElements/smart-table",
+   "smart-table": "HTMLElements/smart-table",	  
    "smart-tabs": "HTMLElements/smart-tabs",
    "smart-progressbar": "HTMLElements/smart-progressbar"
   }
