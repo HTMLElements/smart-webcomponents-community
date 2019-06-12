@@ -58,6 +58,7 @@
   "dependencies": {
    "smart-accordion": "HTMLElements/smart-accordion",
    "smart-button": "HTMLElements/smart-button",
+   "smart-colors": "HTMLElements/smart-colors",
    "smart-carousel": "HTMLElements/smart-carousel",
    "smart-card": "HTMLElements/smart-card",
    "smart-calendar": "HTMLElements/smart-calendar",
