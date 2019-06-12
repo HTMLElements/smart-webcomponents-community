@@ -1,6 +1,6 @@
 {
   "name": "@smarthtmlelements/smarthtmlelements-core",
-  "version": "2.2.0",
+  "version": "3.2.0",
   "description": "Smart HTML Elements Core",
    "scripts": { 
     "test": "karma start karma-minified.conf.js",
