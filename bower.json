@@ -67,6 +67,7 @@
    "smart-tooltip": "HTMLElements/smart-tooltip",
    "smart-table": "HTMLElements/smart-table",	  
    "smart-tabs": "HTMLElements/smart-tabs",
-   "smart-progressbar": "HTMLElements/smart-progressbar"
+   "smart-progressbar": "HTMLElements/smart-progressbar",
+   "smart-bootstrap": "HTMLElements/smart-bootstrap"	 
   }
 }
