@@ -21,6 +21,8 @@ Works across devices and browsers
 Smart HTML Elements takes the JavaScript & HTML UI development to a new level. It is platform independent, cross-browser compatible and works on PC and mobile devices. Don’t spend time testing on different devices and browsers. Use a reliable, CSS compliant JavaScript library based on native technologies.The product supports all major desktop and mobile web browsers - Internet Explorer 11.0, Edge, Firefox, Safari, Opera, Google Chrome.  
   
 [Professional/Enterprise and Community Comparison](https://www.htmlelements.com/docs/community-and-enterprise/)
+
+
 [Theme Builder](https://www.htmlelements.com/themebuilder/)
 
 Web Components
