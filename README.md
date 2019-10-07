@@ -4,6 +4,8 @@
 Best Material Components for the Web
 -----------------------------------------------------------------------------------------------------
 
+[<img src="https://www.htmlelements.com/demos/images/grid-dashboard.png" alt="Grid Web Component">](https://htmlelements.com/demos/)
+
 Build responsive, mobile-first projects on the Web with the most advanced front-end component library
 -----------------------------------------------------------------------------------------------------
 
