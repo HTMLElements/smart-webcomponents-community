@@ -2,6 +2,8 @@
 
 
 Best Material Components for the Web
+-----------------------------------------------------------------------------------------------------
+
 Build responsive, mobile-first projects on the Web with the most advanced front-end component library
 -----------------------------------------------------------------------------------------------------
 
