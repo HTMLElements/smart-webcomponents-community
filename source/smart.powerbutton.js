@@ -1,5 +1,5 @@
 
-/* Smart HTML Elements v4.1.0 (2019-Aug) 
+/* Smart HTML Elements v4.6.0 (2019-Oct) 
 Copyright (c) 2011-2019 jQWidgets. 
 License: https://htmlelements.com/license/ */
 

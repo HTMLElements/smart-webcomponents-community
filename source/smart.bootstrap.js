@@ -1,8 +1,8 @@
-/* Smart HTML Elements v4.1.0 (2019-Aug) 
+/* Smart HTML Elements v4.6.0 (2019-Oct) 
 Copyright (c) 2011-2019 jQWidgets. 
 License: https://htmlelements.com/license/ */
 
-Smart('bootstrap-button', class Button extends Smart.ContentElement {
+Smart('bootstrap-button', class BootstrapButton extends Smart.ContentElement {
 	// Button's properties.
 	static get properties() {
 		return {
@@ -36,15 +36,14 @@ Smart('bootstrap-button', class Button extends Smart.ContentElement {
 		return '<button inner-h-t-m-l=\'[[innerHTML]]\' id=\'button\' type=\'[[type]]\' name=\'[[name]]\' value=\'[[value]]\' disabled=\'[[disabled]]\' role=\'button\'></button>';
 	}
 
-	ready() {
-		const that = this;
-
-		that.render();
-	}
-
 	render() {
 		const that = this;
 
+		if (that.classList.contains('close')) {
+			that.$.button.classList.add('close');
+			return;
+		}
+		
 		that.$.button.className = 'btn';
 
 		if (that.outlined) {
@@ -57,6 +56,8 @@ Smart('bootstrap-button', class Button extends Smart.ContentElement {
 		if (that.sizeMode !== '') {
 			that.$.button.classList.add('btn-' + that.sizeMode);
 		}
+		
+		super.render();
 	}
 
 	propertyChangedHandler(propertyName, oldValue, newValue) {
@@ -66,11 +67,15 @@ Smart('bootstrap-button', class Button extends Smart.ContentElement {
 	}
 });
 
-Smart('bootstrap-check-box', class CheckBox extends Smart.ContentElement {
+Smart('bootstrap-check-box', class BootstrapCheckBox extends Smart.ContentElement {
 	// Button's properties.
 	static get properties() {
 		return {
 			'checked': {
+				value: false,
+				type: 'boolean'
+			},
+			'indeterminate': {
 				value: false,
 				type: 'boolean'
 			},
@@ -79,6 +84,10 @@ Smart('bootstrap-check-box', class CheckBox extends Smart.ContentElement {
 			},
 			'styleMode': {
 				value: 'secondary',
+				type: 'string'
+			},
+			'type': {
+				value: 'checkbox',
 				type: 'string'
 			}
 		};
@@ -97,21 +106,46 @@ Smart('bootstrap-check-box', class CheckBox extends Smart.ContentElement {
 
 	/** CheckBox's template. */
 	template() {
-		return `<label id="button" class="btn">
-				 	<input id="input" type="checkbox" name=\'[[name]]\' autocomplete="off"/>
-				 	<content></content>
-			   </label>`;
+		return `<div><div id="button" class="btn">
+				 	<input indeterminate=[[indeterminate]] checked=[[checked]] id="input" type="checkbox" name=\'[[name]]\' autocomplete="off"/>
+				 	<label id="label"><span><content></content></span></label>
+			   </div></div>`;
 	}
 
 	ready() {
 		const that = this;
 
-		if (!(that instanceof Smart.ToggleButton)) {
+		that.$.button.classList.add('component');
+		that.$.label.classList.add('component-label');
+		that.$.input.classList.add('component-input');	
+			
+		that.$.button.classList.remove('btn');
+		that.$.button.classList.remove('switch');
+		that.$.button.classList.remove('checkbox');
+		that.$.button.classList.remove('radio');
+				
+		if (that.type === 'switch') {
+			that.$.button.classList.add('switch');
+		}
+			
+		if (that.type === 'button') {
+			that.$.button.classList.add('btn');
+			that.$.button.classList.add('btn-' + that.styleMode);
+		}
+		
+		if (that.type === 'checkbox') {
+			that.$.button.classList.add('checkbox');
+		}
+		
+		if (that.type === 'radio') {
+			that.$.button.classList.add('radio');
+			that.$.input.type = "radio";
+		}
+		
+		if (!(that instanceof Smart.Bootstrap.ToggleButton)) {
 			that.classList.add('btn-group-toggle');
 		}
-
-		that.$.button.classList.add('btn-' + that.styleMode);
-
+			
 		if (that.checked) {
 			that.$.button.classList.add('active');
 		}
@@ -135,9 +169,13 @@ Smart('bootstrap-check-box', class CheckBox extends Smart.ContentElement {
 		if (event) {
 			event.preventDefault()
 		}
-
+		
 		if (that.disabled) {
 			return;
+		}
+
+		if (that.indeterminate) {
+			that.indeterminate = false;
 		}
 
 		if (that.checked) {
@@ -145,6 +183,17 @@ Smart('bootstrap-check-box', class CheckBox extends Smart.ContentElement {
 			that.checked = false;
 		}
 		else {
+			if (that instanceof Smart.Bootstrap.RadioButton) {
+				const buttons = document.querySelectorAll('bootstrap-radio');
+
+				for (let i = 0; i < buttons.length; i++) {
+					if (buttons[i].group === that.group) {
+						buttons[i].set('checked', false);
+						buttons[i].$.button.classList.remove('active');
+					}
+				}
+			}
+			
 			that.$.button.classList.add('active');
 			that.checked = true;
 		}
@@ -170,27 +219,33 @@ Smart('bootstrap-check-box', class CheckBox extends Smart.ContentElement {
 	}
 });
 
-Smart('bootstrap-toggle-button', class ToggleButton extends Smart.CheckBox {
+Smart('bootstrap-switch-button', class BootstrapSwitchButton extends Smart.Bootstrap.CheckBox {
+	// Button's properties.
+	static get properties() {
+		return {
+			'type': {
+				value: 'switch',
+				type: 'string'
+			}
+		};
+	}
+});
+
+Smart('bootstrap-toggle-button', class BootstrapToggleButton extends Smart.Bootstrap.CheckBox {
 	// Button's properties.
 	static get properties() {
 		return {
 			'styleMode': {
 				value: 'primary',
 				type: 'string'
+			},
+			'type': {
+				value: 'button',
+				type: 'string'
 			}
 		};
 	}
 
-	/** CheckBox's template. */
-	template() {
-		return `<button id="button" type="button" class="btn" autocomplete="off">
-					<content></content>
-		  		</button>`;
-	}
-
-	/**
-	* CheckBox's Event Listeners
-	*/
 	static get listeners() {
 		return {
 			'click': 'toggle',
@@ -199,6 +254,13 @@ Smart('bootstrap-toggle-button', class ToggleButton extends Smart.CheckBox {
 		};
 	}
 
+template() {
+		return `<div><div id="button" class="btn">
+				 	<input class="hide"  indeterminate=[[indeterminate]] checked=[[checked]] id="input" type="checkbox" name=\'[[name]]\' autocomplete="off"/>
+				 	<label id="label"><content></content></label>
+			   </div></div>`;
+	}
+	
 	toggle(event) {
 		const that = this;
 
@@ -212,7 +274,7 @@ Smart('bootstrap-toggle-button', class ToggleButton extends Smart.CheckBox {
 
 
 		if (that.checked) {
-			if (that instanceof Smart.RadioButton) {
+			if (that instanceof Smart.Bootstrap.RadioButton) {
 				that.$.button.focus();
 				return;
 			}
@@ -221,17 +283,6 @@ Smart('bootstrap-toggle-button', class ToggleButton extends Smart.CheckBox {
 			that.set('checked', false);
 		}
 		else {
-			if (that instanceof Smart.RadioButton) {
-				const buttons = document.querySelectorAll('bootstrap-radio-button');
-
-				for (let i = 0; i < buttons.length; i++) {
-					if (buttons[i].group === that.group) {
-						buttons[i].set('checked', false);
-						buttons[i].$.button.classList.remove('active');
-					}
-				}
-			}
-
 			that.$.button.classList.add('active');
 			that.set('checked', true);
 		}
@@ -242,7 +293,7 @@ Smart('bootstrap-toggle-button', class ToggleButton extends Smart.CheckBox {
 	}
 });
 
-Smart('bootstrap-radio-button', class RadioButton extends Smart.ToggleButton {
+Smart('bootstrap-radio-button', class BootstrapRadioButton extends Smart.Bootstrap.CheckBox {
 	// Button's properties.
 	static get properties() {
 		return {
@@ -253,12 +304,16 @@ Smart('bootstrap-radio-button', class RadioButton extends Smart.ToggleButton {
 			'group': {
 				value: '',
 				type: 'string'
+			},
+			'type': {
+				value: 'radio',
+				type: 'string'
 			}
 		};
 	}
 });
 
-Smart('bootstrap-drop-down', class DropDown extends Smart.ContentElement {
+Smart('bootstrap-drop-down', class BootstrapDropDown extends Smart.ContentElement {
 
 	// DropDown's properties.
 	static get properties() {
@@ -269,6 +324,15 @@ Smart('bootstrap-drop-down', class DropDown extends Smart.ContentElement {
 			},
 			'label': {
 				value: '',
+				type: 'string'
+			},
+			'labelType': {
+				allowedValues: ['a', 'button'],
+				value: 'button',
+				type: 'string'
+			},
+			'href': {
+				value: '#',
 				type: 'string'
 			},
 			'opened': {
@@ -304,7 +368,7 @@ Smart('bootstrap-drop-down', class DropDown extends Smart.ContentElement {
 			'document.click': '_clearMenus',
 			'document.keyup': '_clearMenus',
 			'button.keydown': '_dataApiKeydownHandler',
-			'button.click': '_clickHandler',
+			'container.click': '_clickHandler',
 			'dropDownContainer.click': '_clickHandler',
 			'keydown': '_dataApiKeydownHandler'
 		};
@@ -315,36 +379,36 @@ Smart('bootstrap-drop-down', class DropDown extends Smart.ContentElement {
 
 
 		if (propertyName === 'styleMode' || propertyName === 'sizeMode') {
-			that.$.button.classList.remove('btn-' + oldValue);
+			that.$.button.classList.remove('button-' + oldValue);
 
 			if (propertyName === 'styleMode') {
-				that.$.button.classList.remove('btn-outline-' + newValue);
+				that.$.button.classList.remove('button-outline-' + newValue);
 
 				if (that.$.actionButton) {
-					that.$.actionButton.classList.remove('btn-outline-' + oldValue);
+					that.$.actionButton.classList.remove('button-outline-' + oldValue);
 				}
 
 				if (propertyName === 'outlined') {
-					that.$.button.classList.add('btn-outline-' + newValue);
+					that.$.button.classList.add('button-outline-' + newValue);
 
 					if (that.$.actionButton) {
-						that.$.actionButton.classList.add('btn-outline-' + newValue);
+						that.$.actionButton.classList.add('button-outline-' + newValue);
 					}
 				}
 				else {
-					that.$.button.classList.add('btn-' + newValue);
+					that.$.button.classList.add('button-' + newValue);
 
 					if (that.$.actionButton) {
-						that.$.actionButton.classList.add('btn-' + newValue);
+						that.$.actionButton.classList.add('button-' + newValue);
 					}
 				}
 			}
 			else {
-				that.$.button.classList.add('btn-' + newValue);
+				that.$.button.classList.add('button-' + newValue);
 
 				if (that.$.actionButton) {
-					that.$.actionButton.classList.remove('btn-' + oldValue);
-					that.$.actionButton.classList.add('btn-' + newValue);
+					that.$.actionButton.classList.remove('button-' + oldValue);
+					that.$.actionButton.classList.add('button-' + newValue);
 				}
 			}
 		}
@@ -354,6 +418,21 @@ Smart('bootstrap-drop-down', class DropDown extends Smart.ContentElement {
 		}
 		else if (propertyName === 'opened') {
 			newValue ? that.show() : that.hide();
+		}
+		else if (propertyName === 'labelType') {
+			that.$.button.outerHTML = that.$.button.outerHTML.replace('<' + oldValue + ' ', '<' + newValue + ' ').replace('</' + oldValue + '>', '</' + newValue + '>');
+			that.$.button = that.querySelector('[smart-id="button"]');
+
+			if (newValue === 'a') {
+				that.$.button.setAttribute('href', that.href);
+			}
+			else {
+				that.$.button.classList.add('button');
+				that.$.button.removeAttribute('href');
+			}
+		}
+		else if (propertyName === 'href' && that.labelType === 'a') {
+			that.$.button.setAttribute('href', newValue);
 		}
 	}
 
@@ -375,6 +454,13 @@ Smart('bootstrap-drop-down', class DropDown extends Smart.ContentElement {
 		that.ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
 		that.RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
 		that.REGEXP_KEYDOWN = new RegExp(`${that.ARROW_UP_KEYCODE}|${that.ARROW_DOWN_KEYCODE}|${that.ESCAPE_KEYCODE}`);
+
+		if (that.labelType === 'a') {
+			that.$.button.outerHTML = that.$.button.outerHTML.replace('<button ', '<a ').replace('</button>', '</a>');
+			that.$.button = that.querySelector('[smart-id="button"]');
+			that.$.button.setAttribute('href', that.href);
+			that.$.button.classList.remove('btn');
+		}
 
 		if (!that.dropDownAppendTo) {
 			that.dropDownAppendTo = that.$.container;
@@ -583,10 +669,12 @@ Smart('bootstrap-drop-down', class DropDown extends Smart.ContentElement {
 	}
 
 	_clickHandler(event) {
-		event.preventDefault();
 		event.stopPropagation();
 
-		this.toggle();
+		if (event.target.closest('.dropdown-menu') || event.target.closest('.dropdown-toggle')) {
+			event.preventDefault();
+			this.toggle();
+		}
 	}
 
 	_getParentFromElement(element) {
@@ -639,7 +727,7 @@ Smart('bootstrap-drop-down', class DropDown extends Smart.ContentElement {
 
 	_customPositionDropDown() {
 		const that = this,
-			coordinates = that.$[that instanceof Smart.SplitButton ? 'button' : 'container'].getBoundingClientRect(),
+			coordinates = that.$[that instanceof Smart.Bootstrap.SplitButton ? 'button' : 'container'].getBoundingClientRect(),
 			dropDown = that.$.dropDownContainer;
 		let top = coordinates.top,
 			left = coordinates.left;
@@ -665,7 +753,7 @@ Smart('bootstrap-drop-down', class DropDown extends Smart.ContentElement {
 	}
 });
 
-Smart('bootstrap-split-button', class SplitButton extends Smart.DropDown {
+Smart('bootstrap-split-button', class BootstrapSplitButton extends Smart.Bootstrap.DropDown {
 
 	/** CheckBox's template. */
 	template() {
@@ -713,7 +801,7 @@ Smart('bootstrap-split-button', class SplitButton extends Smart.DropDown {
 	}
 });
 
-Smart('bootstrap-input-group', class InputGroup extends Smart.ContentElement {
+Smart('bootstrap-input-group', class BootstrapInputGroup extends Smart.ContentElement {
 	// Element's properties.
 	static get properties() {
 		return {
@@ -753,7 +841,7 @@ Smart('bootstrap-input-group', class InputGroup extends Smart.ContentElement {
 		};
 	}
 
-	/** Button's template. */
+	
 	template() {
 		return `<div class="input-group" id="container">
 					<div id="prependContainer" class="input-group-prepend">[[contentBefore]]</div>
@@ -766,8 +854,6 @@ Smart('bootstrap-input-group', class InputGroup extends Smart.ContentElement {
 		const that = this;
 
 		that.noWrap ? that.$.container.classList.add('flex-nowrap') : that.$.container.classList.remove('flex-nowrap');
-
-		that.render();
 	}
 
 	propertyChangedHandler(propertyName, oldValue, newValue) {
@@ -777,7 +863,7 @@ Smart('bootstrap-input-group', class InputGroup extends Smart.ContentElement {
 			newValue ? that.$.container.classList.add('flex-nowrap') : that.$.container.classList.remove('flex-nowrap');
 		}
 		else if (propertyName === 'placeholder' || propertyName === 'name' || propertyName === 'type') {
-			const inputs = that.$.inputContainer.querySelectorAll('.form-control');
+			const inputs = that.$.inputContainer.querySelectorAll('.form-component');
 
 			for (let i = 0; i < inputs.length; i++) {
 				inputs[i][propertyName] = newValue;
@@ -806,7 +892,7 @@ Smart('bootstrap-input-group', class InputGroup extends Smart.ContentElement {
 			container = that.$.contentContainer,
 			prependContainer = that.$.prependContainer,
 			appendContainer = that.$.appendContainer;
-		let formControl = container.querySelector('.form-control');
+		let formControl = container.querySelector('.form-component');
 
 		if (!formControl) {
 			const input = document.createElement('input');
@@ -814,7 +900,7 @@ Smart('bootstrap-input-group', class InputGroup extends Smart.ContentElement {
 			input.type = that.type;
 			input.placeholder = that.placeholder;
 			input.name = that.name;
-			input.classList.add('form-control');
+			input.classList.add('form-component');
 
 			container.appendChild(input);
 			formControl = input;
@@ -831,11 +917,15 @@ Smart('bootstrap-input-group', class InputGroup extends Smart.ContentElement {
 
 			previousEl = previousEl.previousElementSibling;
 
-			if (!pe.classList.contains('form-control')) {
+			if (!pe.classList.contains('form-component')) {
 				prependContainer.insertBefore(pe, prependContainer.firstElementChild);
 			}
 		}
 
+		for(let i = 0; i < prependContainer.children.length; i++) {
+			prependContainer.children[i].classList.add('input-group-item');
+		}
+			
 		let nextEl = formControl.nextElementSibling;
 
 		while (nextEl) {
@@ -847,10 +937,15 @@ Smart('bootstrap-input-group', class InputGroup extends Smart.ContentElement {
 
 			nextEl = nextEl.nextElementSibling;
 
-			if (!nx.classList.contains('form-control')) {
+			if (!nx.classList.contains('form-component')) {
 				appendContainer.appendChild(nx);
 			}
 		}
+		
+		for(let i = 0; i < appendContainer.children.length; i++) {
+			appendContainer.children[i].classList.add('input-group-item');
+		}
+	
 
 		while (container.firstElementChild) {
 			that.$.container.insertBefore(container.firstElementChild, appendContainer);
@@ -878,36 +973,40 @@ Smart('bootstrap-input-group', class InputGroup extends Smart.ContentElement {
 	}
 });
 
-Smart('bootstrap-modal', class Modal extends Smart.ContentElement {
+Smart('bootstrap-modal', class BootstrapModal extends Smart.ContentElement {
 	// Element's properties.
 	static get properties() {
 		return {
-			'placeholder': {
+			'sizeMode': {
 				value: '',
-				type: 'string'
-			},
-			'styleMode': {
-				value: '',
+				allowedValue: ['sm', '', 'lg', 'xl'],
 				type: 'string'
 			},
 			'scrollable': {
 				value: false,
 				type: 'boolean'
 			},
-			'sizeMode': {
-				value: '',
-				allowedValue: ['lg', 'sm', ''],
-				type: 'string'
-			},
-			'tabindex': {
-				value: -1,
-				type: 'number'
+			'focusable': {
+				value: true,
+				type: 'boolean'
 			},
 			'centered': {
 				value: false,
 				type: 'boolean'
+			},
+			'opened': {
+				value: false,
+				type: 'boolean'
+			},
+			'backdrop': {
+				allowedValues: ['static', 'default', 'none'],
+				value: 'default',
+				type: 'string'
+			},
+			'keyboard': {
+				value: true,
+				type: 'boolean'
 			}
-
 		};
 	}
 
@@ -916,35 +1015,31 @@ Smart('bootstrap-modal', class Modal extends Smart.ContentElement {
 	*/
 	static get listeners() {
 		return {
-			'up': '_upHandler',
-			'dialog.down': '_dialogDownHandler',
 			'keydown': '_keydownHandler',
 			'click': '_clickHandler'
 		};
 	}
 
-	/** Button's template. */
+	
 	template() {
-		return `<div class="modal-dialog" id="dialog">
+		return `<div><div class="modal-dialog" id="dialog">
 					<div class="modal-content" inner-h-t-m-l="[[innerHTML]]">
 						<content></content>
-				</div>`;
-	}
-
-	ready() {
-		const that = this;
-
-		that.render();
+				</div></div>`;
 	}
 
 	propertyChangedHandler(propertyName, oldValue, newValue) {
 		const that = this;
 
-		if(propertyName === 'tabindex') {
-			that.setAttribute('tabindex', newValue);
+		if (propertyName === 'focusable') {
+			newValue ? that.setAttribute('tabindex', -1) : that.removeAttribute('tabindex');
 		}
-		else if(propertyName === 'scrollable' || propertyName === 'centered') {
+		else if (propertyName === 'scrollable' || propertyName === 'centered') {
 			that.$.dialog.classList[newValue ? 'add' : 'remove']('modal-dialog-' + propertyName);
+		}
+		else if (propertyName === 'sizeMode') {
+			that.$.dialog.classList.remove('modal-' + oldValue);
+			that.$.dialog.classList.add('modal-' + newValue);
 		}
 	}
 
@@ -954,17 +1049,30 @@ Smart('bootstrap-modal', class Modal extends Smart.ContentElement {
 		that.classList.add('modal');
 		that.$.dialog.classList[that.scrollable ? 'add' : 'remove']('modal-dialog-scrollable');
 		that.$.dialog.classList[that.centered ? 'add' : 'remove']('modal-dialog-centered');
+
+		if (that.sizeMode !== '') {
+			that.$.dialog.classList.add('modal-' + that.sizeMode);
+		}
+
+		if (that.opened) {
+			that.show(true);
+		}
+
 		that.setAttribute('tabindex', that.tabindex);
+	}
+
+	handleUpdate() {
+		this._adjustDialog()
 	}
 
 	toggle() {
 		return this.opened ? this.hide() : this.show();
 	}
 
-	show() {
+	show(initialization) {
 		const that = this;
 
-		if (that.opened || that._isTransitioning) {
+		if ((!initialization && that.opened) || that._isTransitioning) {
 			return;
 		}
 
@@ -1034,36 +1142,9 @@ Smart('bootstrap-modal', class Modal extends Smart.ContentElement {
 		if (that.parentElement) {
 			that.parentElement.removeChild(that);
 		}
-	}
 
-	// _transitionendHandler(event) {
-	// 	const that = this;
-
-	// 	this._isTransitioning = false;
-
-	// 	if (that.opened) {
-	// 		this._element.focus();
-	// 		that.$.fireEvent('shown')
-	// 	}
-	// 	else {
-	// 		that._hideModal(event);
-	// 	}
-	// }
-
-	_dialogDownHandler(event) {
-		this._dialogDown = true;
-	}
-
-	_upHandler() {
-		const that = this;
-
-		event.stopPropagation();
-
-		if (that._dialogDown && event.target === that) {
-			this._ignoreBackdropClick = true;
-		}
-
-		delete that._dialogDown;
+		window.removeEventListener('resize', that._windowResizeHandler);
+		document.removeEventListener('focusin', that._forceFocusHandler);// Guard against infinite focus loop
 	}
 
 	_hideModal() {
@@ -1110,9 +1191,7 @@ Smart('bootstrap-modal', class Modal extends Smart.ContentElement {
 	}
 
 	_keydownHandler(event) {
-		const that = this;
-
-		if (event.which === 27) {
+		if (event.which === 27 && this.keyboard) {
 			event.preventDefault()
 			this.hide()
 		}
@@ -1132,6 +1211,11 @@ Smart('bootstrap-modal', class Modal extends Smart.ContentElement {
 		}
 		if (event.target !== event.currentTarget) {
 			return
+		}
+
+		if (that.backdrop === 'static') {
+			that.focus();
+			return;
 		}
 
 		that.hide()
@@ -1201,15 +1285,18 @@ Smart('bootstrap-modal', class Modal extends Smart.ContentElement {
 		}
 	}
 
+	_windowResizeHandler() {
+		this._adjustDialog();
+	}
+
 	_setResizeEvent() {
-		const that = this,
-			resizeHanler = (event) => that._adjustDialog();
+		const that = this;
 
 		if (that.opened) {
-			window.addEventListener('resize', resizeHanler);
+			window.addEventListener('resize', that._windowResizeHandler);
 		}
 		else {
-			window.removeEventListener('resize', resizeHanler);
+			window.removeEventListener('resize', that._windowResizeHandler);
 		}
 	}
 
@@ -1249,28 +1336,30 @@ Smart('bootstrap-modal', class Modal extends Smart.ContentElement {
 		}
 		else {
 			transitionComplete()
-			// that._transitionendHandler()
+		}
+	}
+
+	_forceFocusHandler(event) {
+		const that = this;
+
+		if (document !== event.target && that !== event.target && !that.contains(event.target)) {
+			event.preventDefault();
+			that.hide();
 		}
 	}
 
 	_enforceFocus() {
-		const that = this,
-			focusInHandler = function () {
-				if (document !== event.target && that !== event.target && !that.contains(event.target)) {
-					event.preventDefault();
-					that.hide();
-				}
-			}
+		const that = this;
 
-		document.removeEventListener('focusin', focusInHandler);// Guard against infinite focus loop
-		document.addEventListener('focusin', focusInHandler);
+		document.removeEventListener('focusin', that._forceFocusHandler);// Guard against infinite focus loop
+		document.addEventListener('focusin', that._forceFocusHandler);
 	}
 
 	_showBackdrop(callback) {
 		const that = this;
 		const animate = that.classList.contains('fade');
 
-		if (that.opened) {
+		if (that.opened && that.backdrop !== 'none') {
 			if (!that._backdrop) {
 				that._backdrop = document.createElement('div')
 				that._backdrop.className = 'modal-backdrop';
@@ -1326,5 +1415,690 @@ Smart('bootstrap-modal', class Modal extends Smart.ContentElement {
 			callback()
 		}
 	}
-
 });
+
+Smart('bootstrap-tabs', class BootstrapTabs extends Smart.ContentElement {
+	// Element's properties.
+	static get properties() {
+		return {
+			'sizeMode': {
+				value: '',
+				allowedValue: ['sm', '', 'lg', 'xl'],
+				type: 'string'
+			},
+			'tabType': {
+				value: 'tabs',
+				allowedValue: ['tabs', 'nav', 'pills'],
+				type: 'string'
+			},
+			'listType': {
+				value: 'ul',
+				allowedValue: ['ul', 'ol', 'nav'],
+				type: 'string'
+			},
+			'alignment': {
+				value: '',
+				allowedValue: ['', 'center', 'end', 'vertical'],
+				type: 'string'
+			},
+			'fill': {
+				value: false,
+				type: 'boolean'
+			},
+			'justified': {
+				value: false,
+				type: 'boolean'
+			},
+			'styleMode': {
+				value: '',
+				type: 'string'	
+			}
+		};
+	}
+
+	/**
+	* Element's Event Listeners
+	*/
+	static get listeners() {
+		return {
+			'click': '_clickHandler'
+		};
+	}
+
+	
+	template() {
+		return '<div id="container"><content></content></div>';
+	}
+
+	appendChild(node) {
+		const that = this;
+
+		if (!that.isCompleted) {
+			const args = Array.prototype.slice.call(arguments, 2);
+			return HTMLElement.prototype.appendChild.apply(that, args.concat(Array.prototype.slice.call(arguments)));
+		}
+
+		if (node) {
+			that.$.container.appendChild(node);
+		}
+	}
+
+	removeChild(node) {
+		const that = this;
+
+		if (!that.isCompleted) {
+			const args = Array.prototype.slice.call(arguments, 2);
+			return HTMLElement.prototype.removeChild.apply(that, args.concat(Array.prototype.slice.call(arguments)));
+		}
+
+		if (!node) {
+			that.$.container.removeChild(node);
+		}
+	}
+
+	insertBefore(newNode, referenceNode) {
+		const that = this;
+
+		if (!that.isCompleted) {
+			const args = Array.prototype.slice.call(arguments, 2);
+			return HTMLElement.prototype.insertBefore.apply(that, args.concat(Array.prototype.slice.call(arguments)));
+		}
+
+		if (newNode) {
+			that.$.container.insertBefore(newNode, referenceNode);
+		}
+	}
+
+	propertyChangedHandler(propertyName, oldValue, newValue) {
+		const that = this;
+
+		if (propertyName === 'listType') {
+			const listItems = that.querySelectorAll('.nav-link');
+
+			that.$.container.innerHTML = '';
+
+			for (let i = 0; i < listItems.length; i++) {
+				that.appendChild(listItems[i]);
+			}
+
+			that.render();
+		}
+		
+		if (propertyName === 'styleMode') {
+			that.classList.remove(oldValue);
+			if (that.styleMode) {
+				that.classList.add(that.styleMode);
+			}
+		}
+
+		if (!that._list) {
+			return;
+		}
+
+		if (propertyName === 'alignment') {
+			that._list.classList.remove(newValue === 'vertical' ? 'flex-column' : 'justify-content-' + oldValue);
+
+			if (newValue) {
+				that._list.classList.add(newValue === 'vertical' ? 'flex-column' : 'justify-content-' + newValue);
+			}
+		}
+		else if (propertyName === 'tabType') {
+			that._list.classList.remove('nav-' + oldValue);
+
+			if (newValue !== 'nav') {
+				that._list.classList.add('nav-' + newValue);
+			}
+		}
+		else if (propertyName === 'fill' || propertyName === 'justified') {
+			that._list.classList[newValue ? 'add' : 'remove']('nav-' + propertyName);
+		}
+	}
+
+	render() {
+		const that = this,
+			container = that.$.container,
+			fragment = document.createDocumentFragment();
+
+		while (container.firstElementChild) {
+			const navLink = container.firstElementChild;
+
+			if (navLink) {
+				if (navLink instanceof Smart.Bootstrap.DropDown) {
+					navLink.querySelector('.dropdown-toggle').classList.add('nav-link');
+				}
+				else {
+					navLink.classList.add('nav-link');
+				}
+
+				fragment.appendChild(navLink);
+			}
+		}
+
+		that.$.container.innerHTML = '';
+
+		if (!fragment.children.length) {
+			return;
+		}
+
+		const list = document.createElement(that.listType);
+
+		that._list = list;
+
+		list.classList.add('nav');
+
+		if (that.listType === 'nav') {
+			while (fragment.firstElementChild) {
+				if (fragment.firstElementChild.classList.contains('tab-content')) {
+					that.$.container.appendChild(fragment.firstElementChild);
+					continue;
+				}
+
+				list.appendChild(fragment.firstElementChild);
+			}
+		}
+		else {
+			while (fragment.firstElementChild) {
+				if (fragment.firstElementChild.classList.contains('tab-content')) {
+					that.$.container.appendChild(fragment.firstElementChild);
+					continue;
+				}
+
+				const listItem = document.createElement('li');
+
+				listItem.classList.add('nav-item');
+				listItem.appendChild(fragment.firstElementChild);
+
+				list.appendChild(listItem);
+			}
+		}
+
+		that.$.container.insertBefore(list, that.$.container.lastElementChild);
+		that._refreshBarPosition();	
+		
+		if (!that._list) {
+			return;
+		}
+
+		if (that.alignment && that._list) {
+			that._list.classList.add(that.alignment === 'vertical' ? 'flex-column' : 'justify-content-' + that.alignment);
+		}
+
+		if (that.tabType !== 'nav') {
+			that._list.classList.add('nav-' + that.tabType);
+		}
+
+		if (that.fill) {
+			that._list.classList.add('nav-fill');
+		}
+
+		if (that.justified) {
+			that._list.classList.add('nav-justified');
+		}
+		
+		if (that.styleMode) {
+			that.classList.add(that.styleMode);	
+		}
+		
+		super.render();
+	}
+
+	_getSelectorFromElement(element) {
+		let selector = element.getAttribute('data-target')
+
+		if (!selector || selector === '#') {
+			const hrefAttr = element.getAttribute('href');
+
+			selector = hrefAttr && hrefAttr !== '#' ? hrefAttr.trim() : '';
+		}
+
+		return document.querySelector(selector);
+	}
+
+	// Public
+
+	show(item) {
+		const that = this;
+
+		if (that.disabled) {
+			return
+		}
+
+		const items = Array.from(that.getElementsByClassName('nav-link')),
+			activeItem = items.find(item => item.classList.contains('active')),
+			selector = that._getSelectorFromElement(item);
+
+		if (!item || !item.classList.contains('nav-link') || item === activeItem) {
+			return;
+		}
+
+		that.$.fireEvent('show', { relatedTarget: activeItem, target: item });
+
+		const isDefaultPrevented = that.$.fireEvent('show', { relatedTarget: activeItem, target: item }).defaultPrevented;
+
+		if (isDefaultPrevented) {
+			return
+		}
+
+		that._activate(item, that);
+
+		const complete = () => {
+			that.$.fireEvent('shown', { relatedTarget: activeItem, target: item });
+		}
+
+		if (selector) {
+			that._activate(selector, selector.parentElement, complete)
+		}
+		else {
+			complete()
+		}		
+	}
+
+	dispose() {
+		const that = this;
+
+		if (that.parentElement) {
+			that.parentElement.removeChild(that);
+		}
+	}
+
+	// Private
+  _refreshBarPosition() {
+		const that = this;
+
+		if (!that.bar) {
+			const bar = document.createElement('span');
+			that._list.appendChild(bar);
+			bar.classList.add('bar');
+			
+			that.bar = bar;	
+		}
+		
+	   setTimeout(function () {
+		   const items = Array.from(that.getElementsByClassName('nav-link')),
+			activeItem = items.find(item => item.classList.contains('active'));
+			
+			let width = 0;
+			let activeWidth = 0;
+			
+			for(let i = 0; i < items.length; i++){
+				width += items[i].getBoundingClientRect().width;
+				
+				if (items[i] === activeItem) {
+					activeWidth = width;
+				}
+			}
+			
+		  if (activeItem) {				
+				const rect = activeItem.getBoundingClientRect();
+				
+				that.bar.style.left = -width + activeWidth - activeItem.offsetWidth + 'px';
+				that.bar.style.top = rect.height + 'px';
+				that.bar.style.width = activeItem.offsetWidth + 'px';			
+			}
+		});
+	}
+		
+	_activate(item, container, callback) {
+		const active = container && container.querySelector('.active'),
+			complete = () => this._transitionComplete(item, active, callback);
+	
+		if (callback && active && active.classList.contains('fade')) {
+			active.classList.remove('show');
+			active.addEventListener('transitionend', complete, { once: true });
+		}
+		else {
+			complete()
+		}	
+	}
+
+	_transitionComplete(element, active, callback) {
+		if (active) {
+			active.classList.remove('active');
+
+			const dropdownChild = active.parentElement.querySelector('.dropdown-menu .active');
+
+			if (dropdownChild) {
+				dropdownChild.classList.remove('active');
+			}
+
+			if (active.getAttribute('role') === 'tab') {
+				active.setAttribute('aria-selected', false)
+			}
+		}
+
+		element.classList.add('active');
+		this._refreshBarPosition();
+		
+		if (element.getAttribute('role') === 'tab') {
+			element.setAttribute('aria-selected', true)
+		}
+
+		//Causes reflow
+		element.offsetHeight;
+
+		if (element.classList.contains('fade')) {
+			element.classList.add('show')
+		}
+
+		if (element.parentElement && element.parentElement.classList.contains('dropdown-menu')) {
+			const dropdownElement = element.closest('.dropdown');
+
+			if (dropdownElement) {
+				const dropdownToggle = dropdownElement.querySelector('.dropdown-toggle');
+
+				dropdownToggle.classList.add('active');
+			}
+
+			element.setAttribute('aria-expanded', true);
+		}
+
+		if (callback) {
+			callback()
+		}
+	}
+
+	_clickHandler(event) {
+		const that = this;
+
+		if (that.disabled) {
+			return;
+		}
+
+		const target = event.target;
+
+		//[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]
+		if (['tab', 'pill', 'list'].indexOf(target.getAttribute('data-toggle')) > -1) {
+			that.show(target);
+		}
+	}
+});
+
+Smart('bootstrap-range', class BootstrapRange extends Smart.BaseElement {
+	// Button's properties.
+	static get properties() {
+		return {
+			'min': {
+				value: 0,
+				type: 'number'
+			},
+			'max': {
+				value: 10,
+				type: 'number'	
+			},
+			'name': {
+				type: 'string'
+			},
+			'value': {
+				value: 5,
+				type: 'number'	
+			}
+		};
+	}
+
+	/**
+	* CheckBox's Event Listeners
+	*/
+	static get listeners() {
+		return {
+			'input.focus': 'focus',
+			'input.blur': 'blur'
+		};
+	}
+
+	/** CheckBox's template. */
+	template() {
+		return `<div><div id="range" class="slider">
+				 	<input value=[[value]] max=[[max]] min=[[min]] disabled=[[disabled]]  id="input" type="range" name=\'[[name]]\'/>
+			  </div></div>`;
+	}
+
+	ready() {
+		const that = this;
+
+		that.$.range.classList.add('component');
+		that.$.input.classList.add('component-input');
+		that.$.input.classList.add('range');
+	}
+
+	propertyChangedHandler(propertyName, oldValue, newValue) {
+		const that = this;	
+	}
+
+	blur() {
+		this.$.range.classList.remove('focus');
+	}
+
+	focus() {
+		this.$.range.classList.add('focus');
+	}
+});
+
+Smart('bootstrap-progress', class BootstrapProgress extends Smart.ContentElement {
+	// Button's properties.
+	static get properties() {
+		return {
+			'min': {
+				value: 0,
+				type: 'number'
+			},
+			'max': {
+				value: 10,
+				type: 'number'	
+			},
+			'name': {
+				type: 'string'
+			},
+			'type': {
+				value: '',
+				type: 'string'
+			},
+			'value': {
+				value: 5,
+				type: 'number'	
+			},
+			'striped': {
+				value: false,
+				type: 'boolean'	
+			},
+			'styleMode': {
+				value: 'primary',
+				type: 'string'	
+			}
+		};
+	}
+
+	template() {
+		return `<div><div id="progress" class="progress">
+				 	<div class="progress-bar" role="progressbar" aria-valuenow==[[value]] aria-valuemax==[[max]] aria-valuemin==[[min]] disabled=[[disabled]]  id="progressbar" name=\'[[name]]\'><content></content></div>
+			  </div>
+			 <progress id="circular" class="hide circular"/>
+			  </div>`;
+	}
+
+	refresh() {
+		const that = this;
+	
+		let value = Math.max(that.min, that.value);
+		value = Math.min(that.value, that.max);
+		
+		const width = (value * that.offsetWidth) / (that.max - that.min)
+		
+		that.$.progressbar.style.width = width + 'px';
+		that.$.progressbar.classList.add('bg-' + that.styleMode);
+		that.$.circular.classList.add('bg-' + that.styleMode);
+		
+		that.$.progressbar.classList.remove('progress-bar-striped');
+		
+		if (that.striped) {
+			that.$.progressbar.classList.add('progress-bar-striped');		
+		}
+			
+		if (that.type === 'circular') {
+			that.$.progress.classList.add('hide');
+			that.$.circular.classList.remove('hide');
+		}
+		else {
+			that.$.progress.classList.remove('hide');
+			that.$.circular.classList.add('hide');
+		}
+	}
+	
+	ready() {
+		const that = this;
+
+		that.$.progress.classList.add('component');
+		
+		that.refresh();
+	}
+
+	propertyChangedHandler(propertyName, oldValue, newValue) {
+		const that = this;	
+		
+		that.refresh();
+	}
+});
+
+Smart('bootstrap-circular', class BootstrapCircular extends Smart.Bootstrap.Progress {
+	static get properties() {
+			return {
+				'type': {
+					value: 'circular',
+					type: 'string'	
+				}
+			}
+	}
+});
+
+Smart('bootstrap-input', class BootstrapTextBox extends Smart.ContentElement {
+	static get properties() {
+		return {
+			'name': {
+				value: '',
+				type: 'string'	
+			},
+			'value': {
+				value: '',
+				type: 'string'	
+			},
+			'placeholder': {
+				value: '',
+				type: 'string'	
+			},
+			'required': {
+				value: false,
+				type: 'boolean'	
+			},	
+			'outlined': {
+				value: false,
+				type: 'boolean'	
+			},			
+			'filled': {
+				value: false,
+				type: 'boolean'	
+			},					
+			'styleMode': {
+				value: 'outlined',
+				type: 'string'	
+			}			
+		};
+	}
+
+	template() {
+		return `<div><label input id="label">
+            <input name=[[name]] type="text" class="form-component" id="input" placeholder="[[placeholder]]"
+									value="{{value::keydown}}" required="[[required]]"/>
+            <span id="span">[[placeholder]]</span>
+        </label></div>`;
+	}
+
+	refresh() {
+		const that = this;
+	
+		that.$.label.removeAttribute('outlined');
+		that.$.label.removeAttribute('filled');
+		that.$.label.removeAttribute('default');
+		
+		if (that.outlined) {
+			that.$.label.setAttribute('outlined', '');
+		}
+		else if (that.filled) {
+			that.$.label.setAttribute('filled', '');
+		}
+		else {
+			that.$.label.setAttribute('default', '');
+		}
+		
+		that.$.label.className = '';
+		
+		if (that.styleMode) {
+			that.$.label.classList.add(that.styleMode);	
+			that.$.label.setAttribute('highlight', '');
+		}
+	}
+	
+	ready() {
+		const that = this;
+	
+		that.refresh();
+	}
+
+	propertyChangedHandler(propertyName, oldValue, newValue) {
+		const that = this;	
+		
+		that.refresh();
+	}
+});
+
+Smart('bootstrap-textarea', class BootstrapTextArea extends Smart.Bootstrap.Input {
+	template() {
+		return `<div><label input id="label">
+            <textarea name=[[name]] type="text" class="form-component" id="input" placeholder="[[placeholder]]"
+									value="{{value::keydown}}" required="[[required]]"></textarea>
+            <span id="span">[[placeholder]]</span>
+        </label></div>`;
+	}
+});
+
+Smart('bootstrap-file-input', class BootstrapFileInput extends Smart.ContentElement {
+	static get properties() {
+		return {
+			'name': {
+				value: '',
+				type: 'string'	
+			},
+			'placeholder': {
+				value: '',
+				type: 'string'	
+			},	
+			'styleMode': {
+				value: '',
+				type: 'string'	
+			}			
+		};
+	}
+
+	template() {
+		return `<div><div class="file">
+					<input placeholder=[[placeholder]] name=[[name]] type="file" class="file-input" />
+					<label class="file-label" for="inputGroupFile01"><content></content></label>
+				</div></div>`;
+	}
+
+	refresh() {
+		const that = this;	
+	}
+	
+	ready() {
+		const that = this;
+	
+		that.refresh();
+	}
+
+	propertyChangedHandler(propertyName, oldValue, newValue) {
+		const that = this;	
+		
+		that.refresh();
+	}
+});
+
+
