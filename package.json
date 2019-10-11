@@ -1,7 +1,7 @@
 {
-  "name": "@smarthtmlelements/smarthtmlelements-core",
-  "version": "4.5.0",
-  "description": "Smart HTML Elements Core",
+  "name": "@smarthtmlelements/smart-elements-community",
+  "version": "4.6.0",
+  "description": "Smart HTML Elements Community",
    "scripts": { 
     "test": "karma start karma-minified.conf.js",
     "eslint": "eslint source/*.js --quiet",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HTMLElements/smarthtmlelements-core.git"
+    "url": "git+https://github.com/HTMLElements/smart-elements-community.git"
   },
   "author": "Smart HTML Elements",
   "license": "SEE LICENSE IN http://www.htmlelements.com/license/",
   "bugs": {
-    "url": "https://github.com/HTMLElements/smarthtmlelements-core"
+    "url": "https://github.com/HTMLElements/smart-elements-community"
   },
-  "homepage": "https://github.com/HTMLElements/smarthtmlelements-core#readme",
+  "homepage": "https://github.com/HTMLElements/smart-elements-community#readme",
   "devDependencies": {
     "eslint": "^3.2.2",
     "eslint-config-google": "^0.6.0",
@@ -51,7 +51,6 @@
     "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^1.2.0"
   },
   "main": "index.js",
   "directories": {},
