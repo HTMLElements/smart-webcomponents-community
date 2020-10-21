@@ -1,0 +1,9 @@
+.smart-table {
+    width: 650px;
+}
+
+.material-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table Export Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+    <script type="text/javascript" src="../../../scripts/data.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    
+</head>
+
+<body class="viewport">
+    <div class="demo-description">
+        This demo showcases how to export the data of smart-table.
+    </div>
+    <smart-table id="table"></smart-table>
+
+    <div class="options">
+        <smart-button id="csv">Export to CSV</smart-button>
+        <smart-button id="html">Export to HTML</smart-button>
+        <smart-button id="json">Export to JSON</smart-button>
+        <smart-button id="pdf">Export to PDF</smart-button>
+        <smart-button id="tsv">Export to TSV</smart-button>
+        <smart-button id="xlsx">Export to XLSX</smart-button>
+        <smart-button id="xml">Export to XML</smart-button>
+    </div>
+
+
+    <!-- scripts -->
+    <script type="module" src="../../../source/modules/smart.table.js"></script>
+    <script type="module" src="index.js"></script>
+    <!-- JSZip -->
+    <script type="text/javascript" src="../../../scripts/jszip.min.js"></script>
+    <!-- pdfmake -->
+    <script type="text/javascript" src="../../../scripts/pdfmake.min.js"></script>
+    <script type="text/javascript" src="../../../scripts/vfs_fonts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table Billing History Showcase Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="../../../scripts/data.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    
+</head>
+
+<body class="viewport">
+    <div id="mainContainer">
+        <div id="header">
+            <div id="title">Billing History</div>
+            <div id="info">
+                <div>Your next payment will be on</div>
+                <div><strong>May 19, 2020</strong> for <strong>$13.99</strong></div>
+            </div>
+        </div>
+        <smart-table id="table"></smart-table>
+        <div id="footer"><span class="material-icons">settings</span><span>Receipt settings</span></div>
+    </div>
+
+    <smart-tooltip id="amountTooltip" arrow>Taxes are included</smart-tooltip>
+    <smart-tooltip id="errorTooltip" arrow position="bottom">Insufficient funds in account</smart-tooltip>
+    <smart-toast id="actionToast" position="top-right" auto-close show-close-button type="success"></smart-toast>
+
+    <!-- scripts -->
+    <script type="module" src="../../../source/modules/smart.table.js"></script>
+    <script type="module" src="../../../source/modules/smart.tooltip.js"></script>
+    <script type="module" src="../../../source/modules/smart.toast.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

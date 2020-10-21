@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tabs Label Settings</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+    <link rel="stylesheet" type="text/css" href="../../../styles/demos.css" />
+    
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    </head>
+<body class="viewport">
+    <smart-tabs id="tabs" class="demoTabs" selected-index="3" tab-position="left" selectionMode="click" tab-text-orientation="vertical">
+        <smart-tab-item label="New York"><div id="map-canvas-0"></div></smart-tab-item>
+        <smart-tab-item label="Hong Kong"><div id="map-canvas-1"></div></smart-tab-item>
+        <smart-tab-item label="Troyan"><div id="map-canvas-2"></div></smart-tab-item>
+        <smart-tab-item label="Bali"><div id="map-canvas-3"></div></smart-tab-item>
+    </smart-tabs>
+<div class="options">
+		<div class="caption">Settings</div>
+		<div class="option">
+			<p>Tab position</p>
+			<smart-radio-button id="top" group-name="tabPosition">top</smart-radio-button><br/>
+			<smart-radio-button id="bottom" group-name="tabPosition">bottom</smart-radio-button><br/>
+			<smart-radio-button id="left" group-name="tabPosition" checked>left</smart-radio-button><br/>
+			<smart-radio-button id="right" group-name="tabPosition">right</smart-radio-button>	   
+		</div>
+		<div class="option">
+			<p>Tab text orientation</p>
+			<smart-radio-button id="horizontal" group-name="tabTextOrientation">horizontal</smart-radio-button>
+			<br/>
+			<smart-radio-button id="vertical" group-name="tabTextOrientation" checked>vertical</smart-radio-button>
+		</div>
+		<div class="option">
+			<p>Selection mode</p>
+			<smart-radio-button id="click" group-name="selectionMode" checked>click</smart-radio-button><br/>
+			<smart-radio-button id="dblclick" group-name="selectionMode">dblclick</smart-radio-button><br/>
+			<smart-radio-button id="mouseenter" group-name="selectionMode">mouseenter</smart-radio-button><br/>
+			<smart-radio-button id="none" group-name="selectionMode">none</smart-radio-button>
+		</div>
+	</div>	
+
+    <!-- scripts -->  
+    <script type="module" src="../../../source/modules/smart.tabs.js"></script> 
+    <script type="module" src="../../../source/modules/smart.radiobutton.js"></script> 
+    <script type="module" src="index.js"></script>	
+	
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table Advanced Filtering Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../../source/styles/smart.default.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="../../../scripts/data.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    
+</head>
+
+<body class="viewport">
+    <div id="mainContainer">
+        <div id="filterContainer">
+            <div>
+                <div id="label">Users</div>
+                <div id="numberOfAppliedFiltersContainer">
+                    <div id="numberOfAppliedFilters" class="smart-visibility-hidden"></div>
+                </div>
+                <div>
+                    <smart-button id="filterIcon"><span class="material-icons">filter_list</span></smart-button>
+                </div>
+            </div>
+            <div id="filterRowsContainer"></div>
+        </div>
+        <smart-table id="table"></smart-table>
+    </div>
+
+    <smart-menu id="filterMenu" checkboxes checkable check-mode="checkbox, none" mode="dropDown">
+        <smart-menu-item value="name"><span class="material-icons">filter_alt</span>Name</smart-menu-item>
+        <smart-menu-item value="email"><span class="material-icons">filter_alt</span>Email</smart-menu-item>
+        <smart-menu-item separator value="permission"><span class="material-icons">filter_alt</span>Permission
+        </smart-menu-item>
+        <smart-menu-item id="clearFilters" value="clearFilters" label="clearFiltersTemplate"></smart-menu-item>
+    </smart-menu>
+
+    <smart-menu id="removeMenu" mode="dropDown">
+        <smart-menu-item>Remove access</smart-menu-item>
+    </smart-menu>
+
+    <template id="clearFiltersTemplate">
+        <smart-button class="primary">Clear filters</smart-button>
+    </template>
+
+    <!-- scripts -->
+    <script type="module" src="../../../source/modules/smart.table.js"></script>
+    <script type="module" src="../../../source/modules/smart.menu.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
