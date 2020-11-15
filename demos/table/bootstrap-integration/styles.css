@@ -1,9 +1,0 @@
-.smart-table {
-    width: 900px;
-    margin: 8px;
-}
-
-span[data-toggle="popover"] {
-    cursor: pointer;
-    outline: none;
-}
