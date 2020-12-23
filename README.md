@@ -26,13 +26,12 @@ Smart HTML Elements takes the JavaScript & HTML UI development to a new level. I
 [Theme Builder](https://www.htmlelements.com/themebuilder/)
 
 
-
 Download and Installation
 -------------------------
 
 [Download Smart HTML Elements](http://www.htmlelements.com/download/)
 
-*   ### The SDK files are located in the "source" directory
+*   ### The SDK files are located in the source directory
     
     In general you need to use files from this directory only.  
     
@@ -40,6 +39,8 @@ Download and Installation
     
     ##### Files required in all projects using the SDK
     
+    *   smart.element.js: Core Smart HTML Elements framework
+    *   smart.elements.js: Smart HTML Elements bundle
     *   Stylesheet files. Include at least one stylesheet Theme file and the images folder:
     *   styles/smart.default.css: Stylesheet for the base Theme.  
         The smart.default.css file should be always included in your project.
