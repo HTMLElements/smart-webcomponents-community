@@ -10,10 +10,16 @@ Build responsive, mobile-first projects on the Web with the most advanced front-
 -----------------------------------------------------------------------------------------------------
 
 
-What is Smart HTML Elements?
+What is Smart UI?
 ----------------------------
 
-Smart HTML Elements represents a framework based on Javascript, HTML and CSS for building web-based applications that run on PC, Touch and Mobile devices. Smart HTML Elements includes more than 40 UI components. All components are designed from ground-up and based on a powerful common core. The framework core provides fundamental capabilities like support for HTML Element extensions and inheritance, HTML Templates , Data Binding, Event handling and routing, property change notifications, device and browser compatibility detection and adjustments.
+Smart UI represents a framework based on Javascript, HTML and CSS for building web-based applications that run on PC, Touch and Mobile devices. Smart UI is available for Javascript, Angular, React, Vue & Blazor. It includes more than 60 UI components. All components are designed from ground-up and based on a powerful common core. The framework core provides fundamental capabilities like support for HTML Element extensions and inheritance, HTML Templates , Data Binding, Event handling and routing, property change notifications, device and browser compatibility detection and adjustments.
+
+What is Community License?
+----------------------------
+
+The Community license includes free Table, Tree, Menu and Tabs components. The differences between the Paid and the Community version are listed here: https://www.htmlelements.com/docs/community-and-enterprise/
+
 
 Works across devices and browsers
 ---------------------------------
@@ -59,6 +65,7 @@ Custom Elements
   
 Download and Installation
 -------------------------
+
 
 [Download Smart HTML Elements](http://www.htmlelements.com/download/)
 
