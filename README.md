@@ -25,13 +25,44 @@ Smart HTML Elements takes the JavaScript & HTML UI development to a new level. I
 
 [Theme Builder](https://www.htmlelements.com/themebuilder/)
 
+Web Components
+--------------
 
+A suite of polyfills supporting the Web Components specs is included in our examples. These polyfills ensure that Custom Elements are supported in all browsers.  
+
+Custom Elements
+---
+
+| Component | Status | Issues
+| ----------| ------ | ------
+| [`<smart-accordion>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+accordion)
+| [`<smart-button>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+button)
+| [`<smart-calendar>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+calendar)
+| [`<smart-card>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+card)
+| [`<smart-carousel>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-carousel) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+toggle+button)
+| [`<smart-check-box>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+check+box)
+| [`<smart-grid>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+grid)
+| [`<smart-input>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+input)
+| [`<smart-list-box>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+list+box)
+| [`<smart-power-button>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+power+button)
+| [`<smart-progress-bar>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+progress+bar)
+| [`<smart-radio-button>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+radio+button)
+| [`<smart-repeat-button>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+repeat+button)
+| [`<smart-scroll-bar>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+scroll+bar)
+| [`<smart-switch-button>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+switch+button)
+| [`<smart-sortable>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sortable)
+| [`<smart-table>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+table)
+| [`<smart-tabs>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+tabs)
+| [`<smart-toggle-button>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+toggle+button)
+| [`<smart-tooltip>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+tooltip)
+| [`<smart-toggle-button>`](https://github.com/HTMLElements/smart-elements-community) | [![Published on npm](https://img.shields.io/npm/v/@smarthtmlelements/smart-elements-community.svg)](https://www.npmjs.com/package/@smarthtmlelements/smart-elements-community) | [*Issues*](https://github.com/HTMLElements/smart-elements-community/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+toggle+button)
+  
 Download and Installation
 -------------------------
 
 [Download Smart HTML Elements](http://www.htmlelements.com/download/)
 
-*   ### The SDK files are located in the source directory
+*   ### The SDK files are located in the jqwidgets directory
     
     In general you need to use files from this directory only.  
     
