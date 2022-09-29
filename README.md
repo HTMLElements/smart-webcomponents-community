@@ -1,6 +1,6 @@
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/collection/HTMLElements/smart-webcomponents-community)
 
-This repository contains the FREE community components - Table, Tabs, Tree and Menu. The files are within the 'source/modules' folder. The dev files are within 'source/modules/dev' folder.
+This repository contains the FREE community components - Table, Tabs, Tree and Menu. The files are within the 'source/modules' folder. 
 
 ![table](https://user-images.githubusercontent.com/20238579/177482911-1967307b-60d5-409c-9c48-3a859732b163.png)
 
