@@ -73,7 +73,12 @@ smart-multi-combo-input {
       min-height: var(--smart-editor-height);
     }
   }
-
+  
+  .smart-tokens-container {
+    grid-row-gap: 3px;
+    padding: 3px;
+  }
+  
   .smart-token {
     position: relative;
     white-space: nowrap;
@@ -86,7 +91,7 @@ smart-multi-combo-input {
     border-radius: 20px;
     background-color: var(--smart-primary);
     color: var(--smart-primary-color);
-    margin: var(--smart-editor-label-padding) 0 0 var(--smart-editor-label-padding);
+    margin: 0;
     height: 22px;
 
     .smart-drop-down-list-selection-label {
@@ -101,10 +106,18 @@ smart-multi-combo-input {
       border-radius: 50%;
       width: 20px;
       height: 20px;
+      min-width: 20px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       margin-right: 4px;
+      transform: scale(1.3);
+      left: -3px;
+      position: relative;
+
+      &:hover {
+        transform: scale(1.5);
+      }
     }
 
     &:last-of-type {}
@@ -122,6 +135,7 @@ smart-multi-combo-input {
     border-top-left-radius: var(--smart-border-top-left-radius);
     border-bottom-left-radius: var(--smart-border-bottom-left-radius);
     min-height: var(--smart-editor-height);
+    align-items: center;
   }
 
   .smart-drop-down-list-unselect-button {
@@ -176,6 +190,19 @@ smart-multi-combo-input {
   &[readonly] {
     .smart-input {
       visibility: hidden;
+    }
+
+    .smart-action-button {
+      background: var(--smart-surface);
+      color: var(--smart-surface-color);
+    }
+
+    &[open] {
+      .smart-action-button,
+      .smart-drop-down-button {
+        background: var(--smart-ui-state-hover) !important;
+        color: var(--smart-ui-state-color-hover) !important;
+      }
     }
 
     &:hover {

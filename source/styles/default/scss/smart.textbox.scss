@@ -80,6 +80,10 @@ textarea {
   /*min-width: 150px;*/
   min-height: 0;
 
+  &[top] {
+    transform-origin: bottom;
+  }
+
   &:not([animation="none"]) {
     transition: opacity 0.2s, transform 0.2s ease-out;
   }
@@ -109,6 +113,53 @@ textarea {
     margin: 0;
     width: 100%;
     height: auto;
+
+    &[allow-add-new] {
+      .add-new-item {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      input {
+        border: none;
+        border-bottom: 1px solid var(--smart-border);
+        border-radius: 0px;
+        width: 100%;
+
+        &:focus,
+        &:hover {
+          border-bottom-color: var(--smart-primary);
+        }
+      }
+
+      smart-button {
+        border-radius: 50px;
+        min-width: 30px;
+        width: 30px
+      }
+
+      li {
+        padding-right: 10px;
+
+        &.selected {
+          a {
+            span[data-content] {
+              text-decoration: line-through;
+            }
+
+            span.close-button {
+              text-decoration: none !important;
+            }
+          }
+        }
+
+        a {
+          white-space: pre-wrap;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
 
     &.scroll {
       width: calc(100% - var(--smart-scroll-bar-size) - 2px);
@@ -195,6 +246,7 @@ textarea {
   }
 }
 
+
 .smart-drop-down {
   smart-list-item[focus] {
     .smart-overlay {
@@ -230,9 +282,9 @@ textarea {
 @import 'textbox/_color-input';
 @import 'textbox/_date-input';
 @import 'textbox/_phone-input';
-
 @import 'textbox/_underlined';
 @import 'textbox/_outlined';
+
 
 /* Faster transition in Safari for less noticable fractional font-size issue */
 @media not all and (min-resolution: .001dpcm) {

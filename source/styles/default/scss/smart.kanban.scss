@@ -19,9 +19,10 @@
     .smart-kanban-column:not(.smart-kanban-add-new-column) {
       background: var(--smart-surface);
       padding: 5px;
-      border: 1px solid var(--smart-border);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.08), 0 3px 4px rgba(0, 0, 0, 0.03), 0 3px 16px rgba(0, 0, 0, 0.06);
       border-radius: 5px;
       box-sizing: border-box;
+
 
       .smart-kanban-column-header {
         background: transparent;
@@ -114,6 +115,18 @@
       }
     }
 
+    &[wip-max-error] {
+      >.smart-kanban-column-header {
+        background: #ffcdd2 !important;
+      }
+    }
+
+    &[wip-min-error] {
+      >.smart-kanban-column-header {
+        background: #ffe082 !important;
+      }
+    }
+
     >.smart-kanban-column-header {
       border: var(--smart-border-width) solid var(--smart-border);
       border-top-left-radius: var(--smart-border-top-left-radius);
@@ -158,6 +171,11 @@
               opacity: 0.8;
             }
           }
+        }
+
+        .smart-kanban-title {
+          text-overflow: ellipsis;
+          overflow: hidden;
         }
 
         &.pending {
@@ -369,9 +387,9 @@
       justify-content: center;
       width: 100%;
       opacity: 0.5;
-      font-size:11px;
+      font-size: 11px;
     }
-    
+
     .smart-kanban-task[focus] {
       box-shadow: inset 0px 0px 1px 1px var(--smart-primary);
     }
@@ -401,6 +419,18 @@
   }
 
   .smart-kanban-task {
+
+    &:hover {
+      .smart-kanban-task-edit {
+        width: 16px;
+
+        &:after {
+          content: var(--smart-icon-mode-edit);
+          font-family: var(--smart-font-family-icon);
+        }
+      }
+    }
+
     &.dragged {
       background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%, transparent);
       background-size: 3em 3em;
@@ -418,6 +448,8 @@
     }
   }
 
+  .smart-kanban-task-description,
+  .smart-kanban-task-edit,
   .smart-kanban-task-actions,
   .smart-kanban-task-comments {
     &:hover {
@@ -478,6 +510,10 @@
     border-bottom-left-radius: var(--smart-border-bottom-left-radius);
     border-bottom-right-radius: var(--smart-border-bottom-right-radius);
     min-width: 0;
+  }
+
+  .smart-kanban-task-placeholder {
+    transition: margin 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .drop-target {
@@ -546,8 +582,8 @@
     }
 
     .smart-kanban-add-new-button {
-      width: 30px;
-      height: 30px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: var(--smart-primary);
       color: var(--smart-primary-color);
@@ -556,16 +592,16 @@
       justify-content: center;
       align-content: center;
       align-items: center;
-      font-size: 24px;
-      box-shadow: var(--smart-elevation-6);
+      font-size: 14px;
       cursor: pointer;
-      transition: transform 0.1s ease-out, box-shadow 0.2s ease-in-out;
+      transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       transform: scale(1);
       transition-delay: 0s;
+
       &:hover {
-        box-shadow: var(--smart-elevation-8);
+        box-shadow: var(--smart-elevation-4);
         transform: scale(1.2);
-     }
+      }
 
       &:after {
         content: var(--smart-icon-plus);
@@ -585,7 +621,7 @@
 
         >.smart-kanban-column-header-settings-button {
           display: block;
-          transition: transform 0.2s ease-in-out;
+          transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
           margin-top: -1px;
 
           &:hover,
@@ -623,7 +659,7 @@
 
         >.smart-arrow {
           display: block;
-          transition: transform 0.2s ease-in-out;
+          transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
           &:hover {
             color: var(--smart-primary);
@@ -690,6 +726,8 @@
   cursor: pointer;
   background-color: var(--smart-background);
   position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
 
   .smart-kanban-task-cover-content {
     height: 100px;
@@ -725,12 +763,22 @@
         text-overflow: ellipsis;
         word-break: break-word;
 
+        .attachments {
+          display: flex;
+
+          .item {
+            margin-right: 5px;
+          }
+        }
+
+        .item,
         img {
           border: 1px solid var(--smart-border);
           width: 25px;
           height: 25px;
         }
 
+        .item:hover,
         img:hover {
           border: 2px solid var(--smart-primary);
         }
@@ -770,6 +818,7 @@
       content: var(--smart-icon-check-empty);
       font-family: var(--smart-font-family-icon);
       cursor: pointer;
+      font-size: var(--smart-font-size) !important;
     }
 
     &:hover {
@@ -785,6 +834,7 @@
     &.selected {
       background: var(--smart-ui-state-selected);
       color: var(--smart-ui-state-color-selected);
+      text-decoration: line-through;
 
       &:before {
         content: var(--smart-icon-check-squared);
@@ -825,7 +875,7 @@
 
 .smart-kanban-task-footer {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto auto;
   align-items: center;
   grid-column-gap: 5px;
 }
@@ -903,12 +953,22 @@
 
 .smart-kanban-task-tag {
   display: inline-block;
-  padding: 5px;
   background-color: #{'rgba(var(--smart-primary-rgb), 0.15)'};
   color: var(--smart-background-color);
-  margin-right: 5px;
+  margin-right: 4px;
   border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 7px;
 }
+
+.smart-kanban-task-description {
+  &:after {
+    content: var(--smart-icon-align-left);
+    font-family: var(--smart-font-family-icon);
+  }
+}
+
 
 .smart-kanban-task-actions {
   display: none;
@@ -923,7 +983,7 @@
   display: none;
 
   &:after {
-    content: var(--smart-icon-comment) ' 'attr(num);
+    content: var(--smart-icon-comment) ' ' attr(num);
     font-family: var(--smart-font-family-icon);
     white-space: nowrap;
   }
@@ -1046,18 +1106,31 @@
   display: block;
 }
 
+
 [task-priority] {
+  &[editable] {
+    .smart-kanban-task-text {
+      &:hover {
+        .priority {
+          background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAQElEQVR4nGNgGAVUBEcZGBj+Q/FhBhqA/2h46FlwGMnwQ7SwYBQQBEdHkykhcHg0mQ44ODqaTAmBw6PJlIEWAACAfy0E9A956gAAAABJRU5ErkJggg==");
+        }
+      }
+    }
+  }
+
   .smart-kanban-task-text {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 
     .priority {
       font-family: var(--smart-font-family-icon);
       margin-left: 5px;
       display: inline-block;
       width: 16px;
+      min-width: 16px;
       height: 16px;
       background-repeat: no-repeat;
+      background-size: cover;
 
       &.low {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232666BE'%3E%3Cpath d='M2.73804 7.00207C1.96611 5.66874 2.92823 4 4.46889 4H19.5311C21.0718 4 22.0339 5.66874 21.262 7.00207L13.7309 20.0103C12.9605 21.3409 11.0395 21.3409 10.2691 20.0103L2.73804 7.00207Z'/%3E%3C/svg%3E");
@@ -1112,11 +1185,12 @@
     .remove-subtask {
       display: none;
     }
+
     .new-subtask {
       display: none;
     }
 
-    .smart-footer, 
+    .smart-footer,
     .smart-button.add,
     .smart-button.delete {
       display: none !important;
@@ -1127,7 +1201,9 @@
     }
 
     .smart-multi-combo-input {
-      .smart-drop-down-button, .smart-drop-down-list-unselect-button {
+
+      .smart-drop-down-button,
+      .smart-drop-down-list-unselect-button {
         display: none;
       }
     }
@@ -1135,16 +1211,19 @@
     smart-numeric-text-box input {
       border: none;
     }
+
     .smart-numeric-text-box .smart-numeric-text-box-unit-display {
-      border: none;   
+      border: none;
     }
+
     smart-color-input {
       pointer-events: none;
       opacity: 0.7;
     }
+
     .smart-kanban-tab-content.details textarea,
     input,
-    smart-input, 
+    smart-input,
     smart-multi-combo-input,
     smart-numeric-text-box,
     smart-date-time-picker {
@@ -1164,9 +1243,9 @@
       grid-column-gap: 30px;
 
       &.single-column {
-        grid-template-columns:  1fr;
+        grid-template-columns: 1fr;
       }
-      
+
       .description-editor {
         height: 91px;
       }
@@ -1641,7 +1720,7 @@
     .smart-kanban-comments,
     .smart-kanban-new-comment,
     .smart-kanban-new-comment textarea {
-      transition: height 0.2s ease-in;
+      transition: height 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 

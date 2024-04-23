@@ -224,11 +224,17 @@
     /* Code of align justify icon */
     --smart-icon-reload: '\e809';
     /* Code of reload icon */
+    --smart-icon-cloud: '\e84d';
+    /* Code of cloud icon */
     --smart-icon-cancel: '\e80d';
     /* Code of cancel icon */
     --smart-icon-close: '\e80d';
     /* Code of close icon */
     --smart-icon-cancel-circled: '\e80e';
+    /* Code of Close icon Alt */
+    --smart-icon-cancel-alt: '\E849';
+    /* Code of Close icon Alt */
+    --smart-icon-arrow-alt: '\F105';
     /* Code of circled cancel icon */
     --smart-icon-plus-circled: '\e810';
     /* Code of circled plus icon */
@@ -388,6 +394,20 @@
     /* Code of window pin icon */
     --smart-icon-docs: '\f0c5';
     /* Code of docs icon */
+    --smart-icon-pdf: '\f1c1';
+    /* Code of pdf icon */
+    --smart-icon-excel: '\f1C3';
+    /* Code of excel icon */
+    --smart-icon-word: '\f1C2';
+    /* Code of word icon */
+    --smart-icon-archive: '\f1C6';
+    /* Code of zip icon */
+    --smart-icon-file: '\e845';
+    /* Code of file icon */
+    --smart-icon-powerpoint: '\f1c4';
+    /* Code of powerpoint icon */
+    --smart-icon-text: '\f0f6';
+    /* Code of text icon */
     --smart-icon-math: '\f01a';
     /* Code of math icon */
     --smart-icon-spin: '\e80b';
@@ -436,6 +456,8 @@
     /* Code of list numbered icon */
     --smart-icon-list-unordered: '\f0ca';
     /* Code of list bullet icon */
+    --smart-icon-list-check: '\e89f';
+    /* Code of list check icon */
     --smart-icon-subscript: '\f12c';
     /* Code of subscript icon */
     --smart-icon-superscript: '\f12b';
@@ -510,6 +532,15 @@
     /* Code of Move icon */
     --smart-icon-home: '\E843';
     /* Code of Home icon */
+    --smart-icon-history: '\F1DA';
+    /* Code of History icon */
+    --smart-icon-kanban-alt: '\e8a1';
+    /* Code of Kanban icon */
+    --smart-icon-card-alt: '\e8a2';
+    /* Code of Card icon */
+    --smart-icon-grid-alt: '\e8a3'; 
+    /* Code of Grid icon */
+
     /* Accordion */
     --smart-accordion-animation-duration: 225ms;
     /* smartAccordion animation duration */
@@ -1094,6 +1125,7 @@
     --smart-grid-cell-color-freeze: var(--smart-surface-color);
     /* Sets text color of cells, when row/column is frozen. */
     --smart-grid-cell-background-freeze: var(--smart-surface);
+    --smart-grid-cell-background-freeze-selected: #DCE5EC;
     /* Sets background color of cells, when row/column is frozen */
     --smart-grid-cell-color-delete: #333;
     /* Sets text color of cells, when row is deleted. */
@@ -1118,6 +1150,8 @@
     --smart-grid-cell-color-filter: var(--smart-surface-color);
     /* Sets text color of cells, when column is filtered. */
     --smart-grid-cell-background-filter: #E8F2DB;
+    /* Sets the view bar background colors */
+    --smart-grid-view-bar-background: #FCFCFC;
     /* Sets background color of cells, when column is filtered. */
     --smart-grid-group-row-vertical-offset: 5;
     /* Sets grouped rows vertical offset. */
@@ -1331,6 +1365,23 @@
     /* Radio Button */
     --smart-radio-button-default-size: calc(1px + 1/2 * var(--smart-editor-height));
     /* Default size for the radio button. */
+    /* Ribbon */
+    --smart-ribbon-tab-height: 125px;
+    /* smartRibbon tab height */
+    --smart-ribbon-collapsed-tab-height: 50px;
+    /* smartRibbon collapsed tab height */
+    --smart-ribbon-border-color: var(--smart-border);
+    /* smartRibbon border color */
+    --smart-ribbon-tab-header-width: 100px;
+    /* smartRibbon tab header width */
+    --smart-ribbon-tab-padding: 0px;
+    /* smartRibbon tab padding */
+    --smart-ribbon-group-items-padding: 0 10px;
+    /* smartRibbon group items padding */
+    --smart-ribbon-tab-header-height: 32px;
+    /* smartRibbon tab header height */
+    --smart-ribbon-header-padding: 0px;
+    /* smartRibbon header padding */
     /* Sortable */
     --smart-sortable-handle-size: 25px;
     /* smartSortable handle size */
@@ -1668,7 +1719,7 @@
     /* Sets the min-height of the cells inside the Timeline */
     --smart-scheduler-header-height: 50px;
     /* Sets the height of the header */
-    --smart-scheduler-header-today-button-size: 70px;
+    --smart-scheduler-header-today-button-size: auto;
     /* Scheduler header Today Button width */
     --smart-scheduler-header-date-button-max-size: auto;
     /* Sets the size of the Header Date Selection Button*/
